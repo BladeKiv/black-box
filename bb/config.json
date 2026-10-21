@@ -1,0 +1,6 @@
+{
+  "promotion_successes": 3,
+  "deprecation_failures": 2,
+  "max_retries": 1,
+  "max_steps": 4
+}
