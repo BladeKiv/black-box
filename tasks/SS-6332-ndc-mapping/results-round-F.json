@@ -1,0 +1,12 @@
+{
+  "phase": "Round F; full ticket remains in progress",
+  "cases": [
+    {
+      "id": "F01",
+      "data": "Exact-CID positive control; cid=[TST101]; projects=[]; enabled=true",
+      "expected": "Matching CID admits eligible UA content: G / DEF / GTT",
+      "actual": "200/200 UA options map with ndcMapped=true",
+      "status": "PASS"
+    }
+  ]
+}

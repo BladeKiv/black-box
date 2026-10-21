@@ -1,0 +1,35 @@
+{
+  "provenance": "Linked Jira logs read live 2026-10-21; responses dated 2026-10-16. Historical source discovery only, not fresh execution proof.",
+  "LX": {
+    "traceID": "51a6b02c-c964-11f1-9208-960002c633fe",
+    "segment": "S3 VCE-ZRH",
+    "carryOn": [
+      {"TotalQty":2,"ApplicableBagText":"CARRY8KG 18LB UPTO46LI 118LCM","MaximumWeightMeasure":{"unit":"KG","value":8},"MaxMeasure":{"unit":"Centimeter","value":118}},
+      {"TotalQty":1,"ApplicableBagText":"HANDBAG UPTO 40 X 30 X 15CM"}
+    ],
+    "ticket_expected_pieces": 2
+  },
+  "AA": {
+    "traceID": "2ccb82a7-c966-11f1-a8ee-960002ef6957",
+    "segment": "S2 ORD-MCO",
+    "carryOn": [
+      {"TotalQty":1,"ApplicableBagText":"CARRY ON UP TO 45 LI 115 LCM","MaxMeasure":{"unit":"Centimeter","value":115}},
+      {"TotalQty":1,"ApplicableBagText":"PERSONAL ITEM UP TO 40 LI"}
+    ],
+    "ticket_expected_pieces": 1
+  },
+  "QF": {
+    "traceID": "990cdcba-c96d-11f1-9208-960002c633fe",
+    "passengers": ["T1","T2","T3","T4","T5"],
+    "segments": {
+      "S6 TPA-DFW": {"checked":{"qty":1,"kg":32,"cm":158},"carryOn":[{"qty":1,"text":"CARRY ON UP TO 45 LI 115 LCM","cm":115},{"qty":1,"text":"PERSONAL ITEM UP TO 40 LI"}]},
+      "S7 DFW-AKL": {"checked":{"qty":1,"kg":32,"cm":158},"carryOn":[{"qty":1,"text":"CARRY ON UP TO 45 LI 115 LCM","cm":115},{"qty":1,"text":"PERSONAL ITEM UP TO 40 LI"}]},
+      "S8 AKL-SYD": {"checked":{"qty":1,"kg":32,"cm":158},"carryOn":[{"qty":1,"text":"CARRY7KG 15LB UPTO45LI 115LCM","kg":7,"cm":115}]},
+      "S9 SYD-PER": {"checked":{"qty":1,"kg":32,"cm":158},"carryOn":[{"qty":2,"text":"CARRY7KG 15LB UPTO41LI 105LCM","kg":7,"cm":105},{"qty":1,"text":"CARRY7KG 15LB UPTO41LI 105LCM","kg":7,"cm":105},{"qty":1,"text":"CARRY7KG 15LB UPTO45LI 115LCM","kg":7,"cm":105}]},
+      "S10 PER-SYD": {"observed_baggage_services":[]},
+      "S11 SYD-DFW": {"observed_baggage_services":[]},
+      "S12 DFW-TPA": {"observed_baggage_services":[]}
+    },
+    "mapping": "Each of T1-T5 has distinct ServiceDefinition references linked to the listed checked/carry-on BaggageAllowance. S6 and S7 share the same allowance per passenger; S8 and S9 have separate allowances. No baggage services observed for S10-S12."
+  }
+}

@@ -1,0 +1,352 @@
+[
+  {
+    "index": 1,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTk3I0xIOTE2I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-MUC D GTT:9% rule=8367 sub=25020 | AMS-RDU J missing commissions | FRA-LHR D missing commissions | MAD-FRA Z missing commissions",
+    "qualifies": false
+  },
+  {
+    "index": 2,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTk3I0xIOTE4I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-MUC D GTT:9% rule=8367 sub=25020 | AMS-RDU J missing commissions | FRA-LHR D missing commissions | MAD-FRA Z missing commissions",
+    "qualifies": false
+  },
+  {
+    "index": 3,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE0I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-MUC D GTT:9% rule=8367 sub=25020 | AMS-RDU J missing commissions | FRA-LHR D missing commissions | MAD-FRA Z missing commissions",
+    "qualifies": false
+  },
+  {
+    "index": 4,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE2I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-MUC D GTT:9% rule=8367 sub=25020 | AMS-RDU J missing commissions | FRA-LHR D missing commissions | MAD-FRA Z missing commissions",
+    "qualifies": false
+  },
+  {
+    "index": 5,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxNCNMSDExMTcjTEg0MDh+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-MUC D GTT:9% rule=8367 sub=25020 | AMS-RDU J missing commissions | FRA-LHR D missing commissions | MAD-FRA Z missing commissions",
+    "qualifies": false
+  },
+  {
+    "index": 6,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE4I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-MUC D GTT:9% rule=8367 sub=25020 | AMS-RDU J missing commissions | FRA-LHR D missing commissions | MAD-FRA Z missing commissions",
+    "qualifies": false
+  },
+  {
+    "index": 7,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxNiNMSDExMTcjTEg0MDh+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-MUC D GTT:9% rule=8367 sub=25020 | AMS-RDU J missing commissions | FRA-LHR D missing commissions | MAD-FRA Z missing commissions",
+    "qualifies": false
+  },
+  {
+    "index": 8,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxOCNMSDExMTcjTEg0MDh+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-MUC D GTT:9% rule=8367 sub=25020 | AMS-RDU J missing commissions | FRA-LHR D missing commissions | MAD-FRA Z missing commissions",
+    "qualifies": false
+  },
+  {
+    "index": 9,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxODA3I0xINjc5MCNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 10,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxODA3I0xINjc5MCNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 11,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTQjTEgxODA3I0xINjc5MCNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 12,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTYjTEgxODA3I0xINjc5MCNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 13,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE0I0xIMTgwNyNMSDY3OTAjTEg2NzQwfmxjOmVuX3Vz",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 14,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTgvTUFEUkRVMjAyNi0xMi0wM18wNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTgjTEgxODA3I0xINjc5MCNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 15,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTcvTUFEUkRVMjAyNi0xMi0wM18wNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE2I0xIMTgwNyNMSDY3OTAjTEg2NzQwfmxjOmVuX3Vz",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 16,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTgvTUFEUkRVMjAyNi0xMi0wM18wNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE4I0xIMTgwNyNMSDY3OTAjTEg2NzQwfmxjOmVuX3Vz",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 17,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxODA3I0xINDEyI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 18,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjIqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxODA3I0xIOTI4MCNMSDkxNzZ+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 19,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjIqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxODA3I0xINDE0I0xIOTE3Nn5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 20,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxODA3I0xINDEyI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 21,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjIqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxODA3I0xINDE0I0xIOTE3Nn5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 22,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjIqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxODA3I0xIOTI4MCNMSDkxNzZ+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 23,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTQjTEgxODA3I0xINDEyI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 24,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjIqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTQjTEgxODA3I0xIOTI4MCNMSDkxNzZ+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 25,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjIqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTQjTEgxODA3I0xINDE0I0xIOTE3Nn5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 26,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTYjTEgxODA3I0xINDEyI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 27,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjIqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTYjTEgxODA3I0xINDE0I0xIOTE3Nn5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 28,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjIqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTYjTEgxODA3I0xIOTI4MCNMSDkxNzZ+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 29,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjEqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE0I0xIMTgwNyNMSDQxMiNMSDc1ODh+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 30,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjIqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE0I0xIMTgwNyNMSDQxNCNMSDkxNzZ+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 31,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjIqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE0I0xIMTgwNyNMSDkyODAjTEg5MTc2fmxjOmVuX3Vz",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 32,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTgvTUFEUkRVMjAyNi0xMi0wM18wNzE2MjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTgjTEgxODA3I0xINDEyI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 33,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEzMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxMTE3I0xINDcwI0xINjc0MH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 34,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxMTE3I0xINjY3NiNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 35,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEzMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxMTE3I0xINDcwI0xINjc0MH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 36,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxMTE3I0xINjY3NiNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 37,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEzMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTQjTEgxMTE3I0xINDcwI0xINjc0MH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 38,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEwMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTQjTEgxMTE3I0xINjY3NiNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 39,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEzMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTYjTEgxMTE3I0xINDcwI0xINjc0MH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 40,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTYjTEgxMTE3I0xINjY3NiNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 41,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEwMjAqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE0I0xIMTExNyNMSDY2NzYjTEg2NzQwfmxjOmVuX3Vz",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 42,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEzMjAqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE0I0xIMTExNyNMSDQ3MCNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 43,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEzMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTgjTEgxMTE3I0xINDcwI0xINjc0MH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 44,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTgjTEgxMTE3I0xINjY3NiNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 45,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEzMjAqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE2I0xIMTExNyNMSDQ3MCNMSDY3NDB+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 46,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxODA3I0xINDEwI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 47,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxODA3I0xINDEwI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 48,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTQjTEgxODA3I0xINDEwI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 49,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjEqTEh+I0xIODgzMSNMSDkyODEjTEg5OTMjTEg5MTYjTEgxODA3I0xINDEwI0xINzU4OH5sYzplbl91cw==",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  },
+  {
+    "index": 50,
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNzEyMjEqTEh+I0xIODgzMSNMSDkyODEjTEgxMDAzI0xIOTE0I0xIMTgwNyNMSDQxMCNMSDc1ODh+bGM6ZW5fdXM=",
+    "cons": "GTT",
+    "fares": "RDU-LHR J missing commissions | MAD-RDU Z GTT:7% rule=8367 sub=25021",
+    "qualifies": false
+  }
+]

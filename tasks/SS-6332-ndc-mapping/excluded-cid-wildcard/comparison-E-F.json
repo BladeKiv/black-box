@@ -1,0 +1,18 @@
+{
+  "identity": "explicit itinerary/fare/passenger attributes; opaque Search keys not parsed",
+  "wildcardFirst": {
+    "matchedToExactCidControl": 200,
+    "mapped": 0,
+    "total": 200
+  },
+  "wildcardRepeat": {
+    "matchedToExactCidControl": 200,
+    "mapped": 0,
+    "total": 200
+  },
+  "exactCidControl": {
+    "mapped": 200,
+    "total": 200
+  },
+  "configurationEvidence": "User-confirmed; no direct configuration fetch"
+}

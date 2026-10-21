@@ -1,0 +1,20 @@
+{
+  "phase": "Round B; full ticket remains in progress",
+  "identityFields": "Validating carrier, fare type, passenger counts, and per-segment dates, airports, flight numbers, marketing/operating carriers, cabins, booking classes and fare codes. Keys are not decoded.",
+  "cases": [
+    {
+      "id": "B01",
+      "data": "UA; same Search; ndc_mapping.enabled=false",
+      "expected": "No NDC target mapping; NDC marker/asset absent; compare matching itineraries",
+      "actual": "200/200 uniquely matched UA itineraries changed from G / DEF / GTT to E / 8C4T / VZU; NDC marker/asset absent",
+      "status": "PASS"
+    },
+    {
+      "id": "B02",
+      "data": "WS; same Search; ndc_mapping.enabled=false",
+      "expected": "WS mapping remains unchanged across enabled/disabled rounds",
+      "actual": "14/14 uniquely matched WS itineraries stayed E / 8C4T / VZU; NDC marker/asset absent",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+scenario_id,expected_result,provider_filter,search_url,max_results_to_check
+ss-6258-return-routing-boolean,routing_boolean,S,https://api.search.stage.travel-dev.com/v1/search?adt=1&debug=true&fare=PUB&cid=TST101&fl.0.o=YYC&fl.0.d=SIN&fl.0.dt=2026-09-14&gds=S&pcc=6NVG&fl.1.o=SIN&fl.1.d=YYC&fl.1.dt=2026-09-20,1

@@ -1,0 +1,16 @@
+{
+  "phase": "Round E; full ticket remains in progress",
+  "cases": [
+    {
+      "id": "E01",
+      "data": "Request TST101; enabled=true; cid=[*]; projects=[]",
+      "expected": "CID wildcard admits eligible UA content: G / DEF / GTT",
+      "actual": "FAIL in two HTTP 200 runs: 0/200 mapped each time; all returned E / 8C4T / VZU without ndcMapped=true",
+      "status": "FAIL",
+      "evidenceFiles": [
+        "evidence-round-E-UA.json",
+        "evidence-round-E-UA-repeat.json"
+      ]
+    }
+  ]
+}

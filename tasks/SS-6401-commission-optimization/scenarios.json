@@ -1,0 +1,502 @@
+[
+  {
+    "scenario_id": "TC-01",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "RDU",
+      "fl.0.d": "MUC",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "AMS",
+      "fl.1.d": "LHR",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-02",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "RDU",
+      "fl.0.d": "MUC",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "AMS",
+      "fl.1.d": "LHR",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-03",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "RDU",
+      "fl.0.d": "MUC",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "AMS",
+      "fl.1.d": "LHR",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-04",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "JFK",
+      "fl.0.d": "LHR",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "LHR",
+      "fl.1.d": "JFK",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-05",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "JFK",
+      "fl.0.d": "LHR",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "LHR",
+      "fl.1.d": "JFK",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-06",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "JFK",
+      "fl.0.d": "LHR",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "LHR",
+      "fl.1.d": "JFK",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-07",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "LAX",
+      "fl.0.d": "FRA",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "FRA",
+      "fl.1.d": "LAX",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-08",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "LAX",
+      "fl.0.d": "FRA",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "FRA",
+      "fl.1.d": "LAX",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-09",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "LAX",
+      "fl.0.d": "FRA",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "FRA",
+      "fl.1.d": "LAX",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-10",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "ORD",
+      "fl.0.d": "AMS",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "AMS",
+      "fl.1.d": "ORD",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-11",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "ORD",
+      "fl.0.d": "AMS",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "AMS",
+      "fl.1.d": "ORD",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-12",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "ORD",
+      "fl.0.d": "AMS",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "AMS",
+      "fl.1.d": "ORD",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-13",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "MAD",
+      "fl.0.d": "FRA",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "FRA",
+      "fl.1.d": "MAD",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-14",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "MAD",
+      "fl.0.d": "FRA",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "FRA",
+      "fl.1.d": "MAD",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-15",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "MAD",
+      "fl.0.d": "FRA",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "FRA",
+      "fl.1.d": "MAD",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-16",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "CPH",
+      "fl.0.d": "DEN",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "DEN",
+      "fl.1.d": "CPH",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-17",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "CPH",
+      "fl.0.d": "DEN",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "DEN",
+      "fl.1.d": "CPH",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-18",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "CPH",
+      "fl.0.d": "DEN",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "DEN",
+      "fl.1.d": "CPH",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-19",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "LHR",
+      "fl.0.d": "DXB",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "DXB",
+      "fl.1.d": "LHR",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-20",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "LHR",
+      "fl.0.d": "DXB",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "DXB",
+      "fl.1.d": "LHR",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-21",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "LHR",
+      "fl.0.d": "DXB",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "DXB",
+      "fl.1.d": "LHR",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-22",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "CDG",
+      "fl.0.d": "JFK",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "JFK",
+      "fl.1.d": "CDG",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-23",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "CDG",
+      "fl.0.d": "JFK",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "JFK",
+      "fl.1.d": "CDG",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-24",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "CDG",
+      "fl.0.d": "JFK",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "JFK",
+      "fl.1.d": "CDG",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-25",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "MIA",
+      "fl.0.d": "MAD",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "MAD",
+      "fl.1.d": "MIA",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-26",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "MIA",
+      "fl.0.d": "MAD",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "MAD",
+      "fl.1.d": "MIA",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-27",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "MIA",
+      "fl.0.d": "MAD",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "MAD",
+      "fl.1.d": "MIA",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-28",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "SFO",
+      "fl.0.d": "MUC",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "MUC",
+      "fl.1.d": "SFO",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-29",
+    "query": {
+      "extra": "false",
+      "cabin": "C",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "fl.0.o": "SFO",
+      "fl.0.d": "MUC",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "MUC",
+      "fl.1.d": "SFO",
+      "fl.1.dt": "2026-11-30"
+    }
+  },
+  {
+    "scenario_id": "TC-30",
+    "query": {
+      "extra": "false",
+      "cabin": "Y",
+      "adt": "1",
+      "debug": "true",
+      "cid": "SAL103",
+      "chd": "1",
+      "inf": "1",
+      "fl.0.o": "SFO",
+      "fl.0.d": "MUC",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "MUC",
+      "fl.1.d": "SFO",
+      "fl.1.dt": "2026-11-30"
+    }
+  }
+]

@@ -1,0 +1,739 @@
+Id,Airline,Type,Cabin,Issue Date Before,Issue Date After,Impacted travel dates From,Impacted travel dates To,Impacted airports,Impacted airports ALL/ANY,Re-protection dates range,"Time Difference, min",New RBDs Main carrier,Exclude RBDs Main carrier,New RBDs OAL,Exclude RBDs OAL,Validating Waiver,Marketing Waiver,Waiver placement,Change of Origin & Destination,Change of operating & marketing ,Change of connection points,Closest Departure,"Refund Conditions, min",Refund Conditions segment status,Refund Conditions extra stop,Refund Conditions misconnection
+1,UA ,SCHG,Y,,,,,,,+3/-3,>120,<=M,,original,,UASKEDCHG,OASKEDCHG,OSI,"Yes
+100 mile radius",1/2/3/5/6,1/2/3/4,False,360,,True,True
+2,UA ,SCHG,Y,,,,,,,+3/-3,>120,<=M,,original,,UASKEDCHG,SKCHG,BO_ENDORSEMENT,"Yes
+100 mile radius",1/2/3/5/6,1/2/3/4,False,360,,True,True
+3,UA ,SCHG,S,,,,,,,+3/-3,>120,original,,original,,UASKEDCHG,OASKEDCHG,OSI,"Yes
+100 mile radius",1/2/3/5/6,1/2/3/4,False,360,,True,True
+4,UA ,SCHG,S,,,,,,,+3/-3,>120,original,,original,,UASKEDCHG,SKCHG,BO_ENDORSEMENT,"Yes
+100 mile radius",1/2/3/5/6,1/2/3/4,False,360,,True,True
+5,UA ,SCHG,C,,,,,,,+3/-3,>120,<=J,,original,,UASKEDCHG,OASKEDCHG,OSI,"Yes
+100 mile radius",1/2/3/5/6,1/2/3/4,False,360,,True,True
+6,UA ,SCHG,C,,,,,,,+3/-3,>120,<=J,,original,,UASKEDCHG,SKCHG,BO_ENDORSEMENT,"Yes
+100 mile radius",1/2/3/5/6,1/2/3/4,False,360,,True,True
+7,UA ,SCHG,F,,,,,,,+3/-3,>120,original,,original,,UASKEDCHG,OASKEDCHG,OSI,"Yes
+100 mile radius",1/2/3/5/6,1/2/3/4,False,360,,True,True
+8,UA ,SCHG,F,,,,,,,+3/-3,>120,original,,original,,UASKEDCHG,SKCHG,BO_ENDORSEMENT,"Yes
+100 mile radius",1/2/3/5/6,1/2/3/4,False,360,,True,True
+9,AA,SCHG,Y,,,,,,,+7/-7,>61,<=H,,original,,SKCHG,SKCHG/{MarketingAirline},BO_ENDORSEMENT,"Yes
+Within same City",1/2/3/4/5/6,1/2/3/4,False,240,,True,True
+10,AA,SCHG,S,,,,,,,+7/-7,>61,<=W,,original,,SKCHG,SKCHG/{MarketingAirline},BO_ENDORSEMENT,"Yes
+Within same City",1/2/3/4/5/6,1/2/3/4,False,240,,True,True
+11,AA,SCHG,C,,,,,,,+7/-7,>61,<=C,,original,,SKCHG,SKCHG/{MarketingAirline},BO_ENDORSEMENT,"Yes
+Within same City",1/2/3/4/5/6,1/2/3/4,False,240,,True,True
+12,AA,SCHG,F,,,,,,,+7/-7,>61,<=F,,original,,SKCHG,SKCHG/{MarketingAirline},BO_ENDORSEMENT,"Yes
+Within same City",1/2/3/4/5/6,1/2/3/4,False,240,,True,True
+13,DL,SCHG,Y,,,,,,,+2/-2,>360,<=Y,,original,,REISSUE DUE TO DL INVOL,,OSI,No,1/2/3/4/5/6,1/2/3/4,False,>360,,True,True
+14,DL,SCHG,Y,,,,,,,+2/-2,>360,<=Y,,original,,SKD CHG {MarketingAirline}{FlightNumber} {DepartDateDDMMMYYYY},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,>360,,True,True
+15,DL,SCHG,S,,,,,,,+2/-2,>360,<=P,,original,,REISSUE DUE TO DL INVOL,,OSI,No,1/2/3/4/5/6,1/2/3/4,False,>360,,True,True
+16,DL,SCHG,S,,,,,,,+2/-2,>360,<=P,,original,,SKD CHG {MarketingAirline}{FlightNumber} {DepartDateDDMMMYYYY},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,>360,,True,True
+17,DL,SCHG,C,,,,,,,+2/-2,>360,<=C,,original,,REISSUE DUE TO DL INVOL,,OSI,No,1/2/3/4/5/6,1/2/3/4,False,>360,,True,True
+18,DL,SCHG,C,,,,,,,+2/-2,>360,<=C,,original,,SKD CHG {MarketingAirline}{FlightNumber} {DepartDateDDMMMYYYY},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,>360,,True,True
+19,DL,SCHG,F,,,,,,,+2/-2,>360,<=F,,original,,REISSUE DUE TO DL INVOL,,OSI,No,1/2/3/4/5/6,1/2/3/4,False,>360,,True,True
+20,DL,SCHG,F,,,,,,,+2/-2,>360,<=F,,original,,SKD CHG {MarketingAirline}{FlightNumber} {DepartDateDDMMMYYYY},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,>360,,True,True
+21,TK,SCHG,Y,,,,,,,+30/-7,>15,<=Y,,<=Y,,INVOL EXC DUE TO FLT SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False, 16,,True,True
+22,TK,SCHG,C,,,,,,,+30/-7,>15,<=C,,original,,INVOL EXC DUE TO FLT SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False, 16,,True,True
+23,TK,SCHG,F,,,,,,,+30/-7,>15,original,,<=Y,,INVOL EXC DUE TO FLT SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False, 16,,True,True
+24,LH,SCHG,Y,,,,,,,+3/-3,">120
+",<=Y,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+25,LH,SCHG,S,,,,,,,+3/-3,">120
+",<=G,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+26,LH,SCHG,C,,,,,,,+3/-3,">120
+",<=J,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+27,LH,SCHG,F,,,,,,,+3/-3,">120
+",<=F,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+28, OS,SCHG,Y,,,,,,,+3/-3,">120
+",<=Y,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+29, OS,SCHG,S,,,,,,,+3/-3,">120
+",<=G,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+30, OS,SCHG,C,,,,,,,+3/-3,">120
+",<=J,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+31, OS,SCHG,F,,,,,,,+3/-3,">120
+",<=F,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+32,LX ,SCHG,Y,,,,,,,+3/-3,">120
+",<=Y,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+33,LX ,SCHG,S,,,,,,,+3/-3,">120
+",<=G,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+34,LX ,SCHG,C,,,,,,,+3/-3,">120
+",<=J,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+35,LX ,SCHG,F,,,,,,,+3/-3,">120
+",<=F,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+36,SN,SCHG,Y,,,,,,,+3/-3,">120
+",<=Y,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+37,SN,SCHG,S,,,,,,,+3/-3,">120
+",<=G,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+38,SN,SCHG,C,,,,,,,+3/-3,">120
+",<=J,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+39,SN,SCHG,F,,,,,,,+3/-3,">120
+",<=F,,original,,SKCHG,SKCHG,BO_ENDORSEMENT,No,"1/2/3/5/6
+",1/2/3/4,False,"120
+",,True,True
+40,NH,SCHG,Y,,,,,,,+0/-0,">120
+",original,,original,,SKCHG {MarketingAirline}{FlightNumber}/{DepartDateDDMMM} {O&D},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,"120
+ ",,True,True
+41,NH,SCHG,S,,,,,,,+0/-0,">120
+",original,,original,,SKCHG {MarketingAirline}{FlightNumber}/{DepartDateDDMMM} {O&D},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,"120
+ ",,True,True
+42,NH,SCHG,C,,,,,,,+0/-0,">120
+",original,,original,,SKCHG {MarketingAirline}{FlightNumber}/{DepartDateDDMMM} {O&D},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,"120
+ ",,True,True
+43,NH,SCHG,F,,,,,,,+0/-0,">120
+",original,,original,,SKCHG {MarketingAirline}{FlightNumber}/{DepartDateDDMMM} {O&D},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,"120
+ ",,True,True
+44,AC,SCHG,Y,,,,,,,+3/-3,>180,<=M,,<=M,,SKCH{FlightNumber},,BO_ENDORSEMENT,"Yes
+200 mile radius",1/2/3/5/6,1/2/3/4,False,"180
+",,True,True
+45,AC,SCHG,S,,,,,,,+3/-3,>180,<=O,,original,,SKCH{FlightNumber},,BO_ENDORSEMENT,"Yes
+200 mile radius",1/2/3/5/6,1/2/3/4,False,"180
+",,True,True
+46,AC,SCHG,C,,,,,,,+3/-3,>180,<=J,,original,,SKCH{FlightNumber},,BO_ENDORSEMENT,"Yes
+200 mile radius",1/2/3/5/6,1/2/3/4,False,"180
+",,True,True
+47,AC,SCHG,F,,,,,,,+3/-3,>180,original,,original,,SKCH{FlightNumber},,BO_ENDORSEMENT,"Yes
+200 mile radius",1/2/3/5/6,1/2/3/4,False,"180
+",,True,True
+48,BA,SCHG,Y,,,,,,,+2/-2,>120,<=Y,,<=Y,,INVOL,,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+49,BA,SCHG,Y,,,,,,,+2/-2,>120,<=Y,,<=Y,,"INVOL RRT BA CANX 
+AS PER BA/YY AGREEMENT",,OSI,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+50,BA,SCHG,Y,,,,,,,+2/-2,>120,<=Y,,<=Y,,PSGR or AGY PHONE NUMBER ,,OSI,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+51,BA,SCHG,S,,,,,,,+2/-2,>120,<=W,,original,,INVOL,,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+52,BA,SCHG,S,,,,,,,+2/-2,>120,<=W,,original,,"INVOL RRT BA CANX 
+AS PER BA/YY AGREEMENT",,OSI,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+53,BA,SCHG,S,,,,,,,+2/-2,>120,<=W,,original,,PSGR or AGY PHONE NUMBER ,,OSI,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+54,BA,SCHG,C,,,,,,,+2/-2,>120,<=J,,original,,INVOL,,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+55,BA,SCHG,C,,,,,,,+2/-2,>120,<=J,,original,,"INVOL RRT BA CANX 
+AS PER BA/YY AGREEMENT",,OSI,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+56,BA,SCHG,C,,,,,,,+2/-2,>120,<=J,,original,,PSGR or AGY PHONE NUMBER ,,OSI,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+57,BA,SCHG,F,,,,,,,+2/-2,>120,original,,original,,INVOL,,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+58,BA,SCHG,F,,,,,,,+2/-2,>120,original,,original,,"INVOL RRT BA CANX 
+AS PER BA/YY AGREEMENT",,OSI,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+59,BA,SCHG,F,,,,,,,+2/-2,>120,original,,original,,PSGR or AGY PHONE NUMBER ,,OSI,No,1/2/3/4/5/6,1/2/3/4,True,"300
+",,False,False
+60,IB,SCHG,Y,,,,,,,+30/-30,>180,<=Y,U/T/X/E/G/P,<=Y,,INVOL CHANGE DUE SC {MarketingAirline}{FlightNumber} {DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+150 mile radius",1/2/3/4/5/6,1/2/3/4,True,"300
+",,True,True
+61,IB,SCHG,S,,,,,,,+30/-30,>180,<=W,,original,,INVOL CHANGE DUE SC {MarketingAirline}{FlightNumber} {DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+150 mile radius",1/2/3/4/5/6,1/2/3/4,True,"300
+",,True,True
+62,IB,SCHG,C,,,,,,,+30/-30,>180,<=J,,original,,INVOL CHANGE DUE SC {MarketingAirline}{FlightNumber} {DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+150 mile radius",1/2/3/4/5/6,1/2/3/4,True,"300
+",,True,True
+63,IB,SCHG,F,,,,,,,+30/-30,>180,original,,original,,INVOL CHANGE DUE SC {MarketingAirline}{FlightNumber} {DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+150 mile radius",1/2/3/4/5/6,1/2/3/4,True,"300
+",,True,True
+64,AZ,SCHG,Y,,,,,,,+7/-7,>60,<=Y,,original,,ITA TEMPORARY POLICY/SKCH WW 25-26  ,,BO_ENDORSEMENT,No,1/3/5,1,False,180,UN,True,True
+65,AZ,SCHG,S,,,,,,,+7/-7,>60,<=P,,original,,ITA TEMPORARY POLICY/SKCH WW 25-26  ,,BO_ENDORSEMENT,No,1/3/5,1,False,180,UN,True,True
+66,AZ,SCHG,C,,,,,,,+7/-7,>60,<=J,,original,,ITA TEMPORARY POLICY/SKCH WW 25-26  ,,BO_ENDORSEMENT,No,1/3/5,1,False,180,UN,True,True
+67,AY,SCHG,Y,,,,,,,+2/-2,>31,<=Y,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3/4/6,1/2,False,300,UN,True,True
+68,AY,SCHG,Y,,,,,,,+2/-2,>31,<=Y,,original,,PAX ACCEPTED SCHED CHG FOR  {MarketingAirline}{FlightNumber},,OSI,No,1/3/4/6,1/2,False,61,UN,True,True
+69,AY,SCHG,S,,,,,,,+2/-2,>31,<=W,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3/4/6,1/2,False,61,UN,True,True
+70,AY,SCHG,S,,,,,,,+2/-2,>31,<=W,,original,,PAX ACCEPTED SCHED CHG FOR  {MarketingAirline}{FlightNumber},,OSI,No,1/3/4/6,1/2,False,61,UN,True,True
+71,AY,SCHG,C,,,,,,,+2/-2,>31,<=J,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3/4/6,1/2,False,61,UN,True,True
+72,AY,SCHG,C,,,,,,,+2/-2,>31,<=J,,original,,PAX ACCEPTED SCHED CHG FOR  {MarketingAirline}{FlightNumber},,OSI,No,1/3/4/6,1/2,False,61,UN,True,True
+73,AY,SCHG,F,,,,,,,+2/-2,>31,<=F,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3/4/6,1/2,False,61,UN,True,True
+74,AY,SCHG,F,,,,,,,+2/-2,>31,<=F,,original,,PAX ACCEPTED SCHED CHG FOR  {MarketingAirline}{FlightNumber},,OSI,No,1/3/4/6,1/2,False,61,UN,True,True
+75,JL,SCHG,Y,,,01/04/2025,,,,+7/-7,>61,original,,original,, INVOL25SHJL4R7{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,61,UN,True,True
+76,JL,SCHG,S,,,01/04/2025,,,,+7/-7,>61,original,,original,, INVOL25SHJL4R7{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,61,UN,True,True
+77,JL,SCHG,C,,,01/04/2025,,,,+7/-7,>61,original,,original,, INVOL25SHJL4R7{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,61,UN,True,True
+78,JL,SCHG,F,,,01/04/2025,,,,+7/-7,>61,original,,original,, INVOL25SHJL4R7{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,61,UN,True,True
+79,EK,SCHG,Y,,,,,,,+10/-10,>61,<=Y,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3,1/2/3/4,True ,360,UN,True,True
+80,EK,SCHG,S,,,,,,,+10/-10,>61,original,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3,1/2/3/4,True ,360,UN,True,True
+81,EK,SCHG,C,,,,,,,+10/-10,>61,original,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3,1/2/3/4,True ,360,UN,True,True
+82,EK,SCHG,F,,,,,,,+10/-10,>61,<=F,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3,1/2/3/4,True ,360,UN,True,True
+83,QR,SCHG,Y,,,,,,,+14/-14,>61,<=Y,,original,,SKCHG COMM1068,,BO_ENDORSEMENT,No,1/3,1/2/3/4,True,120,UN,True,True
+84,QR,SCHG,S,,,,,,,+14/-14,>61,original,,original,,SKCHG COMM1068,,BO_ENDORSEMENT,No,1/3,1/2/3/4,True,120,UN,True,True
+85,QR,SCHG,C,,,,,,,+14/-14,>61,<=J,,original,,SKCHG COMM1068,,BO_ENDORSEMENT,No,1/3,1/2/3/4,True,120,UN,True,True
+86,QR,SCHG,F,,,,,,,+14/-14,>61,<=F,,original,,SKCHG COMM1068,,BO_ENDORSEMENT,No,1/3,1/2/3/4,True,120,UN,True,True
+87,EY,SCHG,Y,,,,,,,+30/-30,>120,<=Y,,<=Y,, SKCHG - {MarketingAirline}{FlightNumber} CHANGE,,BO_ENDORSEMENT,"Yes
+within the same country /region on EY operated network",1/3,1/2/3/4,False,"120
+",UN,True,True
+88,EY,SCHG,S,,,,,,,+30/-30,>120,original,,original,, SKCHG - {MarketingAirline}{FlightNumber} CHANGE,,BO_ENDORSEMENT,"Yes
+within the same country /region on EY operated network",1/3,1/2/3/4,False,"120
+",UN,True,True
+89,EY,SCHG,C,,,,,,,+30/-30,>120,<=J,,original,, SKCHG - {MarketingAirline}{FlightNumber} CHANGE,,BO_ENDORSEMENT,"Yes
+within the same country /region on EY operated network",1/3,1/2/3/4,False,"120
+",UN,True,True
+90,EY,SCHG,F,,,,,,,+30/-30,>120,<=F,,original,, SKCHG - {MarketingAirline}{FlightNumber} CHANGE,,BO_ENDORSEMENT,"Yes
+within the same country /region on EY operated network",1/3,1/2/3/4,False,"120
+",UN,True,True
+91,SQ,SCHG,Y,,,,,,,+7/-7,>60,<=Y,,original,,ISC{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,360,UN,True,True
+92,SQ,SCHG,S,,,,,,,+7/-7,>60,<=S,,original,,ISC{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,360,UN,True,True
+93,SQ,SCHG,C,,,,,,,+7/-7,>60,<=Z,,original,,ISC{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,360,UN,True,True
+94,SQ,SCHG,F,,,,,,,+7/-7,>60,<=F,,original,,ISC{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,360,UN,True,True
+95,QF,SCHG,Y,,,,,,,+0/-0,,<=Y,,original,,Contact Airline,Contact Airline,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+96,QF,SCHG,S,,,,,,,+0/-0,,<=W,,original,,Contact Airline,Contact Airline,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+97,QF,SCHG,C,,,,,,,+0/-0,,<=J,,original,,Contact Airline,Contact Airline,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+98,QF,SCHG,F,,,,,,,+0/-0,,<=F,,original,,Contact Airline,Contact Airline,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+99,CX,SCHG,Y,,,,30/12/2026,,,+7/-7,,original,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,300,UN,True,True
+100,CX,SCHG,S,,,,30/12/2026,,,+7/-7,,original,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,300,UN,True,True
+101,CX,SCHG,C,,,,30/12/2026,,,+7/-7,,original,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,300,UN,True,True
+102,CX,SCHG,F,,,,30/12/2026,,,+7/-7,,original,,original,,SKCHG,,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,300,UN,True,True
+103,HA,SCHG,Y,,,,,ITO/HNL/OGG/KOA/MKK/LNY/LIH,ALL,+2/-2,>120,<=Y,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+",,False,False
+104,HA,SCHG,Y,,,,,US/HND/KIX/NRT,ANY,+2/-2,>120,<=Y,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+
+",,False,False
+105,HA,SCHG,Y,,,,,AKL/BNE/CTS/ICN/PPG/PPT/SYD,ANY,+2/-2,>120,<=Y,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+",,False,False
+106,HA,SCHG,S,,,,,ITO/HNL/OGG/KOA/MKK/LNY/LIH,ALL,+2/-2,>120,original,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+",,False,False
+107,HA,SCHG,S,,,,,US/HND/KIX/NRT,ANY,+2/-2,>120,original,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+
+",,False,False
+108,HA,SCHG,S,,,,,AKL/BNE/CTS/ICN/PPG/PPT/SYD,ANY,+2/-2,>120,original,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+",,False,False
+109,HA,SCHG,C,,,,,ITO/HNL/OGG/KOA/MKK/LNY/LIH,ALL,+2/-2,>120,original,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+",,False,False
+110,HA,SCHG,C,,,,,US/HND/KIX/NRT,ANY,+2/-2,>120,original,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+
+",,False,False
+111,HA,SCHG,C,,,,,AKL/BNE/CTS/ICN/PPG/PPT/SYD,ANY,+2/-2,>120,original,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+",,False,False
+112,HA,SCHG,F,,,,,ITO/HNL/OGG/KOA/MKK/LNY/LIH,ALL,+2/-2,>120,<=F,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+",,False,False
+113,HA,SCHG,F,,,,,US/HND/KIX/NRT,ANY,+2/-2,>120,<=F,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+
+",,False,False
+114,HA,SCHG,F,,,,,AKL/BNE/CTS/ICN/PPG/PPT/SYD,ANY,+2/-2,>120,<=F,,original,,HA SKED CHG {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,"120
+",,False,False
+115,VA,SCHG,Y,,,,,,,+1/-1,,<=Y,,original,,SKCHGVACHG,SKCHGOACHG,BO_ENDORSEMENT,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",False,300,UN,True,True
+116,VA,SCHG,S,,,,,,,+1/-1,,original,,original,,SKCHGVACHG,SKCHGOACHG,BO_ENDORSEMENT,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",False,300,UN,True,True
+117,VA,SCHG,C,,,,,,,+1/-1,,<=J,,original,,SKCHGVACHG,SKCHGOACHG,BO_ENDORSEMENT,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",False,300,UN,True,True
+118,VA,SCHG,F,,,,,,,+1/-1,,original,,original,,SKCHGVACHG,SKCHGOACHG,BO_ENDORSEMENT,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",False,300,UN,True,True
+119,UX,SCHG,Y,,,,,,,+7/-7,>30,original,,original,,SKCHG,,BO_ENDORSEMENT,"No
+",1/3,"1/2/3/4
+",False,300,UN,True,True
+120,UX,SCHG,S,,,,,,,+7/-7,>30,original,,original,,SKCHG,,BO_ENDORSEMENT,"No
+",1/3,"1/2/3/4
+",False,300,UN,True,True
+121,UX,SCHG,C,,,,,,,+7/-7,>30,original,,original,,SKCHG,,BO_ENDORSEMENT,"No
+",1/3,"1/2/3/4
+",False,300,UN,True,True
+122,UX,SCHG,F,,,,,,,+7/-7,>30,original,,original,,SKCHG,,BO_ENDORSEMENT,"No
+",1/3,"1/2/3/4
+",False,300,UN,True,True
+123,LA,SCHG,Y,,,,,,,+15/-7,>30,<=Y,,original,,"SKCHG LA{FlightNumber} 
+ {O&D} {DepartDateDDMMM} CNLD",Contact Airline,BO_ENDORSEMENT,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",True,31,XX,True,True
+124,LA,SCHG,Y,,,,,,,+15/-7,>30,<=Y,,original,,INVOL CHG DUE TO COVID19,Contact Airline,OSI,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",True,31,XX,True,True
+125,LA,SCHG,S,,,,,,,+15/-7,>30,<=W,,original,,"SKCHG LA{FlightNumber} 
+ {O&D} {DepartDateDDMMM} CNLD",Contact Airline,BO_ENDORSEMENT,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",True,31,XX,True,True
+126,LA,SCHG,S,,,,,,,+15/-7,>30,<=W,,original,,INVOL CHG DUE TO COVID19,Contact Airline,OSI,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",True,31,XX,True,True
+127,LA,SCHG,C,,,,,,,+15/-7,>30,<=J,,original,,"SKCHG LA{FlightNumber} 
+ {O&D} {DepartDateDDMMM} CNLD",Contact Airline,BO_ENDORSEMENT,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",True,31,XX,True,True
+128,LA,SCHG,C,,,,,,,+15/-7,>30,<=J,,original,,INVOL CHG DUE TO COVID19,Contact Airline,OSI,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",True,31,XX,True,True
+129,LA,SCHG,F,,,,,,,+15/-7,>30,<=F,,original,,"SKCHG LA{FlightNumber} 
+ {O&D} {DepartDateDDMMM} CNLD",Contact Airline,BO_ENDORSEMENT,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",True,31,XX,True,True
+130,LA,SCHG,F,,,,,,,+15/-7,>30,<=F,,original,,INVOL CHG DUE TO COVID19,Contact Airline,OSI,"No
+","1/2/3/4/5/6
+","1/2/3/4
+",True,31,XX,True,True
+131,ET,SCHG,Y,,,,,,,+5/-5,>240,original,,original,,INVLSC{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,"1/2/3/4
+",1/2,True,240,,True,True
+132,ET,SCHG,C,,,,,,,+5/-5,>240,original,,original,,INVLSC{MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,"1/2/3/4
+",1/2,True,240,,True,True
+133,DY,SCHG,Y,,,,,,,+7/-7,>180,<=Y,,original,,"INVOLSC{FlightNumber} 
+{DepartDateDDMMM}",,BO_ENDORSEMENT,"No
+
+","1/2/3/4/5
+
+",1,False,"180
+",UN ,True,True
+134,DY,SCHG,C,,,,,,,+7/-7,>180,original,,original,,"INVOLSC{FlightNumber} 
+{DepartDateDDMMM}",,BO_ENDORSEMENT,"No
+
+","1/2/3/4/5
+
+",1,False,"180
+",UN ,True,True
+135,DY,SCHG,F,,,,,,,+7/-7,>179,original,,original,,"INVOLSC{FlightNumber} 
+{DepartDateDDMMM}",,BO_ENDORSEMENT,"No
+
+","1/2/3/4/5
+
+",1,False,"180
+",UN ,True,True
+136,AS,SCHG,Y,,,,,,,+1/-1,>60,<=Y,,original,,ASSC,,TOUR_CODE,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,"60
+",,True,True
+137,AS,SCHG,Y,,,,,,,+1/-1,>60,<=Y,,original,,"REISSUE DUE TO 
+SCHEDULE CHANGE {MarketingAirline} {FlightNumber} {O&D} {DepartDateDDMMM}",,OSI,"No
+
+","1/2/3/4/5
+",1/2/3/4,False," 60
+",,True,True
+138,AS,SCHG,S,,,,,,,+1/-1,>60,original,,original,,ASSC,,TOUR_CODE,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,"60
+",,True,True
+139,AS,SCHG,S,,,,,,,+1/-1,>60,original,,original,,"REISSUE DUE TO 
+SCHEDULE CHANGE {MarketingAirline} {FlightNumber} {O&D} {DepartDateDDMMM}",,OSI,"No
+
+","1/2/3/4/5
+",1/2/3/4,False," 60
+",,True,True
+140,AS,SCHG,C,,,,,,,+1/-1,>60,<=J,,original,,ASSC,,TOUR_CODE,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,"60
+",,True,True
+141,AS,SCHG,C,,,,,,,+1/-1,>60,<=J,,original,,"REISSUE DUE TO 
+SCHEDULE CHANGE {MarketingAirline} {FlightNumber} {O&D} {DepartDateDDMMM}",,OSI,"No
+
+","1/2/3/4/5
+",1/2/3/4,False," 60
+",,True,True
+142,AS,SCHG,F,,,,,,,+1/-1,>60,<=F,,original,,ASSC,,TOUR_CODE,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,"60
+",,True,True
+143,AS,SCHG,F,,,,,,,+1/-1,>60,<=F,,original,,"REISSUE DUE TO 
+SCHEDULE CHANGE {MarketingAirline} {FlightNumber} {O&D} {DepartDateDDMMM}",,OSI,"No
+
+","1/2/3/4/5
+",1/2/3/4,False," 60
+",,True,True
+144,AM,SCHG,Y,,,,,,,+2/-2,>120,<=Y,W,original,,SKDAMRELOCAT,Contact Airline,TOUR_CODE,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,300,XX,False,False
+145,AM,SCHG,Y,,,,,,,+2/-2,>120,<=Y,W,original,,AM REISSUE DUE TO AM SKED CHG (FLIGHT) (DATE),Contact Airline,OSI,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,300,XX,False,False
+147,AM,SCHG,S,,,,,,,+2/-2,>120,W,,original,,SKDAMRELOCAT,Contact Airline,Contact Airline,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,300,XX,False,False
+148,AM,SCHG,S,,,,,,,+2/-2,>120,W,,original,,AM REISSUE DUE TO AM SKED CHG (FLIGHT) (DATE),Contact Airline,Contact Airline,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,300,XX,False,False
+150,AM,SCHG,C,,,,,,,+2/-2,>120,<=J,,original,,SKDAMRELOCAT,Contact Airline,Contact Airline,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,300,XX,False,False
+151,AM,SCHG,C,,,,,,,+2/-2,>120,<=J,,original,,AM REISSUE DUE TO AM SKED CHG (FLIGHT) (DATE),Contact Airline,Contact Airline,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,300,XX,False,False
+153,AM,SCHG,F,,,,,,,+2/-2,>120,<=F,,original,,SKDAMRELOCAT,Contact Airline,Contact Airline,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,300,XX,False,False
+154,AM,SCHG,F,,,,,,,+2/-2,>120,<=F,,original,,AM REISSUE DUE TO AM SKED CHG (FLIGHT) (DATE),Contact Airline,Contact Airline,"No
+
+","1/2/3/4/5
+",1/2/3/4,False,300,XX,False,False
+156,B6,SCHG,Y,,,,,,,+5/-5,>180,<=Y,,original,,B6 REISSUE DUE TO {MarketingAirline}{FlightNumber} CHANGE {DepartDateDDMMMYYYY},,OSI,"No
+
+","1/2/3/4/5/6
+",1/2/3/4,False,"180
+",,True,True
+157,B6,SCHG,Y,,,,,,,+5/-5,>180,<=Y,,original,,B6SKDCHG,,TOUR_CODE,"No
+
+","1/2/3/4/5/6
+",1/2/3/4,False,"180
+",,True,True
+158,B6,SCHG,S,,,,,,,+5/-5,>180,original,,original,,B6 REISSUE DUE TO {MarketingAirline}{FlightNumber} CHANGE {DepartDateDDMMMYYYY},,OSI,"No
+
+","1/2/3/4/5/6
+",1/2/3/4,False,"180
+",,True,True
+159,B6,SCHG,S,,,,,,,+5/-5,>180,original,,original,,B6SKDCHG,,TOUR_CODE,"No
+
+","1/2/3/4/5/6
+",1/2/3/4,False,"180
+",,True,True
+160,B6,SCHG,C,,,,,,,+5/-5,>180,<=J,,original,,B6 REISSUE DUE TO {MarketingAirline}{FlightNumber} CHANGE {DepartDateDDMMMYYYY},,OSI,"No
+
+","1/2/3/4/5/6
+",1/2/3/4,False,"180
+",,True,True
+161,B6,SCHG,C,,,,,,,+5/-5,>180,<=J,,original,,B6SKDCHG,,TOUR_CODE,"No
+
+","1/2/3/4/5/6
+",1/2/3/4,False,"180
+",,True,True
+162,B6,SCHG,F,,,,,,,+5/-5,>180,original,,original,,B6 REISSUE DUE TO {MarketingAirline}{FlightNumber} CHANGE {DepartDateDDMMMYYYY},,OSI,"No
+
+","1/2/3/4/5/6
+",1/2/3/4,False,"180
+",,True,True
+163,B6,SCHG,F,,,,,,,+5/-5,>180,original,,original,,B6SKDCHG,,TOUR_CODE,"No
+
+","1/2/3/4/5/6
+",1/2/3/4,False,"180
+",,True,True
+164,AF,SCHG,Y,,,,,,,+30/-30,>180,<=Y,,<=Y,,INVOL REISSUE DUE SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+300 mile radius",1/3/5/6,1/2/3/4,True,"300
+
+",,True,True
+165,AF,SCHG,S,,,,,,,+30/-30,>180,<=W,,original,,INVOL REISSUE DUE SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+300 mile radius",1/3/5/6,1/2/3/4,True,"300
+
+",,True,True
+166,AF,SCHG,C,,,,,,,+30/-30,>180,<=J,,original,,INVOL REISSUE DUE SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+300 mile radius",1/3/5/6,1/2/3/4,True,"300
+
+",,True,True
+167,AF,SCHG,F,,,,,,,+30/-30,>180,original,,original,,INVOL REISSUE DUE SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+300 mile radius",1/3/5/6,1/2/3/4,True,"300
+
+",,True,True
+168,KL,SCHG,Y,,,,,,,+30/-30,>180,<=Y,,<=Y,,INVOL REISSUE DUE SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+300 mile radius",1/3/5/6,1/2/3/4,True,"180
+",,True,True
+169,KL,SCHG,S,,,,,,,+30/-30,>180,<=W,,original,,INVOL REISSUE DUE SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+300 mile radius",1/3/5/6,1/2/3/4,True,"180
+",,True,True
+170,KL,SCHG,C,,,,,,,+30/-30,>180,<=J,,original,,INVOL REISSUE DUE SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+300 mile radius",1/3/5/6,1/2/3/4,True,"180
+",,True,True
+171,KL,SCHG,F,,,,,,,+30/-30,>180,original,,original,,INVOL REISSUE DUE SC {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+300 mile radius",1/3/5/6,1/2/3/4,True,"180
+",,True,True
+172,DE,SCHG,Y,,,,,,,+7/-7,>300,<=A,,original,,EXCH DUE TO SCHED CHNG  {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+Same Country",1/2/3/4/5/6,1/2/3/4,False,"180
+",,True,True
+173,DE,SCHG,S,,,,,,,+7/-7,>300,<=Y,,original,,EXCH DUE TO SCHED CHNG  {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+Same Country",1/2/3/4/5/6,1/2/3/4,False,"180
+",,True,True
+174,DE,SCHG,C,,,,,,,+7/-7,>300,<=C,,original,,EXCH DUE TO SCHED CHNG  {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+Same Country",1/2/3/4/5/6,1/2/3/4,False,"180
+",,True,True
+175,DE,SCHG,F,,,,,,,+7/-7,>300,original,,original,,EXCH DUE TO SCHED CHNG  {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+Same Country",1/2/3/4/5/6,1/2/3/4,False,"180
+",,True,True
+176,BR,SCHG,Y,,,,,,,+14/-14,>120,original,,original,,SKCHG DUE TO {MarketingAirline} {FlightNumber}/{DepartDateDDMMM} CANX,,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+177,BR,SCHG,S,,,,,,,+14/-14,>120,original,,original,,SKCHG DUE TO {MarketingAirline} {FlightNumber}/{DepartDateDDMMM} CANX,,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+178,BR,SCHG,C,,,,,,,+14/-14,>120,original,,original,,SKCHG DUE TO {MarketingAirline} {FlightNumber}/{DepartDateDDMMM} CANX,,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+179,BR,SCHG,F,,,,,,,+14/-14,>120,original,,original,,SKCHG DUE TO {MarketingAirline} {FlightNumber}/{DepartDateDDMMM} CANX,,BO_ENDORSEMENT,No,1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+180,VS,SCHG,Y,,,,,,,+1/-1,>300,<=Y,,original,,VS  SCHEDULE CHANGE  {MarketingAirline}{FlightNumber},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,"300
+ ",,True,True
+181,VS,SCHG,Y,,,,,,,+1/-1,>300,<=Y,,original,,VS REISSUE FOC,,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,"300
+ ",,True,True
+182,VS,SCHG,S,,,,,,,+1/-1,>300,<=W,,original,,VS  SCHEDULE CHANGE  {MarketingAirline}{FlightNumber},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,"300
+ ",,True,True
+183,VS,SCHG,S,,,,,,,+1/-1,>300,<=W,,original,,VS REISSUE FOC,,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,"300
+ ",,True,True
+184,VS,SCHG,C,,,,,,,+1/-1,>300,<=J,,original,,VS  SCHEDULE CHANGE  {MarketingAirline}{FlightNumber},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,"300
+ ",,True,True
+185,VS,SCHG,C,,,,,,,+1/-1,>300,<=J,,original,,VS REISSUE FOC,,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,"300
+ ",,True,True
+186,VS,SCHG,F,,,,,,,+1/-1,>300,original,,original,,VS  SCHEDULE CHANGE  {MarketingAirline}{FlightNumber},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,"300
+ ",,True,True
+187,VS,SCHG,F,,,,,,,+1/-1,>300,original,,original,,VS REISSUE FOC,,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,"300
+ ",,True,True
+188,SK,SCHG,Y,,,,,,,+7/-7,>60,<=E,,original,,SKCHG DUE {MarketingAirline} CHANGE OF {FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"No
+
+
+",1/3,1/2/3/4,False,60,UN,True,True
+189,SK,SCHG,S,,,,,,,+7/-7,>60,<=Y,,original,,SKCHG DUE {MarketingAirline} CHANGE OF {FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"No
+
+
+",1/3,1/2/3/4,False,60,UN,True,True
+190,SK,SCHG,C,,,,,,,+7/-7,>60,<=C,,original,,SKCHG DUE {MarketingAirline} CHANGE OF {FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"No
+
+
+",1/3,1/2/3/4,False,60,UN,True,True
+191,SK,SCHG,F,,,,,,,+7/-7,>60,original,,original,,SKCHG DUE {MarketingAirline} CHANGE OF {FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"No
+
+
+",1/3,1/2/3/4,False,60,UN,True,True
+192,MU,SCHG,Y,,,,,,,+3/-3,>16,original,,original,,{MarketingAirline}{FlightNumber}/{DepartDateDDMMM} SC,,BO_ENDORSEMENT,"No
+
+
+",1,1,False,300,,True,True
+193,MU,SCHG,C,,,,,,,+3/-3,>16,original,,original,,{MarketingAirline}{FlightNumber}/{DepartDateDDMMM} SC,,BO_ENDORSEMENT,"No
+
+
+",1,1,False,300,,True,True
+194,MU,SCHG,F,,,,,,,+3/-3,>16,original,,original,,{MarketingAirline}{FlightNumber}/{DepartDateDDMMM} SC,,BO_ENDORSEMENT,"No
+
+
+",1,1,False,300,,True,True
+195,CM,SCHG,Y,,,,,,,+4/-4,>240,<=Y,A,original,,SC-MINOR01-{DepartDateDDMMMYY},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+196,CM,SCHG,Y,,,,,,,+4/-4,>240,<=Y,A,original,,SC-MINOR02-{DepartDateDDMMMYY},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+197,CM,SCHG,Y,,,,,,,+4/-4,>240,<=Y,A,original,,WSCHA,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+198,CM,SCHG,C,,,,,,,+4/-4,>240,<=J,,original,,WSCHA,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+199,CM,SCHG,C,,,,,,,+4/-4,>240,<=J,,original,,SC-DISRUPTION01-{DepartDateDDMMMYY},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+200,CM,SCHG,C,,,,,,,+4/-4,>240,<=J,,original,,PAX SC CONFIRMED,,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+201,CM,SCHG,F,,,,,,,+4/-4,>240,original,,original,,WSCHA,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+202,CM,SCHG,F,,,,,,,+4/-4,>240,original,,original,,WSCHA,,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+203,CM,SCHG,F,,,,,,,+4/-4,>240,original,,original,,PAX SC CONFIRMED,,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,240,XX,True,True
+204,AI,SCHG,Y,,,,,,,+6/-1,>120,<=Y,,original,,SKCHG/AI{FlightNumber}/{DepartDateDDMMMYY},,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,"1/2/3/4
+
+",True,300,UN,True,True
+205,AI,SCHG,Y,,,,,,,+6/-1,>120,<=Y,,original,,INVOL/AI{FlightNumber}/{DepartDateDDMMMYY},,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,"1/2/3/4
+
+",False,300,UN,True,True
+206,AI,SCHG,S,,,,,,,+6/-1,>120,original,,original,,3OS AIINVOL/AI{FlightNumber}/{DepartDateDDMMMYY},,OSI,"No
+
+
+",1/2/3/4/5/6,"1/2/3/4
+
+",False,300,UN,True,True
+207,AI,SCHG,S,,,,,,,+6/-1,>120,original,,original,,3OS AI SKCHG/AI{FlightNumber}/{DepartDateDDMMMYY},,OSI,"No
+
+
+",1/2/3/4/5/6,"1/2/3/4
+
+",False,300,UN,True,True
+208,AI,SCHG,C,,,,,,,+6/-1,>120,<=C,,original,,SKCHG/AI{FlightNumber}/{DepartDateDDMMMYY},,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+209,AI,SCHG,C,,,,,,,+6/-1,>120,<=C,,original,,INVOL/AI{FlightNumber}/{DepartDateDDMMMYY},,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+210,AI,SCHG,F,,,,,,,+6/-1,>120,<=F,,original,,3OS AIINVOL/AI{FlightNumber}/{DepartDateDDMMMYY},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+211,AI,SCHG,F,,,,,,,+6/-1,>120,<=F,,original,,3OS AI SKCHG/AI{FlightNumber}/{DepartDateDDMMMYY},,OSI,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,300,UN,True,True
+212,AD,SCHG,Y,,,,,,,+7/-7,>60,<=Y,,original,,INVOL REROUTE DUE TO SCHEDCHG ON {MarketingAirline} {FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+Same City",1/2/3/4/5/6,"1/2/3/4
+
+",False, 60,,True,True
+213,AD,SCHG,S,,,,,,,+7/-7,>60,original,,original,,INVOL REROUTE DUE TO SCHEDCHG ON {MarketingAirline} {FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+Same City",1/2/3/4/5/6,"1/2/3/4
+
+",False, 60,,True,True
+214,AD,SCHG,C,,,,,,,+7/-7,>60,<=C,,original,,INVOL REROUTE DUE TO SCHEDCHG ON {MarketingAirline} {FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+Same City",1/2/3/4/5/6,"1/2/3/4
+
+",False, 60,,True,True
+215,AD,SCHG,F,,,,,,,+7/-7,>60,original,,original,,INVOL REROUTE DUE TO SCHEDCHG ON {MarketingAirline} {FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,"Yes
+Same City",1/2/3/4/5/6,"1/2/3/4
+
+",False, 60,,True,True
+216,G3,SCHG,Y,,,,,,,+7/-7,>180,<=Y,,original,,INVOL DUE SCHD {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,"No
+
+
+",1/2/3,1/2/3/4,False,60,UN,True,True
+217,G3,SCHG,S,,,,,,,+7/-7,>180,original,,original,,INVOL DUE SCHD {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,"No
+
+
+",1/2/3,1/2/3/4,False,60,UN,True,True
+218,G3,SCHG,C,,,,,,,+7/-7,>180,original,,original,,INVOL DUE SCHD {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,"No
+
+
+",1/2/3,1/2/3/4,False,60,UN,True,True
+219,G3,SCHG,F,,,,,,,+7/-7,>180,original,,original,,INVOL DUE SCHD {MarketingAirline}{FlightNumber} / {DepartDateDDMMM},,BO_ENDORSEMENT,"No
+
+
+",1/2/3,1/2/3/4,False,60,UN,True,True
+220,AV,SCHG,Y,,,,,,,+30/-8,>60,<=Y,,original,,10391,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,300,XX,True,True
+221,AV,SCHG,S,,,,,,,+30/-8,>60,original,,original,,10391,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,300,XX,True,True
+222,AV,SCHG,C,,,,,,,+30/-8,>60,<=C,,original,,10391,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,300,XX,True,True
+223,AV,SCHG,F,,,,,,,+30/-8,>60,original,,original,,10391,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5/6,1/2/3/4,False,300,XX,True,True
+224,WS,SCHG,Y,,,,,,,+2/-2,>180,<=Y,"A,E",original,,SKCHG,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5,1/2/3/4,False,180,UN ,True,True
+225,WS,SCHG,S,,,,,,,+2/-2,>180,<=W,,original,,SKCHG,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5,1/2/3/4,False,180,UN ,True,True
+226,WS,SCHG,C,,,,,,,+2/-2,>180,<=J,,original,,SKCHG,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5,1/2/3/4,False,180,UN ,True,True
+227,WS,SCHG,F,,,,,,,+2/-2,>180,original,,original,,SKCHG,,BO_ENDORSEMENT,"No
+
+
+",1/2/3/4/5,1/2/3/4,False,180,UN ,True,True
+228,AR,SCHG,Y,,,,,,,+15/-15,>240,original,,original,,SKCHGAR{FlightNumber},,BO_ENDORSEMENT,"No
+
+
+",3,1,False,300,XX,False,False
+229,AR,SCHG,S,,,,,,,+15/-15,>240,original,,original,,SKCHGAR{FlightNumber},,BO_ENDORSEMENT,"No
+
+
+",3,1,False,300,XX,False,False
+230,AR,SCHG,C,,,,,,,+15/-15,>240,original,,original,,SKCHGAR{FlightNumber},,BO_ENDORSEMENT,"No
+
+
+",3,1,False,300,XX,False,False
+231,AR,SCHG,F,,,,,,,+15/-15,>240,original,,original,,SKCHGAR{FlightNumber},,BO_ENDORSEMENT,"No
+
+
+",3,1,False,300,XX,False,False
+232,PR,SCHG,Y,,,,,,,+60/-3,>120,original,,original,,INVOL DUE {MarketingAirline}{FlightNumber}/{DepartDateDDMMMYY} XLD,INVOL DUE {MarketingAirline}{FlightNumber}/{DepartDateDDMMMYY} XLD,BO_ENDORSEMENT,No,1/2/3,1/2/3/4,False,120,UN,True,True
+233,PR,SCHG,C,,,,,,,+60/-3,>120,original,,original,,INVOL DUE {MarketingAirline}{FlightNumber}/{DepartDateDDMMMYY} XLD,INVOL DUE {MarketingAirline}{FlightNumber}/{DepartDateDDMMMYY} XLD,BO_ENDORSEMENT,No,1/2/3,1/2/3/4,False,120,UN,True,True
+234,TP,SCHG,Y,,,,,,,+3/-3,>300,original,,original,,"SCHED CHNG {FlightNumber}
+TP/{DepartDateDDMMM}",,BO_ENDORSEMENT,No,1/3,1,False,300,,False,False
+235,TP,SCHG,C,,,,,,,+3/-3,>300,original,,original,,"SCHED CHNG {FlightNumber}
+TP/{DepartDateDDMMM}",,BO_ENDORSEMENT,No,1/3,1,False,300,,False,False
+236,MS,SCHG,Y,,,,,,,+1/-1,>360,original,,original,,INVOL {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+237,MS,SCHG,C,,,,,,,+1/-1,>360,original,,original,,INVOL {MarketingAirline}{FlightNumber}/{DepartDateDDMMM},,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+238,JX,SCHG,Y,,,,,,,+14/-14,>120,<=Y,,original,,SKCHG DUE TO {MarketingAirline}{FlightNumber}/{DepartDateDDMMM} FLIFO,,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+239,JX,SCHG,S,,,,,,,+14/-14,>120,<=W,,original,,SKCHG DUE TO {MarketingAirline}{FlightNumber}/{DepartDateDDMMM} FLIFO,,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+240,JX,SCHG,C,,,,,,,+14/-14,>120,<=J,,original,,SKCHG DUE TO {MarketingAirline}{FlightNumber}/{DepartDateDDMMM} FLIFO,,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+241,JX,SCHG,F,,,,,,,+14/-14,>120,<=F,,original,,SKCHG DUE TO {MarketingAirline}{FlightNumber}/{DepartDateDDMMM} FLIFO,,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+242,KQ,SCHG,Y,,,,,,,+1/-1,>180,original,,original,,INVOL REISSUE DUE {MarketingAirline}{FlightNumber}/{DepartDateDDMMMYY},,BO_ENDORSEMENT,No,1/3,1,False,180,,True,True
+243,KQ,SCHG,S,,,,,,,+1/-1,>180,original,,original,,INVOL REISSUE DUE {MarketingAirline}{FlightNumber}/{DepartDateDDMMMYY},,BO_ENDORSEMENT,No,1/3,1,False,180,,True,True
+244,KQ,SCHG,C,,,,,,,+1/-1,>180,original,,original,,INVOL REISSUE DUE {MarketingAirline}{FlightNumber}/{DepartDateDDMMMYY},,BO_ENDORSEMENT,No,1/3,1,False,180,,True,True
+245,KQ,SCHG,F,,,,,,,+1/-1,>180,original,,original,,INVOL REISSUE DUE {MarketingAirline}{FlightNumber}/{DepartDateDDMMMYY},,BO_ENDORSEMENT,No,1/3,1,False,180,,True,True
+246,CZ,SCHG,Y,,,,,,,+7/-7,,<=Y,,original,,SCUS,,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+247,CZ,SCHG,S,,,,,,,+7/-7,,<=W,,original,,SCUS,,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+248,CZ,SCHG,C,,,,,,,+7/-7,,<=J,,original,,SCUS,,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+249,CZ,SCHG,F,,,,,,,+7/-7,,<=F,,original,,SCUS,,BO_ENDORSEMENT,No,1/3,1,False,300,,True,True
+250,NZ,SCHG,Y,,,,,,,+7/-7,>360,<=Y,,original,,REISSUE DUE SCHL CHNG,Contact Airline,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,360,,True,False
+251,NZ,SCHG,S,,,,,,,+7/-7,>360,<=U,,original,,REISSUE DUE SCHL CHNG,Contact Airline,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,360,,True,False
+252,NZ,SCHG,C,,,,,,,+7/-7,>360,<=C,,original,,REFUND DUE TO UNACCEPTABLE SCHD CHNG,Contact Airline,BO_ENDORSEMENT,No,1/3,1/2/3/4,False,360,,True,False
+253,ALL,SCHG,Y,,,,,,,+1/-1,,original,,original,,Contact Airline,Contact Airline,Contact Airline,No,1/2/3/4/5,1/2/3/4,False,300,UN,False,False
+254,ALL,SCHG,S,,,,,,,+1/-1,,original,,original,,Contact Airline,Contact Airline,Contact Airline,No,1/2/3/4/5,1/2/3/4,False,300,UN,False,False
+255,ALL,SCHG,C,,,,,,,+1/-1,,original,,original,,Contact Airline,Contact Airline,Contact Airline,No,1/2/3/4/5,1/2/3/4,False,300,UN,False,False
+256,ALL,SCHG,F,,,,,,,+1/-1,,original,,original,,Contact Airline,Contact Airline,Contact Airline,No,1/2/3/4/5,1/2/3/4,False,300,UN,False,False

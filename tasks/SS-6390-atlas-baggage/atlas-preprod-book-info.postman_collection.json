@@ -1,0 +1,57 @@
+{
+  "info": {
+    "name": "SS-6390 PREPROD existing booking — Book/Info only",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Use additionalInfo from an existing PREPROD booking log. Only Book/Info is included. Configure preprod_authorization locally; credentials are not embedded. No Search, Result, Book/Create or Ticket/Create calls."
+  },
+  "item": [
+    {
+      "name": "PREPROD Book/Info",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{preprod_authorization}}"
+          }
+        ],
+        "url": "https://airapi51.kivops.info:8090/atlas/v1/book/info",
+        "body": {
+          "mode": "raw",
+          "raw": "{{preprod_request_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const raw=pm.iterationData.get('request_body')||pm.variables.get('preprod_request_body');if(!raw){pm.execution.skipRequest();throw new Error('Supply original existing-booking request from logs');}const d=JSON.parse(raw);if(!d.additionalInfo){pm.execution.skipRequest();throw new Error('Missing existing booking additionalInfo');}pm.variables.set('preprod_request_body',raw);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();",
+              "const cm=pm.iterationData.get('expected_carry_on_length_cm');const inch=pm.iterationData.get('expected_carry_on_length_inch');const path=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segments=path.split('.').reduce((v,k)=>v?.[k],d);if(cm!==undefined && cm!=='')for(const seg of segments||[])pm.test('Source-supplied carry-on dimensions mapped',()=>{pm.expect(seg.carryOn.ADT.lengthCm).to.equal(Number(cm));pm.expect(seg.carryOn.ADT.lengthInch).to.be.oneOf(String(inch).split(';').map(Number));});",
+              "const p=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segs=p.split('.').reduce((v,k)=>v?.[k],d);pm.test('SS-6390: segment baggage exists',()=>pm.expect(segs).to.be.an('array').and.not.empty);if(Array.isArray(segs))for(const s of segs){for(const type of ['baggage','carryOn'])for(const [ptc,b] of Object.entries(s[type]||{})){pm.test(type+' full texts are null',()=>{pm.expect(b.baggageFullTextA == null).to.equal(true);pm.expect(b.baggageFullTextD == null).to.equal(true);});pm.test(type+' piece formatting',()=>pm.expect(b.numberOfPcs).to.match(type==='baggage'?/^\\d{2}P$/:/^\\d+P$/));}}"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

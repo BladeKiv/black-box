@@ -1,0 +1,388 @@
+{
+  "key": "51_U0FMS0lWKkMxMDAwL0NQSERFTjIwMjctMDYtMzBfMDgxMjE4KkFBfiNBWTk1NCNBQTkwMTkjQUEyMjM1fmxjOmVuX3Vz",
+  "routingId": 15,
+  "priceElement": {
+    "NotValid": false,
+    "NotValidErr": null,
+    "GdsCurrency": "USD",
+    "TargetCurrency": "USD",
+    "oBaseFare": {
+      "ADT": 3036
+    },
+    "oBaseTax": {
+      "ADT": 1032.63
+    },
+    "CpanelMK": {
+      "markupId": 0,
+      "markupUid": ""
+    },
+    "CK": {
+      "IsCK": false,
+      "CkScenario": 0,
+      "PaymentTypeSupported": 0
+    }
+  },
+  "prices": {
+    "lastTicketDate": "",
+    "totalPrice": 4068.63,
+    "totalTax": 1032.63,
+    "comm": 0,
+    "isCk": false,
+    "markupId": 0,
+    "markupUid": "",
+    "markup": 0
+  },
+  "passengers": {
+    "ADT": {
+      "codeAs": "ADT",
+      "cnt": 1,
+      "baseFare": 3036,
+      "pubBaseFare": 0,
+      "baseTax": 1032.63,
+      "pubBaseTax": 0,
+      "markup": 0,
+      "comm": 0,
+      "price": 4068.63,
+      "tax": 1032.63,
+      "oBaseFare": {
+        "amount": 3036,
+        "currency": "USD"
+      },
+      "oBaseTax": {
+        "amount": 1032.63,
+        "currency": "USD"
+      }
+    }
+  },
+  "penalties": {
+    "exchange": true,
+    "refund": false,
+    "list": [
+      {
+        "type": "ex",
+        "applicability": "before",
+        "permitted": true,
+        "amount": 0,
+        "oAmount": {
+          "amount": 0,
+          "currency": "USD"
+        }
+      },
+      {
+        "type": "re",
+        "applicability": "before",
+        "permitted": false
+      }
+    ]
+  },
+  "trips": [
+    {
+      "tripId": 1,
+      "segments": [
+        {
+          "segmentId": 1,
+          "departureTime": "2027-06-30 08:45",
+          "arrivalTime": "2027-06-30 11:20",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "954",
+          "operatingFlightNumber": "954",
+          "bookingClass": "R",
+          "duration": 95,
+          "departureAirportCode": "CPH",
+          "departureAirportTerminal": "2",
+          "arrivalAirportCode": "HEL",
+          "arrivalAirportTerminal": "",
+          "operatingAirline": "AY",
+          "airEquipType": "320",
+          "aircraft": "Airbus A320-100",
+          "marketingAirline": "AY",
+          "marriageGroup": "",
+          "cabin": "C",
+          "brandName": "Business",
+          "meal": "",
+          "fareCode": "RNN5C5S4",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "allowPieces": 2,
+              "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+              "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+              "kg": 32,
+              "lbs": 70,
+              "cm": 158,
+              "inch": 62
+            }
+          },
+          "recheckBaggage": false
+        },
+        {
+          "segmentId": 2,
+          "departureTime": "2027-06-30 12:35",
+          "arrivalTime": "2027-06-30 15:20",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "9019",
+          "operatingFlightNumber": "19",
+          "bookingClass": "R",
+          "duration": 645,
+          "departureAirportCode": "HEL",
+          "departureAirportTerminal": "",
+          "arrivalAirportCode": "DFW",
+          "arrivalAirportTerminal": "D",
+          "operatingAirline": "AY",
+          "airEquipType": "330",
+          "aircraft": "Airbus A330",
+          "marketingAirline": "AA",
+          "marriageGroup": "",
+          "cabin": "C",
+          "brandName": "Business",
+          "meal": "",
+          "fareCode": "RNN5C5S4",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "allowPieces": 2,
+              "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+              "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+              "kg": 32,
+              "lbs": 70,
+              "cm": 158,
+              "inch": 62
+            }
+          },
+          "recheckBaggage": false
+        },
+        {
+          "segmentId": 3,
+          "departureTime": "2027-06-30 18:30",
+          "arrivalTime": "2027-06-30 19:36",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "2235",
+          "operatingFlightNumber": "2235",
+          "bookingClass": "R",
+          "duration": 126,
+          "departureAirportCode": "DFW",
+          "departureAirportTerminal": "0",
+          "arrivalAirportCode": "DEN",
+          "arrivalAirportTerminal": "",
+          "operatingAirline": "AA",
+          "airEquipType": "321",
+          "aircraft": "Airbus A321-100",
+          "marketingAirline": "AA",
+          "marriageGroup": "",
+          "cabin": "F",
+          "brandName": "Business",
+          "meal": "",
+          "fareCode": "RNN5C5S4",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "allowPieces": 2,
+              "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+              "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+              "kg": 32,
+              "lbs": 70,
+              "cm": 158,
+              "inch": 62
+            }
+          },
+          "recheckBaggage": false
+        }
+      ],
+      "duration": 1131,
+      "airlineRating": "4",
+      "baggage": {
+        "carryOn": true,
+        "carryOnSource": "provider",
+        "allowPieces": 2,
+        "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+        "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+        "kg": 32,
+        "lbs": 70,
+        "cm": 158,
+        "inch": 62
+      }
+    }
+  ],
+  "maxSeats": 0,
+  "paxCnt": 1,
+  "validatingCarrier": "AA",
+  "gds": "G",
+  "pcc": "DEF",
+  "cons": "GTT",
+  "fareType": "PUB",
+  "tripType": "OW",
+  "cabin": "C",
+  "currency": "USD",
+  "currencySymbol": "$",
+  "currencies": [
+    "USD"
+  ],
+  "currencyRates": {
+    "USDUSD": {
+      "from": "USD",
+      "to": "USD",
+      "rate": 1
+    }
+  },
+  "founded_dt": "2026-09-30 12:54:56.838",
+  "keys": {
+    "services": {
+      "serviceFee": {
+        "amount": 350,
+        "currency": "USD"
+      }
+    },
+    "agent_profit": {
+      "gp": 0,
+      "np": 0,
+      "currency": "USD"
+    },
+    "baggage": {
+      "carryOn": true,
+      "carryOnSource": "provider",
+      "allowPieces": 2,
+      "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+      "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+      "priceWithBag0": {
+        "ADT": 4068.63,
+        "total": 4068.63
+      },
+      "priceWithBag1": {
+        "ADT": 4068.63,
+        "total": 4068.63
+      },
+      "priceWithBag2": {
+        "ADT": 4068.63,
+        "total": 4068.63
+      },
+      "kg": 32,
+      "lbs": 70,
+      "cm": 158,
+      "inch": 62
+    },
+    "ndc_keys": {
+      "ownerCode": "AA",
+      "pcc": "BA82",
+      "fare": "PUB",
+      "currency": "USD",
+      "bags": 2,
+      "offers": [
+        {
+          "offerId": "X7E2D291A-876D-4CF5-A8E0-16",
+          "responseId": "X7E2D291A-876D-4CF5-A8E0",
+          "offerItems": [
+            {
+              "offerItemId": "X7E2D291A-876D-4CF5-A8E0-16-1",
+              "paxRefIds": [
+                "PAX1"
+              ]
+            }
+          ]
+        }
+      ],
+      "passengers": [
+        {
+          "id": "PAX1",
+          "ptc": "ADT"
+        }
+      ]
+    }
+  },
+  "ngsFeatures": {
+    "stars": 1,
+    "name": "Business",
+    "list": [
+      {
+        "id": "2",
+        "application": "N",
+        "serviceType": "T",
+        "tag": "REFUND",
+        "commercialName": "REFUND BEFORE DEPARTURE",
+        "atpco": "06K",
+        "breakdown": [
+          "1:1",
+          "1:2",
+          "1:3"
+        ]
+      },
+      {
+        "id": "3",
+        "application": "F",
+        "serviceType": "T",
+        "tag": "CHANGE",
+        "commercialName": "CHANGE BEFORE DEPARTURE",
+        "atpco": "06I",
+        "breakdown": [
+          "1:1",
+          "1:2",
+          "1:3"
+        ]
+      },
+      {
+        "id": "11",
+        "application": "F",
+        "serviceType": "C",
+        "tag": "CABIN",
+        "commercialName": "CARRY ON HAND BAGGAGE",
+        "atpco": "0L5",
+        "breakdown": [
+          "1:1",
+          "1:2",
+          "1:3"
+        ]
+      },
+      {
+        "id": "15",
+        "application": "F",
+        "serviceType": "C",
+        "tag": "CHECKED",
+        "commercialName": "2PC UPTO50LB 23KG AND62LI 158LCM",
+        "atpco": "0GO",
+        "breakdown": [
+          "1:1",
+          "1:2",
+          "1:3"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "eip": 0,
+    "noavail": false,
+    "searchId": "U0FMS0lWQzEwMDB8Q1BIREVOMjAyNy0wNi0zMA==",
+    "traceId": "0ecfced9-b6aa-408f-a722-e2740bd66a41",
+    "lang": "en",
+    "rank": 7.289998,
+    "rank_v2": {
+      "points_diff": -48.350998,
+      "money_diff": 0,
+      "scaled_points_diff": 7.289998,
+      "scaled_money_diff": 0,
+      "rank_v_1": 0
+    },
+    "cheapest": false,
+    "fastest": false,
+    "best": false,
+    "bags": 2,
+    "country": "us",
+    "prod_types": [
+      "PUB"
+    ],
+    "voidWindow": "24H",
+    "voidWindowDeadline": "2026-10-01 12:54Z",
+    "alliance": "One World",
+    "partner_quote_id": "0ecfced9-b6aa-408f-a722-e2740bd66a41-15",
+    "is_lowcoster": false,
+    "flex": false,
+    "latestSaveDt": "2026-09-30 12:54:56.838"
+  }
+}

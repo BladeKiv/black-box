@@ -1,0 +1,16 @@
+[
+  {
+    "actual": "8 qualifying results checked; both GTT upfront.percent arrays [8]; 0 mismatches; other fare blocks still omit commissions.",
+    "expected": "Configured rates 9% and 7% average to 8% on the two matching fares; other fares remain without commission fields.",
+    "status": "PASS",
+    "id": "TC-01",
+    "testData": "Exact supplied DEV Search; TOJ101; LH; C; S/6NVG; configured 9%/7%"
+  },
+  {
+    "id": "TC-02",
+    "testData": "Exact supplied DEV Search; configured Average rates 9%/9%",
+    "expected": "Both matching fares receive 9%; other fares retain missing commissions fields",
+    "actual": "HTTP 200; 50 results; 16 qualifying results; both percent arrays [9]; no other fares gained commission; 0 mismatches",
+    "status": "PASS"
+  }
+]

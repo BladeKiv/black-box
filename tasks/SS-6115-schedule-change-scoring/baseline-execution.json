@@ -1,0 +1,14 @@
+{
+  "method": "POST",
+  "url": "https://api.search.stage.travel-dev.com/v1/schedules",
+  "authentication": "Attempted JSON auth object; values omitted",
+  "requestBodyFile": "request-future-dated.json",
+  "httpStatus": 401,
+  "response": {
+    "Status": "Error",
+    "ErrorCode": "Err.NotAuthorized",
+    "Message": "Access token is missing or invalid"
+  },
+  "qaStatus": "WARN",
+  "reason": "Authentication transport not established; schedule-change scoring not evaluated"
+}

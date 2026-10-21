@@ -1,0 +1,352 @@
+[
+  {
+    "scenario_id": "TC-03",
+    "origin": "SFO",
+    "destination": "DVO",
+    "outbound_date": "2026-10-30",
+    "return_date": "2026-12-01",
+    "run_utc": "2026-09-22T12:18:23.8322198Z",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?fl[1][d]=SFO&adt=1&cabin=Y&fl[0][o]=SFO&fl[0][d]=DVO&fl[0][dt]=2026-10-30&fl[1][o]=DVO&fl[1][dt]=2026-12-01&cid=GTT102&gds=S&pcc=8KI0&fare=SR&debug=1&files=1&extra=false"
+    },
+    "elapsed_seconds": 5.0844092,
+    "case": {
+      "id": "TC-03",
+      "data": "SFO\u2013DVO return; 2026-10-30 / 2026-12-01. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "60 results; 49 with breakdown references; 616 references; 0 invalid. Validating carriers: BR, PR.",
+      "status": "PASS"
+    },
+    "reference_count": 616,
+    "covered_result_count": 49,
+    "invalid_references": [],
+    "by_carrier": {
+      "BR": {
+        "results": 21,
+        "features": 70,
+        "references": 70
+      },
+      "PR": {
+        "results": 39,
+        "features": 294,
+        "references": 546
+      }
+    },
+    "feature_list_states": {
+      "list null": 11,
+      "list populated": 49
+    }
+  },
+  {
+    "scenario_id": "TC-04",
+    "origin": "LAX",
+    "destination": "DVO",
+    "outbound_date": "2026-10-23",
+    "return_date": "2026-11-24",
+    "run_utc": "2026-09-22T12:18:29.4245854Z",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?fl[1][d]=LAX&adt=1&cabin=Y&fl[0][o]=LAX&fl[0][d]=DVO&fl[0][dt]=2026-10-23&fl[1][o]=DVO&fl[1][dt]=2026-11-24&cid=GTT102&gds=S&pcc=8KI0&fare=SR&debug=1&files=1&extra=false"
+    },
+    "elapsed_seconds": 5.829838,
+    "case": {
+      "id": "TC-04",
+      "data": "LAX\u2013DVO return; 2026-10-23 / 2026-11-24. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "84 results; 47 with breakdown references; 691 references; 0 invalid. Validating carriers: BR, CI, CX, PR, SQ.",
+      "status": "PASS"
+    },
+    "reference_count": 691,
+    "covered_result_count": 47,
+    "invalid_references": [],
+    "by_carrier": {
+      "BR": {
+        "results": 39,
+        "features": 35,
+        "references": 35
+      },
+      "PR": {
+        "results": 40,
+        "features": 280,
+        "references": 560
+      },
+      "CI": {
+        "results": 2,
+        "features": 0,
+        "references": 0
+      },
+      "CX": {
+        "results": 2,
+        "features": 16,
+        "references": 96
+      },
+      "SQ": {
+        "results": 1,
+        "features": 0,
+        "references": 0
+      }
+    },
+    "feature_list_states": {
+      "list null": 37,
+      "list populated": 47
+    }
+  },
+  {
+    "scenario_id": "TC-05",
+    "origin": "JFK",
+    "destination": "DVO",
+    "outbound_date": "2026-10-23",
+    "return_date": "2026-11-24",
+    "run_utc": "2026-09-22T12:18:35.7604099Z",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?fl[1][d]=JFK&adt=1&cabin=Y&fl[0][o]=JFK&fl[0][d]=DVO&fl[0][dt]=2026-10-23&fl[1][o]=DVO&fl[1][dt]=2026-11-24&cid=GTT102&gds=S&pcc=8KI0&fare=SR&debug=1&files=1&extra=false"
+    },
+    "elapsed_seconds": 6.8183644,
+    "case": {
+      "id": "TC-05",
+      "data": "JFK\u2013DVO return; 2026-10-23 / 2026-11-24. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "54 results; 52 with breakdown references; 1355 references; 0 invalid. Validating carriers: BR, CI, CX, EY, JL, PR, QR.",
+      "status": "PASS"
+    },
+    "reference_count": 1355,
+    "covered_result_count": 52,
+    "invalid_references": [],
+    "by_carrier": {
+      "PR": {
+        "results": 40,
+        "features": 208,
+        "references": 862
+      },
+      "EY": {
+        "results": 7,
+        "features": 56,
+        "references": 336
+      },
+      "BR": {
+        "results": 2,
+        "features": 7,
+        "references": 7
+      },
+      "JL": {
+        "results": 1,
+        "features": 2,
+        "references": 12
+      },
+      "QR": {
+        "results": 1,
+        "features": 7,
+        "references": 42
+      },
+      "CX": {
+        "results": 2,
+        "features": 16,
+        "references": 96
+      },
+      "CI": {
+        "results": 1,
+        "features": 0,
+        "references": 0
+      }
+    },
+    "feature_list_states": {
+      "list populated": 52,
+      "list null": 2
+    }
+  },
+  {
+    "scenario_id": "TC-06",
+    "origin": "SFO",
+    "destination": "MNL",
+    "outbound_date": "2026-10-23",
+    "return_date": "2026-11-24",
+    "run_utc": "2026-09-22T12:18:42.8173737Z",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?fl[1][d]=SFO&adt=1&cabin=Y&fl[0][o]=SFO&fl[0][d]=MNL&fl[0][dt]=2026-10-23&fl[1][o]=MNL&fl[1][dt]=2026-11-24&cid=GTT102&gds=S&pcc=8KI0&fare=SR&debug=1&files=1&extra=false"
+    },
+    "elapsed_seconds": 5.2987799,
+    "case": {
+      "id": "TC-06",
+      "data": "SFO\u2013MNL return; 2026-10-23 / 2026-11-24. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "149 results; 57 with breakdown references; 1706 references; 0 invalid. Validating carriers: AA, BR, CI, CX, JL, JX, KE, NH, OZ, PR, SQ, UA.",
+      "status": "PASS"
+    },
+    "reference_count": 1706,
+    "covered_result_count": 57,
+    "invalid_references": [],
+    "by_carrier": {
+      "PR": {
+        "results": 40,
+        "features": 13,
+        "references": 18
+      },
+      "CI": {
+        "results": 7,
+        "features": 0,
+        "references": 0
+      },
+      "CX": {
+        "results": 40,
+        "features": 320,
+        "references": 1280
+      },
+      "UA": {
+        "results": 24,
+        "features": 96,
+        "references": 288
+      },
+      "OZ": {
+        "results": 3,
+        "features": 0,
+        "references": 0
+      },
+      "BR": {
+        "results": 27,
+        "features": 0,
+        "references": 0
+      },
+      "JX": {
+        "results": 2,
+        "features": 0,
+        "references": 0
+      },
+      "KE": {
+        "results": 2,
+        "features": 10,
+        "references": 40
+      },
+      "NH": {
+        "results": 1,
+        "features": 0,
+        "references": 0
+      },
+      "SQ": {
+        "results": 1,
+        "features": 0,
+        "references": 0
+      },
+      "JL": {
+        "results": 1,
+        "features": 2,
+        "references": 8
+      },
+      "AA": {
+        "results": 1,
+        "features": 18,
+        "references": 72
+      }
+    },
+    "feature_list_states": {
+      "list null": 92,
+      "list populated": 57
+    }
+  },
+  {
+    "scenario_id": "TC-07",
+    "origin": "LAX",
+    "destination": "MNL",
+    "outbound_date": "2026-10-23",
+    "return_date": "2026-11-24",
+    "run_utc": "2026-09-22T12:18:48.4951168Z",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?fl[1][d]=LAX&adt=1&cabin=Y&fl[0][o]=LAX&fl[0][d]=MNL&fl[0][dt]=2026-10-23&fl[1][o]=MNL&fl[1][dt]=2026-11-24&cid=GTT102&gds=S&pcc=8KI0&fare=SR&debug=1&files=1&extra=false"
+    },
+    "elapsed_seconds": 8.0852887,
+    "case": {
+      "id": "TC-07",
+      "data": "LAX\u2013MNL return; 2026-10-23 / 2026-11-24. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "199 results; 125 with breakdown references; 3146 references; 0 invalid. Validating carriers: AA, BR, CA, CI, CX, DL, JL, JX, KE, MU, NH, OZ, PR, SQ, UA.",
+      "status": "PASS"
+    },
+    "reference_count": 3146,
+    "covered_result_count": 125,
+    "invalid_references": [],
+    "by_carrier": {
+      "PR": {
+        "results": 40,
+        "features": 0,
+        "references": 0
+      },
+      "CA": {
+        "results": 2,
+        "features": 4,
+        "references": 16
+      },
+      "NH": {
+        "results": 15,
+        "features": 30,
+        "references": 120
+      },
+      "KE": {
+        "results": 33,
+        "features": 225,
+        "references": 720
+      },
+      "CI": {
+        "results": 4,
+        "features": 0,
+        "references": 0
+      },
+      "OZ": {
+        "results": 9,
+        "features": 0,
+        "references": 0
+      },
+      "CX": {
+        "results": 22,
+        "features": 176,
+        "references": 704
+      },
+      "BR": {
+        "results": 17,
+        "features": 0,
+        "references": 0
+      },
+      "DL": {
+        "results": 14,
+        "features": 185,
+        "references": 470
+      },
+      "JX": {
+        "results": 2,
+        "features": 0,
+        "references": 0
+      },
+      "UA": {
+        "results": 35,
+        "features": 210,
+        "references": 948
+      },
+      "MU": {
+        "results": 1,
+        "features": 0,
+        "references": 0
+      },
+      "AA": {
+        "results": 2,
+        "features": 36,
+        "references": 144
+      },
+      "JL": {
+        "results": 2,
+        "features": 6,
+        "references": 24
+      },
+      "SQ": {
+        "results": 1,
+        "features": 0,
+        "references": 0
+      }
+    },
+    "feature_list_states": {
+      "list null": 74,
+      "list populated": 125
+    }
+  }
+]

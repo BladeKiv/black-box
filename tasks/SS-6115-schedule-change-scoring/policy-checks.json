@@ -1,0 +1,68 @@
+[
+  {
+    "u": 1,
+    "v": 2,
+    "name": "tc05-true",
+    "score": 1,
+    "excluded": false
+  },
+  {
+    "u": 1,
+    "v": 2,
+    "name": "tc06-false-h",
+    "score": 4,
+    "excluded": false
+  },
+  {
+    "u": 1,
+    "v": 1,
+    "name": "tc08-v1",
+    "score": 1,
+    "excluded": false
+  },
+  {
+    "u": 1,
+    "v": 3,
+    "name": "tc08-v3",
+    "score": 7,
+    "excluded": false
+  },
+  {
+    "u": 1,
+    "v": 2,
+    "name": "tc09-u1",
+    "score": 1,
+    "excluded": false
+  },
+  {
+    "u": 5,
+    "v": 2,
+    "name": "tc09-u5",
+    "score": 12,
+    "excluded": false
+  },
+  {
+    "term": "CabinFilterTerm",
+    "score": 1,
+    "v": 2,
+    "excluded": true,
+    "name": "tc10-cabin",
+    "u": 1
+  },
+  {
+    "term": "ReprotectionFlexTerm",
+    "score": 1,
+    "v": 2,
+    "excluded": true,
+    "name": "tc10-flex",
+    "u": 1
+  },
+  {
+    "term": "BclassFilterTerm",
+    "score": 1,
+    "v": 2,
+    "excluded": true,
+    "name": "tc10-booking",
+    "u": 1
+  }
+]

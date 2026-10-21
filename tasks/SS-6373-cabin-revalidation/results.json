@@ -1,0 +1,30 @@
+[
+  [
+    "TC-02",
+    "TK; 3 segments",
+    "Replace empty cabins with C on each matching segment",
+    "HTTP 200; classes Z,Z,Z unchanged=True; cabins [\"\", \"\", \"\"] \u2192 [\"C\", \"C\", \"C\"]; GDS G \u2192 S; revalidation by GDS change=True",
+    "PASS"
+  ],
+  [
+    "TC-02b",
+    "TK; 3 segments",
+    "Replace empty cabins with C on each matching segment",
+    "HTTP 200; classes Z,Z,D unchanged=True; cabins [\"\", \"\", \"\"] \u2192 [\"C\", \"C\", \"C\"]; GDS G \u2192 S; revalidation by GDS change=True",
+    "PASS"
+  ],
+  [
+    "TC-04",
+    "LH; 2 segments",
+    "Preserve populated original cabins with unchanged booking classes",
+    "HTTP 200; classes D,D unchanged=True; cabins [\"C\", \"C\"] \u2192 [\"C\", \"C\"]; GDS G \u2192 S; revalidation by GDS change=True",
+    "PASS"
+  ],
+  [
+    "TC-04b",
+    "AA; 3 segments",
+    "Preserve populated original cabins with unchanged booking classes",
+    "HTTP 200; classes R,R,R unchanged=True; cabins [\"C\", \"C\", \"F\"] \u2192 [\"C\", \"C\", \"F\"]; GDS G \u2192 S; revalidation by GDS change=True",
+    "PASS"
+  ]
+]

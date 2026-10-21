@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://airapi51.kivops.info/v1/search?fl[1][d]=SFO&adt=1&cabin=Y&fl[0][o]=SFO&fl[0][d]=DVO&fl[0][dt]=2026-10-23&fl[1][o]=DVO&fl[1][dt]=2026-11-24&cid=GTT102&gds=S&pcc=8KI0&fare=SR&debug=1&files=1&val_cr=PR&extra=false"
+  },
+  "run_utc": "2026-09-22T12:13:17.6474026Z",
+  "http_status": 200,
+  "elapsed_seconds": 3.8156825,
+  "count": 40,
+  "result_count": 40,
+  "top_level_fields": [
+    "count",
+    "results",
+    "starUTCTime",
+    "endUTCTime",
+    "excutionTime",
+    "timing",
+    "req_resp",
+    "ngsMap",
+    "messages"
+  ]
+}

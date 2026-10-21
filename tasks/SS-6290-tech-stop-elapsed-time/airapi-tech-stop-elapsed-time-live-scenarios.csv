@@ -1,0 +1,3 @@
+scenario_id,search_url,original_gds_filter,expected_result,elapsed_time_path
+original-gds-a-positive-stop,http://airapi51.kivops.info/v1/search?adt=1&cabin=Y&fl%5B0%5D%5Bo%5D=DJT&fl%5B0%5D%5Bd%5D=TPA&fl%5B0%5D%5Bdt%5D=2027-03-20&cid=SAL101&debug=true,A,valid,elapsedTime
+all-original-gds-positive-stop,http://airapi51.kivops.info/v1/search?adt=1&cabin=Y&fl%5B0%5D%5Bo%5D=DJT&fl%5B0%5D%5Bd%5D=TPA&fl%5B0%5D%5Bdt%5D=2027-03-20&cid=SAL101&debug=true,,valid,elapsedTime

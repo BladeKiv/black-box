@@ -1,0 +1,144 @@
+{
+  "prices": {
+    "lastTicketDate": "",
+    "totalPrice": 272.6,
+    "totalTax": 1.14
+  },
+  "passengers": {
+    "ADT": {
+      "codeAs": "ADT",
+      "cnt": 1,
+      "oBaseFare": {
+        "amount": 271.46,
+        "currency": "USD"
+      },
+      "oBaseTax": {
+        "amount": 1.14,
+        "currency": "USD"
+      }
+    }
+  },
+  "penalties": {
+    "exchange": true,
+    "refund": false,
+    "list": [
+      {
+        "type": "re",
+        "applicability": "before",
+        "permitted": false
+      },
+      {
+        "type": "re",
+        "applicability": "after",
+        "permitted": false
+      },
+      {
+        "type": "ex",
+        "applicability": "before",
+        "permitted": true,
+        "amount": 150,
+        "oAmount": {
+          "amount": 150,
+          "currency": "USD"
+        }
+      },
+      {
+        "type": "ex",
+        "applicability": "after",
+        "permitted": false
+      }
+    ]
+  },
+  "trips": [
+    {
+      "tripId": 1,
+      "segments": [
+        {
+          "segmentId": 1,
+          "departureTime": "2026-11-11 17:45",
+          "arrivalTime": "2026-11-12 05:15",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "100",
+          "bookingClass": "Y",
+          "duration": 390,
+          "departureAirportCode": "EWR",
+          "departureAirportTerminal": "",
+          "arrivalAirportCode": "DUB",
+          "arrivalAirportTerminal": "",
+          "operatingAirline": "EI",
+          "airEquipType": "321",
+          "aircraft": "",
+          "marketingAirline": "EI",
+          "marriageGroup": "",
+          "cabin": "Y",
+          "brandId": "Saver",
+          "brandName": "Saver",
+          "meal": "",
+          "fareCode": "Y",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "allowPieces": 0
+            }
+          },
+          "recheckBaggage": false
+        },
+        {
+          "segmentId": 2,
+          "departureTime": "2026-11-12 06:15",
+          "arrivalTime": "2026-11-12 09:55",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "592",
+          "bookingClass": "Y",
+          "duration": 160,
+          "departureAirportCode": "DUB",
+          "departureAirportTerminal": "",
+          "arrivalAirportCode": "MAD",
+          "arrivalAirportTerminal": "",
+          "operatingAirline": "EI",
+          "airEquipType": "320",
+          "aircraft": "",
+          "marketingAirline": "EI",
+          "marriageGroup": "",
+          "cabin": "Y",
+          "brandId": "Saver",
+          "brandName": "Saver",
+          "meal": "",
+          "fareCode": "Y",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "allowPieces": 0
+            }
+          },
+          "recheckBaggage": false
+        }
+      ]
+    }
+  ],
+  "maxSeats": 6,
+  "validatingCarrier": "EI",
+  "gds": "K",
+  "pcc": "DEF",
+  "cons": "ATS",
+  "tripType": "OW",
+  "currency": "USD",
+  "keys": {
+    "atlas": {
+      "routingIdentifier": "TllDX01BRF8xXzIwMjYxMTExX18xXzBfMHxrZXp2ZTI2NzEyfDF8MjcxLjYwXzI3MS42MF8zMS44OV8xLjAwXzU3Ni4wOV9VU0R8TllDX01BRF8xXzIwMjYxMTExX18xXzBfMF5FV1ItRUkxMDAtLURVQi0yMDI2MTExMTE3NDUtMjAyNjExMTIwNTE1LVNhdmVyLTEtI0RVQi1FSTU5Mi0tTUFELTIwMjYxMTEyMDYxNS0yMDI2MTExMjA5NTUtU2F2ZXItMS1eMjcxLjYwXzI3MS42MF8zMS44OV8xLjAwXzU3Ni4wOV5BRUlORENfQUVJXl5BRUkxTllDTUFEMjAwMjAyNjExMTFeVVNEXjI3MS42MF4yNzEuNjBeMzEuODleMXwxfDIwMjYxMDEyMjIyNzI0fDB8UzE3OTE4MTUyNDQxMDMyMmMwY2VlZXx8fHx8MS4wMHwzfDB8fG5vcm1hbHxmYWxzZXwyMDI2LTEwLTEyIDE5OjI1OjMxfA==.R8NN/XOZbFpTU7MnLERGySoqys2n/07EwNsm9tTYhPA=",
+      "fid": "u39Jqz5LSH-RsjcauuMK2Ss6xX_Skcr7Wk2fFDkLtqDvmJgf5ezp48Ro9TlCYgHD4Beshu-Bdok-TNBg6k45o0NJeEBO18QS",
+      "pnrCode": "",
+      "paymentType": 2,
+      "isSeparate": false
+    }
+  },
+  "meta": {
+    "voidWindow": "NOT_VOIDABLE"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "info": {
+    "_postman_id": "d2ff4d4a-d510-49bb-9d70-1fc628d39b3f",
+    "name": "SS-6344 Brightsun automatic Search and Match",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51445546",
+    "description": "Malformed token and offer IDs on Result/book/create. Search is setup only. Match segments, checkedBaggage and before exchange/refund permissions. Service performs recovery; collection does not manually re-search. Booking price retry retained."
+  },
+  "item": [
+    {
+      "name": "v1/search",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{search_url}}"
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const url = pm.iterationData.get('search_url') || \"https://api.search.dev.travel-dev.com/brightsun/v1/search?tripType=RT&fl[0][o]=AMS&fl[0][d]=LHR&fl[0][dt]=2026-11-11&fl[1][o]=LHR&fl[1][d]=AMS&fl[1][dt]=2026-11-18&cabin=Y&adt=1&limit=100\";",
+              "pm.variables.set('search_url', url);",
+              "pm.collectionVariables.unset('brightsun_selected_solution');",
+              "pm.collectionVariables.unset('brightsun_result_additional_info');",
+              "pm.collectionVariables.unset('booking_body');",
+              "pm.collectionVariables.set('booking_price_retry', '0');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.unset('brightsun_selected_solution');",
+              "const data = pm.response.json();",
+              "if (!Array.isArray(data.results) || !data.results.length) { pm.execution.setNextRequest(null); throw new Error('No selectable Search setup inventory'); }",
+              "pm.collectionVariables.set('brightsun_selected_solution', JSON.stringify(data.results[0]));",
+              "function matching(r){\n  const segments=r.trips.flatMap(t=>t.segments.map(s=>[s.departureAirportCode,s.arrivalAirportCode,s.departureTime.slice(0,10),s.arrivalTime.slice(0,10),s.marketingAirline,String(s.flightNumber)]));\n  const before=r.penalties.list.filter(p=>p.applicability==='before').map(p=>[p.type,p.permitted]).sort((a,b)=>a[0].localeCompare(b[0]));\n  if(!before.length)throw new Error('Before penalties unavailable');\n  const fare=r.keys.brightsun.fare;\n  for(const k of ['checkedBaggage','exchange','refund'])if(typeof fare[k]!=='boolean')throw new Error('Matching flag missing: '+k);\n  return {segments,before,fare:{checkedBaggage:fare.checkedBaggage,exchange:fare.exchange,refund:fare.refund}};\n}",
+              "pm.collectionVariables.set('matching_baseline', JSON.stringify(matching(data.results[0])));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "v1/result",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{brightsun_host}}/brightsun/v1/result",
+          "host": [
+            "{{brightsun_host}}"
+          ],
+          "path": [
+            "brightsun",
+            "v1",
+            "result"
+          ]
+        },
+        "description": "POST selected Search solution unchanged; prepare booking from the fresh Result response.",
+        "body": {
+          "mode": "raw",
+          "raw": "{{brightsun_selected_solution}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.unset('brightsun_result_additional_info');",
+              "const selected = pm.collectionVariables.get('brightsun_selected_solution');",
+              "if (!selected) {",
+              "    pm.execution.skipRequest();",
+              "    throw new Error('Run Search first: no selected solution is available.');",
+              "}",
+              "JSON.parse(selected);",
+              "pm.collectionVariables.unset('booking_body');",
+              "function corrupt(info,mutation){const copy=JSON.parse(JSON.stringify(info));if(mutation==='token')copy.token='INVALID_TEST_TOKEN';else{for(const k of ['optionKeys','outboundKey','inboundKey']){if(!Object.hasOwn(copy,k))throw new Error('Required mutation field unavailable: '+k);copy[k]=Array.isArray(copy[k])?copy[k].map((_,i)=>'SS6344-MALFORMED-OFFER-'+i):'SS6344-MALFORMED-OFFER';}}return copy;}",
+              "if (pm.iterationData.get('endpoint') === 'result') { const body = JSON.parse(pm.collectionVariables.get('brightsun_selected_solution')); body.keys.brightsun = corrupt(body.keys.brightsun, pm.iterationData.get('mutation')); pm.collectionVariables.set('brightsun_selected_solution', JSON.stringify(body)); }"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "function matching(r){\n  const segments=r.trips.flatMap(t=>t.segments.map(s=>[s.departureAirportCode,s.arrivalAirportCode,s.departureTime.slice(0,10),s.arrivalTime.slice(0,10),s.marketingAirline,String(s.flightNumber)]));\n  const before=r.penalties.list.filter(p=>p.applicability==='before').map(p=>[p.type,p.permitted]).sort((a,b)=>a[0].localeCompare(b[0]));\n  if(!before.length)throw new Error('Before penalties unavailable');\n  const fare=r.keys.brightsun.fare;\n  for(const k of ['checkedBaggage','exchange','refund'])if(typeof fare[k]!=='boolean')throw new Error('Matching flag missing: '+k);\n  return {segments,before,fare:{checkedBaggage:fare.checkedBaggage,exchange:fare.exchange,refund:fare.refund}};\n}",
+              "function corrupt(info,mutation){const copy=JSON.parse(JSON.stringify(info));if(mutation==='token')copy.token='INVALID_TEST_TOKEN';else{for(const k of ['optionKeys','outboundKey','inboundKey']){if(!Object.hasOwn(copy,k))throw new Error('Required mutation field unavailable: '+k);copy[k]=Array.isArray(copy[k])?copy[k].map((_,i)=>'SS6344-MALFORMED-OFFER-'+i):'SS6344-MALFORMED-OFFER';}}return copy;}",
+              "function buildBooking(r, bookingDate) {\n  const cabins = {Y:1,S:2,C:3,F:4};\n  const cabinId = code => {\n    if (!Object.hasOwn(cabins, code)) throw new Error('Unsupported cabin: ' + code);\n    return cabins[code];\n  };\n  if (!r.keys?.brightsun?.key || !r.keys.brightsun.token || !Object.hasOwn(r.keys.brightsun,'supp') || !r.trips?.length || !Number.isFinite(r.prices?.totalPrice) || !r.validatingCarrier) throw new Error('Result missing booking inputs');\n  const stamp = dt => {\n    if (!/^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}(:\\d{2})?$/.test(dt)) throw new Error('Unsupported segment timestamp');\n    return dt.length === 16 ? dt + ':00' : dt;\n  };\n  const first = ['Alex','Taylor','Morgan','Jamie','Casey','Jordan'];\n  const last = ['Bennett','Parker','Hayes','Reed','Carter','Brooks'];\n  const pick = a => a[Math.floor(Math.random()*a.length)];\n  const passengers = [];\n  for (const [ptc, p] of Object.entries(r.passengers)) {\n    if (!['ADT','CHD','INF'].includes(ptc) || !Number.isInteger(p.cnt) || p.cnt < 0) throw new Error('Unsupported passenger count/type');\n    const years = {ADT:25,CHD:7,INF:1}[ptc];\n    const dob = new Date(bookingDate + 'T12:00:00Z');\n    dob.setUTCFullYear(dob.getUTCFullYear()-years);\n    for (let i=0;i<p.cnt;i++) passengers.push({pas_first_name:pick(first),pas_middle_name:'KIVO',pas_last_name:pick(last),pas_dob:dob.toISOString().slice(0,10),pas_type_id:1,pas_nationality:'US',pas_country:'US',pas_gender_id:2,pas_doc_expiration_date:'2030-04-01',pas_doc_number:'AA111222A0'});\n  }\n  return {\n    gds:{gds_id:9,gds_pcc:'DFWG32100',backoffice_id:11111,hybrid_id:'A6F17DE'},\n    additionalInfo:JSON.parse(JSON.stringify(r.keys.brightsun)),\n    contact_info:{address:'701 BENNETT ST',country:'US',city:'BOTTINEAU',state:'ND',zip:'58318'},\n    data:{payments:[{pay_airline:'BA',pay_amount:474,pay_cc_cvv:'***',pay_cc_expire_month:9,pay_cc_expire_year:2025,pay_cc_first_name:'Kathleen',pay_cc_holder:'Kathleen Pankanin',pay_cc_last_name:'Pankanin',pay_cc_name:'Kathleen Pankanin',pay_cc_number:'****8299',pay_cc_type:'VI',pay_type:1}]},\n    payments:{pay_type:1},\n    trip:{booking_type:2,cabin:cabinId(r.cabin),validating_carrier:r.validatingCarrier,total_price:r.prices.totalPrice,passengers,\n      flights:r.trips.map(t=>({segments:t.segments.map(s=>({seg_departure_airport_code:s.departureAirportCode,seg_arrival_airport_code:s.arrivalAirportCode,seg_airline_code:s.marketingAirline,seg_air_equip_type:s.airEquipType,seg_departure_dt:stamp(s.departureTime),seg_arrival_dt:stamp(s.arrivalTime),seg_flight_number:s.flightNumber,seg_cabin_type_id:cabinId(s.cabin),seg_booking_class:s.bookingClass,seg_marriage_grp:'',seg_fare_basis:s.fareCode})),fl_origin_location_code:t.segments[0].departureAirportCode,fl_destination_location_code:t.segments.at(-1).arrivalAirportCode})),\n      contact_phone:'+1 7075642084',country_code:'+1',contact_email:'zahid.bernell@kiv.dev',selling_price:{amount:1,currency_code:'USD'},agency_selling_price:{amount:1,currency_code:'USD'},account_code:'EURKIV',agency_phone:'18888633910'},account_info:null\n  };\n}",
+              "const data=pm.response.json();",
+              "if (pm.iterationData.get('endpoint') === 'result') {",
+              " pm.execution.setNextRequest(null);",
+              " pm.test('SS-6344: Result recovery HTTP 200', () => pm.expect(pm.response.code).to.equal(200));",
+              " if(pm.response.code===200) pm.test('SS-6344: Segments and matching fare flags retained', () => pm.expect(matching(data)).to.deep.equal(JSON.parse(pm.collectionVariables.get('matching_baseline'))));",
+              "} else {",
+              " try {",
+              "  pm.collectionVariables.set('matching_baseline',JSON.stringify(matching(data)));",
+              "  const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Bucharest',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());",
+              "  const body=buildBooking(data,date);body.additionalInfo=corrupt(body.additionalInfo,pm.iterationData.get('mutation'));pm.collectionVariables.set('booking_body',JSON.stringify(body));",
+              " } catch(e){pm.execution.setNextRequest(null);throw e;}",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "v1/book/create",
+      "request": {
+        "method": "POST",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{booking_username}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{booking_password}}",
+              "type": "string"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "mode": "raw",
+          "raw": "{{booking_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (!pm.collectionVariables.get('booking_body')) { pm.execution.skipRequest(); throw new Error('No fresh booking body: run Search and Result first'); }",
+              "if (!pm.variables.get('booking_username') || !pm.variables.get('booking_password')) { pm.execution.skipRequest(); throw new Error('Set local Basic Auth environment variables'); }"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "function updatedPriceBody(body, response, status) {\n  const price=response.data?.response?.total_price;\n  if(status!==422 || response.type!=='Price change' || !Number.isFinite(price) || price<=0) throw new Error('No usable 422 price-change response');\n  const updated=JSON.parse(JSON.stringify(body));\n  updated.trip.total_price=price;\n  return updated;\n}",
+              "const data = pm.response.json();",
+              "const retry = pm.response.code === 422 && data.type === 'Price change' && pm.collectionVariables.get('booking_price_retry') !== '1';",
+              "if (retry) {",
+              " try {",
+              "  const original = JSON.parse(pm.collectionVariables.get('booking_body'));",
+              "  const updated = updatedPriceBody(original, data, pm.response.code);",
+              "  pm.test('SS-6341: Updated price equals 422 response price', () => pm.expect(updated.trip.total_price).to.equal(data.data.response.total_price));",
+              "  pm.collectionVariables.set('booking_body', JSON.stringify(updated));",
+              "  pm.collectionVariables.set('booking_price_retry', '1');",
+              "  pm.execution.setNextRequest('v1/book/create');",
+              " } catch (e) { pm.execution.setNextRequest(null); pm.collectionVariables.unset('booking_body'); throw e; }",
+              "} else {",
+              " pm.test('SS-6341: Booking returns HTTP 200', () => pm.expect(pm.response.code).to.equal(Number(pm.iterationData.get('expected_status') || 200)));",
+              " if (pm.response.code === 200) {",
+              "  pm.test('SS-6341: Booking references returned', () => {",
+              "   pm.expect(data.data.additionalInfo.brightsunReference).to.be.a('string').and.not.empty;",
+              "   pm.expect(data.data.additionalInfo.recLoc).to.be.a('string').and.not.empty;",
+              "  });",
+              " }",
+              " pm.collectionVariables.unset('booking_body');",
+              "}",
+              "if(pm.response.code===200){",
+              " const data=pm.response.json().data, baseline=JSON.parse(pm.collectionVariables.get('matching_baseline'));",
+              " const segments=data.response.pnrInfo.segments.map(s=>[s.departureAirportCode,s.arrivalAirportCode,s.departureDate.slice(0,10),s.arrivalDate.slice(0,10),s.marketingAirlineCode,String(s.marketingFlightNumber)]);",
+              " pm.test('SS-6344: Recovered booking segments match',()=>pm.expect(segments).to.deep.equal(baseline.segments));",
+              " pm.test('SS-6344: Baggage and before penalties match',()=>{const f=data.additionalInfo.fare;pm.expect({checkedBaggage:f.checkedBaggage,exchange:f.exchange,refund:f.refund}).to.deep.equal(baseline.fare);for(const [t,p]of baseline.before)pm.expect(f[t==='ex'?'exchange':'refund']).to.equal(p);});",
+              "}"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "brightsun_host",
+      "value": "https://api.search.dev.travel-dev.com",
+      "type": "string"
+    }
+  ]
+}

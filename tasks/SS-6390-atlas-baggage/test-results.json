@@ -1,0 +1,65 @@
+[
+  {
+    "id": "FLOW-01",
+    "data": "Search · NYC → MAD · 2026-11-11 · 1 ADT · Y · TST103",
+    "expected": "Fresh selectable Atlas itinerary for next step.",
+    "actual": "HTTP 200; 11 options. EI EWR → DUB → MAD selected.",
+    "status": "PASS"
+  },
+  {
+    "id": "FLOW-02",
+    "data": "Result · selected Search object submitted unchanged",
+    "expected": "Fresh Result data carried to Book/Create.",
+    "actual": "HTTP 200; complete keys.atlas copied to additionalInfo; total price USD 167.93.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-01",
+    "data": "Book/Create · EI · 2 segments · 1 ADT",
+    "expected": "Starting at Book, segment baggage and carryOn in book format at the ticket attachment path.",
+    "actual": "HTTP/body 200, code 0. FIX VERIFIED: pnrInfo.segments now present. Both segments have 0P/00P checked baggage and 1P carry-on with 10 kg/22 lb. Provider-omitted fields accepted as null.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-02",
+    "data": "Book/Info before ticketing · fresh booking additionalInfo",
+    "expected": "Segment baggage and carryOn objects available from Book onward.",
+    "actual": "HTTP/body 200, code 0. FIX VERIFIED: pnrInfo.segments now present. Both segments retain correct piece formatting and 10 kg/22 lb carry-on; omitted fields accepted as null.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-03",
+    "data": "Ticket/Create cash · data.payments[0].pay_type=1 · both EI segments",
+    "expected": "Provider-omitted fields accepted as null; carry-on pounds may be populated; checked zero pieces formatted 00P.",
+    "actual": "HTTP 200/body 408 Retry. Both segments: 0P/00P observed; baggage.ADT contains only numberOfPcs. carryOn.ADT.weightLb=22, weightKg=10, numberOfPcs=1P; provider-omitted dimensions/full-text fields accepted as null.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-04",
+    "data": "Final Book/Info · same booking · after cash ticket request",
+    "expected": "Ticket-format baggage/ carryOn fields retained, including populated carry-on pounds.",
+    "actual": "HTTP/body 408 Retry. Both segments retain baggage/carryOn data; carry-on 22 lb and omitted fields are accepted.",
+    "status": "PASS"
+  },
+  {
+    "id": "FLOW-03",
+    "data": "Cash Ticket/Create and final Book/Info · PNR X0XXG0",
+    "expected": "408/Retry is accepted for this DEV sandbox cash flow (user clarification). Ticket numbers are not required for this check.",
+    "actual": "Ticket/Create HTTP 200/body 408 Retry; final Book/Info HTTP/body 408 Retry. Accepted expected outcome.",
+    "status": "PASS"
+  },
+  {
+    "id": "COVERAGE-01",
+    "data": "Five matching Atlas logs · PNR X0XXG0 · EI100/EI592 · ADT",
+    "expected": "Source segmentNo/passengerType mapping; checked zero pieces and carry-on 1 piece/10 kg match AirAPI.",
+    "actual": "Both source segment numbers map correctly. Checked 0 → 0P/00P; overhead 1 piece/10 kg → 1P/10 kg/22 lb. PASS from authenticated source evidence.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-05",
+    "data": "Carry-on source baggageSize 55*40*24cm on segments 1 and 2",
+    "expected": "Provider supplies dimensions: lengthCm=119; lengthInch may be 46 or 47 per user clarification.",
+    "actual": "Five matching source logs contain 55*40*24cm. All four booking/ticket responses contain lengthCm=119 and lengthInch=46 on both segments. Fix verified.",
+    "status": "PASS"
+  }
+]

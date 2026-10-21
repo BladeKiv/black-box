@@ -1,0 +1,6200 @@
+[
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzE3MjMqUFJ+I1BSMTA1I1BSMjgxMyNQUjI4MTgjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzE0MTgyMypQUn4jUFIxMDUjUFIyODEzI1BSMjM2NCNQUjI4NjAjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 14:50",
+            "arrivalTime": "2026-11-24 15:55",
+            "flightNumber": "2364",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "CEB",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 18:45",
+            "arrivalTime": "2026-11-24 20:05",
+            "flightNumber": "2860",
+            "marketingAirline": "PR",
+            "departureAirportCode": "CEB",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzE1MjMqUFJ+I1BSMTA1I1BSMjgxMyNQUjE4MDYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 15:55",
+            "arrivalTime": "2026-11-24 17:50",
+            "flightNumber": "1806",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzE3MjMqUFJ+I1BSMTA1I1BSMjgxNSNQUjI4MTgjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzE0MTgyMypQUn4jUFIxMDUjUFIyODE1I1BSMjM2NCNQUjI4NjAjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 14:50",
+            "arrivalTime": "2026-11-24 15:55",
+            "flightNumber": "2364",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "CEB",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 18:45",
+            "arrivalTime": "2026-11-24 20:05",
+            "flightNumber": "2860",
+            "marketingAirline": "PR",
+            "departureAirportCode": "CEB",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMi9EVk9TRk8yMDI2LTExLTI0XzE3MjMqUFJ+I1BSMTA1I1BSMTgwNSNQUjI4MTgjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 12:30",
+            "arrivalTime": "2026-10-24 14:20",
+            "flightNumber": "1805",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMi9EVk9TRk8yMDI2LTExLTI0XzE0MTgyMypQUn4jUFIxMDUjUFIxODA1I1BSMjM2NCNQUjI4NjAjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 12:30",
+            "arrivalTime": "2026-10-24 14:20",
+            "flightNumber": "1805",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 14:50",
+            "arrivalTime": "2026-11-24 15:55",
+            "flightNumber": "2364",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "CEB",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 18:45",
+            "arrivalTime": "2026-11-24 20:05",
+            "flightNumber": "2860",
+            "marketingAirline": "PR",
+            "departureAirportCode": "CEB",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzE1MjMqUFJ+I1BSMTA1I1BSMjgxNSNQUjE4MDYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 15:55",
+            "arrivalTime": "2026-11-24 17:50",
+            "flightNumber": "1806",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzEyMjMqUFJ+I1BSMTA1I1BSMjgxMyNQUjI4MTYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 12:55",
+            "arrivalTime": "2026-11-24 14:45",
+            "flightNumber": "2816",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzE3MjIyMSpQUn4jUFIxMDUjUFIyODEzI1BSMjgxOCNQUjEwMiNQUjM4ODJ+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 22:15",
+            "arrivalTime": "2026-11-24 19:10",
+            "flightNumber": "102",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 21:35",
+            "arrivalTime": "2026-11-24 23:17",
+            "flightNumber": "3882",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMi9EVk9TRk8yMDI2LTExLTI0XzE1MjMqUFJ+I1BSMTA1I1BSMTgwNSNQUjE4MDYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 12:30",
+            "arrivalTime": "2026-10-24 14:20",
+            "flightNumber": "1805",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 15:55",
+            "arrivalTime": "2026-11-24 17:50",
+            "flightNumber": "1806",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxNC9EVk9TRk8yMDI2LTExLTI0XzE3MjMqUFJ+I1BSMTA1I1BSMjgxNyNQUjI4MTgjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 14:30",
+            "arrivalTime": "2026-10-24 16:25",
+            "flightNumber": "2817",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxNC9EVk9TRk8yMDI2LTExLTI0XzE0MTgyMypQUn4jUFIxMDUjUFIyODE3I1BSMjM2NCNQUjI4NjAjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 14:30",
+            "arrivalTime": "2026-10-24 16:25",
+            "flightNumber": "2817",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 14:50",
+            "arrivalTime": "2026-11-24 15:55",
+            "flightNumber": "2364",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "CEB",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 18:45",
+            "arrivalTime": "2026-11-24 20:05",
+            "flightNumber": "2860",
+            "marketingAirline": "PR",
+            "departureAirportCode": "CEB",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzExMjMqUFJ+I1BSMTA1I1BSMjgxMyNQUjI4MTQjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 11:00",
+            "arrivalTime": "2026-11-24 12:50",
+            "flightNumber": "2814",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDcxMjIwL0RWT1NGTzIwMjYtMTEtMjRfMTcyMypQUn4jUFIzODc5I1BSMTEzI1BSMjgyMyNQUjI4MTgjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 07:15",
+            "arrivalTime": "2026-10-23 08:54",
+            "flightNumber": "3879",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-23 12:25",
+            "arrivalTime": "2026-10-24 18:00",
+            "flightNumber": "113",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-10-24 20:10",
+            "arrivalTime": "2026-10-24 22:05",
+            "flightNumber": "2823",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzA2MTExMSpQUn4jUFIxMDUjUFIyODEzI1BSMjgxMCNQUjExMiNQUjM4OTh+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 06:20",
+            "arrivalTime": "2026-11-24 08:10",
+            "flightNumber": "2810",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 11:10",
+            "arrivalTime": "2026-11-24 08:05",
+            "flightNumber": "112",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 11:39",
+            "arrivalTime": "2026-11-24 13:22",
+            "flightNumber": "3898",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzEyMjMqUFJ+I1BSMTA1I1BSMjgxNSNQUjI4MTYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 12:55",
+            "arrivalTime": "2026-11-24 14:45",
+            "flightNumber": "2816",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzE1MjIyMSpQUn4jUFIxMDUjUFIyODEzI1BSMTgwNiNQUjEwMiNQUjM4ODJ+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 15:55",
+            "arrivalTime": "2026-11-24 17:50",
+            "flightNumber": "1806",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 22:15",
+            "arrivalTime": "2026-11-24 19:10",
+            "flightNumber": "102",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 21:35",
+            "arrivalTime": "2026-11-24 23:17",
+            "flightNumber": "3882",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxNC9EVk9TRk8yMDI2LTExLTI0XzE1MjMqUFJ+I1BSMTA1I1BSMjgxNyNQUjE4MDYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 14:30",
+            "arrivalTime": "2026-10-24 16:25",
+            "flightNumber": "2817",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 15:55",
+            "arrivalTime": "2026-11-24 17:50",
+            "flightNumber": "1806",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzA1MTExMSpQUn4jUFIxMDUjUFIyODEzI1BSMjgwNCNQUjExMiNQUjM4OTh+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 05:25",
+            "arrivalTime": "2026-11-24 07:10",
+            "flightNumber": "2804",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 11:10",
+            "arrivalTime": "2026-11-24 08:05",
+            "flightNumber": "112",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 11:39",
+            "arrivalTime": "2026-11-24 13:22",
+            "flightNumber": "3898",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzA5MjMqUFJ+I1BSMTA1I1BSMjgxMyNQUjE4MTIjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 09:05",
+            "arrivalTime": "2026-11-24 10:55",
+            "flightNumber": "1812",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzE3MjIyMSpQUn4jUFIxMDUjUFIyODE1I1BSMjgxOCNQUjEwMiNQUjM4ODJ+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 22:15",
+            "arrivalTime": "2026-11-24 19:10",
+            "flightNumber": "102",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 21:35",
+            "arrivalTime": "2026-11-24 23:17",
+            "flightNumber": "3882",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMi9EVk9TRk8yMDI2LTExLTI0XzEyMjMqUFJ+I1BSMTA1I1BSMTgwNSNQUjI4MTYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 12:30",
+            "arrivalTime": "2026-10-24 14:20",
+            "flightNumber": "1805",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 12:55",
+            "arrivalTime": "2026-11-24 14:45",
+            "flightNumber": "2816",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDcxMjIyL0RWT1NGTzIwMjYtMTEtMjRfMTcyMypQUn4jUFIzODc5I1BSMTEzI1BSMjgyMSNQUjI4MTgjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 07:15",
+            "arrivalTime": "2026-10-23 08:54",
+            "flightNumber": "3879",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-23 12:25",
+            "arrivalTime": "2026-10-24 18:00",
+            "flightNumber": "113",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-10-24 22:15",
+            "arrivalTime": "2026-10-25 00:05",
+            "flightNumber": "2821",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDcxMjIwL0RWT1NGTzIwMjYtMTEtMjRfMTUyMypQUn4jUFIzODc5I1BSMTEzI1BSMjgyMyNQUjE4MDYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 07:15",
+            "arrivalTime": "2026-10-23 08:54",
+            "flightNumber": "3879",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-23 12:25",
+            "arrivalTime": "2026-10-24 18:00",
+            "flightNumber": "113",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-10-24 20:10",
+            "arrivalTime": "2026-10-24 22:05",
+            "flightNumber": "2823",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 15:55",
+            "arrivalTime": "2026-11-24 17:50",
+            "flightNumber": "1806",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzExMjMqUFJ+I1BSMTA1I1BSMjgxNSNQUjI4MTQjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 11:00",
+            "arrivalTime": "2026-11-24 12:50",
+            "flightNumber": "2814",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDcxMjIzL0RWT1NGTzIwMjYtMTEtMjRfMTcyMypQUn4jUFIzODc5I1BSMTEzI1BSMjgyNSNQUjI4MTgjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 07:15",
+            "arrivalTime": "2026-10-23 08:54",
+            "flightNumber": "3879",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-23 12:25",
+            "arrivalTime": "2026-10-24 18:00",
+            "flightNumber": "113",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-10-24 23:00",
+            "arrivalTime": "2026-10-25 00:50",
+            "flightNumber": "2825",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxOC9EVk9TRk8yMDI2LTExLTI0XzE3MjMqUFJ+I1BSMTA1I1BSMTgxOSNQUjI4MTgjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 18:25",
+            "arrivalTime": "2026-10-24 20:25",
+            "flightNumber": "1819",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMi9EVk9TRk8yMDI2LTExLTI0XzE3MjIyMSpQUn4jUFIxMDUjUFIxODA1I1BSMjgxOCNQUjEwMiNQUjM4ODJ+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 12:30",
+            "arrivalTime": "2026-10-24 14:20",
+            "flightNumber": "1805",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 17:55",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "2818",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 22:15",
+            "arrivalTime": "2026-11-24 19:10",
+            "flightNumber": "102",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 21:35",
+            "arrivalTime": "2026-11-24 23:17",
+            "flightNumber": "3882",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxOC9EVk9TRk8yMDI2LTExLTI0XzE0MTgyMypQUn4jUFIxMDUjUFIxODE5I1BSMjM2NCNQUjI4NjAjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 18:25",
+            "arrivalTime": "2026-10-24 20:25",
+            "flightNumber": "1819",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 14:50",
+            "arrivalTime": "2026-11-24 15:55",
+            "flightNumber": "2364",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "CEB",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 18:45",
+            "arrivalTime": "2026-11-24 20:05",
+            "flightNumber": "2860",
+            "marketingAirline": "PR",
+            "departureAirportCode": "CEB",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzA2MTExMSpQUn4jUFIxMDUjUFIyODE1I1BSMjgxMCNQUjExMiNQUjM4OTh+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 06:20",
+            "arrivalTime": "2026-11-24 08:10",
+            "flightNumber": "2810",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 11:10",
+            "arrivalTime": "2026-11-24 08:05",
+            "flightNumber": "112",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 11:39",
+            "arrivalTime": "2026-11-24 13:22",
+            "flightNumber": "3898",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzE1MjIyMSpQUn4jUFIxMDUjUFIyODE1I1BSMTgwNiNQUjEwMiNQUjM4ODJ+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 15:55",
+            "arrivalTime": "2026-11-24 17:50",
+            "flightNumber": "1806",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 22:15",
+            "arrivalTime": "2026-11-24 19:10",
+            "flightNumber": "102",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 21:35",
+            "arrivalTime": "2026-11-24 23:17",
+            "flightNumber": "3882",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMi9EVk9TRk8yMDI2LTExLTI0XzExMjMqUFJ+I1BSMTA1I1BSMTgwNSNQUjI4MTQjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 12:30",
+            "arrivalTime": "2026-10-24 14:20",
+            "flightNumber": "1805",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 11:00",
+            "arrivalTime": "2026-11-24 12:50",
+            "flightNumber": "2814",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzEyMjIyMSpQUn4jUFIxMDUjUFIyODEzI1BSMjgxNiNQUjEwMiNQUjM4ODJ+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 12:55",
+            "arrivalTime": "2026-11-24 14:45",
+            "flightNumber": "2816",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 22:15",
+            "arrivalTime": "2026-11-24 19:10",
+            "flightNumber": "102",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 21:35",
+            "arrivalTime": "2026-11-24 23:17",
+            "flightNumber": "3882",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzAyMTExMSpQUn4jUFIxMDUjUFIyODEzI1BSMjgyMiNQUjExMiNQUjM4OTh+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 02:55",
+            "arrivalTime": "2026-11-24 04:40",
+            "flightNumber": "2822",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 11:10",
+            "arrivalTime": "2026-11-24 08:05",
+            "flightNumber": "112",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 11:39",
+            "arrivalTime": "2026-11-24 13:22",
+            "flightNumber": "3898",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxNC9EVk9TRk8yMDI2LTExLTI0XzEyMjMqUFJ+I1BSMTA1I1BSMjgxNyNQUjI4MTYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 14:30",
+            "arrivalTime": "2026-10-24 16:25",
+            "flightNumber": "2817",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 12:55",
+            "arrivalTime": "2026-11-24 14:45",
+            "flightNumber": "2816",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDcxMjIyL0RWT1NGTzIwMjYtMTEtMjRfMTUyMypQUn4jUFIzODc5I1BSMTEzI1BSMjgyMSNQUjE4MDYjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 07:15",
+            "arrivalTime": "2026-10-23 08:54",
+            "flightNumber": "3879",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-23 12:25",
+            "arrivalTime": "2026-10-24 18:00",
+            "flightNumber": "113",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-10-24 22:15",
+            "arrivalTime": "2026-10-25 00:05",
+            "flightNumber": "2821",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 15:55",
+            "arrivalTime": "2026-11-24 17:50",
+            "flightNumber": "1806",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAwOC9EVk9TRk8yMDI2LTExLTI0XzA2MjMqUFJ+I1BSMTA1I1BSMjgxMyNQUjI4MTAjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 08:20",
+            "arrivalTime": "2026-10-24 10:10",
+            "flightNumber": "2813",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 06:20",
+            "arrivalTime": "2026-11-24 08:10",
+            "flightNumber": "2810",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDcxMjIwL0RWT1NGTzIwMjYtMTEtMjRfMTQxODIzKlBSfiNQUjM4NzkjUFIxMTMjUFIyODIzI1BSMjM2NCNQUjI4NjAjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 07:15",
+            "arrivalTime": "2026-10-23 08:54",
+            "flightNumber": "3879",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "LAX"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-23 12:25",
+            "arrivalTime": "2026-10-24 18:00",
+            "flightNumber": "113",
+            "marketingAirline": "PR",
+            "departureAirportCode": "LAX",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-10-24 20:10",
+            "arrivalTime": "2026-10-24 22:05",
+            "flightNumber": "2823",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 14:50",
+            "arrivalTime": "2026-11-24 15:55",
+            "flightNumber": "2364",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "CEB",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 18:45",
+            "arrivalTime": "2026-11-24 20:05",
+            "flightNumber": "2860",
+            "marketingAirline": "PR",
+            "departureAirportCode": "CEB",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 3,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:3",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "key": "51_R1RUMTAyKlkxMDAwL1NGT0RWTzIwMjYtMTAtMjNfMDAxMS9EVk9TRk8yMDI2LTExLTI0XzA5MjMqUFJ+I1BSMTA1I1BSMjgxNSNQUjE4MTIjUFIxMDR+bGM6ZW5fdXM=",
+    "gds": "S",
+    "pcc": "8KI0",
+    "cons": "GTT",
+    "validatingCarrier": "PR",
+    "fareType": "COMM",
+    "trips": [
+      {
+        "tripId": 1,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-10-23 00:30",
+            "arrivalTime": "2026-10-24 05:30",
+            "flightNumber": "105",
+            "marketingAirline": "PR",
+            "departureAirportCode": "SFO",
+            "arrivalAirportCode": "MNL"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-10-24 11:10",
+            "arrivalTime": "2026-10-24 13:00",
+            "flightNumber": "2815",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "DVO",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          }
+        ]
+      },
+      {
+        "tripId": 2,
+        "segments": [
+          {
+            "segmentId": 1,
+            "departureTime": "2026-11-24 09:05",
+            "arrivalTime": "2026-11-24 10:55",
+            "flightNumber": "1812",
+            "marketingAirline": "PR",
+            "departureAirportCode": "DVO",
+            "arrivalAirportCode": "MNL",
+            "brandId": "COMFCLS",
+            "brandName": "COMFORT CLASS"
+          },
+          {
+            "segmentId": 2,
+            "departureTime": "2026-11-24 23:15",
+            "arrivalTime": "2026-11-24 19:45",
+            "flightNumber": "104",
+            "marketingAirline": "PR",
+            "departureAirportCode": "MNL",
+            "arrivalAirportCode": "SFO"
+          }
+        ]
+      }
+    ],
+    "ngsFeatures": {
+      "stars": 3,
+      "name": "COMFORT CLASS",
+      "list": [
+        {
+          "id": "11",
+          "application": "F",
+          "serviceType": "T",
+          "tag": "CHANGE",
+          "commercialName": "CHANGE FEE",
+          "atpco": "055",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "5",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "MILES",
+          "commercialName": "115 PERCENT MILES EARNED",
+          "atpco": "06E",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "27",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND BEFORE DEPARTURE",
+          "atpco": "06K",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "13",
+          "application": "C",
+          "serviceType": "T",
+          "tag": "REFUND",
+          "commercialName": "REFUND AFTER DEPARTURE",
+          "atpco": "06L",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "8",
+          "application": "F",
+          "serviceType": "M",
+          "tag": "MEAL",
+          "commercialName": "SNACK",
+          "atpco": "0AT",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "4",
+          "application": "F",
+          "serviceType": "Z",
+          "tag": "PRIORITY",
+          "commercialName": "SEAT RESERVATION",
+          "atpco": "0B5",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        },
+        {
+          "id": "18",
+          "application": "F",
+          "serviceType": "C",
+          "tag": "CABIN",
+          "commercialName": "CARRY7KG 15LB UPTO45LI 115LCM",
+          "atpco": "0M3",
+          "breakdown": [
+            "1:2",
+            "2:1"
+          ]
+        }
+      ]
+    }
+  }
+]

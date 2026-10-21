@@ -1,0 +1,33 @@
+{
+  "source": "SS-6390 expected new.json attachment",
+  "evidence_kind": "expected output only; not a live DEV response",
+  "segments": [
+    {
+      "segmentNumber": 1,
+      "baggageAllowance": "1P",
+      "baggage": {
+        "ADT": {
+          "weightLb": 33,
+          "weightKg": 15,
+          "lengthInch": 62,
+          "lengthCm": 158,
+          "numberOfPcs": "01P",
+          "baggageFullTextA": null,
+          "baggageFullTextD": null
+        }
+      },
+      "carryOnAllowance": "1P",
+      "carryOn": {
+        "ADT": {
+          "weightLb": null,
+          "weightKg": 7,
+          "lengthInch": null,
+          "lengthCm": null,
+          "numberOfPcs": "1P",
+          "baggageFullTextA": null,
+          "baggageFullTextD": null
+        }
+      }
+    }
+  ]
+}

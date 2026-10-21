@@ -1,0 +1,98 @@
+[
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTk3I0xIOTE2I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTk3I0xIOTE4I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE0I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE2I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxNCNMSDExMTcjTEg0MDh+bGM6ZW5fdXM=",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE4I0xIMTExNyNMSDQwOH5sYzplbl91cw==",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxNiNMSDExMTcjTEg0MDh+bGM6ZW5fdXM=",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxOCNMSDExMTcjTEg0MDh+bGM6ZW5fdXM=",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18xNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxMTE1I0xINzYwMyNMSDc3MTB+bGM6ZW5fdXM=",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18xMzExMTYqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTYjTEgxMTEzI0xINzYwMyNMSDc1MTJ+bGM6ZW5fdXM=",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18xNzExMjAqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxMTE1I0xINzYwMyNMSDc3MTB+bGM6ZW5fdXM=",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  },
+  {
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18xMzExMTYqTEh+I0xIODgzMSNMSDkyODEjTEg5OTcjTEg5MTgjTEgxMTEzI0xINzYwMyNMSDc1MTJ+bGM6ZW5fdXM=",
+    "route": "MAD-FRA",
+    "class": "Z",
+    "routingInversion": true,
+    "commissionFieldPresent": false,
+    "commissions": null
+  }
+]

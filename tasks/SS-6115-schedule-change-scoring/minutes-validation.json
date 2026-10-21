@@ -1,0 +1,302 @@
+[
+  {
+    "trip": 1,
+    "expected": 20.0,
+    "actual": 20
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 20.0,
+    "actual": 20
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 1450.0,
+    "actual": 1450
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 1450.0,
+    "actual": 1450
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 1637.0,
+    "actual": 1637
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 1637.0,
+    "actual": 1637
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 20.0,
+    "actual": 20
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 2990.0,
+    "actual": 2990
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 2990.0,
+    "actual": 2990
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 1450.0,
+    "actual": 1450
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 1637.0,
+    "actual": 1637
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 2990.0,
+    "actual": 2990
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 20.0,
+    "actual": 20
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 20.0,
+    "actual": 20
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 107.0,
+    "actual": 107
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 107.0,
+    "actual": 107
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 197.0,
+    "actual": 197
+  },
+  {
+    "trip": 2,
+    "expected": 23.0,
+    "actual": 23
+  },
+  {
+    "trip": 1,
+    "expected": 197.0,
+    "actual": 197
+  },
+  {
+    "trip": 2,
+    "expected": 67.0,
+    "actual": 67
+  },
+  {
+    "trip": 1,
+    "expected": 20.0,
+    "actual": 20
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 107.0,
+    "actual": 107
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 137.0,
+    "actual": 137
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  },
+  {
+    "trip": 1,
+    "expected": 197.0,
+    "actual": 197
+  },
+  {
+    "trip": 2,
+    "expected": 2903.0,
+    "actual": 2903
+  }
+]

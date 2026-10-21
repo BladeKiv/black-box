@@ -1,0 +1,2 @@
+scenario_id,expected_result,provider_filter,search_url,adt,chd,inf,pay_type,segments_path,required_fields,expected_carry_on_length_cm,expected_carry_on_length_inch
+"dev-ow-adt-cash","Ticket-format baggage from Book onward; cash 408 Retry accepted","atlas","https://api.search.dev.travel-dev.com/atlas/v1/search?adt=1&cid=TST103&debug=1&fl[0][o]=NYC&fl[0][d]=MAD&fl[0][dt]=2026-11-11&tripType=OW&cabin=Y","1","0","0","1","data.response.pnrInfo.segments","weightLb;weightKg;lengthInch;lengthCm;numberOfPcs;baggageFullTextA;baggageFullTextD","119","46;47"

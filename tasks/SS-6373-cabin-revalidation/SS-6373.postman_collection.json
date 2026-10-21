@@ -1,0 +1,96 @@
+{
+  "info": {
+    "name": "SS-6373 PREPROD cabin revalidation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Run with expected-outcomes.csv. Keys may expire; refresh Search and CSV original segment data together. Per user clarification, null is covered by empty-cabin testing; no separate null test is required. Tests cover AirAPI only. Configure basic authentication locally; credentials are not included."
+  },
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{username}}",
+        "type": "string"
+      },
+      {
+        "key": "password",
+        "value": "{{password}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://airapi51.kivops.info"
+    },
+    {
+      "key": "product_type",
+      "value": "SALKIV"
+    },
+    {
+      "key": "username",
+      "value": ""
+    },
+    {
+      "key": "password",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Search original inventory",
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?extra=false&cabin=C&adt=1&debug=true&fare=PUB&cid=SALKIV&gds=G&pcc=DEF&fl.0.dt=2027-06-30&fl.0.o=CPH&fl.0.d=DEN",
+        "header": []
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Search returns results array',()=>pm.expect(pm.response.json().results).to.be.an('array'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Revalidate CSV original key",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/v1/result/{{product_type}}/{{original_key}}",
+        "header": []
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "['original_key','original_gds','original_segments','expected_cabins','search_url'].forEach(k => { if (!pm.iterationData.get(k)) throw new Error('Supply CSV row: '+k); });",
+              "pm.variables.set('original_key', pm.iterationData.get('original_key'));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const j=pm.response.json();",
+              "const original=JSON.parse(pm.iterationData.get('original_segments'));",
+              "const expected=JSON.parse(pm.iterationData.get('expected_cabins'));",
+              "const actual=(j.trips||[]).flatMap(t=>(t.segments||[]).map(s=>({...s,tripId:t.tripId})));",
+              "pm.test('Same itinerary, segments, and booking classes',()=>{pm.expect(actual.length).to.eql(original.length); original.forEach(o=>{const a=actual.find(s=>s.tripId===o.tripId&&s.segmentId===o.segmentId);pm.expect(a).to.be.an('object');['flightNumber','departureAirportCode','arrivalAirportCode','departureTime','bookingClass'].forEach(k=>pm.expect(a[k]).to.eql(o[k]));});});",
+              "pm.test('Revalidation occurred: original GDS changed',()=>pm.expect(j.gds).not.to.eql(pm.iterationData.get('original_gds')));",
+              "pm.test(pm.iterationData.get('expected_result'),()=>original.forEach((o,i)=>{const a=actual.find(s=>s.tripId===o.tripId&&s.segmentId===o.segmentId);pm.expect(a.cabin).to.eql(expected[i]);}));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

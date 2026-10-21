@@ -1,0 +1,162 @@
+[
+  {
+    "fareCount": 4,
+    "rates": [
+      8,
+      8
+    ],
+    "otherFares": [
+      {
+        "commissionsFieldPresent": false,
+        "route": "AMS-RDU",
+        "class": "J"
+      },
+      {
+        "commissionsFieldPresent": false,
+        "route": "FRA-LHR",
+        "class": "D"
+      }
+    ],
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTk3I0xIOTE2I0xIMTExNyNMSDQwOH5sYzplbl91cw=="
+  },
+  {
+    "fareCount": 4,
+    "rates": [
+      8,
+      8
+    ],
+    "otherFares": [
+      {
+        "commissionsFieldPresent": false,
+        "route": "AMS-RDU",
+        "class": "J"
+      },
+      {
+        "commissionsFieldPresent": false,
+        "route": "FRA-LHR",
+        "class": "D"
+      }
+    ],
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzE0MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTk3I0xIOTE4I0xIMTExNyNMSDQwOH5sYzplbl91cw=="
+  },
+  {
+    "fareCount": 4,
+    "rates": [
+      8,
+      8
+    ],
+    "otherFares": [
+      {
+        "commissionsFieldPresent": false,
+        "route": "AMS-RDU",
+        "class": "J"
+      },
+      {
+        "commissionsFieldPresent": false,
+        "route": "FRA-LHR",
+        "class": "D"
+      }
+    ],
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE0I0xIMTExNyNMSDQwOH5sYzplbl91cw=="
+  },
+  {
+    "fareCount": 4,
+    "rates": [
+      8,
+      8
+    ],
+    "otherFares": [
+      {
+        "commissionsFieldPresent": false,
+        "route": "AMS-RDU",
+        "class": "J"
+      },
+      {
+        "commissionsFieldPresent": false,
+        "route": "FRA-LHR",
+        "class": "D"
+      }
+    ],
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE2I0xIMTExNyNMSDQwOH5sYzplbl91cw=="
+  },
+  {
+    "fareCount": 4,
+    "rates": [
+      8,
+      8
+    ],
+    "otherFares": [
+      {
+        "commissionsFieldPresent": false,
+        "route": "AMS-RDU",
+        "class": "J"
+      },
+      {
+        "commissionsFieldPresent": false,
+        "route": "FRA-LHR",
+        "class": "D"
+      }
+    ],
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTYvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxNCNMSDExMTcjTEg0MDh+bGM6ZW5fdXM="
+  },
+  {
+    "fareCount": 4,
+    "rates": [
+      8,
+      8
+    ],
+    "otherFares": [
+      {
+        "commissionsFieldPresent": false,
+        "route": "AMS-RDU",
+        "class": "J"
+      },
+      {
+        "commissionsFieldPresent": false,
+        "route": "FRA-LHR",
+        "class": "D"
+      }
+    ],
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA4MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIOTkzI0xIOTE4I0xIMTExNyNMSDQwOH5sYzplbl91cw=="
+  },
+  {
+    "fareCount": 4,
+    "rates": [
+      8,
+      8
+    ],
+    "otherFares": [
+      {
+        "commissionsFieldPresent": false,
+        "route": "AMS-RDU",
+        "class": "J"
+      },
+      {
+        "commissionsFieldPresent": false,
+        "route": "FRA-LHR",
+        "class": "D"
+      }
+    ],
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTcvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxNiNMSDExMTcjTEg0MDh+bGM6ZW5fdXM="
+  },
+  {
+    "fareCount": 4,
+    "rates": [
+      8,
+      8
+    ],
+    "otherFares": [
+      {
+        "commissionsFieldPresent": false,
+        "route": "AMS-RDU",
+        "class": "J"
+      },
+      {
+        "commissionsFieldPresent": false,
+        "route": "FRA-LHR",
+        "class": "D"
+      }
+    ],
+    "key": "0_VE9KMTAxKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTUxNy9BTVNMSFIyMDI2LTExLTMwXzA3MTgvTUFEUkRVMjAyNi0xMi0wM18wNjEwKkxIfiNMSDg4MzEjTEg5MjgxI0xIMTAwMyNMSDkxOCNMSDExMTcjTEg0MDh+bGM6ZW5fdXM="
+  }
+]

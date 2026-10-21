@@ -1,0 +1,61 @@
+[
+  {
+    "id": "rt-adt-chd-inf",
+    "type": "RT",
+    "adt": 1,
+    "chd": 1,
+    "inf": 1,
+    "evidence": ".\\tasks\\ss-6341\\runs\\2026-10-01T10-00-04-677Z",
+    "provenance": "earlier captured booking, not rerun"
+  },
+  {
+    "id": "ow-1adt",
+    "type": "OW",
+    "adt": 1,
+    "chd": 0,
+    "inf": 0,
+    "url": "https://api.search.dev.travel-dev.com/brightsun/v1/search?tripType=OW&fl[0][o]=AMS&fl[0][d]=LHR&fl[0][dt]=2026-11-11&cabin=Y&adt=1&chd=0&inf=0&limit=100",
+    "evidence": ".\\tasks\\ss-6341\\runs\\2026-10-01T10-16-37-711Z",
+    "provenance": "new live booking"
+  },
+  {
+    "id": "rt-2adt",
+    "type": "RT",
+    "adt": 2,
+    "chd": 0,
+    "inf": 0,
+    "url": "https://api.search.dev.travel-dev.com/brightsun/v1/search?tripType=RT&fl[0][o]=AMS&fl[0][d]=LHR&fl[0][dt]=2026-11-11&cabin=Y&adt=2&chd=0&inf=0&fl[1][o]=LHR&fl[1][d]=AMS&fl[1][dt]=2026-11-18&limit=100",
+    "evidence": ".\\tasks\\ss-6341\\runs\\2026-10-01T10-16-58-495Z",
+    "provenance": "new live booking"
+  },
+  {
+    "id": "ow-adt-chd",
+    "type": "OW",
+    "adt": 1,
+    "chd": 1,
+    "inf": 0,
+    "url": "https://api.search.dev.travel-dev.com/brightsun/v1/search?tripType=OW&fl[0][o]=AMS&fl[0][d]=LHR&fl[0][dt]=2026-11-11&cabin=Y&adt=1&chd=1&inf=0&limit=100",
+    "evidence": ".\\tasks\\ss-6341\\runs\\2026-10-01T10-17-27-085Z",
+    "provenance": "new live booking"
+  },
+  {
+    "id": "rt-adt-inf",
+    "type": "RT",
+    "adt": 1,
+    "chd": 0,
+    "inf": 1,
+    "url": "https://api.search.dev.travel-dev.com/brightsun/v1/search?tripType=RT&fl[0][o]=AMS&fl[0][d]=LHR&fl[0][dt]=2026-11-11&cabin=Y&adt=1&chd=0&inf=1&fl[1][o]=LHR&fl[1][d]=AMS&fl[1][dt]=2026-11-18&limit=100",
+    "evidence": ".\\tasks\\ss-6341\\runs\\2026-10-01T10-17-47-272Z",
+    "provenance": "new live booking"
+  },
+  {
+    "id": "mc-2adt",
+    "type": "MC",
+    "adt": 2,
+    "chd": 0,
+    "inf": 0,
+    "url": "https://api.search.dev.travel-dev.com/brightsun/v1/search?tripType=MC&fl[0][o]=LAX&fl[0][d]=FRA&fl[0][dt]=2026-11-11&cabin=Y&adt=2&chd=0&inf=0&fl[1][o]=MUC&fl[1][d]=LAX&fl[1][dt]=2026-11-18&limit=100",
+    "evidence": ".\\tasks\\ss-6341\\runs\\2026-10-01T10-18-11-737Z",
+    "provenance": "new live booking"
+  }
+]

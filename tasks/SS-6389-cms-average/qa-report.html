@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AirAPI QA Dispatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#15202b; --paper:#f7fafb; --rule:#cad7dc; --muted:#58707a; --accent:#08788e; --pass:#18794e; --fail:#b42832; --warn:#a85a00; }
+    @media (prefers-color-scheme: dark) { :root { --ink:#edf3f5; --paper:#101820; --rule:#344751; --muted:#a7bbc2; --accent:#63d2e7; --pass:#75d7a7; --fail:#ff9b9f; --warn:#f6b56d; } }
+    body[data-theme="light"] { --ink:#15202b; --paper:#f7fafb; --rule:#cad7dc; --muted:#58707a; --accent:#08788e; --pass:#18794e; --fail:#b42832; --warn:#a85a00; }
+    body[data-theme="dark"] { --ink:#edf3f5; --paper:#101820; --rule:#344751; --muted:#a7bbc2; --accent:#63d2e7; --pass:#75d7a7; --fail:#ff9b9f; --warn:#f6b56d; }
+    * { box-sizing:border-box; }
+    body { background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; margin:0; padding:24px; }
+    main { border:1px solid var(--rule); margin:auto; max-width:920px; }
+    header { border-bottom:3px solid var(--accent); display:grid; gap:20px; grid-template-columns:1fr; padding:26px 28px 22px; }
+    .eyebrow, th, h2 { font-family:"Barlow Condensed",sans-serif; letter-spacing:.11em; text-transform:uppercase; }
+    .eyebrow { color:var(--muted); font-size:.8rem; font-weight:600; }
+    h1 { font-family:"Barlow Condensed",sans-serif; font-size:2.35rem; letter-spacing:.01em; line-height:.95; margin:.4rem 0 0; text-transform:uppercase; }
+    .run { color:var(--muted); font-size:.85rem; line-height:1.6; }.theme-toggle { background:transparent; border:1px solid var(--rule); color:var(--ink); cursor:pointer; font:600 .72rem "Barlow Condensed",sans-serif; letter-spacing:.09em; margin-top:10px; padding:6px 9px; text-transform:uppercase; }
+    .signal { border-bottom:1px solid var(--rule); display:grid; grid-template-columns:1.3fr repeat(3,.7fr); }
+    .metric { border-right:1px solid var(--rule); padding:16px 20px; } .metric:last-child { border:0; }
+    .metric span { display:block; } .metric .label { color:var(--muted); font-family:"Barlow Condensed",sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+    .metric .value { font-family:"Barlow Condensed",sans-serif; font-size:1.8rem; font-weight:600; margin-top:3px; }
+    .pass { color:var(--pass); } .fail { color:var(--fail); } .warn { color:var(--warn); }
+    article { padding:28px; } .finding { border-left:3px solid var(--accent); font-size:1rem; line-height:1.6; margin:0 0 30px; padding-left:14px; }
+    h2 { font-size:.9rem; margin:0 0 12px; } table { border-collapse:collapse; font-size:.9rem; width:100%; }
+    th { color:var(--muted); font-size:.72rem; font-weight:600; padding:0 12px 9px 0; text-align:left; }
+    td { border-top:1px solid var(--rule); line-height:1.45; padding:14px 12px 14px 0; vertical-align:top; } .test { font-weight:700; } .status { font-family:"Barlow Condensed",sans-serif; font-size:.86rem; font-weight:700; letter-spacing:.09em; }
+    .evidence { border-top:1px solid var(--rule); display:grid; gap:24px; grid-template-columns:1fr; margin-top:28px; padding-top:22px; } .evidence p { color:var(--muted); font-size:.86rem; line-height:1.55; margin:0; }
+    code { background:color-mix(in srgb,var(--accent) 10%,transparent); font-family:ui-monospace,monospace; font-size:.86em; padding:2px 4px; }
+    .failure-sample { background:color-mix(in srgb,var(--fail) 6%,transparent); border-left:3px solid var(--fail); margin:24px 0; padding:18px; } .failure-sample p { color:var(--muted); font-size:.86rem; line-height:1.55; margin:0 0 10px; } .failure-sample pre { border:1px solid var(--rule); font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; margin:0; overflow:auto; padding:12px; white-space:pre; }
+    .download-artifact { background:none; border:0; color:var(--accent); cursor:pointer; font:inherit; padding:0; text-decoration:underline; } @media (min-width:680px) { header { grid-template-columns:1fr auto; } .run { text-align:right; } .evidence { grid-template-columns:1fr 1fr; } }
+    @media (max-width:620px) { body { padding:12px; } header, article { padding:20px; } .signal { grid-template-columns:1fr 1fr; } .metric { border-bottom:1px solid var(--rule); } .metric:nth-child(2n) { border-right:0; } .metric:nth-last-child(-n+2) { border-bottom:0; } .table-wrap { overflow-x:auto; } table { min-width:650px; } }
+  </style>
+</head>
+<body data-theme="light">
+  <main>
+    <header>
+      <div><div class="eyebrow">AirAPI / QA dispatch</div><h1>SS-6389 · CMS average</h1></div>
+      <div class="run">Run 2026-10-12<br>DEV Search · TOJ101 / LH / C / S / 6NVG<br><button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
+    </header>
+    <section class="signal" aria-label="Release signal"><div class="metric"><span class="label">Release signal</span><span class="value pass">PASS</span></div><div class="metric"><span class="label">Passed</span><span class="value pass">2</span></div><div class="metric"><span class="label">Failed</span><span class="value fail">0</span></div><div class="metric"><span class="label">Warn</span><span class="value warn">0</span></div></section>
+    <article>
+      <p class="finding">Both requested averaging cases PASS: 9%/7% produced 8%/8% in 8 qualifying results; 9%/9% produced 9%/9% in 16 qualifying results. Other fare blocks retained missing commissions fields. Explicit 0% rule input was not tested.</p>
+      <h2>Executed tests</h2>
+      <div class="table-wrap"><table><thead><tr><th>ID</th><th>Test data</th><th>Expected → actual</th><th>Status</th></tr></thead><tbody><tr><td>TC-01</td><td>Exact supplied DEV Search; TOJ101; LH; C; S/6NVG; configured 9%/7%</td><td>Configured rates 9% and 7% average to 8% on the two matching fares; other fares remain without commission fields. → 8 qualifying results checked; both GTT upfront.percent arrays [8]; 0 mismatches; other fare blocks still omit commissions.</td><td class="status pass">PASS</td></tr><tr><td>TC-02</td><td>Exact supplied DEV Search; configured Average rates 9%/9%</td><td>Both matching fares receive 9%; other fares retain missing commissions fields → HTTP 200; 50 results; 16 qualifying results; both percent arrays [9]; no other fares gained commission; 0 mismatches</td><td class="status pass">PASS</td></tr></tbody></table></div>
+      
+      <section class="evidence"><div><h2>Intended behavior and evidence</h2><p>Exclude commissionless fares from averaging. Exact Search URL and opaque keys preserved in search-request.json, submitted-rule-response.json and mixed-rates-validation.json. Rates 9%/7% were supplied by the user; response shows 8%/8%. Equal-rate rerun executed: equal-rates-response.json and equal-rates-validation.json. Explicit-zero input was not tested.</p></div><div><h2>Rerun artifacts</h2><p><button class="download-artifact" data-file="SS-6389.postman_collection.json">Postman collection</button><br><button class="download-artifact" data-file="expected-outcomes.csv">Expected-outcome CSV</button></p></div></section>
+    </article>
+  </main>
+  <script>
+    const artifacts = {"expected-outcomes.csv":{"type":"text/csv;charset=utf-8","content":"InNjZW5hcmlvX2lkIiwiZXhwZWN0ZWRfcmVzdWx0IiwicHJvdmlkZXJfZmlsdGVyIiwic2VhcmNoX3VybCIsImlucHV0X3BlcmNlbnRfZCIsImlucHV0X3BlcmNlbnRfeiIsImV4cGVjdGVkX3BlcmNlbnQiLCJleGVjdXRpb25fc3RhdHVzIg0KIm1peGVkX3JhdGVzIiwiVHdvIG1hdGNoZWQgZmFyZXMgZWFjaCA4JTsgbWlzc2luZyBjb21taXNzaW9uIGZpZWxkcyByZXRhaW5lZCIsIkxIIC8gUyAvIDZOVkciLCJodHRwczovL2FwaS5zZWFyY2guZGV2LnRyYXZlbC1kZXYuY29tL3YxL3NlYXJjaD9leHRyYT1mYWxzZSZjYWJpbj1DJmZsLjIubz1NQUQmZmwuMi5kPVJEVSZmbC4yLmR0PTIwMjYtMTItMDMmYWR0PTEmZGVidWc9dHJ1ZSZmYXJlPVBVQiZjaWQ9VE9KMTAxJmdkcz1TJnBjYz02TlZHJmZsLjAuZHQ9MjAyNi0xMS0yMCZmbC4xLm89QU1TJmZsLjEuZD1MSFImZmwuMS5kdD0yMDI2LTExLTMwJmZsLjAubz1SRFUmZmwuMC5kPU1VQyZ2YWxfY3I9TEgmYmFzaWM9ZmFsc2UiLCI5IiwiNyIsIjgiLCJQQVNTIg0KImVxdWFsX3JhdGVzIiwiVHdvIG1hdGNoZWQgZmFyZXMgZWFjaCA5JTsgbWlzc2luZyBjb21taXNzaW9uIGZpZWxkcyByZXRhaW5lZCIsIkxIIC8gUyAvIDZOVkciLCJodHRwczovL2FwaS5zZWFyY2guZGV2LnRyYXZlbC1kZXYuY29tL3YxL3NlYXJjaD9leHRyYT1mYWxzZSZjYWJpbj1DJmZsLjIubz1NQUQmZmwuMi5kPVJEVSZmbC4yLmR0PTIwMjYtMTItMDMmYWR0PTEmZGVidWc9dHJ1ZSZmYXJlPVBVQiZjaWQ9VE9KMTAxJmdkcz1TJnBjYz02TlZHJmZsLjAuZHQ9MjAyNi0xMS0yMCZmbC4xLm89QU1TJmZsLjEuZD1MSFImZmwuMS5kdD0yMDI2LTExLTMwJmZsLjAubz1SRFUmZmwuMC5kPU1VQyZ2YWxfY3I9TEgmYmFzaWM9ZmFsc2UiLCI5IiwiOSIsIjkiLCJQQVNTIg0K"},"SS-6389.postman_collection.json":{"content":"ew0KICAiaXRlbSI6IFsNCiAgICB7DQogICAgICAiZXZlbnQiOiBbDQogICAgICAgIHsNCiAgICAgICAgICAibGlzdGVuIjogInByZXJlcXVlc3QiLA0KICAgICAgICAgICJzY3JpcHQiOiB7DQogICAgICAgICAgICAiZXhlYyI6IFsNCiAgICAgICAgICAgICAgInBtLnZhcmlhYmxlcy5zZXQoXCJzY2VuYXJpb19pZFwiLHBtLml0ZXJhdGlvbkRhdGEuZ2V0KFwic2NlbmFyaW9faWRcIikgfHwgXCJtaXhlZF9yYXRlc1wiKTsiLA0KICAgICAgICAgICAgICAicG0udmFyaWFibGVzLnNldChcImV4cGVjdGVkX3BlcmNlbnRcIixwbS5pdGVyYXRpb25EYXRhLmdldChcImV4cGVjdGVkX3BlcmNlbnRcIikgfHwgOCk7Ig0KICAgICAgICAgICAgXSwNCiAgICAgICAgICAgICJ0eXBlIjogInRleHQvamF2YXNjcmlwdCINCiAgICAgICAgICB9DQogICAgICAgIH0sDQogICAgICAgIHsNCiAgICAgICAgICAibGlzdGVuIjogInRlc3QiLA0KICAgICAgICAgICJzY3JpcHQiOiB7DQogICAgICAgICAgICAiZXhlYyI6IFsNCiAgICAgICAgICAgICAgImNvbnN0IHI9cG0ucmVzcG9uc2UuanNvbigpOyIsDQogICAgICAgICAgICAgICJjb25zdCBleHBlY3RlZD1OdW1iZXIocG0uaXRlcmF0aW9uRGF0YS5nZXQoXCJleHBlY3RlZF9wZXJjZW50XCIpIHx8IDgpOyIsDQogICAgICAgICAgICAgICJjb25zdCBtYXRjaGVzPXIucmVzdWx0cy5maWx0ZXIoeD0+e2NvbnN0IGY9eC5rZXlzPy5jb21taXNzaW9uX2luZm8/LmZhcmVDYWxjdWxhdGlvbj8uQURUfHxbXTtyZXR1cm4gZi5zb21lKGE9PmEuZGVwYXJ0dXJlPT09XCJSRFVcIiYmYS5hcnJpdmFsPT09XCJNVUNcIiYmYS5ib29raW5nQ2xhc3M9PT1cIkRcIiYmYS5jb21taXNzaW9ucz8uR1RUPy51cGZyb250Py5zdWJSdWxlPT09MjUwMjApJiZmLnNvbWUoYT0+YS5kZXBhcnR1cmU9PT1cIk1BRFwiJiZhLmFycml2YWw9PT1cIkZSQVwiJiZhLmJvb2tpbmdDbGFzcz09PVwiWlwiJiZhLmNvbW1pc3Npb25zPy5HVFQ/LnVwZnJvbnQ/LnN1YlJ1bGU9PT0yNTAyMSk7fSk7IiwNCiAgICAgICAgICAgICAgImlmKCFtYXRjaGVzLmxlbmd0aCl7cG0udGVzdC5za2lwKFwiV0FSTjogbWF0Y2hpbmcgZmFyZS9ydWxlIGludmVudG9yeSB1bmF2YWlsYWJsZVwiLCgpPT57fSk7fWVsc2V7cG0udGVzdChcIkJvdGggQXZlcmFnZSBmYXJlcyByZWNlaXZlIGV4cGVjdGVkIHJhdGVcIiwoKT0+bWF0Y2hlcy5mb3JFYWNoKHg9Pntjb25zdCBmPXgua2V5cy5jb21taXNzaW9uX2luZm8uZmFyZUNhbGN1bGF0aW9uLkFEVDtmb3IoY29uc3QgaWQgb2YgWzI1MDIwLDI1MDIxXSl7Y29uc3QgYT1mLmZpbmQoYT0+YS5jb21taXNzaW9ucz8uR1RUPy51cGZyb250Py5zdWJSdWxlPT09aWQpO3BtLmV4cGVjdChhLmNvbW1pc3Npb25zLkdUVC51cGZyb250LmNvbnRyYWN0KS50by5lcWwoXCJBdmVyYWdlXCIpO3BtLmV4cGVjdChhLmNvbW1pc3Npb25zLkdUVC51cGZyb250LnBlcmNlbnQpLnRvLmVxbChbZXhwZWN0ZWRdKTt9fSkpO30iDQogICAgICAgICAgICBdLA0KICAgICAgICAgICAgInR5cGUiOiAidGV4dC9qYXZhc2NyaXB0Ig0KICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgICAgXSwNCiAgICAgICJuYW1lIjogIkF2ZXJhZ2UgY29tbWlzc2lvbiBTZWFyY2giLA0KICAgICAgInJlcXVlc3QiOiB7DQogICAgICAgICJhdXRoIjogew0KICAgICAgICAgICJiYXNpYyI6IFsNCiAgICAgICAgICAgIHsNCiAgICAgICAgICAgICAgImtleSI6ICJ1c2VybmFtZSIsDQogICAgICAgICAgICAgICJ2YWx1ZSI6ICJ7e2F1dGhfbG9naW59fSIsDQogICAgICAgICAgICAgICJ0eXBlIjogInN0cmluZyINCiAgICAgICAgICAgIH0sDQogICAgICAgICAgICB7DQogICAgICAgICAgICAgICJrZXkiOiAicGFzc3dvcmQiLA0KICAgICAgICAgICAgICAidmFsdWUiOiAie3thdXRoX3Bhc3N3b3JkfX0iLA0KICAgICAgICAgICAgICAidHlwZSI6ICJzdHJpbmciDQogICAgICAgICAgICB9DQogICAgICAgICAgXSwNCiAgICAgICAgICAidHlwZSI6ICJiYXNpYyINCiAgICAgICAgfSwNCiAgICAgICAgIm1ldGhvZCI6ICJHRVQiLA0KICAgICAgICAidXJsIjogImh0dHBzOi8vYXBpLnNlYXJjaC5kZXYudHJhdmVsLWRldi5jb20vdjEvc2VhcmNoP2V4dHJhPWZhbHNlJmNhYmluPUMmZmwuMi5vPU1BRCZmbC4yLmQ9UkRVJmZsLjIuZHQ9MjAyNi0xMi0wMyZhZHQ9MSZkZWJ1Zz10cnVlJmZhcmU9UFVCJmNpZD1UT0oxMDEmZ2RzPVMmcGNjPTZOVkcmZmwuMC5kdD0yMDI2LTExLTIwJmZsLjEubz1BTVMmZmwuMS5kPUxIUiZmbC4xLmR0PTIwMjYtMTEtMzAmZmwuMC5vPVJEVSZmbC4wLmQ9TVVDJnZhbF9jcj1MSCZiYXNpYz1mYWxzZSINCiAgICAgIH0NCiAgICB9DQogIF0sDQogICJ2YXJpYWJsZSI6IFsNCiAgICB7DQogICAgICAia2V5IjogImF1dGhfbG9naW4iLA0KICAgICAgInZhbHVlIjogIiINCiAgICB9LA0KICAgIHsNCiAgICAgICJrZXkiOiAiYXV0aF9wYXNzd29yZCIsDQogICAgICAidmFsdWUiOiAiIg0KICAgIH0NCiAgXSwNCiAgImluZm8iOiB7DQogICAgIm5hbWUiOiAiU1MtNjM4OSBDTVMgYXZlcmFnZSBTZWFyY2giLA0KICAgICJkZXNjcmlwdGlvbiI6ICJFeGFjdCB1c2VyIFNlYXJjaDsgbm8gcHJvdmlkZXIgdHJhY2tzLiBDcmVkZW50aWFscyBibGFuay4gZXhwZWN0ZWRfcGVyY2VudCBjb21lcyBmcm9tIENTVi4gQ29tbWlzc2lvbmxlc3MgZmllbGRzIHJlbWFpbiBkaXN0aW5jdCBmcm9tIGV4cGxpY2l0IHplcm8uIEJvdGggcmF0ZSBzY2VuYXJpb3Mgd2VyZSBleGVjdXRlZCBkaXJlY3RseTsgQ1NWIGV4cGVjdGVkX3BlcmNlbnQgbXVzdCBtYXRjaCB0aGUgYWN0aXZlIHVzZXItY29uZmlndXJlZCBydWxlcy4iLA0KICAgICJzY2hlbWEiOiAiaHR0cHM6Ly9zY2hlbWEuZ2V0cG9zdG1hbi5jb20vanNvbi9jb2xsZWN0aW9uL3YyLjEuMC9jb2xsZWN0aW9uLmpzb24iDQogIH0NCn0NCg==","type":"application/json;charset=utf-8"}};
+    const toggle = document.querySelector('.theme-toggle');
+    toggle.addEventListener('click', function () {
+      const dark = document.body.dataset.theme === 'dark';
+      document.body.dataset.theme = dark ? 'light' : 'dark';
+      toggle.textContent = dark ? 'Dark mode' : 'Light mode';
+      toggle.setAttribute('aria-pressed', String(!dark));
+    });
+    document.querySelectorAll('.download-artifact').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const artifact = artifacts[button.dataset.file];
+        const binary = atob(artifact.content);
+        const bytes = new Uint8Array(binary.length);
+        for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+        const blobUrl = URL.createObjectURL(new Blob([bytes], { type: artifact.type }));
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = button.dataset.file;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(function () { URL.revokeObjectURL(blobUrl); }, 0);
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

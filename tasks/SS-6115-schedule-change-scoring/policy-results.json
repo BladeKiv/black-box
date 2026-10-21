@@ -1,0 +1,83 @@
+[
+  {
+    "id": "TC-05",
+    "data": "BA expert reroute JFK-LHR-CDG to JFK-LGW-CDG; U=1,V=2; 30 min",
+    "expected": "True behavior: preserve actual V=2, score as V=1",
+    "actual": "ruleId=46; V=2; score=1; excluded=false. Attachment identifies BA as True; deployed rule numbering differs",
+    "status": "PASS",
+    "requestFile": "tc05-true-request.json",
+    "responseFile": "tc05-true-response.json"
+  },
+  {
+    "id": "TC-06",
+    "data": "UA expert reroute; class H; U=1,V=2; 30 min",
+    "expected": "False behavior retains regular score 4",
+    "actual": "ruleId=2; score=4; excluded=false; attachment UA rules 1/2 are False",
+    "status": "PASS",
+    "requestFile": "tc06-false-h-request.json",
+    "responseFile": "tc06-false-h-response.json"
+  },
+  {
+    "id": "TC-07",
+    "data": "BA True-behavior request plus attached policy allow-lists",
+    "expected": "V=2 is excluded when not explicitly allowed under True",
+    "actual": "All attached True rows allow V=2; no restrictive True fixture available. Positive BA request remains eligible; negative branch not evaluated",
+    "status": "WARN",
+    "requestFile": "tc05-true-request.json",
+    "responseFile": "tc05-true-response.json"
+  },
+  {
+    "id": "TC-08",
+    "data": "BA unchanged routing and one-extra-stop; single candidate per request",
+    "expected": "True does not promote V=1 or added-stop V=3; regular scores 1 and 7",
+    "actual": "ruleId=46; U=1,V=1 score=1; U=1,V=3 score=7; both excluded=false",
+    "status": "PASS",
+    "requestFile": "tc08-v3-request.json",
+    "responseFile": "tc08-v3-response.json"
+  },
+  {
+    "id": "TC-09",
+    "data": "BA reroutes, U=1 at 120 min vs U=5 at 30 min, separate requests",
+    "expected": "Carrier dimension retained: scores 1 versus 12 despite closer U=5",
+    "actual": "Both ruleId=46 and non-excluded; scores 1 and 12. Combined response ordering not tested",
+    "status": "PASS",
+    "requestFile": "tc09-u5-request.json",
+    "responseFile": "tc09-u5-response.json"
+  },
+  {
+    "id": "TC-10-cabin",
+    "data": "BA promoted reroute; segment 2 changed from Y to C",
+    "expected": "Cabin violation remains excluded under True",
+    "actual": "score=1; excluded=true; CabinFilterTerm reported (also booking-class violations)",
+    "status": "PASS",
+    "requestFile": "tc10-cabin-request.json",
+    "responseFile": "tc10-cabin-response.json"
+  },
+  {
+    "id": "TC-10-flex",
+    "data": "BA promoted reroute; departure shifted +3 days and 30 min",
+    "expected": "Date-flex violation remains excluded under True",
+    "actual": "score=1; 4350 min; excluded=true; ReprotectionFlexTerm reported",
+    "status": "PASS",
+    "requestFile": "tc10-flex-request.json",
+    "responseFile": "tc10-flex-response.json"
+  },
+  {
+    "id": "TC-10-booking",
+    "data": "BA promoted reroute; economy cabin with booking class J",
+    "expected": "Unacceptable booking class remains excluded under True",
+    "actual": "score=1; excluded=true; BclassFilterTerm reported",
+    "status": "PASS",
+    "requestFile": "tc10-booking-request.json",
+    "responseFile": "tc10-booking-response.json"
+  },
+  {
+    "id": "TC-10-JV",
+    "data": "GET /algo/conf schedule_change plus BA control request",
+    "expected": "JV rejection remains enforced when enabled",
+    "actual": "STAGE schedule_change.enable_jv=false; no enabled-JV fixture tested. Configuration was not changed",
+    "status": "WARN",
+    "requestFile": "tc05-true-request.json",
+    "responseFile": "tc05-true-response.json"
+  }
+]

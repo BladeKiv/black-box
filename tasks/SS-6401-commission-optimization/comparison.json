@@ -1,0 +1,4944 @@
+{
+  "pairs": [
+    {
+      "matched": 923,
+      "equal": 923,
+      "positive_commission_equal": 238,
+      "commission_info_equal": 0,
+      "rule_evaluated": 0,
+      "rule_equal": 0,
+      "rule_differences": [],
+      "differences": [],
+      "samples": [
+        {
+          "input": {
+            "gds": "S",
+            "pcc": "X0GG",
+            "cons": "GTT",
+            "fareType": "SR",
+            "validatingCarrier": "EI",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "JFK",
+                  "departureTime": "2026-11-20 11:30",
+                  "arrivalTime": "2026-11-20 13:07",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "B6",
+                  "flightNumber": "5061",
+                  "bookingClass": "N",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                },
+                {
+                  "departureAirportCode": "JFK",
+                  "arrivalAirportCode": "DUB",
+                  "departureTime": "2026-11-20 17:00",
+                  "arrivalTime": "2026-11-21 04:30",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "104",
+                  "bookingClass": "N",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                },
+                {
+                  "departureAirportCode": "DUB",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 06:40",
+                  "arrivalTime": "2026-11-21 10:10",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "352",
+                  "bookingClass": "T",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "DUB",
+                  "departureTime": "2026-11-30 09:35",
+                  "arrivalTime": "2026-11-30 10:15",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "603",
+                  "bookingClass": "A",
+                  "cabin": "Y",
+                  "fareCode": "AE1LNXG4"
+                },
+                {
+                  "departureAirportCode": "DUB",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 19:45",
+                  "arrivalTime": "2026-11-30 21:05",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "184",
+                  "bookingClass": "P",
+                  "cabin": "Y",
+                  "fareCode": "PI1YNXG4"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 417
+              },
+              "oBaseTax": {
+                "ADT": 451.7
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTExNzA2L0FNU0xIUjIwMjYtMTEtMzBfMDkxOSpFSX4jRUk1MDYxI0VJMTA0I0VJMzUyI0VJNjAzI0VJMTg0fmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTExNzA2L0FNU0xIUjIwMjYtMTEtMzBfMDkxOSpFSX4jRUk1MDYxI0VJMTA0I0VJMzUyI0VJNjAzI0VJMTg0fmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 868.7,
+              "totalTax": 451.7,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 417,
+                "pubBaseFare": 0,
+                "baseTax": 451.7,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 868.7,
+                "tax": 451.7,
+                "oBaseFare": {
+                  "amount": 417,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 451.7,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "S",
+            "pcc": "W1EL",
+            "cons": "VOW",
+            "fareType": "COMM",
+            "validatingCarrier": "VS",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "ATL",
+                  "departureTime": "2026-11-20 12:56",
+                  "arrivalTime": "2026-11-20 14:26",
+                  "marketingAirline": "DL",
+                  "operatingAirline": "DL",
+                  "flightNumber": "2052",
+                  "bookingClass": "H",
+                  "cabin": "Y",
+                  "fareCode": "LKW01NMZ/AC787",
+                  "brandId": "CLASSIC"
+                },
+                {
+                  "departureAirportCode": "ATL",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 18:05",
+                  "arrivalTime": "2026-11-21 09:00",
+                  "marketingAirline": "VS",
+                  "operatingAirline": "DL",
+                  "flightNumber": "3850",
+                  "bookingClass": "L",
+                  "cabin": "Y",
+                  "fareCode": "LKW01NMZ/AC787",
+                  "brandId": "CLASSIC"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 16:45",
+                  "arrivalTime": "2026-11-30 17:00",
+                  "marketingAirline": "VS",
+                  "operatingAirline": "VS",
+                  "flightNumber": "7064",
+                  "bookingClass": "L",
+                  "cabin": "Y",
+                  "fareCode": "LKW01NMZ/AC787",
+                  "brandId": "CLASSIC"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 1363
+              },
+              "oBaseTax": {
+                "ADT": 434.4
+              },
+              "oPubBaseFare": {
+                "ADT": 1363
+              },
+              "oPubBaseTax": {
+                "ADT": 434.4
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 1363,
+                "pubBaseTax": 434.4
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "A",
+                "pcc": "SFOG3210A"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTIxOC9BTVNMSFIyMDI2LTExLTMwXzE2KlZTfiNETDIwNTIjVlMzODUwI1ZTNzA2NH5sYzplbl91cw==",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTIxOC9BTVNMSFIyMDI2LTExLTMwXzE2KlZTfiNETDIwNTIjVlMzODUwI1ZTNzA2NH5sYzplbl91cw==",
+          "output": {
+            "prices": {
+              "totalPrice": 1770.69,
+              "totalTax": 434.4,
+              "comm": 26.71,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 1336.29,
+                "pubBaseFare": 1363,
+                "baseTax": 434.4,
+                "pubBaseTax": 434.4,
+                "markup": 0,
+                "comm": 26.71,
+                "price": 1770.69,
+                "tax": 434.4,
+                "oBaseFare": {
+                  "amount": 1336.29,
+                  "currency": "USD"
+                },
+                "oPubBaseFare": {
+                  "amount": 1363,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 434.4,
+                  "currency": "USD"
+                },
+                "oPubBaseTax": {
+                  "amount": 434.4,
+                  "currency": "USD"
+                },
+                "oComm": {
+                  "amount": 26.71,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "Assets": {
+                "Commission": {
+                  "ValuePerPax": {
+                    "ADT": {
+                      "amount": 26.7148,
+                      "currency": "USD"
+                    }
+                  },
+                  "AssetPlacement": "OrigComm"
+                }
+              },
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "87SP",
+            "cons": "VZC",
+            "fareType": "PUB",
+            "validatingCarrier": "AF",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "ATL",
+                  "departureTime": "2026-11-20 12:56",
+                  "arrivalTime": "2026-11-20 14:26",
+                  "marketingAirline": "AF",
+                  "operatingAirline": "DL",
+                  "flightNumber": "2796",
+                  "bookingClass": "K",
+                  "cabin": "Y",
+                  "fareCode": "KKW01NMZ",
+                  "brandId": "2229498"
+                },
+                {
+                  "departureAirportCode": "ATL",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 18:05",
+                  "arrivalTime": "2026-11-21 09:00",
+                  "marketingAirline": "AF",
+                  "operatingAirline": "DL",
+                  "flightNumber": "3631",
+                  "bookingClass": "K",
+                  "cabin": "Y",
+                  "fareCode": "KKW01NMZ",
+                  "brandId": "2229498"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 20:40",
+                  "arrivalTime": "2026-11-30 20:50",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "KL",
+                  "flightNumber": "1017",
+                  "bookingClass": "K",
+                  "cabin": "Y",
+                  "fareCode": "KKW01NMZ",
+                  "brandId": "2229498"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "CAD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 1944
+              },
+              "oBaseTax": {
+                "ADT": 692.8
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "E",
+                "pcc": "Y5F"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTIxOC9BTVNMSFIyMDI2LTExLTMwXzIwKkFGfiNBRjI3OTYjQUYzNjMxI0tMMTAxN35sYzplbl91cw==",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTIxOC9BTVNMSFIyMDI2LTExLTMwXzIwKkFGfiNBRjI3OTYjQUYzNjMxI0tMMTAxN35sYzplbl91cw==",
+          "output": {
+            "prices": {
+              "totalPrice": 1895.22,
+              "totalTax": 532.89,
+              "comm": 0,
+              "isCk": true,
+              "markup": 47.38
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 1362.34,
+                "pubBaseFare": 0,
+                "baseTax": 485.51,
+                "pubBaseTax": 0,
+                "markup": 47.38,
+                "comm": 0,
+                "CkAmount": 47.38,
+                "price": 1895.22,
+                "tax": 532.89,
+                "oBaseFare": {
+                  "amount": 1944,
+                  "currency": "CAD"
+                },
+                "oBaseTax": {
+                  "amount": 692.8,
+                  "currency": "CAD"
+                },
+                "oCkAmount": {
+                  "amount": 67.61,
+                  "currency": "CAD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": true,
+                "CkScenario": 2,
+                "PaymentTypeSupported": 0,
+                "ValuePerPax": {
+                  "ADT": {
+                    "amount": 67.61,
+                    "currency": "CAD"
+                  }
+                }
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        }
+      ],
+      "prod_only": 423,
+      "preprod_only": 444,
+      "scenario_id": "TC-01",
+      "repeat": "1",
+      "query": {
+        "extra": "false",
+        "cabin": "Y",
+        "adt": "1",
+        "debug": "true",
+        "cid": "SAL103",
+        "fl.0.o": "RDU",
+        "fl.0.d": "MUC",
+        "fl.0.dt": "2026-11-20",
+        "fl.1.o": "AMS",
+        "fl.1.d": "LHR",
+        "fl.1.dt": "2026-11-30"
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://airsearch.api.travelinsides.com/v1/search?extra=false&cabin=Y&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://airapi51.kivops.info/v1/search?extra=false&cabin=Y&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        }
+      ],
+      "statuses": [
+        200,
+        200
+      ],
+      "amount_status": "PASS",
+      "rule_status": "WARN"
+    },
+    {
+      "matched": 914,
+      "equal": 914,
+      "positive_commission_equal": 210,
+      "commission_info_equal": 0,
+      "rule_evaluated": 0,
+      "rule_equal": 0,
+      "rule_differences": [],
+      "differences": [],
+      "samples": [
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "18Y8",
+            "cons": "GTT",
+            "fareType": "PUB",
+            "validatingCarrier": "AC",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "YYZ",
+                  "departureTime": "2026-11-20 09:00",
+                  "arrivalTime": "2026-11-20 10:53",
+                  "marketingAirline": "AC",
+                  "operatingAirline": "AC",
+                  "flightNumber": "8837",
+                  "bookingClass": "Y",
+                  "cabin": "Y",
+                  "fareCode": "Y1",
+                  "brandId": "2221209"
+                },
+                {
+                  "departureAirportCode": "YYZ",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 19:50",
+                  "arrivalTime": "2026-11-21 10:00",
+                  "marketingAirline": "AC",
+                  "operatingAirline": "AC",
+                  "flightNumber": "836",
+                  "bookingClass": "Y",
+                  "cabin": "Y",
+                  "fareCode": "Y1",
+                  "brandId": "2221209"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 11:40",
+                  "arrivalTime": "2026-11-30 12:00",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "BA",
+                  "flightNumber": "435",
+                  "bookingClass": "B",
+                  "cabin": "Y",
+                  "fareCode": "Y1",
+                  "brandId": "2221209"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 5175
+              },
+              "oBaseTax": {
+                "ADT": 437.3
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "JCB",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMDkxOS9BTVNMSFIyMDI2LTExLTMwXzExKkFDfiNBQzg4MzcjQUM4MzYjQkE0MzV+bGM6ZW5fdXM=",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMDkxOS9BTVNMSFIyMDI2LTExLTMwXzExKkFDfiNBQzg4MzcjQUM4MzYjQkE0MzV+bGM6ZW5fdXM=",
+          "output": {
+            "prices": {
+              "totalPrice": 5612.3,
+              "totalTax": 437.3,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "JCB",
+                "cnt": 1,
+                "baseFare": 5175,
+                "pubBaseFare": 0,
+                "baseTax": 437.3,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 5612.3,
+                "tax": 437.3,
+                "oBaseFare": {
+                  "amount": 5175,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 437.3,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "87SP",
+            "cons": "VZC",
+            "fareType": "PUB",
+            "validatingCarrier": "DL",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "ATL",
+                  "departureTime": "2026-11-20 05:15",
+                  "arrivalTime": "2026-11-20 06:39",
+                  "marketingAirline": "DL",
+                  "operatingAirline": "DL",
+                  "flightNumber": "1552",
+                  "bookingClass": "H",
+                  "cabin": "Y",
+                  "fareCode": "HKW01NMZ",
+                  "brandId": "2161057"
+                },
+                {
+                  "departureAirportCode": "ATL",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 18:05",
+                  "arrivalTime": "2026-11-21 09:00",
+                  "marketingAirline": "DL",
+                  "operatingAirline": "DL",
+                  "flightNumber": "130",
+                  "bookingClass": "H",
+                  "cabin": "Y",
+                  "fareCode": "HKW01NMZ",
+                  "brandId": "2161057"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 13:30",
+                  "arrivalTime": "2026-11-30 13:50",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "KL",
+                  "flightNumber": "1009",
+                  "bookingClass": "K",
+                  "cabin": "Y",
+                  "fareCode": "HKW01NMZ",
+                  "brandId": "2161057"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "CAD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 1944
+              },
+              "oBaseTax": {
+                "ADT": 652.9
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "E",
+                "pcc": "Y5F"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMDUxOC9BTVNMSFIyMDI2LTExLTMwXzEzKkRMfiNETDE1NTIjREwxMzAjS0wxMDA5fmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMDUxOC9BTVNMSFIyMDI2LTExLTMwXzEzKkRMfiNETDE1NTIjREwxMzAjS0wxMDA5fmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 1866.55,
+              "totalTax": 504.21,
+              "comm": 0,
+              "isCk": true,
+              "markup": 46.66
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 1362.34,
+                "pubBaseFare": 0,
+                "baseTax": 457.55,
+                "pubBaseTax": 0,
+                "markup": 46.66,
+                "comm": 0,
+                "CkAmount": 46.66,
+                "price": 1866.55,
+                "tax": 504.21,
+                "oBaseFare": {
+                  "amount": 1944,
+                  "currency": "CAD"
+                },
+                "oBaseTax": {
+                  "amount": 652.9,
+                  "currency": "CAD"
+                },
+                "oCkAmount": {
+                  "amount": 66.59,
+                  "currency": "CAD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": true,
+                "CkScenario": 2,
+                "PaymentTypeSupported": 0,
+                "ValuePerPax": {
+                  "ADT": {
+                    "amount": 66.59,
+                    "currency": "CAD"
+                  }
+                }
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "S",
+            "pcc": "X0GG",
+            "cons": "GTT",
+            "fareType": "SR",
+            "validatingCarrier": "EI",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "JFK",
+                  "departureTime": "2026-11-20 11:30",
+                  "arrivalTime": "2026-11-20 13:07",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "B6",
+                  "flightNumber": "5061",
+                  "bookingClass": "N",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                },
+                {
+                  "departureAirportCode": "JFK",
+                  "arrivalAirportCode": "DUB",
+                  "departureTime": "2026-11-20 17:00",
+                  "arrivalTime": "2026-11-21 04:30",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "104",
+                  "bookingClass": "N",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                },
+                {
+                  "departureAirportCode": "DUB",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 06:40",
+                  "arrivalTime": "2026-11-21 10:10",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "352",
+                  "bookingClass": "T",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "DUB",
+                  "departureTime": "2026-11-30 09:35",
+                  "arrivalTime": "2026-11-30 10:15",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "603",
+                  "bookingClass": "A",
+                  "cabin": "Y",
+                  "fareCode": "AE1LNXG4"
+                },
+                {
+                  "departureAirportCode": "DUB",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 19:45",
+                  "arrivalTime": "2026-11-30 21:05",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "184",
+                  "bookingClass": "P",
+                  "cabin": "Y",
+                  "fareCode": "PI1YNXG4"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 417
+              },
+              "oBaseTax": {
+                "ADT": 451.7
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTExNzA2L0FNU0xIUjIwMjYtMTEtMzBfMDkxOSpFSX4jRUk1MDYxI0VJMTA0I0VJMzUyI0VJNjAzI0VJMTg0fmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTExNzA2L0FNU0xIUjIwMjYtMTEtMzBfMDkxOSpFSX4jRUk1MDYxI0VJMTA0I0VJMzUyI0VJNjAzI0VJMTg0fmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 868.7,
+              "totalTax": 451.7,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 417,
+                "pubBaseFare": 0,
+                "baseTax": 451.7,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 868.7,
+                "tax": 451.7,
+                "oBaseFare": {
+                  "amount": 417,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 451.7,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        }
+      ],
+      "prod_only": 343,
+      "preprod_only": 370,
+      "scenario_id": "TC-01",
+      "repeat": "2",
+      "query": {
+        "extra": "false",
+        "cabin": "Y",
+        "adt": "1",
+        "debug": "true",
+        "cid": "SAL103",
+        "fl.0.o": "RDU",
+        "fl.0.d": "MUC",
+        "fl.0.dt": "2026-11-20",
+        "fl.1.o": "AMS",
+        "fl.1.d": "LHR",
+        "fl.1.dt": "2026-11-30"
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://airsearch.api.travelinsides.com/v1/search?extra=false&cabin=Y&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://airapi51.kivops.info/v1/search?extra=false&cabin=Y&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        }
+      ],
+      "statuses": [
+        200,
+        200
+      ],
+      "amount_status": "PASS",
+      "rule_status": "WARN"
+    },
+    {
+      "matched": 929,
+      "equal": 929,
+      "positive_commission_equal": 212,
+      "commission_info_equal": 0,
+      "rule_evaluated": 0,
+      "rule_equal": 0,
+      "rule_differences": [],
+      "differences": [],
+      "samples": [
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "18Y8",
+            "cons": "GTT",
+            "fareType": "PUB",
+            "validatingCarrier": "AC",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "YYZ",
+                  "departureTime": "2026-11-20 09:00",
+                  "arrivalTime": "2026-11-20 10:53",
+                  "marketingAirline": "AC",
+                  "operatingAirline": "AC",
+                  "flightNumber": "8837",
+                  "bookingClass": "Y",
+                  "cabin": "Y",
+                  "fareCode": "Y1",
+                  "brandId": "2221209"
+                },
+                {
+                  "departureAirportCode": "YYZ",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 19:50",
+                  "arrivalTime": "2026-11-21 10:00",
+                  "marketingAirline": "AC",
+                  "operatingAirline": "AC",
+                  "flightNumber": "836",
+                  "bookingClass": "Y",
+                  "cabin": "Y",
+                  "fareCode": "Y1",
+                  "brandId": "2221209"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 11:40",
+                  "arrivalTime": "2026-11-30 12:00",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "BA",
+                  "flightNumber": "435",
+                  "bookingClass": "B",
+                  "cabin": "Y",
+                  "fareCode": "Y1",
+                  "brandId": "2221209"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 5175
+              },
+              "oBaseTax": {
+                "ADT": 437.3
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "JCB",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMDkxOS9BTVNMSFIyMDI2LTExLTMwXzExKkFDfiNBQzg4MzcjQUM4MzYjQkE0MzV+bGM6ZW5fdXM=",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMDkxOS9BTVNMSFIyMDI2LTExLTMwXzExKkFDfiNBQzg4MzcjQUM4MzYjQkE0MzV+bGM6ZW5fdXM=",
+          "output": {
+            "prices": {
+              "totalPrice": 5612.3,
+              "totalTax": 437.3,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "JCB",
+                "cnt": 1,
+                "baseFare": 5175,
+                "pubBaseFare": 0,
+                "baseTax": 437.3,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 5612.3,
+                "tax": 437.3,
+                "oBaseFare": {
+                  "amount": 5175,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 437.3,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "87SP",
+            "cons": "VZC",
+            "fareType": "PUB",
+            "validatingCarrier": "DL",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "ATL",
+                  "departureTime": "2026-11-20 05:15",
+                  "arrivalTime": "2026-11-20 06:39",
+                  "marketingAirline": "DL",
+                  "operatingAirline": "DL",
+                  "flightNumber": "1552",
+                  "bookingClass": "H",
+                  "cabin": "Y",
+                  "fareCode": "HKW01NMZ",
+                  "brandId": "2161057"
+                },
+                {
+                  "departureAirportCode": "ATL",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 18:05",
+                  "arrivalTime": "2026-11-21 09:00",
+                  "marketingAirline": "DL",
+                  "operatingAirline": "DL",
+                  "flightNumber": "130",
+                  "bookingClass": "H",
+                  "cabin": "Y",
+                  "fareCode": "HKW01NMZ",
+                  "brandId": "2161057"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 13:30",
+                  "arrivalTime": "2026-11-30 13:50",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "KL",
+                  "flightNumber": "1009",
+                  "bookingClass": "K",
+                  "cabin": "Y",
+                  "fareCode": "HKW01NMZ",
+                  "brandId": "2161057"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "CAD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 1944
+              },
+              "oBaseTax": {
+                "ADT": 652.9
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "E",
+                "pcc": "Y5F"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMDUxOC9BTVNMSFIyMDI2LTExLTMwXzEzKkRMfiNETDE1NTIjREwxMzAjS0wxMDA5fmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMDUxOC9BTVNMSFIyMDI2LTExLTMwXzEzKkRMfiNETDE1NTIjREwxMzAjS0wxMDA5fmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 1866.55,
+              "totalTax": 504.21,
+              "comm": 0,
+              "isCk": true,
+              "markup": 46.66
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 1362.34,
+                "pubBaseFare": 0,
+                "baseTax": 457.55,
+                "pubBaseTax": 0,
+                "markup": 46.66,
+                "comm": 0,
+                "CkAmount": 46.66,
+                "price": 1866.55,
+                "tax": 504.21,
+                "oBaseFare": {
+                  "amount": 1944,
+                  "currency": "CAD"
+                },
+                "oBaseTax": {
+                  "amount": 652.9,
+                  "currency": "CAD"
+                },
+                "oCkAmount": {
+                  "amount": 66.59,
+                  "currency": "CAD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": true,
+                "CkScenario": 2,
+                "PaymentTypeSupported": 0,
+                "ValuePerPax": {
+                  "ADT": {
+                    "amount": 66.59,
+                    "currency": "CAD"
+                  }
+                }
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "S",
+            "pcc": "X0GG",
+            "cons": "GTT",
+            "fareType": "SR",
+            "validatingCarrier": "EI",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "JFK",
+                  "departureTime": "2026-11-20 11:30",
+                  "arrivalTime": "2026-11-20 13:07",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "B6",
+                  "flightNumber": "5061",
+                  "bookingClass": "N",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                },
+                {
+                  "departureAirportCode": "JFK",
+                  "arrivalAirportCode": "DUB",
+                  "departureTime": "2026-11-20 17:00",
+                  "arrivalTime": "2026-11-21 04:30",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "104",
+                  "bookingClass": "N",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                },
+                {
+                  "departureAirportCode": "DUB",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 06:40",
+                  "arrivalTime": "2026-11-21 10:10",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "352",
+                  "bookingClass": "T",
+                  "cabin": "Y",
+                  "fareCode": "NKW9C9M5C1"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "DUB",
+                  "departureTime": "2026-11-30 09:35",
+                  "arrivalTime": "2026-11-30 10:15",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "603",
+                  "bookingClass": "A",
+                  "cabin": "Y",
+                  "fareCode": "AE1LNXG4"
+                },
+                {
+                  "departureAirportCode": "DUB",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 19:45",
+                  "arrivalTime": "2026-11-30 21:05",
+                  "marketingAirline": "EI",
+                  "operatingAirline": "EI",
+                  "flightNumber": "184",
+                  "bookingClass": "P",
+                  "cabin": "Y",
+                  "fareCode": "PI1YNXG4"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 417
+              },
+              "oBaseTax": {
+                "ADT": 451.7
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTExNzA2L0FNU0xIUjIwMjYtMTEtMzBfMDkxOSpFSX4jRUk1MDYxI0VJMTA0I0VJMzUyI0VJNjAzI0VJMTg0fmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKlkxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTExNzA2L0FNU0xIUjIwMjYtMTEtMzBfMDkxOSpFSX4jRUk1MDYxI0VJMTA0I0VJMzUyI0VJNjAzI0VJMTg0fmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 868.7,
+              "totalTax": 451.7,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 417,
+                "pubBaseFare": 0,
+                "baseTax": 451.7,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 868.7,
+                "tax": 451.7,
+                "oBaseFare": {
+                  "amount": 417,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 451.7,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        }
+      ],
+      "prod_only": 387,
+      "preprod_only": 396,
+      "scenario_id": "TC-01",
+      "repeat": "3",
+      "query": {
+        "extra": "false",
+        "cabin": "Y",
+        "adt": "1",
+        "debug": "true",
+        "cid": "SAL103",
+        "fl.0.o": "RDU",
+        "fl.0.d": "MUC",
+        "fl.0.dt": "2026-11-20",
+        "fl.1.o": "AMS",
+        "fl.1.d": "LHR",
+        "fl.1.dt": "2026-11-30"
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://airsearch.api.travelinsides.com/v1/search?extra=false&cabin=Y&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://airapi51.kivops.info/v1/search?extra=false&cabin=Y&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        }
+      ],
+      "statuses": [
+        200,
+        200
+      ],
+      "amount_status": "PASS",
+      "rule_status": "WARN"
+    },
+    {
+      "matched": 1024,
+      "equal": 1024,
+      "positive_commission_equal": 314,
+      "commission_info_equal": 0,
+      "rule_evaluated": 0,
+      "rule_equal": 0,
+      "rule_differences": [],
+      "differences": [],
+      "samples": [
+        {
+          "input": {
+            "gds": "S",
+            "pcc": "W2GM",
+            "cons": "VOJ",
+            "fareType": "COMM",
+            "validatingCarrier": "BA",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 20:18",
+                  "arrivalTime": "2026-11-20 21:34",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "6950",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 16:55",
+                  "arrivalTime": "2026-11-22 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1632",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 07:00",
+                  "arrivalTime": "2026-11-30 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "BA",
+                  "flightNumber": "449",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 3079
+              },
+              "oBaseTax": {
+                "ADT": 1621.38
+              },
+              "oPubBaseFare": {
+                "ADT": 3079
+              },
+              "oPubBaseTax": {
+                "ADT": 1621.38
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 3079,
+                "pubBaseTax": 1621.38
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "A",
+                "pcc": "SFOG3210A"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMSFIyMDI2LTExLTMwXzA3KkJBfiNCQTY5NTAjQkExNjMyI0JBNDQ5fmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMSFIyMDI2LTExLTMwXzA3KkJBfiNCQTY5NTAjQkExNjMyI0JBNDQ5fmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 4247.77,
+              "totalTax": 1621.38,
+              "comm": 452.61,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 2626.39,
+                "pubBaseFare": 3079,
+                "baseTax": 1621.38,
+                "pubBaseTax": 1621.38,
+                "markup": 0,
+                "comm": 452.61,
+                "price": 4247.77,
+                "tax": 1621.38,
+                "oBaseFare": {
+                  "amount": 2626.39,
+                  "currency": "USD"
+                },
+                "oPubBaseFare": {
+                  "amount": 3079,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 1621.38,
+                  "currency": "USD"
+                },
+                "oPubBaseTax": {
+                  "amount": 1621.38,
+                  "currency": "USD"
+                },
+                "oComm": {
+                  "amount": 452.61,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "Assets": {
+                "Commission": {
+                  "ValuePerPax": {
+                    "ADT": {
+                      "amount": 452.613,
+                      "currency": "USD"
+                    }
+                  },
+                  "AssetPlacement": "OrigComm"
+                }
+              },
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "25CF",
+            "cons": "GTT",
+            "fareType": "COMM",
+            "validatingCarrier": "BA",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 20:18",
+                  "arrivalTime": "2026-11-20 21:34",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "6950",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 16:55",
+                  "arrivalTime": "2026-11-22 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1632",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LCY",
+                  "departureTime": "2026-11-30 10:10",
+                  "arrivalTime": "2026-11-30 10:20",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "CJ",
+                  "flightNumber": "8496",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 3032
+              },
+              "oBaseTax": {
+                "ADT": 1629.38
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMQ1kyMDI2LTExLTMwXzEwKkJBfiNCQTY5NTAjQkExNjMyI0JBODQ5Nn5sYzplbl91cw==",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMQ1kyMDI2LTExLTMwXzEwKkJBfiNCQTY5NTAjQkExNjMyI0JBODQ5Nn5sYzplbl91cw==",
+          "output": {
+            "prices": {
+              "totalPrice": 4661.38,
+              "totalTax": 1629.38,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 3032,
+                "pubBaseFare": 0,
+                "baseTax": 1629.38,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 4661.38,
+                "tax": 1629.38,
+                "oBaseFare": {
+                  "amount": 3032,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 1629.38,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "8C4T",
+            "cons": "VZU",
+            "fareType": "PUB",
+            "validatingCarrier": "KL",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "YYZ",
+                  "departureTime": "2026-11-20 14:45",
+                  "arrivalTime": "2026-11-20 16:38",
+                  "marketingAirline": "AC",
+                  "operatingAirline": "AC",
+                  "flightNumber": "8839",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "JX1",
+                  "brandId": "EXECLAT"
+                },
+                {
+                  "departureAirportCode": "YYZ",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 19:50",
+                  "arrivalTime": "2026-11-21 10:00",
+                  "marketingAirline": "AC",
+                  "operatingAirline": "AC",
+                  "flightNumber": "836",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "JX1",
+                  "brandId": "EXECLAT"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 07:20",
+                  "arrivalTime": "2026-11-30 07:40",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "KL",
+                  "flightNumber": "1001",
+                  "bookingClass": "C",
+                  "cabin": "C",
+                  "fareCode": "CYS0BFNN"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 15576
+              },
+              "oBaseTax": {
+                "ADT": 161.8
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "A",
+                "pcc": "SFOG3210A"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTQxOS9BTVNMSFIyMDI2LTExLTMwXzA3KktMfiNBQzg4MzkjQUM4MzYjS0wxMDAxfmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTQxOS9BTVNMSFIyMDI2LTExLTMwXzA3KktMfiNBQzg4MzkjQUM4MzYjS0wxMDAxfmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 15737.8,
+              "totalTax": 161.8,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 15576,
+                "pubBaseFare": 0,
+                "baseTax": 161.8,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 15737.8,
+                "tax": 161.8,
+                "oBaseFare": {
+                  "amount": 15576,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 161.8,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        }
+      ],
+      "prod_only": 403,
+      "preprod_only": 389,
+      "scenario_id": "TC-02",
+      "repeat": "1",
+      "query": {
+        "extra": "false",
+        "cabin": "C",
+        "adt": "1",
+        "debug": "true",
+        "cid": "SAL103",
+        "fl.0.o": "RDU",
+        "fl.0.d": "MUC",
+        "fl.0.dt": "2026-11-20",
+        "fl.1.o": "AMS",
+        "fl.1.d": "LHR",
+        "fl.1.dt": "2026-11-30"
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://airsearch.api.travelinsides.com/v1/search?extra=false&cabin=C&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://airapi51.kivops.info/v1/search?extra=false&cabin=C&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        }
+      ],
+      "statuses": [
+        200,
+        200
+      ],
+      "amount_status": "PASS",
+      "rule_status": "WARN"
+    },
+    {
+      "matched": 952,
+      "equal": 952,
+      "positive_commission_equal": 290,
+      "commission_info_equal": 0,
+      "rule_evaluated": 0,
+      "rule_equal": 0,
+      "rule_differences": [],
+      "differences": [],
+      "samples": [
+        {
+          "input": {
+            "gds": "S",
+            "pcc": "W2GM",
+            "cons": "VOJ",
+            "fareType": "COMM",
+            "validatingCarrier": "BA",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 20:18",
+                  "arrivalTime": "2026-11-20 21:34",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "6950",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 16:55",
+                  "arrivalTime": "2026-11-22 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1632",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 07:00",
+                  "arrivalTime": "2026-11-30 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "BA",
+                  "flightNumber": "449",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 3079
+              },
+              "oBaseTax": {
+                "ADT": 1621.38
+              },
+              "oPubBaseFare": {
+                "ADT": 3079
+              },
+              "oPubBaseTax": {
+                "ADT": 1621.38
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 3079,
+                "pubBaseTax": 1621.38
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "A",
+                "pcc": "SFOG3210A"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMSFIyMDI2LTExLTMwXzA3KkJBfiNCQTY5NTAjQkExNjMyI0JBNDQ5fmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMSFIyMDI2LTExLTMwXzA3KkJBfiNCQTY5NTAjQkExNjMyI0JBNDQ5fmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 4247.77,
+              "totalTax": 1621.38,
+              "comm": 452.61,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 2626.39,
+                "pubBaseFare": 3079,
+                "baseTax": 1621.38,
+                "pubBaseTax": 1621.38,
+                "markup": 0,
+                "comm": 452.61,
+                "price": 4247.77,
+                "tax": 1621.38,
+                "oBaseFare": {
+                  "amount": 2626.39,
+                  "currency": "USD"
+                },
+                "oPubBaseFare": {
+                  "amount": 3079,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 1621.38,
+                  "currency": "USD"
+                },
+                "oPubBaseTax": {
+                  "amount": 1621.38,
+                  "currency": "USD"
+                },
+                "oComm": {
+                  "amount": 452.61,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "Assets": {
+                "Commission": {
+                  "ValuePerPax": {
+                    "ADT": {
+                      "amount": 452.613,
+                      "currency": "USD"
+                    }
+                  },
+                  "AssetPlacement": "OrigComm"
+                }
+              },
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "25CF",
+            "cons": "GTT",
+            "fareType": "COMM",
+            "validatingCarrier": "BA",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 20:18",
+                  "arrivalTime": "2026-11-20 21:34",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "6950",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 16:55",
+                  "arrivalTime": "2026-11-22 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1632",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LCY",
+                  "departureTime": "2026-11-30 10:10",
+                  "arrivalTime": "2026-11-30 10:20",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "CJ",
+                  "flightNumber": "8496",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 3032
+              },
+              "oBaseTax": {
+                "ADT": 1629.38
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMQ1kyMDI2LTExLTMwXzEwKkJBfiNCQTY5NTAjQkExNjMyI0JBODQ5Nn5sYzplbl91cw==",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMQ1kyMDI2LTExLTMwXzEwKkJBfiNCQTY5NTAjQkExNjMyI0JBODQ5Nn5sYzplbl91cw==",
+          "output": {
+            "prices": {
+              "totalPrice": 4661.38,
+              "totalTax": 1629.38,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 3032,
+                "pubBaseFare": 0,
+                "baseTax": 1629.38,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 4661.38,
+                "tax": 1629.38,
+                "oBaseFare": {
+                  "amount": 3032,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 1629.38,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "8C4T",
+            "cons": "VZU",
+            "fareType": "PUB",
+            "validatingCarrier": "KL",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "YYZ",
+                  "departureTime": "2026-11-20 14:45",
+                  "arrivalTime": "2026-11-20 16:38",
+                  "marketingAirline": "AC",
+                  "operatingAirline": "AC",
+                  "flightNumber": "8839",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "JX1",
+                  "brandId": "EXECLAT"
+                },
+                {
+                  "departureAirportCode": "YYZ",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 19:50",
+                  "arrivalTime": "2026-11-21 10:00",
+                  "marketingAirline": "AC",
+                  "operatingAirline": "AC",
+                  "flightNumber": "836",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "JX1",
+                  "brandId": "EXECLAT"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 07:20",
+                  "arrivalTime": "2026-11-30 07:40",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "KL",
+                  "flightNumber": "1001",
+                  "bookingClass": "C",
+                  "cabin": "C",
+                  "fareCode": "CYS0BFNN"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 15576
+              },
+              "oBaseTax": {
+                "ADT": 161.8
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "A",
+                "pcc": "SFOG3210A"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTQxOS9BTVNMSFIyMDI2LTExLTMwXzA3KktMfiNBQzg4MzkjQUM4MzYjS0wxMDAxfmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTQxOS9BTVNMSFIyMDI2LTExLTMwXzA3KktMfiNBQzg4MzkjQUM4MzYjS0wxMDAxfmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 15737.8,
+              "totalTax": 161.8,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 15576,
+                "pubBaseFare": 0,
+                "baseTax": 161.8,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 15737.8,
+                "tax": 161.8,
+                "oBaseFare": {
+                  "amount": 15576,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 161.8,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        }
+      ],
+      "prod_only": 394,
+      "preprod_only": 394,
+      "scenario_id": "TC-02",
+      "repeat": "2",
+      "query": {
+        "extra": "false",
+        "cabin": "C",
+        "adt": "1",
+        "debug": "true",
+        "cid": "SAL103",
+        "fl.0.o": "RDU",
+        "fl.0.d": "MUC",
+        "fl.0.dt": "2026-11-20",
+        "fl.1.o": "AMS",
+        "fl.1.d": "LHR",
+        "fl.1.dt": "2026-11-30"
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://airsearch.api.travelinsides.com/v1/search?extra=false&cabin=C&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://airapi51.kivops.info/v1/search?extra=false&cabin=C&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        }
+      ],
+      "statuses": [
+        200,
+        200
+      ],
+      "amount_status": "PASS",
+      "rule_status": "WARN"
+    },
+    {
+      "matched": 960,
+      "equal": 960,
+      "positive_commission_equal": 305,
+      "commission_info_equal": 0,
+      "rule_evaluated": 0,
+      "rule_equal": 0,
+      "rule_differences": [],
+      "differences": [],
+      "samples": [
+        {
+          "input": {
+            "gds": "S",
+            "pcc": "W2GM",
+            "cons": "VOJ",
+            "fareType": "COMM",
+            "validatingCarrier": "BA",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 20:18",
+                  "arrivalTime": "2026-11-20 21:34",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "6950",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 16:55",
+                  "arrivalTime": "2026-11-22 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1632",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 07:00",
+                  "arrivalTime": "2026-11-30 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "BA",
+                  "flightNumber": "449",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S5",
+                  "brandId": "BIZPROMO"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 3079
+              },
+              "oBaseTax": {
+                "ADT": 1621.38
+              },
+              "oPubBaseFare": {
+                "ADT": 3079
+              },
+              "oPubBaseTax": {
+                "ADT": 1621.38
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 3079,
+                "pubBaseTax": 1621.38
+              }
+            },
+            "original_info": {
+              "original_info": {
+                "gds": "A",
+                "pcc": "SFOG3210A"
+              }
+            }
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMSFIyMDI2LTExLTMwXzA3KkJBfiNCQTY5NTAjQkExNjMyI0JBNDQ5fmxjOmVuX3Vz",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMSFIyMDI2LTExLTMwXzA3KkJBfiNCQTY5NTAjQkExNjMyI0JBNDQ5fmxjOmVuX3Vz",
+          "output": {
+            "prices": {
+              "totalPrice": 4247.77,
+              "totalTax": 1621.38,
+              "comm": 452.61,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 2626.39,
+                "pubBaseFare": 3079,
+                "baseTax": 1621.38,
+                "pubBaseTax": 1621.38,
+                "markup": 0,
+                "comm": 452.61,
+                "price": 4247.77,
+                "tax": 1621.38,
+                "oBaseFare": {
+                  "amount": 2626.39,
+                  "currency": "USD"
+                },
+                "oPubBaseFare": {
+                  "amount": 3079,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 1621.38,
+                  "currency": "USD"
+                },
+                "oPubBaseTax": {
+                  "amount": 1621.38,
+                  "currency": "USD"
+                },
+                "oComm": {
+                  "amount": 452.61,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "Assets": {
+                "Commission": {
+                  "ValuePerPax": {
+                    "ADT": {
+                      "amount": 452.613,
+                      "currency": "USD"
+                    }
+                  },
+                  "AssetPlacement": "OrigComm"
+                }
+              },
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "25CF",
+            "cons": "GTT",
+            "fareType": "COMM",
+            "validatingCarrier": "BA",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 20:18",
+                  "arrivalTime": "2026-11-20 21:34",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "6950",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 16:55",
+                  "arrivalTime": "2026-11-22 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1632",
+                  "bookingClass": "I",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LCY",
+                  "departureTime": "2026-11-30 10:10",
+                  "arrivalTime": "2026-11-30 10:20",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "CJ",
+                  "flightNumber": "8496",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "ILW8D4S9/CM15",
+                  "brandId": "2151932"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 3032
+              },
+              "oBaseTax": {
+                "ADT": 1629.38
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMQ1kyMDI2LTExLTMwXzEwKkJBfiNCQTY5NTAjQkExNjMyI0JBODQ5Nn5sYzplbl91cw==",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMjAxNi9BTVNMQ1kyMDI2LTExLTMwXzEwKkJBfiNCQTY5NTAjQkExNjMyI0JBODQ5Nn5sYzplbl91cw==",
+          "output": {
+            "prices": {
+              "totalPrice": 4661.38,
+              "totalTax": 1629.38,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 3032,
+                "pubBaseFare": 0,
+                "baseTax": 1629.38,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 4661.38,
+                "tax": 1629.38,
+                "oBaseFare": {
+                  "amount": 3032,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 1629.38,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            }
+          }
+        },
+        {
+          "input": {
+            "gds": "E",
+            "pcc": "18Y8",
+            "cons": "GTT",
+            "fareType": "TOUR",
+            "validatingCarrier": "BA",
+            "currency": "USD",
+            "paxCnt": 1,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 16:18",
+                  "arrivalTime": "2026-11-20 17:36",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "6943",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "RHW8D4S5/J795",
+                  "brandId": "2151934"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-21 16:55",
+                  "arrivalTime": "2026-11-22 07:30",
+                  "marketingAirline": "BA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1632",
+                  "bookingClass": "R",
+                  "cabin": "C",
+                  "fareCode": "RHW8D4S5/J795",
+                  "brandId": "2151934"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "ZRH",
+                  "departureTime": "2026-11-30 15:15",
+                  "arrivalTime": "2026-11-30 16:50",
+                  "marketingAirline": "LX",
+                  "operatingAirline": "LX",
+                  "flightNumber": "729",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "JFF77WW"
+                },
+                {
+                  "departureAirportCode": "ZRH",
+                  "arrivalAirportCode": "LCY",
+                  "departureTime": "2026-12-01 07:55",
+                  "arrivalTime": "2026-12-01 08:40",
+                  "marketingAirline": "LX",
+                  "operatingAirline": "2L",
+                  "flightNumber": "460",
+                  "bookingClass": "J",
+                  "cabin": "C",
+                  "fareCode": "JFF77WW"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 9623
+              },
+              "oBaseTax": {
+                "ADT": 1773.36
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "JCB",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {}
+          },
+          "prod_key": "112_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTYxNi9BTVNMQ1kyMDI2LTExLTMwXzE1MDcqQkF+I0JBNjk0MyNCQTE2MzIjTFg3MjkjTFg0NjB+bGM6ZW5fdXM=",
+          "preprod_key": "51_U0FMMTAzKkMxMDAwL1JEVU1VQzIwMjYtMTEtMjBfMTYxNi9BTVNMQ1kyMDI2LTExLTMwXzE1MDcqQkF+I0JBNjk0MyNCQTE2MzIjTFg3MjkjTFg0NjB+bGM6ZW5fdXM=",
+          "output": {
+            "prices": {
+              "totalPrice": 12098.38,
+              "totalTax": 2225.33,
+              "comm": 0,
+              "isCk": true,
+              "markup": 451.97,
+              "oMarkup": {
+                "amount": 210,
+                "currency": "USD"
+              }
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "JCB",
+                "cnt": 1,
+                "baseFare": 9873.05,
+                "pubBaseFare": 0,
+                "baseTax": 1773.36,
+                "pubBaseTax": 0,
+                "markup": 451.97,
+                "comm": 0,
+                "CkAmount": 241.97,
+                "price": 12098.38,
+                "tax": 2225.33,
+                "oBaseFare": {
+                  "amount": 9623,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 1773.36,
+                  "currency": "USD"
+                },
+                "oMarkup": {
+                  "amount": 210,
+                  "currency": "USD"
+                },
+                "oCkAmount": {
+                  "amount": 241.97,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "Assets": {
+                "Hotel": {
+                  "ValuePerPax": {
+                    "ADT": {
+                      "amount": 250.05,
+                      "currency": "USD"
+                    }
+                  },
+                  "AssetPlacement": "Fare"
+                }
+              },
+              "CK": {
+                "IsCK": true,
+                "CkScenario": 1,
+                "PaymentTypeSupported": 0,
+                "ValuePerPax": {
+                  "ADT": {
+                    "amount": 241.97,
+                    "currency": "USD"
+                  }
+                }
+              },
+              "CpanelMK": {
+                "markupId": 111318,
+                "markupUid": "a1da7de2-2daf-4703-a520-0ecded317464",
+                "MarkupPerPax": {
+                  "ADT": {
+                    "amount": 210,
+                    "currency": "USD"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "prod_only": 390,
+      "preprod_only": 360,
+      "scenario_id": "TC-02",
+      "repeat": "3",
+      "query": {
+        "extra": "false",
+        "cabin": "C",
+        "adt": "1",
+        "debug": "true",
+        "cid": "SAL103",
+        "fl.0.o": "RDU",
+        "fl.0.d": "MUC",
+        "fl.0.dt": "2026-11-20",
+        "fl.1.o": "AMS",
+        "fl.1.d": "LHR",
+        "fl.1.dt": "2026-11-30"
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://airsearch.api.travelinsides.com/v1/search?extra=false&cabin=C&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://airapi51.kivops.info/v1/search?extra=false&cabin=C&adt=1&debug=true&cid=SAL103&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        }
+      ],
+      "statuses": [
+        200,
+        200
+      ],
+      "amount_status": "PASS",
+      "rule_status": "WARN"
+    },
+    {
+      "matched": 93,
+      "equal": 93,
+      "positive_commission_equal": 2,
+      "commission_info_equal": 0,
+      "rule_evaluated": 0,
+      "rule_equal": 0,
+      "rule_differences": [],
+      "differences": [],
+      "samples": [
+        {
+          "input": {
+            "gds": "Q",
+            "pcc": "SBZ101",
+            "cons": "GTT",
+            "fareType": "PUB",
+            "validatingCarrier": "AA",
+            "currency": "USD",
+            "paxCnt": 3,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 11:17",
+                  "arrivalTime": "2026-11-20 12:30",
+                  "marketingAirline": "AA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1895",
+                  "bookingClass": "B",
+                  "cabin": "Y",
+                  "fareCode": "VKW0C9BV",
+                  "brandId": "AAAT-BASIC"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 16:55",
+                  "arrivalTime": "2026-11-21 07:30",
+                  "marketingAirline": "AA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "762",
+                  "bookingClass": "B",
+                  "cabin": "Y",
+                  "fareCode": "VKW0C9BV",
+                  "brandId": "AAAT-BASIC"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 16:45",
+                  "arrivalTime": "2026-11-30 17:00",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "KL",
+                  "flightNumber": "1013",
+                  "bookingClass": "X",
+                  "cabin": "Y",
+                  "fareCode": "XYSOBN9A"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 379.47,
+                "CHD": 378.47,
+                "INF": 37
+              },
+              "oBaseTax": {
+                "ADT": 453.8,
+                "CHD": 453.8,
+                "INF": 29
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              },
+              "CHD": {
+                "codeAs": "CHD",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              },
+              "INF": {
+                "codeAs": "INF",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {},
+            "tickets": [
+              {
+                "gds": "V",
+                "pcc": "G9MJ",
+                "cons": "GTT",
+                "fareType": "PUB",
+                "validatingCarrier": "AA",
+                "currency": "USD",
+                "paxCnt": 3,
+                "tripType": "OW",
+                "trips": [
+                  []
+                ],
+                "input_prices": {
+                  "GdsCurrency": "USD",
+                  "TargetCurrency": "USD",
+                  "oBaseFare": {
+                    "ADT": 364,
+                    "CHD": 364,
+                    "INF": 36
+                  },
+                  "oBaseTax": {
+                    "ADT": 358,
+                    "CHD": 358,
+                    "INF": 29
+                  }
+                },
+                "passenger_inputs": {
+                  "ADT": {
+                    "codeAs": "ADT",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "CHD": {
+                    "codeAs": "CNN",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "INF": {
+                    "codeAs": "INF",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  }
+                },
+                "original_info": {}
+              },
+              {
+                "gds": "I",
+                "pcc": "SFOG3210A",
+                "cons": "GTT",
+                "fareType": "PUB",
+                "validatingCarrier": "KL",
+                "currency": "USD",
+                "paxCnt": 3,
+                "tripType": "OW",
+                "trips": [
+                  []
+                ],
+                "input_prices": {
+                  "GdsCurrency": "USD",
+                  "TargetCurrency": "USD",
+                  "oBaseFare": {
+                    "ADT": 15.47,
+                    "CHD": 14.47,
+                    "INF": 1
+                  },
+                  "oBaseTax": {
+                    "ADT": 95.8,
+                    "CHD": 95.8,
+                    "INF": 0
+                  }
+                },
+                "passenger_inputs": {
+                  "ADT": {
+                    "codeAs": "JCB",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "CHD": {
+                    "codeAs": "JNN",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "INF": {
+                    "codeAs": "JNF",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  }
+                },
+                "original_info": {}
+              }
+            ]
+          },
+          "prod_key": "112_U0FMMTAzKlkxMTEwL1JEVU1VQzIwMjYtMTEtMjBfMTExNi9BTVNMSFIyMDI2LTExLTMwXzE2KkFBfiNBQTE4OTUjQUE3NjIjS0wxMDEzfmxjOmVuX3VzOlNFUCNBQUtM",
+          "preprod_key": "51_U0FMMTAzKlkxMTEwL1JEVU1VQzIwMjYtMTEtMjBfMTExNi9BTVNMSFIyMDI2LTExLTMwXzE2KkFBfiNBQTE4OTUjQUE3NjIjS0wxMDEzfmxjOmVuX3VzOlNFUCNBQUtM",
+          "output": {
+            "prices": {
+              "totalPrice": 1731.54,
+              "totalTax": 936.6,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 379.47,
+                "pubBaseFare": 0,
+                "baseTax": 453.8,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 833.27,
+                "tax": 453.8,
+                "oBaseFare": {
+                  "amount": 379.47,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 453.8,
+                  "currency": "USD"
+                }
+              },
+              "CHD": {
+                "codeAs": "CHD",
+                "cnt": 1,
+                "baseFare": 378.47,
+                "pubBaseFare": 0,
+                "baseTax": 453.8,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 832.27,
+                "tax": 453.8,
+                "oBaseFare": {
+                  "amount": 378.47,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 453.8,
+                  "currency": "USD"
+                }
+              },
+              "INF": {
+                "codeAs": "INF",
+                "cnt": 1,
+                "baseFare": 37,
+                "pubBaseFare": 0,
+                "baseTax": 29,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 66,
+                "tax": 29,
+                "oBaseFare": {
+                  "amount": 37,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 29,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            },
+            "tickets": [
+              {
+                "prices": {
+                  "totalPrice": 1509,
+                  "totalTax": 745,
+                  "comm": 0,
+                  "isCk": false,
+                  "markup": 0
+                },
+                "passengers": {
+                  "ADT": {
+                    "codeAs": "ADT",
+                    "cnt": 1,
+                    "baseFare": 364,
+                    "pubBaseFare": 0,
+                    "baseTax": 358,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 722,
+                    "tax": 358,
+                    "oBaseFare": {
+                      "amount": 364,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 358,
+                      "currency": "USD"
+                    }
+                  },
+                  "CHD": {
+                    "codeAs": "CNN",
+                    "cnt": 1,
+                    "baseFare": 364,
+                    "pubBaseFare": 0,
+                    "baseTax": 358,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 722,
+                    "tax": 358,
+                    "oBaseFare": {
+                      "amount": 364,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 358,
+                      "currency": "USD"
+                    }
+                  },
+                  "INF": {
+                    "codeAs": "INF",
+                    "cnt": 1,
+                    "baseFare": 36,
+                    "pubBaseFare": 0,
+                    "baseTax": 29,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 65,
+                    "tax": 29,
+                    "oBaseFare": {
+                      "amount": 36,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 29,
+                      "currency": "USD"
+                    }
+                  }
+                },
+                "priceElement": {
+                  "CK": {
+                    "IsCK": false,
+                    "CkScenario": 0,
+                    "PaymentTypeSupported": 0
+                  },
+                  "CpanelMK": {
+                    "markupId": 0,
+                    "markupUid": ""
+                  }
+                }
+              },
+              {
+                "prices": {
+                  "totalPrice": 222.54,
+                  "totalTax": 191.6,
+                  "comm": 0,
+                  "isCk": false,
+                  "markup": 0
+                },
+                "passengers": {
+                  "ADT": {
+                    "codeAs": "JCB",
+                    "cnt": 1,
+                    "baseFare": 15.47,
+                    "pubBaseFare": 0,
+                    "baseTax": 95.8,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 111.27,
+                    "tax": 95.8,
+                    "oBaseFare": {
+                      "amount": 15.47,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 95.8,
+                      "currency": "USD"
+                    }
+                  },
+                  "CHD": {
+                    "codeAs": "JNN",
+                    "cnt": 1,
+                    "baseFare": 14.47,
+                    "pubBaseFare": 0,
+                    "baseTax": 95.8,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 110.27,
+                    "tax": 95.8,
+                    "oBaseFare": {
+                      "amount": 14.47,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 95.8,
+                      "currency": "USD"
+                    }
+                  },
+                  "INF": {
+                    "codeAs": "JNF",
+                    "cnt": 1,
+                    "baseFare": 1,
+                    "pubBaseFare": 0,
+                    "baseTax": 0,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 1,
+                    "tax": 0,
+                    "oBaseFare": {
+                      "amount": 1,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 0,
+                      "currency": "USD"
+                    }
+                  }
+                },
+                "priceElement": {
+                  "CK": {
+                    "IsCK": false,
+                    "CkScenario": 0,
+                    "PaymentTypeSupported": 0
+                  },
+                  "CpanelMK": {
+                    "markupId": 0,
+                    "markupUid": ""
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "gds": "Q",
+            "pcc": "SBZ101",
+            "cons": "GTT",
+            "fareType": "PUB",
+            "validatingCarrier": "AA",
+            "currency": "USD",
+            "paxCnt": 3,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "CLT",
+                  "departureTime": "2026-11-20 14:49",
+                  "arrivalTime": "2026-11-20 16:04",
+                  "marketingAirline": "AA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "1897",
+                  "bookingClass": "B",
+                  "cabin": "Y",
+                  "fareCode": "VKW0C9BV",
+                  "brandId": "AAAT-BASIC"
+                },
+                {
+                  "departureAirportCode": "CLT",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 16:55",
+                  "arrivalTime": "2026-11-21 07:30",
+                  "marketingAirline": "AA",
+                  "operatingAirline": "AA",
+                  "flightNumber": "762",
+                  "bookingClass": "B",
+                  "cabin": "Y",
+                  "fareCode": "VKW0C9BV",
+                  "brandId": "AAAT-BASIC"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 20:40",
+                  "arrivalTime": "2026-11-30 20:50",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "KL",
+                  "flightNumber": "1017",
+                  "bookingClass": "X",
+                  "cabin": "Y",
+                  "fareCode": "XYSOBN9A"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 379.47,
+                "CHD": 378.47,
+                "INF": 37
+              },
+              "oBaseTax": {
+                "ADT": 453.8,
+                "CHD": 453.8,
+                "INF": 29
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              },
+              "CHD": {
+                "codeAs": "CHD",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              },
+              "INF": {
+                "codeAs": "INF",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {},
+            "tickets": [
+              {
+                "gds": "V",
+                "pcc": "G9MJ",
+                "cons": "GTT",
+                "fareType": "PUB",
+                "validatingCarrier": "AA",
+                "currency": "USD",
+                "paxCnt": 3,
+                "tripType": "OW",
+                "trips": [
+                  []
+                ],
+                "input_prices": {
+                  "GdsCurrency": "USD",
+                  "TargetCurrency": "USD",
+                  "oBaseFare": {
+                    "ADT": 364,
+                    "CHD": 364,
+                    "INF": 36
+                  },
+                  "oBaseTax": {
+                    "ADT": 358,
+                    "CHD": 358,
+                    "INF": 29
+                  }
+                },
+                "passenger_inputs": {
+                  "ADT": {
+                    "codeAs": "ADT",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "CHD": {
+                    "codeAs": "CNN",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "INF": {
+                    "codeAs": "INF",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  }
+                },
+                "original_info": {}
+              },
+              {
+                "gds": "I",
+                "pcc": "SFOG3210A",
+                "cons": "GTT",
+                "fareType": "PUB",
+                "validatingCarrier": "KL",
+                "currency": "USD",
+                "paxCnt": 3,
+                "tripType": "OW",
+                "trips": [
+                  []
+                ],
+                "input_prices": {
+                  "GdsCurrency": "USD",
+                  "TargetCurrency": "USD",
+                  "oBaseFare": {
+                    "ADT": 15.47,
+                    "CHD": 14.47,
+                    "INF": 1
+                  },
+                  "oBaseTax": {
+                    "ADT": 95.8,
+                    "CHD": 95.8,
+                    "INF": 0
+                  }
+                },
+                "passenger_inputs": {
+                  "ADT": {
+                    "codeAs": "JCB",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "CHD": {
+                    "codeAs": "JNN",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "INF": {
+                    "codeAs": "JNF",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  }
+                },
+                "original_info": {}
+              }
+            ]
+          },
+          "prod_key": "112_U0FMMTAzKlkxMTEwL1JEVU1VQzIwMjYtMTEtMjBfMTQxNi9BTVNMSFIyMDI2LTExLTMwXzIwKkFBfiNBQTE4OTcjQUE3NjIjS0wxMDE3fmxjOmVuX3VzOlNFUCNBQUtM",
+          "preprod_key": "51_U0FMMTAzKlkxMTEwL1JEVU1VQzIwMjYtMTEtMjBfMTQxNi9BTVNMSFIyMDI2LTExLTMwXzIwKkFBfiNBQTE4OTcjQUE3NjIjS0wxMDE3fmxjOmVuX3VzOlNFUCNBQUtM",
+          "output": {
+            "prices": {
+              "totalPrice": 1731.54,
+              "totalTax": 936.6,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 379.47,
+                "pubBaseFare": 0,
+                "baseTax": 453.8,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 833.27,
+                "tax": 453.8,
+                "oBaseFare": {
+                  "amount": 379.47,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 453.8,
+                  "currency": "USD"
+                }
+              },
+              "CHD": {
+                "codeAs": "CHD",
+                "cnt": 1,
+                "baseFare": 378.47,
+                "pubBaseFare": 0,
+                "baseTax": 453.8,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 832.27,
+                "tax": 453.8,
+                "oBaseFare": {
+                  "amount": 378.47,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 453.8,
+                  "currency": "USD"
+                }
+              },
+              "INF": {
+                "codeAs": "INF",
+                "cnt": 1,
+                "baseFare": 37,
+                "pubBaseFare": 0,
+                "baseTax": 29,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 66,
+                "tax": 29,
+                "oBaseFare": {
+                  "amount": 37,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 29,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            },
+            "tickets": [
+              {
+                "prices": {
+                  "totalPrice": 1509,
+                  "totalTax": 745,
+                  "comm": 0,
+                  "isCk": false,
+                  "markup": 0
+                },
+                "passengers": {
+                  "ADT": {
+                    "codeAs": "ADT",
+                    "cnt": 1,
+                    "baseFare": 364,
+                    "pubBaseFare": 0,
+                    "baseTax": 358,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 722,
+                    "tax": 358,
+                    "oBaseFare": {
+                      "amount": 364,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 358,
+                      "currency": "USD"
+                    }
+                  },
+                  "CHD": {
+                    "codeAs": "CNN",
+                    "cnt": 1,
+                    "baseFare": 364,
+                    "pubBaseFare": 0,
+                    "baseTax": 358,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 722,
+                    "tax": 358,
+                    "oBaseFare": {
+                      "amount": 364,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 358,
+                      "currency": "USD"
+                    }
+                  },
+                  "INF": {
+                    "codeAs": "INF",
+                    "cnt": 1,
+                    "baseFare": 36,
+                    "pubBaseFare": 0,
+                    "baseTax": 29,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 65,
+                    "tax": 29,
+                    "oBaseFare": {
+                      "amount": 36,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 29,
+                      "currency": "USD"
+                    }
+                  }
+                },
+                "priceElement": {
+                  "CK": {
+                    "IsCK": false,
+                    "CkScenario": 0,
+                    "PaymentTypeSupported": 0
+                  },
+                  "CpanelMK": {
+                    "markupId": 0,
+                    "markupUid": ""
+                  }
+                }
+              },
+              {
+                "prices": {
+                  "totalPrice": 222.54,
+                  "totalTax": 191.6,
+                  "comm": 0,
+                  "isCk": false,
+                  "markup": 0
+                },
+                "passengers": {
+                  "ADT": {
+                    "codeAs": "JCB",
+                    "cnt": 1,
+                    "baseFare": 15.47,
+                    "pubBaseFare": 0,
+                    "baseTax": 95.8,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 111.27,
+                    "tax": 95.8,
+                    "oBaseFare": {
+                      "amount": 15.47,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 95.8,
+                      "currency": "USD"
+                    }
+                  },
+                  "CHD": {
+                    "codeAs": "JNN",
+                    "cnt": 1,
+                    "baseFare": 14.47,
+                    "pubBaseFare": 0,
+                    "baseTax": 95.8,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 110.27,
+                    "tax": 95.8,
+                    "oBaseFare": {
+                      "amount": 14.47,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 95.8,
+                      "currency": "USD"
+                    }
+                  },
+                  "INF": {
+                    "codeAs": "JNF",
+                    "cnt": 1,
+                    "baseFare": 1,
+                    "pubBaseFare": 0,
+                    "baseTax": 0,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 1,
+                    "tax": 0,
+                    "oBaseFare": {
+                      "amount": 1,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 0,
+                      "currency": "USD"
+                    }
+                  }
+                },
+                "priceElement": {
+                  "CK": {
+                    "IsCK": false,
+                    "CkScenario": 0,
+                    "PaymentTypeSupported": 0
+                  },
+                  "CpanelMK": {
+                    "markupId": 0,
+                    "markupUid": ""
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "input": {
+            "gds": "Q",
+            "pcc": "SBZ101",
+            "cons": "GTT",
+            "fareType": "PUB",
+            "validatingCarrier": "KL",
+            "currency": "USD",
+            "paxCnt": 3,
+            "tripType": "MC",
+            "trips": [
+              [
+                {
+                  "departureAirportCode": "RDU",
+                  "arrivalAirportCode": "ATL",
+                  "departureTime": "2026-11-20 15:05",
+                  "arrivalTime": "2026-11-20 16:34",
+                  "marketingAirline": "DL",
+                  "operatingAirline": "DL",
+                  "flightNumber": "2026",
+                  "bookingClass": "Q",
+                  "cabin": "Y",
+                  "fareCode": "QKW01NBL"
+                },
+                {
+                  "departureAirportCode": "ATL",
+                  "arrivalAirportCode": "MUC",
+                  "departureTime": "2026-11-20 18:05",
+                  "arrivalTime": "2026-11-21 09:00",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "DL",
+                  "flightNumber": "6130",
+                  "bookingClass": "Q",
+                  "cabin": "Y",
+                  "fareCode": "QKW01NBL"
+                }
+              ],
+              [
+                {
+                  "departureAirportCode": "AMS",
+                  "arrivalAirportCode": "LHR",
+                  "departureTime": "2026-11-30 15:45",
+                  "arrivalTime": "2026-11-30 16:05",
+                  "marketingAirline": "KL",
+                  "operatingAirline": "KL",
+                  "flightNumber": "1011",
+                  "bookingClass": "X",
+                  "cabin": "Y",
+                  "fareCode": "XYSOBN9A"
+                }
+              ]
+            ],
+            "input_prices": {
+              "GdsCurrency": "USD",
+              "TargetCurrency": "USD",
+              "oBaseFare": {
+                "ADT": 388.41,
+                "CHD": 387.41,
+                "INF": 37
+              },
+              "oBaseTax": {
+                "ADT": 453.8,
+                "CHD": 453.8,
+                "INF": 29
+              }
+            },
+            "passenger_inputs": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              },
+              "CHD": {
+                "codeAs": "CHD",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              },
+              "INF": {
+                "codeAs": "INF",
+                "cnt": 1,
+                "pubBaseFare": 0,
+                "pubBaseTax": 0
+              }
+            },
+            "original_info": {},
+            "tickets": [
+              {
+                "gds": "I",
+                "pcc": "SFOG3210A",
+                "cons": "GTT",
+                "fareType": "PUB",
+                "validatingCarrier": "KL",
+                "currency": "USD",
+                "paxCnt": 3,
+                "tripType": "OW",
+                "trips": [
+                  []
+                ],
+                "input_prices": {
+                  "GdsCurrency": "USD",
+                  "TargetCurrency": "USD",
+                  "oBaseFare": {
+                    "ADT": 372.94,
+                    "CHD": 372.94,
+                    "INF": 36
+                  },
+                  "oBaseTax": {
+                    "ADT": 358,
+                    "CHD": 358,
+                    "INF": 29
+                  }
+                },
+                "passenger_inputs": {
+                  "ADT": {
+                    "codeAs": "JCB",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "CHD": {
+                    "codeAs": "JNN",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "INF": {
+                    "codeAs": "JNF",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  }
+                },
+                "original_info": {}
+              },
+              {
+                "gds": "I",
+                "pcc": "SFOG3210A",
+                "cons": "GTT",
+                "fareType": "PUB",
+                "validatingCarrier": "KL",
+                "currency": "USD",
+                "paxCnt": 3,
+                "tripType": "OW",
+                "trips": [
+                  []
+                ],
+                "input_prices": {
+                  "GdsCurrency": "USD",
+                  "TargetCurrency": "USD",
+                  "oBaseFare": {
+                    "ADT": 15.47,
+                    "CHD": 14.47,
+                    "INF": 1
+                  },
+                  "oBaseTax": {
+                    "ADT": 95.8,
+                    "CHD": 95.8,
+                    "INF": 0
+                  }
+                },
+                "passenger_inputs": {
+                  "ADT": {
+                    "codeAs": "JCB",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "CHD": {
+                    "codeAs": "JNN",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  },
+                  "INF": {
+                    "codeAs": "JNF",
+                    "cnt": 1,
+                    "pubBaseFare": 0,
+                    "pubBaseTax": 0
+                  }
+                },
+                "original_info": {}
+              }
+            ]
+          },
+          "prod_key": "112_U0FMMTAzKlkxMTEwL1JEVU1VQzIwMjYtMTEtMjBfMTUxOC9BTVNMSFIyMDI2LTExLTMwXzE1KktMfiNETDIwMjYjS0w2MTMwI0tMMTAxMX5sYzplbl91czpTRVAjS0xLTA==",
+          "preprod_key": "51_U0FMMTAzKlkxMTEwL1JEVU1VQzIwMjYtMTEtMjBfMTUxOC9BTVNMSFIyMDI2LTExLTMwXzE1KktMfiNETDIwMjYjS0w2MTMwI0tMMTAxMX5sYzplbl91czpTRVAjS0xLTA==",
+          "output": {
+            "prices": {
+              "totalPrice": 1749.42,
+              "totalTax": 936.6,
+              "comm": 0,
+              "isCk": false,
+              "markup": 0
+            },
+            "passengers": {
+              "ADT": {
+                "codeAs": "ADT",
+                "cnt": 1,
+                "baseFare": 388.41,
+                "pubBaseFare": 0,
+                "baseTax": 453.8,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 842.21,
+                "tax": 453.8,
+                "oBaseFare": {
+                  "amount": 388.41,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 453.8,
+                  "currency": "USD"
+                }
+              },
+              "CHD": {
+                "codeAs": "CHD",
+                "cnt": 1,
+                "baseFare": 387.41,
+                "pubBaseFare": 0,
+                "baseTax": 453.8,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 841.21,
+                "tax": 453.8,
+                "oBaseFare": {
+                  "amount": 387.41,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 453.8,
+                  "currency": "USD"
+                }
+              },
+              "INF": {
+                "codeAs": "INF",
+                "cnt": 1,
+                "baseFare": 37,
+                "pubBaseFare": 0,
+                "baseTax": 29,
+                "pubBaseTax": 0,
+                "markup": 0,
+                "comm": 0,
+                "price": 66,
+                "tax": 29,
+                "oBaseFare": {
+                  "amount": 37,
+                  "currency": "USD"
+                },
+                "oBaseTax": {
+                  "amount": 29,
+                  "currency": "USD"
+                }
+              }
+            },
+            "priceElement": {
+              "CK": {
+                "IsCK": false,
+                "CkScenario": 0,
+                "PaymentTypeSupported": 0
+              },
+              "CpanelMK": {
+                "markupId": 0,
+                "markupUid": ""
+              }
+            },
+            "tickets": [
+              {
+                "prices": {
+                  "totalPrice": 1526.88,
+                  "totalTax": 745,
+                  "comm": 0,
+                  "isCk": false,
+                  "markup": 0
+                },
+                "passengers": {
+                  "ADT": {
+                    "codeAs": "JCB",
+                    "cnt": 1,
+                    "baseFare": 372.94,
+                    "pubBaseFare": 0,
+                    "baseTax": 358,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 730.94,
+                    "tax": 358,
+                    "oBaseFare": {
+                      "amount": 372.94,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 358,
+                      "currency": "USD"
+                    }
+                  },
+                  "CHD": {
+                    "codeAs": "JNN",
+                    "cnt": 1,
+                    "baseFare": 372.94,
+                    "pubBaseFare": 0,
+                    "baseTax": 358,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 730.94,
+                    "tax": 358,
+                    "oBaseFare": {
+                      "amount": 372.94,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 358,
+                      "currency": "USD"
+                    }
+                  },
+                  "INF": {
+                    "codeAs": "JNF",
+                    "cnt": 1,
+                    "baseFare": 36,
+                    "pubBaseFare": 0,
+                    "baseTax": 29,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 65,
+                    "tax": 29,
+                    "oBaseFare": {
+                      "amount": 36,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 29,
+                      "currency": "USD"
+                    }
+                  }
+                },
+                "priceElement": {
+                  "CK": {
+                    "IsCK": false,
+                    "CkScenario": 0,
+                    "PaymentTypeSupported": 0
+                  },
+                  "CpanelMK": {
+                    "markupId": 0,
+                    "markupUid": ""
+                  }
+                }
+              },
+              {
+                "prices": {
+                  "totalPrice": 222.54,
+                  "totalTax": 191.6,
+                  "comm": 0,
+                  "isCk": false,
+                  "markup": 0
+                },
+                "passengers": {
+                  "ADT": {
+                    "codeAs": "JCB",
+                    "cnt": 1,
+                    "baseFare": 15.47,
+                    "pubBaseFare": 0,
+                    "baseTax": 95.8,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 111.27,
+                    "tax": 95.8,
+                    "oBaseFare": {
+                      "amount": 15.47,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 95.8,
+                      "currency": "USD"
+                    }
+                  },
+                  "CHD": {
+                    "codeAs": "JNN",
+                    "cnt": 1,
+                    "baseFare": 14.47,
+                    "pubBaseFare": 0,
+                    "baseTax": 95.8,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 110.27,
+                    "tax": 95.8,
+                    "oBaseFare": {
+                      "amount": 14.47,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 95.8,
+                      "currency": "USD"
+                    }
+                  },
+                  "INF": {
+                    "codeAs": "JNF",
+                    "cnt": 1,
+                    "baseFare": 1,
+                    "pubBaseFare": 0,
+                    "baseTax": 0,
+                    "pubBaseTax": 0,
+                    "markup": 0,
+                    "comm": 0,
+                    "price": 1,
+                    "tax": 0,
+                    "oBaseFare": {
+                      "amount": 1,
+                      "currency": "USD"
+                    },
+                    "oBaseTax": {
+                      "amount": 0,
+                      "currency": "USD"
+                    }
+                  }
+                },
+                "priceElement": {
+                  "CK": {
+                    "IsCK": false,
+                    "CkScenario": 0,
+                    "PaymentTypeSupported": 0
+                  },
+                  "CpanelMK": {
+                    "markupId": 0,
+                    "markupUid": ""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "prod_only": 1155,
+      "preprod_only": 1180,
+      "scenario_id": "TC-03",
+      "repeat": "1",
+      "query": {
+        "extra": "false",
+        "cabin": "Y",
+        "adt": "1",
+        "debug": "true",
+        "cid": "SAL103",
+        "chd": "1",
+        "inf": "1",
+        "fl.0.o": "RDU",
+        "fl.0.d": "MUC",
+        "fl.0.dt": "2026-11-20",
+        "fl.1.o": "AMS",
+        "fl.1.d": "LHR",
+        "fl.1.dt": "2026-11-30"
+      },
+      "requests": [
+        {
+          "method": "GET",
+          "url": "https://airsearch.api.travelinsides.com/v1/search?extra=false&cabin=Y&adt=1&debug=true&cid=SAL103&chd=1&inf=1&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://airapi51.kivops.info/v1/search?extra=false&cabin=Y&adt=1&debug=true&cid=SAL103&chd=1&inf=1&fl.0.o=RDU&fl.0.d=MUC&fl.0.dt=2026-11-20&fl.1.o=AMS&fl.1.d=LHR&fl.1.dt=2026-11-30",
+          "headers": {
+            "Authorization": "[REDACTED]"
+          }
+        }
+      ],
+      "statuses": [
+        200,
+        200
+      ],
+      "amount_status": "PASS",
+      "rule_status": "WARN"
+    }
+  ],
+  "timings": [
+    {
+      "scenario_id": "TC-01",
+      "repeat": 1,
+      "environment": "prod",
+      "status": 200,
+      "response_seconds": 15.959786299999905,
+      "started_utc": "2026-10-13T12:17:03.053156+00:00",
+      "returned_results": 1346,
+      "server_search_seconds": 13.549962105,
+      "commission_seconds": 0.390539252,
+      "commission_processed": 3729,
+      "commission_returned": 1473,
+      "commission_us_per_processed": 104.73029015821936,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-01",
+      "repeat": 1,
+      "environment": "preprod",
+      "status": 200,
+      "response_seconds": 15.235412500000166,
+      "started_utc": "2026-10-13T12:17:19.029885+00:00",
+      "returned_results": 1367,
+      "server_search_seconds": 13.231560021,
+      "commission_seconds": 0.14286590200000002,
+      "commission_processed": 3841,
+      "commission_returned": 1573,
+      "commission_us_per_processed": 37.19497578755533,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-01",
+      "repeat": 2,
+      "environment": "prod",
+      "status": 200,
+      "response_seconds": 15.481485399999656,
+      "started_utc": "2026-10-13T12:18:15.827715+00:00",
+      "returned_results": 1257,
+      "server_search_seconds": 13.117246789,
+      "commission_seconds": 0.095395946,
+      "commission_processed": 3271,
+      "commission_returned": 1482,
+      "commission_us_per_processed": 29.164153469886884,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-01",
+      "repeat": 2,
+      "environment": "preprod",
+      "status": 200,
+      "response_seconds": 15.339688000000024,
+      "started_utc": "2026-10-13T12:18:00.473532+00:00",
+      "returned_results": 1284,
+      "server_search_seconds": 13.246639069,
+      "commission_seconds": 0.083314594,
+      "commission_processed": 4138,
+      "commission_returned": 1761,
+      "commission_us_per_processed": 20.134024649589175,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-01",
+      "repeat": 3,
+      "environment": "prod",
+      "status": 200,
+      "response_seconds": 15.308861000001343,
+      "started_utc": "2026-10-13T12:18:31.316595+00:00",
+      "returned_results": 1316,
+      "server_search_seconds": 13.190560339,
+      "commission_seconds": 0.112470292,
+      "commission_processed": 3368,
+      "commission_returned": 1373,
+      "commission_us_per_processed": 33.39379216152019,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-01",
+      "repeat": 3,
+      "environment": "preprod",
+      "status": 200,
+      "response_seconds": 15.939996199998859,
+      "started_utc": "2026-10-13T12:18:46.630671+00:00",
+      "returned_results": 1325,
+      "server_search_seconds": 12.917494796,
+      "commission_seconds": 0.063993128,
+      "commission_processed": 3258,
+      "commission_returned": 1647,
+      "commission_us_per_processed": 19.641844076120318,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-02",
+      "repeat": 1,
+      "environment": "prod",
+      "status": 200,
+      "response_seconds": 14.4055343,
+      "started_utc": "2026-10-13T12:19:02.583701+00:00",
+      "returned_results": 1427,
+      "server_search_seconds": 12.115627777,
+      "commission_seconds": 0.071157332,
+      "commission_processed": 3088,
+      "commission_returned": 1722,
+      "commission_us_per_processed": 23.043177461139898,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-02",
+      "repeat": 1,
+      "environment": "preprod",
+      "status": 200,
+      "response_seconds": 15.224251700001332,
+      "started_utc": "2026-10-13T12:19:16.999739+00:00",
+      "returned_results": 1413,
+      "server_search_seconds": 11.974399678,
+      "commission_seconds": 0.138640402,
+      "commission_processed": 3150,
+      "commission_returned": 1912,
+      "commission_us_per_processed": 44.01282603174603,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-02",
+      "repeat": 2,
+      "environment": "prod",
+      "status": 200,
+      "response_seconds": 14.074234900001102,
+      "started_utc": "2026-10-13T12:19:49.966572+00:00",
+      "returned_results": 1346,
+      "server_search_seconds": 11.907647398,
+      "commission_seconds": 0.09165786199999999,
+      "commission_processed": 3029,
+      "commission_returned": 1832,
+      "commission_us_per_processed": 30.260106305711453,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-02",
+      "repeat": 2,
+      "environment": "preprod",
+      "status": 200,
+      "response_seconds": 17.729444700000386,
+      "started_utc": "2026-10-13T12:19:32.230664+00:00",
+      "returned_results": 1346,
+      "server_search_seconds": 15.730450824,
+      "commission_seconds": 0.067417755,
+      "commission_processed": 2828,
+      "commission_returned": 1792,
+      "commission_us_per_processed": 23.83937588401697,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-02",
+      "repeat": 3,
+      "environment": "prod",
+      "status": 200,
+      "response_seconds": 13.990751699999237,
+      "started_utc": "2026-10-13T12:20:04.047767+00:00",
+      "returned_results": 1350,
+      "server_search_seconds": 11.763635379,
+      "commission_seconds": 0.058764259000000006,
+      "commission_processed": 3113,
+      "commission_returned": 1794,
+      "commission_us_per_processed": 18.877050754898814,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-02",
+      "repeat": 3,
+      "environment": "preprod",
+      "status": 200,
+      "response_seconds": 13.419904700000188,
+      "started_utc": "2026-10-13T12:20:18.044218+00:00",
+      "returned_results": 1320,
+      "server_search_seconds": 11.467766972,
+      "commission_seconds": 0.065418622,
+      "commission_processed": 2732,
+      "commission_returned": 1716,
+      "commission_us_per_processed": 23.945322840409954,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-03",
+      "repeat": 1,
+      "environment": "prod",
+      "status": 200,
+      "response_seconds": 17.765950900000462,
+      "started_utc": "2026-10-13T12:20:31.471831+00:00",
+      "returned_results": 1248,
+      "server_search_seconds": 15.489129504,
+      "commission_seconds": 0.428418992,
+      "commission_processed": 2881,
+      "commission_returned": 1460,
+      "commission_us_per_processed": 148.7049607775078,
+      "commission_info_results": 0
+    },
+    {
+      "scenario_id": "TC-03",
+      "repeat": 1,
+      "environment": "preprod",
+      "status": 200,
+      "response_seconds": 17.460274900000513,
+      "started_utc": "2026-10-13T12:20:49.246118+00:00",
+      "returned_results": 1273,
+      "server_search_seconds": 14.752776092,
+      "commission_seconds": 0.18069489300000002,
+      "commission_processed": 2919,
+      "commission_returned": 1446,
+      "commission_us_per_processed": 61.903012332990755,
+      "commission_info_results": 1171
+    }
+  ],
+  "coverage": {
+    "prod": {
+      "validatingCarrier": [
+        "AA",
+        "AC",
+        "AF",
+        "BA",
+        "DL",
+        "EI",
+        "EN",
+        "FI",
+        "IB",
+        "KL",
+        "LH",
+        "LX",
+        "SK",
+        "UA",
+        "VS"
+      ],
+      "gds": [
+        "A",
+        "E",
+        "G",
+        "I",
+        "Q",
+        "S"
+      ],
+      "pcc": [
+        "18Y8",
+        "25CF",
+        "59EL",
+        "87SP",
+        "8C4T",
+        "8U10",
+        "8Y11",
+        "B17L",
+        "DEF",
+        "L05L",
+        "LAXGO3100",
+        "SBZ101",
+        "SBZ103",
+        "SFOG3210A",
+        "W1EL",
+        "W2GM",
+        "X0GG",
+        "Y5F",
+        "YVRG32400"
+      ],
+      "cons": [
+        "GTC",
+        "GTT",
+        "GWU",
+        "HUT",
+        "OVT",
+        "VOJ",
+        "VOW",
+        "VZC",
+        "VZU",
+        "WTC",
+        "WTK"
+      ],
+      "fareType": [
+        "COMM",
+        "PUB",
+        "SR",
+        "TOUR"
+      ],
+      "bookingClass": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "fareCode": [
+        "70J",
+        "AE1LNXG4",
+        "CETBUZE9",
+        "CFFWUS",
+        "CFFWUS/AC787",
+        "CFFWUS/CM20",
+        "CSK",
+        "CYL0BBTA",
+        "CYS0AFNN",
+        "CYS0BFNN",
+        "DEUBUZP0",
+        "DFFWUS",
+        "DFFWUS/AC787",
+        "DNN0D4S5/J794",
+        "DNN0D4S9",
+        "DNN0D4S9/CM2",
+        "DO1QUSSB/DCCO",
+        "DYL0BBTA",
+        "DYS0BBTA",
+        "FYS0ABLA",
+        "GE1LNXG4",
+        "GI1YNXG4",
+        "GYS72BLA",
+        "HKW01NMZ",
+        "HKW01NMZ/AC787",
+        "HKW0C9M5",
+        "HKW0C9M5/CM15",
+        "HKW0C9M5/F179",
+        "HKW0C9M9",
+        "HYS0ABLA",
+        "ILW8D4S5",
+        "ILW8D4S9/CM15",
+        "IOV2CO",
+        "IYL0BBTA",
+        "IYS0ABTA",
+        "IYS0BBTA",
+        "J1N0C9S1",
+        "J1N0C9S1/J795",
+        "JA1",
+        "JA1/CM4",
+        "JDRBS",
+        "JEOBF",
+        "JEOBS",
+        "JFF77WW",
+        "JFFW",
+        "JFFW/AC787",
+        "JNRBS",
+        "JW1/TZB2",
+        "JX1",
+        "JX1/CM15",
+        "JX1/CM2",
+        "JX1/CM4",
+        "JX1/TZA2",
+        "JX1/TZB2",
+        "K40CLSP9",
+        "KAVGA0ML",
+        "KAVTA0MC",
+        "KKW01NMZ",
+        "KKW01NMZ/AC787",
+        "KKW0C9M9",
+        "KTBFR",
+        "KTBFR2",
+        "LKW01NBL",
+        "LKW01NMZ",
+        "LKW01NMZ/AC787",
+        "LKW0C9M5/J794",
+        "LKW0C9M9",
+        "LYS0ABLA",
+        "LYS0BBLA",
+        "LZ0HO/Y",
+        "MI1YNCG8",
+        "MKW01KMZ",
+        "NKW8C1M9",
+        "NKW9C9M5C1",
+        "NYS02BLA",
+        "NYSKBBLA",
+        "O0S72BTA",
+        "O0SOBBTA",
+        "O1BBGDS",
+        "O3SOBBTA",
+        "OI1YNIG8",
+        "OI1YNXG4",
+        "OLERES",
+        "OYL9BBTA",
+        "OZ0CO",
+        "OZ0HO",
+        "OZ0HO/Y",
+        "P10BUZP9",
+        "P10BXXZ9",
+        "PE1LNXG4",
+        "PETBUZE9",
+        "PETBXXU9",
+        "PI1YNXG4",
+        "POW23GDS",
+        "QAA5AFDN",
+        "QAWGA0ML",
+        "QH7OASMR",
+        "QKV00TBQ",
+        "QKW01NBL",
+        "QUA0AFDN",
+        "RHW8D4S5/J795",
+        "RLW8C4S9",
+        "RLW8C4S9/CM2",
+        "RLW8D4S5",
+        "RLW8D4S5/CM15",
+        "RYS12BLA",
+        "RYSNBN9A",
+        "SEUCLSP0",
+        "SKW8C1M9",
+        "SYS02BLA",
+        "TLERES",
+        "TYS0ABLA",
+        "UAA7ADEN",
+        "UI1YNXG4",
+        "VAA2ADDN",
+        "VKW0C9BV",
+        "VKW0C9M5",
+        "VKW0C9M9",
+        "VZ0HO/Y",
+        "WAA2AKDN",
+        "WAA4PFDN",
+        "WKV00TBQ",
+        "WUA2ODDN",
+        "XYSOBN9A",
+        "Y1",
+        "Y1/CM2",
+        "Y1/CM4",
+        "Y1/TZB2",
+        "Y1N0C9S1",
+        "Y1N0C9S1/CM15",
+        "YA2AA",
+        "YAA0ADEY",
+        "YFF77WW",
+        "Z0S52BTA",
+        "Z0SFBBTA",
+        "Z1S52BTA",
+        "ZEOBF",
+        "ZERBF",
+        "ZETBXXU9",
+        "ZI1YNXG4",
+        "ZYL9BBTA",
+        "ZYS02BTA"
+      ],
+      "pax": [
+        "ADT",
+        "CHD",
+        "INF"
+      ],
+      "fare_owner": [],
+      "commission_consolidator": [],
+      "rule": [],
+      "subRule": [],
+      "contract": [],
+      "ticketCode": []
+    },
+    "preprod": {
+      "validatingCarrier": [
+        "AA",
+        "AC",
+        "AF",
+        "BA",
+        "DL",
+        "EI",
+        "EN",
+        "FI",
+        "IB",
+        "KL",
+        "LH",
+        "LX",
+        "SK",
+        "UA",
+        "VS"
+      ],
+      "gds": [
+        "A",
+        "E",
+        "G",
+        "I",
+        "Q",
+        "S"
+      ],
+      "pcc": [
+        "18Y8",
+        "25CF",
+        "59EL",
+        "87SP",
+        "8C4T",
+        "8U10",
+        "8Y11",
+        "B17L",
+        "DEF",
+        "L05L",
+        "LAXGO3100",
+        "SBZ101",
+        "SBZ103",
+        "SFOG3210A",
+        "W1EL",
+        "W2GM",
+        "X0GG",
+        "Y5F",
+        "YVRG32400"
+      ],
+      "cons": [
+        "GTC",
+        "GTT",
+        "GWU",
+        "HUT",
+        "OVT",
+        "VOJ",
+        "VOW",
+        "VZC",
+        "VZU",
+        "WTC",
+        "WTK"
+      ],
+      "fareType": [
+        "COMM",
+        "PUB",
+        "SR",
+        "TOUR"
+      ],
+      "bookingClass": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "fareCode": [
+        "70J",
+        "AE1LNXG4",
+        "BAWGA0MQ",
+        "CETBUZE9",
+        "CFFWUS",
+        "CFFWUS/AC787",
+        "CFFWUS/CM20",
+        "CSK",
+        "CYL0BBTA",
+        "CYS0AFNN",
+        "CYS0BFNN",
+        "DEUBUZP0",
+        "DFFWUS",
+        "DFFWUS/AC787",
+        "DNN0D4S5/CM15",
+        "DNN0D4S5/J794",
+        "DNN0D4S9",
+        "DNN0D4S9/CM2",
+        "DO1QUSSB/DCCO",
+        "DYL0BBTA",
+        "DYS0BBTA",
+        "FYS0ABLA",
+        "GE1LNXG4",
+        "GI1YNXG4",
+        "GYS72BLA",
+        "HAA4ADEN",
+        "HKW01NMZ",
+        "HKW01NMZ/AC787",
+        "HKW0C9M5",
+        "HKW0C9M5/CM15",
+        "HKW0C9M5/F179",
+        "HYS0ABLA",
+        "ILW8D4S5",
+        "ILW8D4S9/CM15",
+        "IOV2CO",
+        "IYL0BBTA",
+        "IYS0ABTA",
+        "IYS0BBTA",
+        "J1N0C9S1",
+        "J1N0C9S1/J794",
+        "J1N0C9S1/J795",
+        "JA1",
+        "JA1/CM4",
+        "JDRBS",
+        "JEOBF",
+        "JEOBS",
+        "JFF77WW",
+        "JFFW",
+        "JFFW/AC787",
+        "JNRBS",
+        "JW1/TZB2",
+        "JX1",
+        "JX1/CM15",
+        "JX1/CM2",
+        "JX1/CM4",
+        "JX1/TZA2",
+        "JX1/TZB2",
+        "K40CLSP9",
+        "KAVGA0ML",
+        "KAVTA0MC",
+        "KKW01NMZ",
+        "KKW01NMZ/AC787",
+        "KTBFR",
+        "KTBFR2",
+        "LKW01NBL",
+        "LKW01NMZ",
+        "LKW01NMZ/AC787",
+        "LKW0C9M5/J794",
+        "LKW0C9M9",
+        "LYS0ABLA",
+        "LYS0BBLA",
+        "MI1YNCG8",
+        "MKW01KMZ",
+        "MKW0C9M9",
+        "NKW8C1M9",
+        "NKW9C9M5C1",
+        "NYS02BLA",
+        "NYSKBBLA",
+        "O0S72BTA",
+        "O0SOBBTA",
+        "O1BBGDS",
+        "O3SOBBTA",
+        "OI1YNIG8",
+        "OI1YNXG4",
+        "OLERES",
+        "OYL9BBTA",
+        "OZ0CO",
+        "OZ0HO",
+        "OZ0HO/Y",
+        "P10BUZP9",
+        "P10BXXZ9",
+        "PE1LNXG4",
+        "PETBUZE9",
+        "PETBXXU9",
+        "PI1YNXG4",
+        "POW23GDS",
+        "QAA5AFDN",
+        "QAWGA0ML",
+        "QH7OASMR",
+        "QKV00TBQ",
+        "QKW01NBL",
+        "QUA0AFDN",
+        "RHW8D4S5/J795",
+        "RLW8C4S9",
+        "RLW8C4S9/CM2",
+        "RLW8D4S5",
+        "RLW8D4S5/CM15",
+        "RYS12BLA",
+        "RYSNBN9A",
+        "SEUCLSP0",
+        "SKW8C1M9",
+        "SYS02BLA",
+        "TLERES",
+        "TYS0ABLA",
+        "UAA7ADEN",
+        "UI1YNXG4",
+        "VAA2ADDN",
+        "VKW0C9BV",
+        "VKW0C9M5",
+        "VKW0C9M9",
+        "VZ0HO/Y",
+        "WAA2AKDN",
+        "WAA4PFDN",
+        "WKV00TBQ",
+        "WUA2ODDN",
+        "XYS52BLA",
+        "XYSOBN9A",
+        "Y1",
+        "Y1/CM12",
+        "Y1/CM2",
+        "Y1/CM4",
+        "Y1/TZB2",
+        "Y1N0C9S1",
+        "Y1N0C9S1/CM15",
+        "YA2AA",
+        "YAA0ADEY",
+        "YFF77WW",
+        "Z0S52BTA",
+        "Z0SFBBTA",
+        "Z1S52BTA",
+        "ZEOBF",
+        "ZERBF",
+        "ZETBXXU9",
+        "ZI1YNXG4",
+        "ZYL9BBTA",
+        "ZYS02BTA"
+      ],
+      "pax": [
+        "ADT",
+        "CHD",
+        "INF"
+      ],
+      "fare_owner": [
+        "AA",
+        "AC",
+        "AF",
+        "BA",
+        "DL",
+        "EI",
+        "EN",
+        "IB",
+        "KL",
+        "LH",
+        "LX",
+        "UA",
+        "VS"
+      ],
+      "commission_consolidator": [
+        "GTC",
+        "GTT",
+        "HUT",
+        "MLN",
+        "RHT",
+        "VOJ",
+        "VOW",
+        "VZC",
+        "VZU"
+      ],
+      "rule": [
+        "1989",
+        "3570",
+        "3705",
+        "3819",
+        "4065",
+        "4069",
+        "4202",
+        "4205",
+        "4431",
+        "4434",
+        "4821",
+        "4823",
+        "4910",
+        "4933",
+        "6070",
+        "6073",
+        "6089",
+        "6091",
+        "6092",
+        "6096",
+        "6122",
+        "6127",
+        "6189"
+      ],
+      "subRule": [
+        "12998",
+        "13008",
+        "23879",
+        "24902",
+        "24906",
+        "24907",
+        "25765",
+        "28486",
+        "28573",
+        "29563",
+        "29645",
+        "30973",
+        "31006",
+        "32900",
+        "32929",
+        "33530",
+        "33534",
+        "33535",
+        "33681",
+        "33683",
+        "44169",
+        "44206",
+        "44566",
+        "44592",
+        "44607",
+        "44659",
+        "45037",
+        "45044",
+        "45182",
+        "45687",
+        "45694"
+      ],
+      "contract": [
+        "Lowest",
+        "Pro-rate"
+      ],
+      "ticketCode": [
+        "AC787",
+        "TZB2"
+      ]
+    }
+  }
+}

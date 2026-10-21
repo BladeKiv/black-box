@@ -1,0 +1,3478 @@
+{
+  "scenario_id": "TC-07",
+  "origin": "LAX",
+  "destination": "MNL",
+  "outbound_date": "2026-10-23",
+  "return_date": "2026-11-24",
+  "run_utc": "2026-09-22T12:17:28.4107829Z",
+  "request": {
+    "url": "http://airapi51.kivops.info/v1/search?fl[1][d]=LAX&adt=1&cabin=Y&fl[0][o]=LAX&fl[0][d]=MNL&fl[0][dt]=2026-10-23&fl[1][o]=MNL&fl[1][dt]=2026-11-24&cid=GTT102&gds=S&pcc=8KI0&fare=SR&debug=1&files=1&val_cr=PR&extra=false",
+    "method": "GET"
+  },
+  "response": {
+    "body_excerpt": {
+      "count": 56,
+      "results": [
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTIvTU5MTEFYMjAyNi0xMS0yNF8xMSpQUn4jUFIxMTMjUFIxMTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 12:25",
+                  "arrivalTime": "2026-10-24 18:00",
+                  "flightNumber": "113",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 11:10",
+                  "arrivalTime": "2026-11-24 08:05",
+                  "flightNumber": "112",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTIvTU5MTEFYMjAyNi0xMS0yNF8yMipQUn4jUFIxMTMjUFIxMDJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 12:25",
+                  "arrivalTime": "2026-10-24 18:00",
+                  "flightNumber": "113",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 22:15",
+                  "arrivalTime": "2026-11-24 19:10",
+                  "flightNumber": "102",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTYvTU5MTEFYMjAyNi0xMS0yNF8yMipQUn4jUFIxMjMjUFIxMDJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 16:55",
+                  "arrivalTime": "2026-10-24 22:35",
+                  "flightNumber": "123",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 22:15",
+                  "arrivalTime": "2026-11-24 19:10",
+                  "flightNumber": "102",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTYvTU5MTEFYMjAyNi0xMS0yNF8xMSpQUn4jUFIxMjMjUFIxMTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 16:55",
+                  "arrivalTime": "2026-10-24 22:35",
+                  "flightNumber": "123",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 11:10",
+                  "arrivalTime": "2026-11-24 08:05",
+                  "flightNumber": "112",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjMvTU5MTEFYMjAyNi0xMS0yNF8yMipQUn4jUFIxMDMjUFIxMDJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 23:45",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "103",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 22:15",
+                  "arrivalTime": "2026-11-24 19:10",
+                  "flightNumber": "102",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjMvTU5MTEFYMjAyNi0xMS0yNF8xMSpQUn4jUFIxMDMjUFIxMTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 23:45",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "103",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 11:10",
+                  "arrivalTime": "2026-11-24 08:05",
+                  "flightNumber": "112",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjAwMC9NTkxMQVgyMDI2LTExLTI0XzIyKlBSfiNQUjM4ODIjUFIxMDUjUFIxMDJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 20:02",
+                  "arrivalTime": "2026-10-23 21:39",
+                  "flightNumber": "3882",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 22:15",
+                  "arrivalTime": "2026-11-24 19:10",
+                  "flightNumber": "102",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjAwMC9NTkxMQVgyMDI2LTExLTI0XzExKlBSfiNQUjM4ODIjUFIxMDUjUFIxMTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 20:02",
+                  "arrivalTime": "2026-10-23 21:39",
+                  "flightNumber": "3882",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 11:10",
+                  "arrivalTime": "2026-11-24 08:05",
+                  "flightNumber": "112",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTcwMC9NTkxMQVgyMDI2LTExLTI0XzIyKlBSfiNQUjM4OTEjUFIxMDUjUFIxMDJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 17:30",
+                  "arrivalTime": "2026-10-23 19:03",
+                  "flightNumber": "3891",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 22:15",
+                  "arrivalTime": "2026-11-24 19:10",
+                  "flightNumber": "102",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTcwMC9NTkxMQVgyMDI2LTExLTI0XzExKlBSfiNQUjM4OTEjUFIxMDUjUFIxMTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 17:30",
+                  "arrivalTime": "2026-10-23 19:03",
+                  "flightNumber": "3891",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 11:10",
+                  "arrivalTime": "2026-11-24 08:05",
+                  "flightNumber": "112",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTMwMC9NTkxMQVgyMDI2LTExLTI0XzIyKlBSfiNQUjM4ODAjUFIxMDUjUFIxMDJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 13:55",
+                  "arrivalTime": "2026-10-23 15:37",
+                  "flightNumber": "3880",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 22:15",
+                  "arrivalTime": "2026-11-24 19:10",
+                  "flightNumber": "102",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTMwMC9NTkxMQVgyMDI2LTExLTI0XzExKlBSfiNQUjM4ODAjUFIxMDUjUFIxMTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 13:55",
+                  "arrivalTime": "2026-10-23 15:37",
+                  "flightNumber": "3880",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 11:10",
+                  "arrivalTime": "2026-11-24 08:05",
+                  "flightNumber": "112",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDkwMC9NTkxMQVgyMDI2LTExLTI0XzExKlBSfiNQUjM4ODYjUFIxMDUjUFIxMTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 09:16",
+                  "arrivalTime": "2026-10-23 11:02",
+                  "flightNumber": "3886",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 11:10",
+                  "arrivalTime": "2026-11-24 08:05",
+                  "flightNumber": "112",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDkwMC9NTkxMQVgyMDI2LTExLTI0XzIyKlBSfiNQUjM4ODYjUFIxMDUjUFIxMDJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 09:16",
+                  "arrivalTime": "2026-10-23 11:02",
+                  "flightNumber": "3886",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 22:15",
+                  "arrivalTime": "2026-11-24 19:10",
+                  "flightNumber": "102",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTIvTU5MTEFYMjAyNi0xMS0yNF8yMzEwKlBSfiNQUjExMyNQUjEwNCNQUjM4ODR+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 12:25",
+                  "arrivalTime": "2026-10-24 18:00",
+                  "flightNumber": "113",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 10:39",
+                  "arrivalTime": "2026-11-25 12:13",
+                  "flightNumber": "3884",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTYvTU5MTEFYMjAyNi0xMS0yNF8yMzEwKlBSfiNQUjEyMyNQUjEwNCNQUjM4ODR+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 16:55",
+                  "arrivalTime": "2026-10-24 22:35",
+                  "flightNumber": "123",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 10:39",
+                  "arrivalTime": "2026-11-25 12:13",
+                  "flightNumber": "3884",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjMvTU5MTEFYMjAyNi0xMS0yNF8yMzEwKlBSfiNQUjEwMyNQUjEwNCNQUjM4ODR+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 23:45",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "103",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 10:39",
+                  "arrivalTime": "2026-11-25 12:13",
+                  "flightNumber": "3884",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDcwMC9NTkxMQVgyMDI2LTExLTI0XzExKlBSfiNQUjM4ODEjUFIxMDUjUFIxMTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 07:17",
+                  "arrivalTime": "2026-10-23 08:57",
+                  "flightNumber": "3881",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 11:10",
+                  "arrivalTime": "2026-11-24 08:05",
+                  "flightNumber": "112",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDcwMC9NTkxMQVgyMDI2LTExLTI0XzIyKlBSfiNQUjM4ODEjUFIxMDUjUFIxMDJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 07:17",
+                  "arrivalTime": "2026-10-23 08:57",
+                  "flightNumber": "3881",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 22:15",
+                  "arrivalTime": "2026-11-24 19:10",
+                  "flightNumber": "102",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjAwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTAqUFJ+I1BSMzg4MiNQUjEwNSNQUjEwNCNQUjM4ODR+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 20:02",
+                  "arrivalTime": "2026-10-23 21:39",
+                  "flightNumber": "3882",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 10:39",
+                  "arrivalTime": "2026-11-25 12:13",
+                  "flightNumber": "3884",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTIvTU5MTEFYMjAyNi0xMS0yNF8yMzA3KlBSfiNQUjExMyNQUjEwNCNQUjM4Nzl+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 12:25",
+                  "arrivalTime": "2026-10-24 18:00",
+                  "flightNumber": "113",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 07:00",
+                  "arrivalTime": "2026-11-25 08:35",
+                  "flightNumber": "3879",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTYvTU5MTEFYMjAyNi0xMS0yNF8yMzA3KlBSfiNQUjEyMyNQUjEwNCNQUjM4Nzl+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 16:55",
+                  "arrivalTime": "2026-10-24 22:35",
+                  "flightNumber": "123",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 07:00",
+                  "arrivalTime": "2026-11-25 08:35",
+                  "flightNumber": "3879",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjMvTU5MTEFYMjAyNi0xMS0yNF8yMzA3KlBSfiNQUjEwMyNQUjEwNCNQUjM4Nzl+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 23:45",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "103",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 07:00",
+                  "arrivalTime": "2026-11-25 08:35",
+                  "flightNumber": "3879",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTAqUFJ+I1BSMzg5MSNQUjEwNSNQUjEwNCNQUjM4ODR+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 17:30",
+                  "arrivalTime": "2026-10-23 19:03",
+                  "flightNumber": "3891",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 10:39",
+                  "arrivalTime": "2026-11-25 12:13",
+                  "flightNumber": "3884",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTIvTU5MTEFYMjAyNi0xMS0yNF8yMzEyKlBSfiNQUjExMyNQUjEwNCNQUjM4OTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 12:25",
+                  "arrivalTime": "2026-10-24 18:00",
+                  "flightNumber": "113",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 12:00",
+                  "arrivalTime": "2026-11-25 13:33",
+                  "flightNumber": "3892",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTYvTU5MTEFYMjAyNi0xMS0yNF8yMzEyKlBSfiNQUjEyMyNQUjEwNCNQUjM4OTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 16:55",
+                  "arrivalTime": "2026-10-24 22:35",
+                  "flightNumber": "123",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 12:00",
+                  "arrivalTime": "2026-11-25 13:33",
+                  "flightNumber": "3892",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjMvTU5MTEFYMjAyNi0xMS0yNF8yMzEyKlBSfiNQUjEwMyNQUjEwNCNQUjM4OTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 23:45",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "103",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 12:00",
+                  "arrivalTime": "2026-11-25 13:33",
+                  "flightNumber": "3892",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTMwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTAqUFJ+I1BSMzg4MCNQUjEwNSNQUjEwNCNQUjM4ODR+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 13:55",
+                  "arrivalTime": "2026-10-23 15:37",
+                  "flightNumber": "3880",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 10:39",
+                  "arrivalTime": "2026-11-25 12:13",
+                  "flightNumber": "3884",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjAwMC9NTkxMQVgyMDI2LTExLTI0XzIzMDcqUFJ+I1BSMzg4MiNQUjEwNSNQUjEwNCNQUjM4Nzl+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 20:02",
+                  "arrivalTime": "2026-10-23 21:39",
+                  "flightNumber": "3882",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 07:00",
+                  "arrivalTime": "2026-11-25 08:35",
+                  "flightNumber": "3879",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTIvTU5MTEFYMjAyNi0xMS0yNF8yMzE0KlBSfiNQUjExMyNQUjEwNCNQUjM4ODd+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 12:25",
+                  "arrivalTime": "2026-10-24 18:00",
+                  "flightNumber": "113",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 14:07",
+                  "arrivalTime": "2026-11-25 15:40",
+                  "flightNumber": "3887",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTYvTU5MTEFYMjAyNi0xMS0yNF8yMzE0KlBSfiNQUjEyMyNQUjEwNCNQUjM4ODd+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 16:55",
+                  "arrivalTime": "2026-10-24 22:35",
+                  "flightNumber": "123",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 14:07",
+                  "arrivalTime": "2026-11-25 15:40",
+                  "flightNumber": "3887",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjMvTU5MTEFYMjAyNi0xMS0yNF8yMzE0KlBSfiNQUjEwMyNQUjEwNCNQUjM4ODd+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 23:45",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "103",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 14:07",
+                  "arrivalTime": "2026-11-25 15:40",
+                  "flightNumber": "3887",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTIvTU5MTEFYMjAyNi0xMS0yNF8yMzE2KlBSfiNQUjExMyNQUjEwNCNQUjM4ODV+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 12:25",
+                  "arrivalTime": "2026-10-24 18:00",
+                  "flightNumber": "113",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 16:15",
+                  "arrivalTime": "2026-11-25 17:51",
+                  "flightNumber": "3885",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMDcqUFJ+I1BSMzg5MSNQUjEwNSNQUjEwNCNQUjM4Nzl+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 17:30",
+                  "arrivalTime": "2026-10-23 19:03",
+                  "flightNumber": "3891",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 07:00",
+                  "arrivalTime": "2026-11-25 08:35",
+                  "flightNumber": "3879",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTYvTU5MTEFYMjAyNi0xMS0yNF8yMzE2KlBSfiNQUjEyMyNQUjEwNCNQUjM4ODV+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 16:55",
+                  "arrivalTime": "2026-10-24 22:35",
+                  "flightNumber": "123",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 16:15",
+                  "arrivalTime": "2026-11-25 17:51",
+                  "flightNumber": "3885",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjMvTU5MTEFYMjAyNi0xMS0yNF8yMzE2KlBSfiNQUjEwMyNQUjEwNCNQUjM4ODV+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 23:45",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "103",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 16:15",
+                  "arrivalTime": "2026-11-25 17:51",
+                  "flightNumber": "3885",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDkwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTAqUFJ+I1BSMzg4NiNQUjEwNSNQUjEwNCNQUjM4ODR+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 09:16",
+                  "arrivalTime": "2026-10-23 11:02",
+                  "flightNumber": "3886",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 10:39",
+                  "arrivalTime": "2026-11-25 12:13",
+                  "flightNumber": "3884",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjAwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTIqUFJ+I1BSMzg4MiNQUjEwNSNQUjEwNCNQUjM4OTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 20:02",
+                  "arrivalTime": "2026-10-23 21:39",
+                  "flightNumber": "3882",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 12:00",
+                  "arrivalTime": "2026-11-25 13:33",
+                  "flightNumber": "3892",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTAqUFJ+I1BSMzg4MSNQUjEwNSNQUjEwNCNQUjM4ODR+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 07:17",
+                  "arrivalTime": "2026-10-23 08:57",
+                  "flightNumber": "3881",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 10:39",
+                  "arrivalTime": "2026-11-25 12:13",
+                  "flightNumber": "3884",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTMwMC9NTkxMQVgyMDI2LTExLTI0XzIzMDcqUFJ+I1BSMzg4MCNQUjEwNSNQUjEwNCNQUjM4Nzl+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 13:55",
+                  "arrivalTime": "2026-10-23 15:37",
+                  "flightNumber": "3880",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 07:00",
+                  "arrivalTime": "2026-11-25 08:35",
+                  "flightNumber": "3879",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjAwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTQqUFJ+I1BSMzg4MiNQUjEwNSNQUjEwNCNQUjM4ODd+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 20:02",
+                  "arrivalTime": "2026-10-23 21:39",
+                  "flightNumber": "3882",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 14:07",
+                  "arrivalTime": "2026-11-25 15:40",
+                  "flightNumber": "3887",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTIqUFJ+I1BSMzg5MSNQUjEwNSNQUjEwNCNQUjM4OTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 17:30",
+                  "arrivalTime": "2026-10-23 19:03",
+                  "flightNumber": "3891",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 12:00",
+                  "arrivalTime": "2026-11-25 13:33",
+                  "flightNumber": "3892",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMjAwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTYqUFJ+I1BSMzg4MiNQUjEwNSNQUjEwNCNQUjM4ODV+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 20:02",
+                  "arrivalTime": "2026-10-23 21:39",
+                  "flightNumber": "3882",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 16:15",
+                  "arrivalTime": "2026-11-25 17:51",
+                  "flightNumber": "3885",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTQqUFJ+I1BSMzg5MSNQUjEwNSNQUjEwNCNQUjM4ODd+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 17:30",
+                  "arrivalTime": "2026-10-23 19:03",
+                  "flightNumber": "3891",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 14:07",
+                  "arrivalTime": "2026-11-25 15:40",
+                  "flightNumber": "3887",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDkwMC9NTkxMQVgyMDI2LTExLTI0XzIzMDcqUFJ+I1BSMzg4NiNQUjEwNSNQUjEwNCNQUjM4Nzl+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 09:16",
+                  "arrivalTime": "2026-10-23 11:02",
+                  "flightNumber": "3886",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 07:00",
+                  "arrivalTime": "2026-11-25 08:35",
+                  "flightNumber": "3879",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTMwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTIqUFJ+I1BSMzg4MCNQUjEwNSNQUjEwNCNQUjM4OTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 13:55",
+                  "arrivalTime": "2026-10-23 15:37",
+                  "flightNumber": "3880",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 12:00",
+                  "arrivalTime": "2026-11-25 13:33",
+                  "flightNumber": "3892",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTYqUFJ+I1BSMzg5MSNQUjEwNSNQUjEwNCNQUjM4ODV+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 17:30",
+                  "arrivalTime": "2026-10-23 19:03",
+                  "flightNumber": "3891",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 16:15",
+                  "arrivalTime": "2026-11-25 17:51",
+                  "flightNumber": "3885",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMDcqUFJ+I1BSMzg4MSNQUjEwNSNQUjEwNCNQUjM4Nzl+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 07:17",
+                  "arrivalTime": "2026-10-23 08:57",
+                  "flightNumber": "3881",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 07:00",
+                  "arrivalTime": "2026-11-25 08:35",
+                  "flightNumber": "3879",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTMwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTQqUFJ+I1BSMzg4MCNQUjEwNSNQUjEwNCNQUjM4ODd+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 13:55",
+                  "arrivalTime": "2026-10-23 15:37",
+                  "flightNumber": "3880",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 14:07",
+                  "arrivalTime": "2026-11-25 15:40",
+                  "flightNumber": "3887",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMTMwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTYqUFJ+I1BSMzg4MCNQUjEwNSNQUjEwNCNQUjM4ODV+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 13:55",
+                  "arrivalTime": "2026-10-23 15:37",
+                  "flightNumber": "3880",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 16:15",
+                  "arrivalTime": "2026-11-25 17:51",
+                  "flightNumber": "3885",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDkwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTIqUFJ+I1BSMzg4NiNQUjEwNSNQUjEwNCNQUjM4OTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 09:16",
+                  "arrivalTime": "2026-10-23 11:02",
+                  "flightNumber": "3886",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 12:00",
+                  "arrivalTime": "2026-11-25 13:33",
+                  "flightNumber": "3892",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTIqUFJ+I1BSMzg4MSNQUjEwNSNQUjEwNCNQUjM4OTJ+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 07:17",
+                  "arrivalTime": "2026-10-23 08:57",
+                  "flightNumber": "3881",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 12:00",
+                  "arrivalTime": "2026-11-25 13:33",
+                  "flightNumber": "3892",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDkwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTQqUFJ+I1BSMzg4NiNQUjEwNSNQUjEwNCNQUjM4ODd+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 09:16",
+                  "arrivalTime": "2026-10-23 11:02",
+                  "flightNumber": "3886",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 14:07",
+                  "arrivalTime": "2026-11-25 15:40",
+                  "flightNumber": "3887",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTQqUFJ+I1BSMzg4MSNQUjEwNSNQUjEwNCNQUjM4ODd+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 07:17",
+                  "arrivalTime": "2026-10-23 08:57",
+                  "flightNumber": "3881",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 14:07",
+                  "arrivalTime": "2026-11-25 15:40",
+                  "flightNumber": "3887",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDkwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTYqUFJ+I1BSMzg4NiNQUjEwNSNQUjEwNCNQUjM4ODV+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 09:16",
+                  "arrivalTime": "2026-10-23 11:02",
+                  "flightNumber": "3886",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 16:15",
+                  "arrivalTime": "2026-11-25 17:51",
+                  "flightNumber": "3885",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "51_R1RUMTAyKlkxMDAwL0xBWE1OTDIwMjYtMTAtMjNfMDcwMC9NTkxMQVgyMDI2LTExLTI0XzIzMTYqUFJ+I1BSMzg4MSNQUjEwNSNQUjEwNCNQUjM4ODV+bGM6ZW5fdXM=",
+          "gds": "S",
+          "pcc": "8KI0",
+          "cons": "GTT",
+          "validatingCarrier": "PR",
+          "fareType": "COMM",
+          "ngsFeatures": {
+            "stars": 3,
+            "name": "",
+            "list": null
+          },
+          "trips": [
+            {
+              "tripId": 1,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-10-23 07:17",
+                  "arrivalTime": "2026-10-23 08:57",
+                  "flightNumber": "3881",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "LAX",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-10-24 00:30",
+                  "arrivalTime": "2026-10-25 05:30",
+                  "flightNumber": "105",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "MNL",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            },
+            {
+              "tripId": 2,
+              "segments": [
+                {
+                  "segmentId": 1,
+                  "departureTime": "2026-11-24 23:15",
+                  "arrivalTime": "2026-11-24 19:45",
+                  "flightNumber": "104",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "MNL",
+                  "arrivalAirportCode": "SFO",
+                  "brandId": null,
+                  "brandName": null
+                },
+                {
+                  "segmentId": 2,
+                  "departureTime": "2026-11-25 16:15",
+                  "arrivalTime": "2026-11-25 17:51",
+                  "flightNumber": "3885",
+                  "marketingAirline": "PR",
+                  "departureAirportCode": "SFO",
+                  "arrivalAirportCode": "LAX",
+                  "brandId": null,
+                  "brandName": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "http_status": 200
+  },
+  "elapsed_seconds": 1.6611398
+}

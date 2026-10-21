@@ -1,0 +1,1760 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.dev.travel-dev.com/v1/search?extra=false&cabin=Y&adt=1&debug=true&fare=PUB&cid=TST101&gds=S&pcc=6NVG&fl.0.dt=2026-10-14&fl.0.o=LHR&fl.0.d=LAS&val_cr=WS",
+    "authentication": "Basic header; value omitted"
+  },
+  "started": "2026-09-18T07:23:33.622Z",
+  "httpStatus": 200,
+  "response": {
+    "count": 14,
+    "results": [
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMTQxODIyKldTfiNXUzEjV1MyNzEjV1MzMjE5fmxjOmVuX3Vz",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 368,
+            "pubBaseFare": 0,
+            "baseTax": 475.73,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 843.73,
+            "tax": 475.73,
+            "oBaseFare": {
+              "amount": 368,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 475.73,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "LP7J3KEK",
+              "departure": "LHR",
+              "arrival": "YYJ",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 166.74738
+            },
+            {
+              "code": "LTUD0ZES",
+              "departure": "YYJ",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 202.36478
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 368
+          },
+          "oBaseTax": {
+            "ADT": 475.73
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 14:10",
+                "arrivalTime": "2026-10-14 16:00",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "1",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 18:55",
+                "arrivalTime": "2026-10-14 19:35",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "YYJ",
+                "flightNumber": "271",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-14 22:00",
+                "arrivalTime": "2026-10-15 01:05",
+                "departureAirportCode": "YYJ",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "3219",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0ZES"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMTQxMypXU34jV1MxI1dTMTAxOH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 315,
+            "pubBaseFare": 0,
+            "baseTax": 475.73,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 790.73,
+            "tax": 475.73,
+            "oBaseFare": {
+              "amount": 315,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 475.73,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "LP7J3KEK",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                }
+              ],
+              "amount": 166.74738
+            },
+            {
+              "code": "LTUD0TEK",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 147.49501
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 315
+          },
+          "oBaseTax": {
+            "ADT": 475.73
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 14:10",
+                "arrivalTime": "2026-10-14 16:00",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "1",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-15 13:35",
+                "arrivalTime": "2026-10-15 15:30",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "1018",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0TEK"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMTQxODIyKldTfiNXUzEjV1MzMzY4I1dTMzkzMn5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 336,
+            "pubBaseFare": 0,
+            "baseTax": 475.73,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 811.73,
+            "tax": 475.73,
+            "oBaseFare": {
+              "amount": 336,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 475.73,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "LP7J3KEK",
+              "departure": "LHR",
+              "arrival": "YQR",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 184.56107
+            },
+            {
+              "code": "LTQD0ZEM",
+              "departure": "YQR",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 151.06174
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 336
+          },
+          "oBaseTax": {
+            "ADT": 475.73
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 14:10",
+                "arrivalTime": "2026-10-14 16:00",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "1",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 18:55",
+                "arrivalTime": "2026-10-14 20:30",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "YQR",
+                "flightNumber": "3368",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-14 22:00",
+                "arrivalTime": "2026-10-15 03:12",
+                "departureAirportCode": "YQR",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "3932",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTQD0ZEM"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMTQwNipXU34jV1MxI1dTMzkyMH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 355,
+            "pubBaseFare": 0,
+            "baseTax": 475.73,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 830.73,
+            "tax": 475.73,
+            "oBaseFare": {
+              "amount": 355,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 475.73,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "LP7J3KEK",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                }
+              ],
+              "amount": 166.74738
+            },
+            {
+              "code": "LTUD0ZES",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 188.11781
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 355
+          },
+          "oBaseTax": {
+            "ADT": 475.73
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 14:10",
+                "arrivalTime": "2026-10-14 16:00",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "1",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-15 06:00",
+                "arrivalTime": "2026-10-15 09:00",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "3920",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0ZES"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMTQxMSpXU34jV1MxI1dTMTA4OH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 355,
+            "pubBaseFare": 0,
+            "baseTax": 475.73,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 830.73,
+            "tax": 475.73,
+            "oBaseFare": {
+              "amount": 355,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 475.73,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "LP7J3KEK",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                }
+              ],
+              "amount": 166.74738
+            },
+            {
+              "code": "LTUD0ZES",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 188.11781
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 355
+          },
+          "oBaseTax": {
+            "ADT": 475.73
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 14:10",
+                "arrivalTime": "2026-10-14 16:00",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "1",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-15 11:00",
+                "arrivalTime": "2026-10-15 12:55",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "1088",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0ZES"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMTQxODA2KldTfiNXUzEjV1M2NTAjV1MzOTU2fmxjOmVuX3Vz",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 410,
+            "pubBaseFare": 0,
+            "baseTax": 483.83,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 893.83,
+            "tax": 483.83,
+            "oBaseFare": {
+              "amount": 410,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 483.83,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "LP7J3KEK",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                }
+              ],
+              "amount": 166.74738
+            },
+            {
+              "code": "LCUD0ZEG",
+              "departure": "YYC",
+              "arrival": "YYZ",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 111.867615
+            },
+            {
+              "code": "LTQD0ZEM",
+              "departure": "YYZ",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 131.11
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 410
+          },
+          "oBaseTax": {
+            "ADT": 483.83
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 14:10",
+                "arrivalTime": "2026-10-14 16:00",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "1",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 18:15",
+                "arrivalTime": "2026-10-15 00:10",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "YYZ",
+                "flightNumber": "650",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LCUD0ZEG"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-15 06:45",
+                "arrivalTime": "2026-10-15 09:05",
+                "departureAirportCode": "YYZ",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "3956",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTQD0ZEM"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMTQxOTA2KldTfiNXUzEjV1M2NTIjV1MzOTU2fmxjOmVuX3Vz",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 410,
+            "pubBaseFare": 0,
+            "baseTax": 483.83,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 893.83,
+            "tax": 483.83,
+            "oBaseFare": {
+              "amount": 410,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 483.83,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "LP7J3KEK",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                }
+              ],
+              "amount": 166.74738
+            },
+            {
+              "code": "LCUD0ZEG",
+              "departure": "YYC",
+              "arrival": "YYZ",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 111.867615
+            },
+            {
+              "code": "LTQD0ZEM",
+              "departure": "YYZ",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 131.11
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 410
+          },
+          "oBaseTax": {
+            "ADT": 483.83
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 14:10",
+                "arrivalTime": "2026-10-14 16:00",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "1",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 19:10",
+                "arrivalTime": "2026-10-15 01:05",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "YYZ",
+                "flightNumber": "652",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LCUD0ZEG"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-15 06:45",
+                "arrivalTime": "2026-10-15 09:05",
+                "departureAirportCode": "YYZ",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "3956",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTQD0ZEM"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMTQxNSpXU34jV1MxI1dTMTA5MH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 355,
+            "pubBaseFare": 0,
+            "baseTax": 475.73,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 830.73,
+            "tax": 475.73,
+            "oBaseFare": {
+              "amount": 355,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 475.73,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "LP7J3KEK",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                }
+              ],
+              "amount": 166.74738
+            },
+            {
+              "code": "LTUD0ZES",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 188.11781
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 355
+          },
+          "oBaseTax": {
+            "ADT": 475.73
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 14:10",
+                "arrivalTime": "2026-10-14 16:00",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "1",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LP7J3KEK"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-15 15:20",
+                "arrivalTime": "2026-10-15 17:15",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "1090",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0ZES"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMDgxNDA2KldTfiNXUzUwNjQjV1M5I1dTMzkyMH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 1019,
+            "pubBaseFare": 0,
+            "baseTax": 469.13,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 1488.13,
+            "tax": 469.13,
+            "oBaseFare": {
+              "amount": 1019,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 469.13,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "QZ0J3KES",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 831.0594
+            },
+            {
+              "code": "LTUD0ZES",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 188.11781
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 1019
+          },
+          "oBaseTax": {
+            "ADT": 469.13
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 08:55",
+                "arrivalTime": "2026-10-14 11:15",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "CDG",
+                "flightNumber": "5064",
+                "marketingAirline": "WS",
+                "operatingAirline": "AF",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 14:00",
+                "arrivalTime": "2026-10-14 15:10",
+                "departureAirportCode": "CDG",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "9",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-15 06:00",
+                "arrivalTime": "2026-10-15 09:00",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "3920",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0ZES"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMDYxNDA2KldTfiNXUzUwNTkjV1M5I1dTMzkyMH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 1019,
+            "pubBaseFare": 0,
+            "baseTax": 469.13,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 1488.13,
+            "tax": 469.13,
+            "oBaseFare": {
+              "amount": 1019,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 469.13,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "QZ0J3KES",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 831.0594
+            },
+            {
+              "code": "LTUD0ZES",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 188.11781
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 1019
+          },
+          "oBaseTax": {
+            "ADT": 469.13
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 06:15",
+                "arrivalTime": "2026-10-14 08:40",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "CDG",
+                "flightNumber": "5059",
+                "marketingAirline": "WS",
+                "operatingAirline": "AF",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 14:00",
+                "arrivalTime": "2026-10-14 15:10",
+                "departureAirportCode": "CDG",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "9",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-15 06:00",
+                "arrivalTime": "2026-10-15 09:00",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "3920",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0ZES"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMDgxNDExKldTfiNXUzUwNjQjV1M5I1dTMTA4OH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 1019,
+            "pubBaseFare": 0,
+            "baseTax": 469.13,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 1488.13,
+            "tax": 469.13,
+            "oBaseFare": {
+              "amount": 1019,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 469.13,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "QZ0J3KES",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 831.0594
+            },
+            {
+              "code": "LTUD0ZES",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 188.11781
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 1019
+          },
+          "oBaseTax": {
+            "ADT": 469.13
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 08:55",
+                "arrivalTime": "2026-10-14 11:15",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "CDG",
+                "flightNumber": "5064",
+                "marketingAirline": "WS",
+                "operatingAirline": "AF",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 14:00",
+                "arrivalTime": "2026-10-14 15:10",
+                "departureAirportCode": "CDG",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "9",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-15 11:00",
+                "arrivalTime": "2026-10-15 12:55",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "1088",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0ZES"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMDgxNDEzKldTfiNXUzUwNjQjV1M5I1dTMTAxOH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 979,
+            "pubBaseFare": 0,
+            "baseTax": 469.13,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 1448.13,
+            "tax": 469.13,
+            "oBaseFare": {
+              "amount": 979,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 469.13,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "QZ0J3KES",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 831.0594
+            },
+            {
+              "code": "LTUD0TEK",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 147.49501
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 979
+          },
+          "oBaseTax": {
+            "ADT": 469.13
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 08:55",
+                "arrivalTime": "2026-10-14 11:15",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "CDG",
+                "flightNumber": "5064",
+                "marketingAirline": "WS",
+                "operatingAirline": "AF",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 14:00",
+                "arrivalTime": "2026-10-14 15:10",
+                "departureAirportCode": "CDG",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "9",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-15 13:35",
+                "arrivalTime": "2026-10-15 15:30",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "1018",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0TEK"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMDYxNDExKldTfiNXUzUwNTkjV1M5I1dTMTA4OH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 1019,
+            "pubBaseFare": 0,
+            "baseTax": 469.13,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 1488.13,
+            "tax": 469.13,
+            "oBaseFare": {
+              "amount": 1019,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 469.13,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "QZ0J3KES",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 831.0594
+            },
+            {
+              "code": "LTUD0ZES",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 188.11781
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 1019
+          },
+          "oBaseTax": {
+            "ADT": 469.13
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 06:15",
+                "arrivalTime": "2026-10-14 08:40",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "CDG",
+                "flightNumber": "5059",
+                "marketingAirline": "WS",
+                "operatingAirline": "AF",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 14:00",
+                "arrivalTime": "2026-10-14 15:10",
+                "departureAirportCode": "CDG",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "9",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-15 11:00",
+                "arrivalTime": "2026-10-15 12:55",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "1088",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0ZES"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL0xIUkxBUzIwMjYtMTAtMTRfMDYxNDEzKldTfiNXUzUwNTkjV1M5I1dTMTAxOH5sYzplbl91cw==",
+        "validatingCarrier": "WS",
+        "gds": "E",
+        "pcc": "8C4T",
+        "cons": "VZU",
+        "fareType": "PUB",
+        "cabin": "Y",
+        "passengers": {
+          "ADT": {
+            "codeAs": "ADT",
+            "cnt": 1,
+            "baseFare": 979,
+            "pubBaseFare": 0,
+            "baseTax": 469.13,
+            "pubBaseTax": 0,
+            "markup": 0,
+            "comm": 0,
+            "price": 1448.13,
+            "tax": 469.13,
+            "oBaseFare": {
+              "amount": 979,
+              "currency": "USD"
+            },
+            "oBaseTax": {
+              "amount": 469.13,
+              "currency": "USD"
+            }
+          }
+        },
+        "original_info": {
+          "gds": "S",
+          "pcc": "6NVG",
+          "cons": "GTT"
+        },
+        "fareCalculation": {
+          "ADT": [
+            {
+              "code": "QZ0J3KES",
+              "departure": "LHR",
+              "arrival": "YYC",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2
+                }
+              ],
+              "amount": 831.0594
+            },
+            {
+              "code": "LTUD0TEK",
+              "departure": "YYC",
+              "arrival": "LAS",
+              "owner": "WS",
+              "cabin": "Y",
+              "currency": "USD",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 3
+                }
+              ],
+              "amount": 147.49501
+            }
+          ]
+        },
+        "priceElement": {
+          "oBaseFare": {
+            "ADT": 979
+          },
+          "oBaseTax": {
+            "ADT": 469.13
+          }
+        },
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-10-14 06:15",
+                "arrivalTime": "2026-10-14 08:40",
+                "departureAirportCode": "LHR",
+                "arrivalAirportCode": "CDG",
+                "flightNumber": "5059",
+                "marketingAirline": "WS",
+                "operatingAirline": "AF",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-10-14 14:00",
+                "arrivalTime": "2026-10-14 15:10",
+                "departureAirportCode": "CDG",
+                "arrivalAirportCode": "YYC",
+                "flightNumber": "9",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "Q",
+                "fareCode": "QZ0J3KES"
+              },
+              {
+                "segmentId": 3,
+                "departureTime": "2026-10-15 13:35",
+                "arrivalTime": "2026-10-15 15:30",
+                "departureAirportCode": "YYC",
+                "arrivalAirportCode": "LAS",
+                "flightNumber": "1018",
+                "marketingAirline": "WS",
+                "operatingAirline": "WS",
+                "cabin": "Y",
+                "bookingClass": "L",
+                "fareCode": "LTUD0TEK"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

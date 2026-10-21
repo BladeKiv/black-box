@@ -1,0 +1,58 @@
+{
+  "info": {
+    "_postman_id": "0ef3a0c6-9ab4-44fd-bf8c-2c3383a00f7c",
+    "name": "AirAPI - Technical-stop elapsedTime (live response shape)",
+    "description": "Ticket-scoped black-box regression for the observed AirAPI Search response. Credentials are environment variables. Original integration identity is read from keys.original_info.gds.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "search_url", "value": "http://airapi51.kivops.info/v1/search?adt=1&cabin=Y&fl%5B0%5D%5Bo%5D=DJT&fl%5B0%5D%5Bd%5D=TPA&fl%5B0%5D%5Bdt%5D=2027-03-20&cid=SAL101&debug=true" },
+    { "key": "basic_username", "value": "" },
+    { "key": "basic_password", "value": "" },
+    { "key": "original_gds_filter", "value": "A" },
+    { "key": "expected_result", "value": "valid" },
+    { "key": "elapsed_time_path", "value": "elapsedTime" }
+  ],
+  "item": [
+    {
+      "name": "AirAPI Search behavior",
+      "item": [
+        {
+          "name": "Technical-stop elapsedTime is calculated",
+          "request": {
+            "auth": { "type": "basic", "basic": [ { "key": "username", "value": "{{basic_username}}", "type": "string" }, { "key": "password", "value": "{{basic_password}}", "type": "string" } ] },
+            "method": "GET",
+            "header": [],
+            "url": "{{search_url}}"
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": { "type": "text/javascript", "exec": [
+                "const data = pm.iterationData;",
+                "['search_url', 'original_gds_filter', 'expected_result', 'elapsed_time_path'].forEach(function (key) { if (data && data.has(key) && data.get(key) !== '') pm.variables.set(key, data.get(key)); });"
+              ] }
+            },
+            {
+              "listen": "test",
+              "script": { "type": "text/javascript", "exec": [
+                "const cfg = function (key) { return pm.variables.get(key); };",
+                "const atPath = function (root, path) { return path.split('.').reduce(function (value, part) { return value == null ? undefined : value[part]; }, root); };",
+                "pm.test('Authorized Search request succeeds', function () { pm.expect(pm.response.code).to.equal(200); });",
+                "if (pm.response.code !== 200) return;",
+                "let body; try { body = pm.response.json(); } catch (error) { pm.test('Search response is JSON', function () { throw error; }); return; }",
+                "pm.test('Search has a results array', function () { pm.expect(body.results).to.be.an('array'); });",
+                "if (!Array.isArray(body.results)) return;",
+                "const filter = cfg('original_gds_filter'); const candidates = [];",
+                "body.results.forEach(function (option, optionIndex) { const originalGds = atPath(option, 'keys.original_info.gds'); if (filter && originalGds !== filter) return; (option.trips || []).forEach(function (trip, tripIndex) { (trip.segments || []).forEach(function (segment, segmentIndex) { if (Number(segment.stop) > 0) candidates.push({ optionIndex: optionIndex, tripIndex: tripIndex, segmentIndex: segmentIndex, segment: segment }); }); }); });",
+                "if (cfg('expected_result') === 'valid') pm.test('A matching positive-stop segment is returned', function () { pm.expect(candidates.length).to.be.above(0); });",
+                "if (cfg('expected_result') === 'no_match_allowed' && candidates.length === 0) pm.test('No matching sandbox inventory is allowed', function () { pm.expect(candidates.length).to.equal(0); });",
+                "candidates.forEach(function (candidate) { const segment = candidate.segment; const stops = segment.stops || []; stops.forEach(function (stop, stopIndex) { const departure = stopIndex === 0 ? segment.departureTime : stops[stopIndex - 1].departureDateTime; const expectedMinutes = (Date.parse(stop.arrivalDateTime) - Date.parse(departure)) / 60000; const actual = atPath(stop, cfg('elapsed_time_path')); const label = 'option ' + candidate.optionIndex + ', trip ' + candidate.tripIndex + ', segment ' + candidate.segmentIndex + ', stop ' + stopIndex; pm.test(label + ' has parseable boundary timestamps', function () { pm.expect(Date.parse(departure)).to.not.be.NaN; pm.expect(Date.parse(stop.arrivalDateTime)).to.not.be.NaN; }); if (!Number.isFinite(expectedMinutes)) return; pm.test(label + ' has elapsedTime', function () { pm.expect(actual).to.not.be.oneOf([undefined, null, '']); }); pm.test(label + ' differs from local-time calculation only by whole timezone hours', function () { pm.expect(Math.abs(expectedMinutes - Number(actual)) % 60).to.equal(0); }); }); });"
+              ] }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

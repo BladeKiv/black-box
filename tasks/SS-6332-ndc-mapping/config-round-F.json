@@ -1,0 +1,61 @@
+{
+  "source": "User confirmed restoring cid=[TST101], with enabled=true and projects=[]",
+  "ndc_mapping": {
+    "enabled": true,
+    "cid": [
+      "TST101"
+    ],
+    "projects": [],
+    "config": [
+      {
+        "carrier": "UA",
+        "source_cons": "GTT",
+        "source_distributions": [
+          {
+            "gds": "S",
+            "pcc": [
+              "6NVG"
+            ]
+          },
+          {
+            "gds": "E",
+            "pcc": [
+              "*"
+            ]
+          },
+          {
+            "gds": "A",
+            "pcc": [
+              "SFOG3210A",
+              "DFWG32100"
+            ]
+          }
+        ],
+        "source_fare": [
+          "PUB"
+        ],
+        "target_cons": "GTT",
+        "target_gds": "G",
+        "target_pcc": "DEF",
+        "tax_delta_by_cabin": {
+          "Y": {
+            "ADT": 25,
+            "CHD": 20
+          },
+          "S": {
+            "ADT": 40,
+            "CHD": 32
+          },
+          "C": {
+            "ADT": 90,
+            "CHD": 72
+          },
+          "F": {
+            "ADT": 120,
+            "CHD": 96
+          }
+        }
+      }
+    ]
+  }
+}

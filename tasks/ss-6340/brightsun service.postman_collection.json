@@ -1,0 +1,182 @@
+{
+  "info": {
+    "_postman_id": "d2ff4d4a-d510-49bb-9d70-1fc628d39b3f",
+    "name": "brightsun service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51445546",
+    "_collection_link": "https://go.postman.co/collection/51445546-d2ff4d4a-d510-49bb-9d70-1fc628d39b3f?source=collection_link",
+    "description": "SS-6340: Run v1/search then v1/result with expected-outcomes.csv in Collection Runner. Each row selects results[0] and POSTs that complete object unchanged. keys.brightsun returned by Result is saved as brightsun_result_additional_info. Error 112/113 scenarios excluded by user instruction. No booking calls."
+  },
+  "item": [
+    {
+      "name": "/meta/build",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/brightsun/meta/build",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "brightsun",
+            "meta",
+            "build"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "v1/search",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{search_url}}"
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const url = pm.iterationData.get('search_url') || \"https://api.search.dev.travel-dev.com/brightsun/v1/search?tripType=RT&fl[0][o]=AMS&fl[0][d]=LHR&fl[0][dt]=2026-11-11&cabin=Y&adt=1&fl[1][o]=LHR&fl[1][d]=AMS&fl[1][dt]=2026-11-18&limit=100\";",
+              "pm.variables.set('search_url', url);",
+              "pm.collectionVariables.unset('brightsun_selected_solution');",
+              "pm.collectionVariables.unset('brightsun_result_additional_info');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.unset('brightsun_selected_solution');",
+              "pm.collectionVariables.unset('brightsun_result_additional_info');",
+              "const data = pm.response.json();",
+              "pm.test('Search returns selectable solutions', function () {",
+              "    pm.expect(data.results).to.be.an('array').and.not.empty;",
+              "});",
+              "if (Array.isArray(data.results) && data.results.length > 0) {",
+              "    pm.collectionVariables.set('brightsun_selected_solution', JSON.stringify(data.results[0]));",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "v1/result",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{brightsun_host}}/brightsun/v1/result",
+          "host": [
+            "{{brightsun_host}}"
+          ],
+          "path": [
+            "brightsun",
+            "v1",
+            "result"
+          ]
+        },
+        "description": "Run v1/search first. It selects results[0] and stores the complete object; this POST sends it unchanged. SS-6340 Result additional info is keys.brightsun. Save its returned Key and any token for booking preparation. Errors 112/113 are terminal; automated error checks require a confirmed error response. No booking request is included.",
+        "body": {
+          "mode": "raw",
+          "raw": "{{brightsun_selected_solution}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.unset('brightsun_result_additional_info');",
+              "const selected = pm.collectionVariables.get('brightsun_selected_solution');",
+              "if (!selected) {",
+              "    pm.execution.skipRequest();",
+              "    throw new Error('Run Search first: no selected solution is available.');",
+              "}",
+              "JSON.parse(selected);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const data = pm.response.json();",
+              "const info = data.keys && data.keys.brightsun;",
+              "pm.test('SS-6340: Result returns keys.brightsun additional info', function () {",
+              "    pm.expect(info).to.be.an('object');",
+              "});",
+              "pm.test('SS-6340: Result additional info contains a booking Key', function () {",
+              "    pm.expect(info && info.key).to.be.a('string').and.not.empty;",
+              "});",
+              "if (info && Object.prototype.hasOwnProperty.call(info, 'token')) {",
+              "    pm.test('SS-6340: Returned token is usable', function () {",
+              "        pm.expect(info.token).to.be.a('string').and.not.empty;",
+              "    });",
+              "}",
+              "pm.collectionVariables.unset('brightsun_result_additional_info');",
+              "if (info && typeof info.key === 'string' && info.key.length > 0) {",
+              "    pm.collectionVariables.set('brightsun_result_additional_info', JSON.stringify(info));",
+              "}",
+              "",
+              "pm.test('SS-6340: Result returns fare data', function () {",
+              "    pm.expect(data.prices.totalPrice).to.be.a('number');",
+              "    pm.expect(data.prices.totalTax).to.be.a('number');",
+              "    pm.expect(data.currency).to.be.a('string').and.not.empty;",
+              "});",
+              "const selected = JSON.parse(pm.collectionVariables.get('brightsun_selected_solution'));",
+              "const itinerary = o => o.trips.flatMap(t => t.segments.map(s => [s.departureAirportCode, s.arrivalAirportCode, s.departureTime, s.flightNumber, s.marketingAirline]));",
+              "pm.test('SS-6340: Result retains selected itinerary and currency', function () {",
+              "    pm.expect(itinerary(data)).to.deep.equal(itinerary(selected));",
+              "    pm.expect(data.currency).to.equal(selected.currency);",
+              "});",
+              "",
+              "pm.test('SS-6340: Result preserves selected passenger counts and trip type', function () {",
+              "    pm.expect(data.tripType).to.equal(selected.tripType);",
+              "    const counts = o => Object.fromEntries(Object.entries(o.passengers).map(([k,v]) => [k,v.cnt]));",
+              "    pm.expect(counts(data)).to.deep.equal(counts(selected));",
+              "});",
+              "const url = new URL(pm.variables.get('search_url'));",
+              "pm.test('SS-6340: Selected passengers match Search parameters', function () {",
+              "    for (const code of ['ADT','CHD','INF']) {",
+              "        const count = Number(url.searchParams.get(code.toLowerCase()) || (code === 'ADT' ? 1 : 0));",
+              "        if (count > 0) pm.expect(selected.passengers[code].cnt).to.equal(count);",
+              "        else if (selected.passengers[code]) pm.expect(selected.passengers[code].cnt).to.equal(0);",
+              "    }",
+              "    pm.expect(selected.tripType).to.equal(url.searchParams.get('tripType'));",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "brightsun_host",
+      "value": "https://api.search.dev.travel-dev.com",
+      "type": "string"
+    }
+  ]
+}

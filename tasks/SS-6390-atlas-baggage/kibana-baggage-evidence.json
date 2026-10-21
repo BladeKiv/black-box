@@ -1,0 +1,80 @@
+{
+  "source": "Authenticated Kibana DEV Atlas Discover, Today, response: X0XXG0; baggage source rows read for new dimension retest",
+  "retrievedDate": "2026-10-13",
+  "pnr": "X0XXG0",
+  "matchingLogCount": 5,
+  "logTimestamps": [
+    "Oct 13, 2026 @ 14:42:09.311",
+    "Oct 13, 2026 @ 14:42:09.311",
+    "Oct 13, 2026 @ 14:42:09.311",
+    "Oct 13, 2026 @ 14:41:44.310",
+    "Oct 13, 2026 @ 14:41:43.309"
+  ],
+  "operations": [
+    "queryOrderDetails",
+    "queryOrderDetails",
+    "queryOrderDetails",
+    "queryOrderDetails",
+    "order"
+  ],
+  "request": {
+    "orderNo": "TESTA****2684",
+    "pnrCode": "X0XXG0"
+  },
+  "response": {
+    "orderNo": "TESTA****2684",
+    "pnrCode": "X0XXG0",
+    "segments": [
+      {
+        "segmentIndex": 1,
+        "flightNumber": "EI100",
+        "depAirport": "EWR",
+        "arrAirport": "DUB"
+      },
+      {
+        "segmentIndex": 2,
+        "flightNumber": "EI592",
+        "depAirport": "DUB",
+        "arrAirport": "MAD"
+      }
+    ],
+    "baggageElements": [
+      {
+        "segmentNo": 1,
+        "baggageType": "StandardCheckInBaggage",
+        "passengerType": 0,
+        "baggagePiece": 0,
+        "baggageWeight": 0,
+        "baggageSize": "",
+        "isAllWeight": false
+      },
+      {
+        "segmentNo": 1,
+        "baggageType": "CabinBaggageOverheadLocker",
+        "passengerType": 0,
+        "baggagePiece": 1,
+        "baggageWeight": 10,
+        "baggageSize": "55*40*24cm",
+        "isAllWeight": false
+      },
+      {
+        "segmentNo": 2,
+        "baggageType": "StandardCheckInBaggage",
+        "passengerType": 0,
+        "baggagePiece": 0,
+        "baggageWeight": 0,
+        "baggageSize": "",
+        "isAllWeight": false
+      },
+      {
+        "segmentNo": 2,
+        "baggageType": "CabinBaggageOverheadLocker",
+        "passengerType": 0,
+        "baggagePiece": 1,
+        "baggageWeight": 10,
+        "baggageSize": "55*40*24cm",
+        "isAllWeight": false
+      }
+    ]
+  }
+}

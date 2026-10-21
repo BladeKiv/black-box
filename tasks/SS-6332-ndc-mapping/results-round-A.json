@@ -1,0 +1,26 @@
+{
+  "phase": "Round A only; full ticket testing remains in progress",
+  "cases": [
+    {
+      "id": "A01",
+      "data": "UA; TST101; LHR–LAS 2026-10-14; Y; 1 ADT; PUB; S/6NVG",
+      "expected": "Returned all-UA marketed options map to G / DEF / GTT",
+      "actual": "200/200 UA options match the target triple; all have ndcMapped=true",
+      "status": "PASS"
+    },
+    {
+      "id": "A02",
+      "data": "Same request with val_cr=WS; only UA configured",
+      "expected": "WS does not receive the UA NDC target triple",
+      "actual": "14/14 WS options return E / 8C4T / VZU; ndcMapped is absent",
+      "status": "PASS"
+    },
+    {
+      "id": "A03",
+      "data": "UA response subset with a non-UA operating carrier",
+      "expected": "Non-UA operating carrier does not block the UA target triple",
+      "actual": "56/56 codeshare options retain G / DEF / GTT with all-UA marketing",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "info": {
+    "name": "SS-6348 ngsFeatures breakdown \u2014 AirAPI Search",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Search-only ticket reproduction. Set local authorization to the full Basic header. Run with the matching CSV. WARN means skipped due to unavailable inventory; do not interpret skipped assertions as PASS. Keys remain opaque. TC-01 expected pair applies only to the listed ticket flights and feature IDs."
+  },
+  "variable": [
+    {
+      "key": "scenario_id",
+      "value": "SS6348-SEARCH"
+    },
+    {
+      "key": "expected_result",
+      "value": "Valid one-based trip:segment references; affected ticket features use [\"1:2\",\"2:1\"]."
+    },
+    {
+      "key": "provider_filter",
+      "value": "S/8KI0"
+    },
+    {
+      "key": "search_url",
+      "value": "http://airapi51.kivops.info/v1/search?fl[1][d]=SFO&adt=1&cabin=Y&fl[0][o]=SFO&fl[0][d]=DVO&fl[0][dt]=2026-10-23&fl[1][o]=DVO&fl[1][dt]=2026-11-24&cid=GTT102&gds=S&pcc=8KI0&fare=SR&debug=1&files=1&val_cr=PR&extra=false"
+    },
+    {
+      "key": "fixture_flights",
+      "value": "[[\"PR105\", \"PR2813\"], [\"PR2818\", \"PR104\"]]"
+    },
+    {
+      "key": "feature_ids",
+      "value": "[\"11\", \"5\", \"27\", \"13\", \"8\", \"4\", \"18\"]"
+    },
+    {
+      "key": "expected_breakdown",
+      "value": "[\"1:2\", \"2:1\"]"
+    },
+    {
+      "key": "check_fixture",
+      "value": "true"
+    },
+    {
+      "key": "reference_case_id",
+      "value": "TC-02"
+    }
+  ],
+  "item": [
+    {
+      "name": "Ticket Search \u2014 TC-01 and TC-02",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (!pm.variables.get('authorization')) throw new Error('Set the authorization variable locally to the supplied full Basic header.');",
+              "const url = pm.iterationData.get('search_url') || pm.collectionVariables.get('search_url');",
+              "pm.variables.set('effective_search_url', url);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const data = pm.response.json();",
+              "const get = name => pm.iterationData.get(name) || pm.collectionVariables.get(name);",
+              "const expected = JSON.parse(get('expected_breakdown'));",
+              "const flights = JSON.parse(get('fixture_flights'));",
+              "const ids = JSON.parse(get('feature_ids'));",
+              "const results = Array.isArray(data.results) ? data.results : [];",
+              "const matches = results.filter(r => JSON.stringify((r.trips || []).map(t => (t.segments || []).map(s => s.marketingAirline + s.flightNumber))) === JSON.stringify(flights));",
+              "const features = matches.flatMap(r => (r.ngsFeatures?.list || []).filter(f => ids.includes(f.id)));",
+              "if (get('check_fixture') === 'true') {",
+              "if (!features.length || ids.some(id => !features.some(f => f.id === id))) {",
+              "  pm.test.skip('TC-01 WARN: ticket itinerary or affected features unavailable', () => {});",
+              "} else {",
+              "  pm.test('TC-01: ticket feature breakdown equals expected trip:segment pairs', () => {",
+              "    features.forEach(f => pm.expect(f.breakdown).to.eql(expected));",
+              "  });",
+              "}",
+              "}",
+              "const invalid = [];",
+              "let references = 0;",
+              "results.forEach((r, ri) => (r.ngsFeatures?.list || []).forEach((f, fi) => (f.breakdown || []).forEach(ref => {",
+              "  references++;",
+              "  const m = /^([1-9]\\d*):([1-9]\\d*)$/.exec(ref);",
+              "  if (!m || !r.trips?.[Number(m[1])-1]?.segments?.[Number(m[2])-1]) invalid.push({result_index:ri, feature_index:fi, reference:ref, key:r.key});",
+              "})));",
+              "const caseId = get('reference_case_id');",
+              "if (!references) {",
+              "  pm.test.skip(caseId + ' WARN: no breakdown references available', () => {});",
+              "} else {",
+              "  pm.test(caseId + ': every breakdown references an existing trip and segment', () => pm.expect(invalid).to.eql([]));",
+              "}",
+              "console.log('SS-6348 evidence summary', {results:results.length, matchingItineraries:matches.length, references, invalid});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{authorization}}"
+          }
+        ],
+        "url": "{{effective_search_url}}"
+      }
+    }
+  ]
+}

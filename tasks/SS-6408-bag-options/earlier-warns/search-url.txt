@@ -1,0 +1,1 @@
+https://api.search.stage.travel-dev.com/v1/search?extra=false&adt=1&debug=true&cid=TST103&fl.0.dt=2026-11-20&cabin=Y&fl.0.o=FRA&fl.0.d=AMS

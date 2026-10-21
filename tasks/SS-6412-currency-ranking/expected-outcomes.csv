@@ -1,0 +1,4 @@
+scenario_id,expected_result,provider_filter,search_url,currency,baseline_currency
+TC-01,Observe ranking stability; review any differences allowing ties,,https://api.search.stage1.travel-dev.com/v1/search?cid=OVA101&original_cid=1&adt=1&debug=true&cabin=Y&fl%5B0%5D%5Bo%5D=EWR&fl%5B0%5D%5Bd%5D=LGW&fl%5B0%5D%5Bdt%5D=2026-12-14&currency=USD&limit=50,USD,USD
+TC-02,Observe ranking stability; review any differences allowing ties,,https://api.search.stage1.travel-dev.com/v1/search?cid=OVA101&original_cid=1&adt=1&debug=true&cabin=Y&fl%5B0%5D%5Bo%5D=EWR&fl%5B0%5D%5Bd%5D=LGW&fl%5B0%5D%5Bdt%5D=2026-12-14&currency=GBP&limit=50,GBP,USD
+TC-03,Observe ranking stability; review any differences allowing ties,,https://api.search.stage1.travel-dev.com/v1/search?cid=OVA101&original_cid=1&adt=1&debug=true&cabin=Y&fl%5B0%5D%5Bo%5D=EWR&fl%5B0%5D%5Bd%5D=LGW&fl%5B0%5D%5Bdt%5D=2026-12-14&currency=INR&limit=50,INR,USD

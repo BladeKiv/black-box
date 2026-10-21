@@ -1,0 +1,1 @@
+https://api.search.stage.travel-dev.com/v1/search?adt=1&debug=true&cid=TST101&fl.0.dt=2026-11-20&fl.1.dt=2026-11-30&val_cr=LH&gds=S&pcc=6NVG&fare=SR&cabin=C&fl.0.o=FRA&fl.0.d=CDG&fl.1.o=CDG&fl.1.d=MUC

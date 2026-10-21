@@ -1,0 +1,14 @@
+{
+  "httpStatus": 200,
+  "authentication": "Basic Authorization omitted",
+  "url": "https://api.search.stage.travel-dev.com/algo/conf",
+  "purpose": "Read-only discovery, not endpoint execution assertion",
+  "method": "GET",
+  "response": {
+    "schedule_change": {
+      "MaxChangeCarrier": 10,
+      "enable_jv": false,
+      "MaxChangeSegments": 10
+    }
+  }
+}

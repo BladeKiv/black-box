@@ -1,0 +1,86 @@
+[
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMDgvQ0RHTVVDMjAyNi0xMS0zMF8wNjA5KkxIfiNMSDEwNDIjTEgxMDUxI0xIOTh+bGM6ZW5fdXM6VVBHIzpOR1MjUzE=",
+    "gdsOfferId": ":UPG#:NGS#S1",
+    "allowPieces": 1,
+    "price": 658.9,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMDkvQ0RHTVVDMjAyNi0xMS0zMF8wNjA5KkxIfiNMSDEwNDQjTEgxMDUxI0xIOTh+bGM6ZW5fdXM6VVBHIzpOR1MjUzE=",
+    "gdsOfferId": ":UPG#:NGS#S1",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMTIvQ0RHTVVDMjAyNi0xMS0zMF8wNjA5KkxIfiNMSDEwNDYjTEgxMDUxI0xIOTh+bGM6ZW5fdXM6VVBHIw==",
+    "gdsOfferId": ":UPG#",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMjEvQ0RHTVVDMjAyNi0xMS0zMF8wNjA5KkxIfiNMSDEwNTAjTEgxMDUxI0xIOTh+bGM6ZW5fdXM6VVBHIzpOR1MjUzI=",
+    "gdsOfferId": ":UPG#:NGS#S2",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMjEvQ0RHTVVDMjAyNi0xMS0zMF8wNjEwKkxIfiNMSDEwNTAjTEgxMDUxI0xIMTAyfmxjOmVuX3VzOlVQRyM6TkdTI1Mx",
+    "gdsOfferId": ":UPG#:NGS#S1",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMDgvQ0RHTVVDMjAyNi0xMS0zMF8wNjEwKkxIfiNMSDEwNDIjTEgxMDUxI0xIMTAyfmxjOmVuX3VzOlVQRyM=",
+    "gdsOfferId": ":UPG#",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMTIvQ0RHTVVDMjAyNi0xMS0zMF8wNjEwKkxIfiNMSDEwNDYjTEgxMDUxI0xIMTAyfmxjOmVuX3VzOlVQRyM=",
+    "gdsOfferId": ":UPG#",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMDkvQ0RHTVVDMjAyNi0xMS0zMF8wNjEwKkxIfiNMSDEwNDQjTEgxMDUxI0xIMTAyfmxjOmVuX3VzOlVQRyM6TkdTI1My",
+    "gdsOfferId": ":UPG#:NGS#S2",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMDgvQ0RHTVVDMjAyNi0xMS0zMF8wNjEzKkxIfiNMSDEwNDIjTEgxMDUxI0xIMTA4fmxjOmVuX3VzOlVQRyM=",
+    "gdsOfferId": ":UPG#",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMjEvQ0RHTVVDMjAyNi0xMS0zMF8wNjEzKkxIfiNMSDEwNTAjTEgxMDUxI0xIMTA4fmxjOmVuX3VzOlVQRyM6TkdTI1Mx",
+    "gdsOfferId": ":UPG#:NGS#S1",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMDkvQ0RHTVVDMjAyNi0xMS0zMF8wNjEzKkxIfiNMSDEwNDQjTEgxMDUxI0xIMTA4fmxjOmVuX3VzOlVQRyM6TkdTI1Mx",
+    "gdsOfferId": ":UPG#:NGS#S1",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  },
+  {
+    "key": "0_VFNUMTAxKkMxMDAwL0ZSQUNERzIwMjYtMTEtMjBfMTIvQ0RHTVVDMjAyNi0xMS0zMF8wNjEzKkxIfiNMSDEwNDYjTEgxMDUxI0xIMTA4fmxjOmVuX3VzOlVQRyM=",
+    "gdsOfferId": ":UPG#",
+    "allowPieces": 1,
+    "price": 666.4,
+    "currency": "USD"
+  }
+]

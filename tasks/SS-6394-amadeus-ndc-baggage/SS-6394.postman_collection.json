@@ -1,0 +1,169 @@
+{
+  "info": {
+    "name": "SS-6394 PREPROD Book/Info only",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Existing real bookings; Book/Info only. User authorized TLS verification disabled for this PREPROD host/run only. Authentication must be set locally. CSV assertions cover observed ticket-defined structure; full source numeric parity is not certified."
+  },
+  "variable": [
+    {
+      "key": "segments_path",
+      "value": "data.response.pnrInfo.segments"
+    },
+    {
+      "key": "preprod_authorization",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "AA existing booking Book/Info",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{preprod_authorization}}"
+          }
+        ],
+        "url": "https://airapi51.kivops.info:8089/ndc/v1/book/info",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"gds\": {\n    \"gds_id\": 2,\n    \"gds_pcc\": \"SFOG3210A\"\n  },\n  \"additionalInfo\": {\n    \"isNDC\": true\n  },\n  \"data\": {\n    \"historical\": 0,\n    \"pnr\": \"BFJ7RS\",\n    \"rebook\": 0,\n    \"provider_locator_code\": \"BFJ7RS\"\n  },\n  \"sender\": {\n    \"action\": \"checkExchangeDiscrepancies\",\n    \"component\": \"ExchangeSaleService\",\n    \"app\": \"backoffice.backend\",\n    \"module\": \"app-backend\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set('scenario_owner', 'AA');",
+              "const raw=pm.iterationData.get('request_body');if(raw){JSON.parse(raw);pm.request.body.update(raw);}if(!pm.variables.get('preprod_authorization')){pm.execution.skipRequest();throw new Error('Set preprod_authorization locally');}"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();pm.test('Successful Book/Info',()=>pm.expect(d.status).to.equal(200));",
+              "const p=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const ss=p.split('.').reduce((v,k)=>v?.[k],d);pm.test('Segments present',()=>pm.expect(ss).to.be.an('array').and.not.empty);",
+              "const owner=pm.iterationData.get('provider_filter')||pm.variables.get('scenario_owner');const ptc=owner==='AA'?'JCB':'ADT';for(const s of ss||[]){pm.test('Checked breakdown and prefixes',()=>{const b=s.baggage[ptc];pm.expect(b.numberOfPcs).to.match(/^\\d{2}P$/);pm.expect(b.baggageFullTextA).to.match(/^FBA/);pm.expect(b.baggageFullTextD).to.match(/^FBD/);});if(s.carryOn&&s.carryOn[ptc])pm.test('Carry-on prefixes',()=>{pm.expect(s.carryOn[ptc].baggageFullTextA).to.match(/^COA/);pm.expect(s.carryOn[ptc].baggageFullTextD).to.match(/^COD/);});}",
+              "const expected=pm.iterationData.get('expected_segments_json');if(expected){pm.test('Reviewed expected values',()=>{for(const e of JSON.parse(expected)){const s=ss.find(v=>v.tripId===e.tripId&&v.segmentNumber===e.segmentNumber);pm.expect(s).to.exist;for(const k of ['baggageAllowance','baggage','carryOnAllowance','carryOn'])if(Object.prototype.hasOwnProperty.call(e,k))pm.expect(s[k]).to.deep.equal(e[k]);}});}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "QR existing booking Book/Info",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{preprod_authorization}}"
+          }
+        ],
+        "url": "https://airapi51.kivops.info:8089/ndc/v1/book/info",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"gds\": {\n    \"gds_id\": 2,\n    \"gds_pcc\": \"SFOG3210A\"\n  },\n  \"additionalInfo\": {\n    \"isNDC\": true\n  },\n  \"data\": {\n    \"historical\": 0,\n    \"pnr\": \"CXTS37\",\n    \"rebook\": 0,\n    \"provider_locator_code\": \"CXTS37\"\n  },\n  \"sender\": {\n    \"action\": \"checkExchangeDiscrepancies\",\n    \"component\": \"ExchangeSaleService\",\n    \"app\": \"backoffice.backend\",\n    \"module\": \"app-backend\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set('scenario_owner', 'QR');",
+              "const raw=pm.iterationData.get('request_body');if(raw){JSON.parse(raw);pm.request.body.update(raw);}if(!pm.variables.get('preprod_authorization')){pm.execution.skipRequest();throw new Error('Set preprod_authorization locally');}"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();pm.test('Successful Book/Info',()=>pm.expect(d.status).to.equal(200));",
+              "const p=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const ss=p.split('.').reduce((v,k)=>v?.[k],d);pm.test('Segments present',()=>pm.expect(ss).to.be.an('array').and.not.empty);",
+              "const owner=pm.iterationData.get('provider_filter')||pm.variables.get('scenario_owner');const ptc=owner==='AA'?'JCB':'ADT';for(const s of ss||[]){pm.test('Checked breakdown and prefixes',()=>{const b=s.baggage[ptc];pm.expect(b.numberOfPcs).to.match(/^\\d{2}P$/);pm.expect(b.baggageFullTextA).to.match(/^FBA/);pm.expect(b.baggageFullTextD).to.match(/^FBD/);});if(s.carryOn&&s.carryOn[ptc])pm.test('Carry-on prefixes',()=>{pm.expect(s.carryOn[ptc].baggageFullTextA).to.match(/^COA/);pm.expect(s.carryOn[ptc].baggageFullTextD).to.match(/^COD/);});}",
+              "const expected=pm.iterationData.get('expected_segments_json');if(expected){pm.test('Reviewed expected values',()=>{for(const e of JSON.parse(expected)){const s=ss.find(v=>v.tripId===e.tripId&&v.segmentNumber===e.segmentNumber);pm.expect(s).to.exist;for(const k of ['baggageAllowance','baggage','carryOnAllowance','carryOn'])if(Object.prototype.hasOwnProperty.call(e,k))pm.expect(s[k]).to.deep.equal(e[k]);}});}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "LX existing booking Book/Info",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{preprod_authorization}}"
+          }
+        ],
+        "url": "https://airapi51.kivops.info:8089/ndc/v1/book/info",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"additionalInfo\": {\n    \"isNDC\": true,\n    \"ngs\": false,\n    \"order_id\": \"LX724S9XOP5A2\",\n    \"order_items\": [\n      {\n        \"orderItemID\": \"PFC6EFA5C-8A9F-4DB6-B78Akqt745cor6xi7-1-1_1APAX_T1\",\n        \"paxRefIds\": \"1\"\n      },\n      {\n        \"orderItemID\": \"PFC6EFA5C-8A9F-4DB6-B78Akqt745cor6xi7-1-1_1APAX_T2\",\n        \"paxRefIds\": \"2\"\n      }\n    ],\n    \"ownerCode\": \"LX\",\n    \"passengers\": [\n      {\n        \"id\": \"1\",\n        \"ptc\": \"ADT\"\n      },\n      {\n        \"id\": \"2\",\n        \"ptc\": \"ADT\"\n      }\n    ],\n    \"pcc\": \"SFOG3210A\",\n    \"updated_schedule\": true\n  },\n  \"data\": {\n    \"historical\": 0,\n    \"pnr\": \"2L2FGK\",\n    \"provider_locator_code\": \"2L2FGK\",\n    \"rebook\": 0\n  },\n  \"gds\": {\n    \"backoffice_id\": 3569020,\n    \"gds_id\": 2,\n    \"gds_offer_id\": \"143_VVdLTVVTKkMyMDAwL0xBWEFUSDIwMjYtMTEtMDRfMTcxNi9WQ0VaUkgyMDI2LTExLTE1XzA5L1pSSExBWDIwMjYtMTEtMTdfMTAxNSpMSH4jTEg0NTMjTEgxNzU0I0xYMTY2MSNMWDMxOCNMWDMwNTZ+bGM6ZW5fdXM=\",\n    \"gds_pcc\": \"SFOG3210A\",\n    \"hybrid_id\": \"UNDE1B0A5D\"\n  },\n  \"sender\": {\n    \"action\": \"RetrieveTicketCommand\",\n    \"app\": \"backoffice.console\",\n    \"component\": \"auto-ticketing\",\n    \"module\": \"app-console\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set('scenario_owner', 'LX');",
+              "const raw=pm.iterationData.get('request_body');if(raw){JSON.parse(raw);pm.request.body.update(raw);}if(!pm.variables.get('preprod_authorization')){pm.execution.skipRequest();throw new Error('Set preprod_authorization locally');}"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();pm.test('Successful Book/Info',()=>pm.expect(d.status).to.equal(200));",
+              "const p=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const ss=p.split('.').reduce((v,k)=>v?.[k],d);pm.test('Segments present',()=>pm.expect(ss).to.be.an('array').and.not.empty);",
+              "const owner=pm.iterationData.get('provider_filter')||pm.variables.get('scenario_owner');const ptc=owner==='AA'?'JCB':'ADT';for(const s of ss||[]){pm.test('Checked breakdown and prefixes',()=>{const b=s.baggage[ptc];pm.expect(b.numberOfPcs).to.match(/^\\d{2}P$/);pm.expect(b.baggageFullTextA).to.match(/^FBA/);pm.expect(b.baggageFullTextD).to.match(/^FBD/);});if(s.carryOn&&s.carryOn[ptc])pm.test('Carry-on prefixes',()=>{pm.expect(s.carryOn[ptc].baggageFullTextA).to.match(/^COA/);pm.expect(s.carryOn[ptc].baggageFullTextD).to.match(/^COD/);});}",
+              "const expected=pm.iterationData.get('expected_segments_json');if(expected){pm.test('Reviewed expected values',()=>{for(const e of JSON.parse(expected)){const s=ss.find(v=>v.tripId===e.tripId&&v.segmentNumber===e.segmentNumber);pm.expect(s).to.exist;for(const k of ['baggageAllowance','baggage','carryOnAllowance','carryOn'])if(Object.prototype.hasOwnProperty.call(e,k))pm.expect(s[k]).to.deep.equal(e[k]);}});}"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

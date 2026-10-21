@@ -1,0 +1,12 @@
+{
+  "phase": "Round J; full ticket remains in progress",
+  "cases": [
+    {
+      "id": "J01",
+      "data": "Search S/6NVG; configured S/6NVG and E/6NVG",
+      "expected": "Matching the PCC within the correct GDS restores G / DEF / GTT",
+      "actual": "200/200 UA options map to G / DEF / GTT with ndcMapped=true",
+      "status": "PASS"
+    }
+  ]
+}

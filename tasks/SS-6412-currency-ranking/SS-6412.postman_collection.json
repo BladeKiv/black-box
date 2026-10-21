@@ -1,0 +1,73 @@
+{
+  "info": {
+    "name": "SS-6412 - Currency ranking observation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Run CSV in USD, GBP, INR order. TLS verification disabled under standing authorization. Empty inventory is WARN. Logs exact-key rank differences; differences require user tie review and are not automatic failures. Authentication: populate search_authorization locally. No provider tracks."
+  },
+  "variable": [
+    {
+      "key": "search_authorization",
+      "value": ""
+    },
+    {
+      "key": "usd_ranks",
+      "value": "[]"
+    }
+  ],
+  "item": [
+    {
+      "name": "Observe currency ranking",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (pm.iterationData.get('currency') === 'USD') pm.collectionVariables.set('usd_ranks', '[]');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d = pm.response.json();",
+              "pm.test('Search exposes results array', () => pm.expect(d.results).to.be.an('array'));",
+              "const rows = d.results || [];",
+              "if (!rows.length) {",
+              "  console.warn('WARN: no inventory; currency ranking cannot be evaluated');",
+              "  pm.test.skip('Currency ranking comparison: WARN - no inventory', () => {});",
+              "} else {",
+              "  const ranks = rows.map((r, i) => ({ key: r.key, rank: i + 1 }));",
+              "  const currency = pm.iterationData.get('currency');",
+              "  if (currency === 'USD') pm.collectionVariables.set('usd_ranks', JSON.stringify(ranks));",
+              "  else {",
+              "    const baseline = JSON.parse(pm.collectionVariables.get('usd_ranks') || '[]');",
+              "    const changes = ranks.flatMap(r => { const b = baseline.find(x => x.key === r.key); return b && b.rank !== r.rank ? [{ key: r.key, usd_rank: b.rank, actual_rank: r.rank }] : []; });",
+              "    console.log('Observed rank differences (review ties before verdict)', changes);",
+              "    pm.test.skip('Rank differences require tie review before verdict', () => {});",
+              "  }",
+              "  console.log(currency + ' opaque-key ranks', ranks);",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{search_url}}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "source": "User confirmed source_cons=GTT and source_distributions S/[8C4T], E/[6NVG]; remaining settings unchanged",
+  "ndc_mapping": {
+    "enabled": true,
+    "cid": [
+      "TST101"
+    ],
+    "projects": [],
+    "config": [
+      {
+        "carrier": "UA",
+        "source_cons": "GTT",
+        "source_distributions": [
+          {
+            "gds": "S",
+            "pcc": [
+              "8C4T"
+            ]
+          },
+          {
+            "gds": "E",
+            "pcc": [
+              "6NVG"
+            ]
+          }
+        ],
+        "source_fare": [
+          "PUB"
+        ],
+        "target_cons": "GTT",
+        "target_gds": "G",
+        "target_pcc": "DEF",
+        "tax_delta_by_cabin": {
+          "Y": {
+            "ADT": 25,
+            "CHD": 20
+          },
+          "S": {
+            "ADT": 40,
+            "CHD": 32
+          },
+          "C": {
+            "ADT": 90,
+            "CHD": 72
+          },
+          "F": {
+            "ADT": 120,
+            "CHD": 96
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "info": { "name": "AirAPI - SS-6296 CMS dump PCC validation", "description": "Ticket-scoped AirAPI commission-validation regression. Credentials are environment variables.", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "variable": [
+    { "key": "validation_url", "value": "http://airapi51.kivops.info/v1/commission/EXPBBP/validation/dump-pub/true?pcc=W2GM" },
+    { "key": "basic_username", "value": "" }, { "key": "basic_password", "value": "" },
+    { "key": "expected_result", "value": "no_commission" }, { "key": "expected_pcc", "value": "W2GM" }, { "key": "expected_gds", "value": "S" },
+    { "key": "dump_payload", "value": "1 DL3013D 02JAN J INDATL*SS1   247P  429P /DCDL /E\n2 DL 279D 02JAN J ATLEZE*SS1   735P  735A  03JAN S /DCDL /E" }
+  ],
+  "item": [{ "name": "AirAPI commission validation", "item": [{
+    "name": "PCC commission validation",
+    "request": { "auth": { "type": "basic", "basic": [{ "key": "username", "value": "{{basic_username}}", "type": "string" }, { "key": "password", "value": "{{basic_password}}", "type": "string" }] }, "method": "POST", "header": [{ "key": "Content-Type", "value": "text/plain" }], "body": { "mode": "raw", "raw": "{{dump_payload}}", "options": { "raw": { "language": "text" } } }, "url": "{{validation_url}}" },
+    "event": [
+      { "listen": "prerequest", "script": { "type": "text/javascript", "exec": ["const data = pm.iterationData;", "['validation_url', 'expected_result', 'expected_pcc', 'expected_gds', 'dump_payload'].forEach(function (key) { if (data && data.has(key) && data.get(key) !== '') pm.variables.set(key, data.get(key)); });"] } },
+      { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Commission validation succeeds', function () { pm.expect(pm.response.code).to.equal(200); });", "if (pm.response.code !== 200) return;", "let body; try { body = pm.response.json(); } catch (error) { pm.test('Validation response is JSON', function () { throw error; }); return; }", "const itinerary = Array.isArray(body.results) && body.results[0] ? body.results[0] : body.originalItinerary;", "pm.test('Itinerary is returned', function () { pm.expect(itinerary).to.be.an('object'); });", "if (!itinerary) return;", "pm.test('Requested PCC is retained', function () { pm.expect(itinerary.pcc).to.equal(pm.variables.get('expected_pcc')); });", "pm.test('Expected GDS is returned', function () { pm.expect(itinerary.gds).to.equal(pm.variables.get('expected_gds')); });", "const prices = itinerary.prices || {};", "const fees = prices.commBreakdown && prices.commBreakdown.segmentFees;", "if (pm.variables.get('expected_result') === 'no_commission') pm.test('Itinerary commission is zero', function () { pm.expect(Number(prices.comm)).to.equal(0); });", "if (pm.variables.get('expected_result') === 'commission_applied') pm.test('A commission entry is applied', function () { pm.expect(fees).to.be.an('array').that.is.not.empty; pm.expect(Number(fees[0].amount)).to.be.above(0); });", "if (pm.variables.get('expected_result') === 'commission_applied') pm.test('Non-deductable fee keeps aggregate commission at zero', function () { if (fees[0].deduct === false) pm.expect(Number(prices.comm)).to.equal(0); });"] } }
+    ]
+  }]}]
+}

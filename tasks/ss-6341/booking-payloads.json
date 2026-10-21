@@ -1,0 +1,1826 @@
+[
+  {
+    "scenario_id": "rt-adt-chd-inf",
+    "provenance": "earlier captured booking, not rerun",
+    "initial": {
+      "request": {
+        "method": "POST",
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "gds": {
+            "gds_id": 9,
+            "gds_pcc": "DFWG32100",
+            "backoffice_id": 11111,
+            "hybrid_id": "A6F17DE"
+          },
+          "additionalInfo": {
+            "key": "9QfADDSqWDKABhszdAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "9QfADDSqWDKAKHszdAAAAA==",
+              "9QfADDSqWDKAZHszdAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "contact_info": {
+            "address": "701 BENNETT ST",
+            "country": "US",
+            "city": "BOTTINEAU",
+            "state": "ND",
+            "zip": "58318"
+          },
+          "data": {
+            "payments": [
+              {
+                "pay_airline": "BA",
+                "pay_amount": 474,
+                "pay_cc_cvv": "***",
+                "pay_cc_expire_month": 9,
+                "pay_cc_expire_year": 2025,
+                "pay_cc_first_name": "Kathleen",
+                "pay_cc_holder": "Kathleen Pankanin",
+                "pay_cc_last_name": "Pankanin",
+                "pay_cc_name": "Kathleen Pankanin",
+                "pay_cc_number": "****8299",
+                "pay_cc_type": "VI",
+                "pay_type": 1
+              }
+            ]
+          },
+          "payments": {
+            "pay_type": 1
+          },
+          "trip": {
+            "booking_type": 2,
+            "cabin": 1,
+            "validating_carrier": "KL",
+            "total_price": 383.75,
+            "passengers": [
+              {
+                "pas_first_name": "Taylor",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Carter",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Jamie",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Bennett",
+                "pas_dob": "2019-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Jamie",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Hayes",
+                "pas_dob": "2025-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              }
+            ],
+            "flights": [
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "AMS",
+                    "seg_arrival_airport_code": "LHR",
+                    "seg_airline_code": "KL",
+                    "seg_air_equip_type": "32Q",
+                    "seg_departure_dt": "2026-11-11 20:35:00",
+                    "seg_arrival_dt": "2026-11-11 20:50:00",
+                    "seg_flight_number": "1017",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "G",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "GYS72BLA"
+                  }
+                ],
+                "fl_origin_location_code": "AMS",
+                "fl_destination_location_code": "LHR"
+              },
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "LHR",
+                    "seg_arrival_airport_code": "AMS",
+                    "seg_airline_code": "KL",
+                    "seg_air_equip_type": "295",
+                    "seg_departure_dt": "2026-11-18 15:45:00",
+                    "seg_arrival_dt": "2026-11-18 18:00:00",
+                    "seg_flight_number": "1010",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "G",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "GYS72BLA"
+                  }
+                ],
+                "fl_origin_location_code": "LHR",
+                "fl_destination_location_code": "AMS"
+              }
+            ],
+            "contact_phone": "+1 7075642084",
+            "country_code": "+1",
+            "contact_email": "zahid.bernell@kiv.dev",
+            "selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "agency_selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "account_code": "EURKIV",
+            "agency_phone": "18888633910"
+          },
+          "account_info": null
+        }
+      },
+      "response": {
+        "status": 422,
+        "name": "Unprocessable Entity",
+        "code": 26,
+        "message": "{\"data\":{\"priceDetails\":{\"AmountReturned\":569.55,\"AmountSpecified\":383.75,\"data\":{\"priceQuotes\":[{\"baseFare\":{\"amount\":35,\"currencyCode\":\"GBP\"},\"taxes\":{\"amount\":154.85,\"currencyCode\":\"GBP\"},\"totalFare\":{\"amount\":189.85,\"currencyCode\":\"GBP\"},\"passengerType\":\"ADT\",\"passengerQty\":3}]}}}}",
+        "type": "Price change",
+        "data": {
+          "response": {
+            "total_price": 569.55,
+            "currency": "GBP"
+          },
+          "additionalInfo": {
+            "key": "9QfADDSqWDKABhszdAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "9QfADDSqWDKAKHszdAAAAA==",
+              "9QfADDSqWDKAZHszdAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      },
+      "meta": {
+        "status": 422,
+        "receivedAt": "2026-10-01T10:01:32.785Z"
+      }
+    },
+    "retry": {
+      "request": {
+        "method": "POST",
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "gds": {
+            "gds_id": 9,
+            "gds_pcc": "DFWG32100",
+            "backoffice_id": 11111,
+            "hybrid_id": "A6F17DE"
+          },
+          "additionalInfo": {
+            "key": "9QfADDSqWDKABhszdAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "9QfADDSqWDKAKHszdAAAAA==",
+              "9QfADDSqWDKAZHszdAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "contact_info": {
+            "address": "701 BENNETT ST",
+            "country": "US",
+            "city": "BOTTINEAU",
+            "state": "ND",
+            "zip": "58318"
+          },
+          "data": {
+            "payments": [
+              {
+                "pay_airline": "BA",
+                "pay_amount": 474,
+                "pay_cc_cvv": "***",
+                "pay_cc_expire_month": 9,
+                "pay_cc_expire_year": 2025,
+                "pay_cc_first_name": "Kathleen",
+                "pay_cc_holder": "Kathleen Pankanin",
+                "pay_cc_last_name": "Pankanin",
+                "pay_cc_name": "Kathleen Pankanin",
+                "pay_cc_number": "****8299",
+                "pay_cc_type": "VI",
+                "pay_type": 1
+              }
+            ]
+          },
+          "payments": {
+            "pay_type": 1
+          },
+          "trip": {
+            "booking_type": 2,
+            "cabin": 1,
+            "validating_carrier": "KL",
+            "total_price": 569.55,
+            "passengers": [
+              {
+                "pas_first_name": "Taylor",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Carter",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Jamie",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Bennett",
+                "pas_dob": "2019-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Jamie",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Hayes",
+                "pas_dob": "2025-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              }
+            ],
+            "flights": [
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "AMS",
+                    "seg_arrival_airport_code": "LHR",
+                    "seg_airline_code": "KL",
+                    "seg_air_equip_type": "32Q",
+                    "seg_departure_dt": "2026-11-11 20:35:00",
+                    "seg_arrival_dt": "2026-11-11 20:50:00",
+                    "seg_flight_number": "1017",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "G",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "GYS72BLA"
+                  }
+                ],
+                "fl_origin_location_code": "AMS",
+                "fl_destination_location_code": "LHR"
+              },
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "LHR",
+                    "seg_arrival_airport_code": "AMS",
+                    "seg_airline_code": "KL",
+                    "seg_air_equip_type": "295",
+                    "seg_departure_dt": "2026-11-18 15:45:00",
+                    "seg_arrival_dt": "2026-11-18 18:00:00",
+                    "seg_flight_number": "1010",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "G",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "GYS72BLA"
+                  }
+                ],
+                "fl_origin_location_code": "LHR",
+                "fl_destination_location_code": "AMS"
+              }
+            ],
+            "contact_phone": "+1 7075642084",
+            "country_code": "+1",
+            "contact_email": "zahid.bernell@kiv.dev",
+            "selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "agency_selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "account_code": "EURKIV",
+            "agency_phone": "18888633910"
+          },
+          "account_info": null
+        }
+      },
+      "response": {
+        "status": 200,
+        "name": "Success",
+        "code": 0,
+        "message": "OK",
+        "data": {
+          "response": {
+            "pnr": "HN8X2F",
+            "booking_id": "IBE15530644",
+            "locator_code": "YYR8ST",
+            "total_price": 569.55,
+            "currency": "GBP",
+            "pnrInfo": {
+              "pnrCode": "HN8X2F",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "KL*YYR8ST",
+                  "departureAirportCode": "AMS",
+                  "departureDate": "2026-11-11 20:35",
+                  "arrivalAirportCode": "LHR",
+                  "arrivalDate": "2026-11-11 20:50",
+                  "arrivalTerminal": "4",
+                  "marketingAirlineCode": "KL",
+                  "marketingFlightNumber": "1017",
+                  "operatingAirlineCode": "KL",
+                  "operatingFlightNumber": "1017",
+                  "airEquipmentType": "32Q",
+                  "bookingClass": "G",
+                  "cabinCode": "Y",
+                  "brandName": "LIGHT",
+                  "fareCode": "GYS72BLA",
+                  "flightDuration": 75,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                },
+                {
+                  "tripId": 2,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "KL*YYR8ST",
+                  "departureAirportCode": "LHR",
+                  "departureDate": "2026-11-18 15:45",
+                  "departureTerminal": "4",
+                  "arrivalAirportCode": "AMS",
+                  "arrivalDate": "2026-11-18 18:00",
+                  "marketingAirlineCode": "KL",
+                  "marketingFlightNumber": "1010",
+                  "operatingAirlineCode": "KL",
+                  "operatingFlightNumber": "1010",
+                  "airEquipmentType": "295",
+                  "bookingClass": "G",
+                  "cabinCode": "Y",
+                  "brandName": "LIGHT",
+                  "fareCode": "GYS72BLA",
+                  "flightDuration": 75,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                }
+              ]
+            }
+          },
+          "additionalInfo": {
+            "key": "9QfADDSqWDKABhszdAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "9QfADDSqWDKAKHszdAAAAA==",
+              "9QfADDSqWDKAZHszdAAAAA=="
+            ],
+            "recLoc": "HN8X2F",
+            "brightsunReference": "IBE15530644",
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      },
+      "meta": {
+        "status": 200,
+        "receivedAt": "2026-10-01T10:06:24.396Z"
+      }
+    },
+    "error": null
+  },
+  {
+    "scenario_id": "ow-1adt",
+    "provenance": "new live booking",
+    "initial": {
+      "request": {
+        "method": "POST",
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "gds": {
+            "gds_id": 9,
+            "gds_pcc": "DFWG32100",
+            "backoffice_id": 11111,
+            "hybrid_id": "A6F17DE"
+          },
+          "additionalInfo": {
+            "key": "5HLLmCVqWDKAbWPevAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "optionKeys": [
+              "5HLLmCVqWDKA5RPevAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "OW",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "contact_info": {
+            "address": "701 BENNETT ST",
+            "country": "US",
+            "city": "BOTTINEAU",
+            "state": "ND",
+            "zip": "58318"
+          },
+          "data": {
+            "payments": [
+              {
+                "pay_airline": "BA",
+                "pay_amount": 474,
+                "pay_cc_cvv": "***",
+                "pay_cc_expire_month": 9,
+                "pay_cc_expire_year": 2025,
+                "pay_cc_first_name": "Kathleen",
+                "pay_cc_holder": "Kathleen Pankanin",
+                "pay_cc_last_name": "Pankanin",
+                "pay_cc_name": "Kathleen Pankanin",
+                "pay_cc_number": "****8299",
+                "pay_cc_type": "VI",
+                "pay_type": 1
+              }
+            ]
+          },
+          "payments": {
+            "pay_type": 1
+          },
+          "trip": {
+            "booking_type": 2,
+            "cabin": 1,
+            "validating_carrier": "BA",
+            "total_price": 118.5,
+            "passengers": [
+              {
+                "pas_first_name": "Casey",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Carter",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              }
+            ],
+            "flights": [
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "AMS",
+                    "seg_arrival_airport_code": "LHR",
+                    "seg_airline_code": "BA",
+                    "seg_air_equip_type": "319",
+                    "seg_departure_dt": "2026-11-11 16:00:00",
+                    "seg_arrival_dt": "2026-11-11 16:15:00",
+                    "seg_flight_number": "439",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "O",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "OZ0HO"
+                  }
+                ],
+                "fl_origin_location_code": "AMS",
+                "fl_destination_location_code": "LHR"
+              }
+            ],
+            "contact_phone": "+1 7075642084",
+            "country_code": "+1",
+            "contact_email": "zahid.bernell@kiv.dev",
+            "selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "agency_selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "account_code": "EURKIV",
+            "agency_phone": "18888633910"
+          },
+          "account_info": null
+        }
+      },
+      "response": {
+        "status": 200,
+        "name": "Success",
+        "code": 0,
+        "message": "OK",
+        "data": {
+          "response": {
+            "pnr": "HN8X4W",
+            "booking_id": "IBE15530645",
+            "locator_code": "YYSFKF",
+            "total_price": 118.5,
+            "currency": "GBP",
+            "pnrInfo": {
+              "pnrCode": "HN8X4W",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "BA*YYSFKF",
+                  "departureAirportCode": "AMS",
+                  "departureDate": "2026-11-11 15:55",
+                  "arrivalAirportCode": "LHR",
+                  "arrivalDate": "2026-11-11 16:15",
+                  "arrivalTerminal": "5",
+                  "marketingAirlineCode": "BA",
+                  "marketingFlightNumber": "439",
+                  "operatingAirlineCode": "BA",
+                  "operatingFlightNumber": "439",
+                  "airEquipmentType": "319",
+                  "bookingClass": "O",
+                  "cabinCode": "Y",
+                  "brandName": "BASIC",
+                  "fareCode": "OZ0HO",
+                  "flightDuration": 75,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                }
+              ]
+            }
+          },
+          "additionalInfo": {
+            "key": "5HLLmCVqWDKAbWPevAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "optionKeys": [
+              "5HLLmCVqWDKA5RPevAAAAA=="
+            ],
+            "recLoc": "HN8X4W",
+            "brightsunReference": "IBE15530645",
+            "fareType": "PUB",
+            "tripType": "OW",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      },
+      "meta": {
+        "status": 200,
+        "receivedAt": "2026-10-01T10:16:58.490Z"
+      }
+    },
+    "retry": null,
+    "error": null
+  },
+  {
+    "scenario_id": "rt-2adt",
+    "provenance": "new live booking",
+    "initial": {
+      "request": {
+        "method": "POST",
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "gds": {
+            "gds_id": 9,
+            "gds_pcc": "DFWG32100",
+            "backoffice_id": 11111,
+            "hybrid_id": "A6F17DE"
+          },
+          "additionalInfo": {
+            "key": "q7rKmCTqWDKAmuktvAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "q7rKmCTqWDKAWkktvAAAAA==",
+              "q7rKmCTqWDKAYkktvAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "contact_info": {
+            "address": "701 BENNETT ST",
+            "country": "US",
+            "city": "BOTTINEAU",
+            "state": "ND",
+            "zip": "58318"
+          },
+          "data": {
+            "payments": [
+              {
+                "pay_airline": "BA",
+                "pay_amount": 474,
+                "pay_cc_cvv": "***",
+                "pay_cc_expire_month": 9,
+                "pay_cc_expire_year": 2025,
+                "pay_cc_first_name": "Kathleen",
+                "pay_cc_holder": "Kathleen Pankanin",
+                "pay_cc_last_name": "Pankanin",
+                "pay_cc_name": "Kathleen Pankanin",
+                "pay_cc_number": "****8299",
+                "pay_cc_type": "VI",
+                "pay_type": 1
+              }
+            ]
+          },
+          "payments": {
+            "pay_type": 1
+          },
+          "trip": {
+            "booking_type": 2,
+            "cabin": 1,
+            "validating_carrier": "BA",
+            "total_price": 385.5,
+            "passengers": [
+              {
+                "pas_first_name": "Morgan",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Brooks",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Jordan",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Carter",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              }
+            ],
+            "flights": [
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "AMS",
+                    "seg_arrival_airport_code": "LHR",
+                    "seg_airline_code": "BA",
+                    "seg_air_equip_type": "319",
+                    "seg_departure_dt": "2026-11-11 16:00:00",
+                    "seg_arrival_dt": "2026-11-11 16:15:00",
+                    "seg_flight_number": "439",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "O",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "OZ0H"
+                  }
+                ],
+                "fl_origin_location_code": "AMS",
+                "fl_destination_location_code": "LHR"
+              },
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "LHR",
+                    "seg_arrival_airport_code": "AMS",
+                    "seg_airline_code": "BA",
+                    "seg_air_equip_type": "32N",
+                    "seg_departure_dt": "2026-11-18 06:45:00",
+                    "seg_arrival_dt": "2026-11-18 09:10:00",
+                    "seg_flight_number": "430",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "O",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "OZ0H"
+                  }
+                ],
+                "fl_origin_location_code": "LHR",
+                "fl_destination_location_code": "AMS"
+              }
+            ],
+            "contact_phone": "+1 7075642084",
+            "country_code": "+1",
+            "contact_email": "zahid.bernell@kiv.dev",
+            "selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "agency_selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "account_code": "EURKIV",
+            "agency_phone": "18888633910"
+          },
+          "account_info": null
+        }
+      },
+      "response": {
+        "status": 200,
+        "name": "Success",
+        "code": 0,
+        "message": "OK",
+        "data": {
+          "response": {
+            "pnr": "HN8X52",
+            "booking_id": "IBE15530646",
+            "locator_code": "YYSLAW",
+            "total_price": 385.5,
+            "currency": "GBP",
+            "pnrInfo": {
+              "pnrCode": "HN8X52",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "BA*YYSLAW",
+                  "departureAirportCode": "AMS",
+                  "departureDate": "2026-11-11 15:55",
+                  "arrivalAirportCode": "LHR",
+                  "arrivalDate": "2026-11-11 16:15",
+                  "arrivalTerminal": "5",
+                  "marketingAirlineCode": "BA",
+                  "marketingFlightNumber": "439",
+                  "operatingAirlineCode": "BA",
+                  "operatingFlightNumber": "439",
+                  "airEquipmentType": "319",
+                  "bookingClass": "O",
+                  "cabinCode": "Y",
+                  "brandName": "BASIC",
+                  "fareCode": "OZ0H",
+                  "flightDuration": 75,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                },
+                {
+                  "tripId": 2,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "BA*YYSLAW",
+                  "departureAirportCode": "LHR",
+                  "departureDate": "2026-11-18 06:45",
+                  "departureTerminal": "5",
+                  "arrivalAirportCode": "AMS",
+                  "arrivalDate": "2026-11-18 09:15",
+                  "marketingAirlineCode": "BA",
+                  "marketingFlightNumber": "430",
+                  "operatingAirlineCode": "BA",
+                  "operatingFlightNumber": "430",
+                  "airEquipmentType": "32N",
+                  "bookingClass": "O",
+                  "cabinCode": "Y",
+                  "brandName": "BASIC",
+                  "fareCode": "OZ0H",
+                  "flightDuration": 85,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                }
+              ]
+            }
+          },
+          "additionalInfo": {
+            "key": "q7rKmCTqWDKAmuktvAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "q7rKmCTqWDKAWkktvAAAAA==",
+              "q7rKmCTqWDKAYkktvAAAAA=="
+            ],
+            "recLoc": "HN8X52",
+            "brightsunReference": "IBE15530646",
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      },
+      "meta": {
+        "status": 200,
+        "receivedAt": "2026-10-01T10:17:27.083Z"
+      }
+    },
+    "retry": null,
+    "error": null
+  },
+  {
+    "scenario_id": "ow-adt-chd",
+    "provenance": "new live booking",
+    "initial": {
+      "request": {
+        "method": "POST",
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "gds": {
+            "gds_id": 9,
+            "gds_pcc": "DFWG32100",
+            "backoffice_id": 11111,
+            "hybrid_id": "A6F17DE"
+          },
+          "additionalInfo": {
+            "key": "q7rKmCTqWDKATumtvAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "optionKeys": [
+              "q7rKmCTqWDKAKlmtvAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "OW",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "contact_info": {
+            "address": "701 BENNETT ST",
+            "country": "US",
+            "city": "BOTTINEAU",
+            "state": "ND",
+            "zip": "58318"
+          },
+          "data": {
+            "payments": [
+              {
+                "pay_airline": "BA",
+                "pay_amount": 474,
+                "pay_cc_cvv": "***",
+                "pay_cc_expire_month": 9,
+                "pay_cc_expire_year": 2025,
+                "pay_cc_first_name": "Kathleen",
+                "pay_cc_holder": "Kathleen Pankanin",
+                "pay_cc_last_name": "Pankanin",
+                "pay_cc_name": "Kathleen Pankanin",
+                "pay_cc_number": "****8299",
+                "pay_cc_type": "VI",
+                "pay_type": 1
+              }
+            ]
+          },
+          "payments": {
+            "pay_type": 1
+          },
+          "trip": {
+            "booking_type": 2,
+            "cabin": 1,
+            "validating_carrier": "BA",
+            "total_price": 237,
+            "passengers": [
+              {
+                "pas_first_name": "Taylor",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Hayes",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Morgan",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Bennett",
+                "pas_dob": "2019-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              }
+            ],
+            "flights": [
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "AMS",
+                    "seg_arrival_airport_code": "LHR",
+                    "seg_airline_code": "BA",
+                    "seg_air_equip_type": "319",
+                    "seg_departure_dt": "2026-11-11 16:00:00",
+                    "seg_arrival_dt": "2026-11-11 16:15:00",
+                    "seg_flight_number": "439",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "O",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "OZ0HO"
+                  }
+                ],
+                "fl_origin_location_code": "AMS",
+                "fl_destination_location_code": "LHR"
+              }
+            ],
+            "contact_phone": "+1 7075642084",
+            "country_code": "+1",
+            "contact_email": "zahid.bernell@kiv.dev",
+            "selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "agency_selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "account_code": "EURKIV",
+            "agency_phone": "18888633910"
+          },
+          "account_info": null
+        }
+      },
+      "response": {
+        "status": 200,
+        "name": "Success",
+        "code": 0,
+        "message": "OK",
+        "data": {
+          "response": {
+            "pnr": "HN8X57",
+            "booking_id": "IBE15530647",
+            "locator_code": "YYS83T",
+            "total_price": 237,
+            "currency": "GBP",
+            "pnrInfo": {
+              "pnrCode": "HN8X57",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "BA*YYS83T",
+                  "departureAirportCode": "AMS",
+                  "departureDate": "2026-11-11 15:55",
+                  "arrivalAirportCode": "LHR",
+                  "arrivalDate": "2026-11-11 16:15",
+                  "arrivalTerminal": "5",
+                  "marketingAirlineCode": "BA",
+                  "marketingFlightNumber": "439",
+                  "operatingAirlineCode": "BA",
+                  "operatingFlightNumber": "439",
+                  "airEquipmentType": "319",
+                  "bookingClass": "O",
+                  "cabinCode": "Y",
+                  "brandName": "BASIC",
+                  "fareCode": "OZ0HO",
+                  "flightDuration": 75,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                }
+              ]
+            }
+          },
+          "additionalInfo": {
+            "key": "q7rKmCTqWDKATumtvAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "optionKeys": [
+              "q7rKmCTqWDKAKlmtvAAAAA=="
+            ],
+            "recLoc": "HN8X57",
+            "brightsunReference": "IBE15530647",
+            "fareType": "PUB",
+            "tripType": "OW",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      },
+      "meta": {
+        "status": 200,
+        "receivedAt": "2026-10-01T10:17:47.271Z"
+      }
+    },
+    "retry": null,
+    "error": null
+  },
+  {
+    "scenario_id": "rt-adt-inf",
+    "provenance": "new live booking",
+    "initial": {
+      "request": {
+        "method": "POST",
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "gds": {
+            "gds_id": 9,
+            "gds_pcc": "DFWG32100",
+            "backoffice_id": 11111,
+            "hybrid_id": "A6F17DE"
+          },
+          "additionalInfo": {
+            "key": "5HLLmCVqWDKABUWevAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "5HLLmCVqWDKArDWevAAAAA==",
+              "5HLLmCVqWDKA6DWevAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "contact_info": {
+            "address": "701 BENNETT ST",
+            "country": "US",
+            "city": "BOTTINEAU",
+            "state": "ND",
+            "zip": "58318"
+          },
+          "data": {
+            "payments": [
+              {
+                "pay_airline": "BA",
+                "pay_amount": 474,
+                "pay_cc_cvv": "***",
+                "pay_cc_expire_month": 9,
+                "pay_cc_expire_year": 2025,
+                "pay_cc_first_name": "Kathleen",
+                "pay_cc_holder": "Kathleen Pankanin",
+                "pay_cc_last_name": "Pankanin",
+                "pay_cc_name": "Kathleen Pankanin",
+                "pay_cc_number": "****8299",
+                "pay_cc_type": "VI",
+                "pay_type": 1
+              }
+            ]
+          },
+          "payments": {
+            "pay_type": 1
+          },
+          "trip": {
+            "booking_type": 2,
+            "cabin": 1,
+            "validating_carrier": "KL",
+            "total_price": 215.9,
+            "passengers": [
+              {
+                "pas_first_name": "Morgan",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Brooks",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Casey",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Parker",
+                "pas_dob": "2025-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              }
+            ],
+            "flights": [
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "AMS",
+                    "seg_arrival_airport_code": "LHR",
+                    "seg_airline_code": "KL",
+                    "seg_air_equip_type": "32Q",
+                    "seg_departure_dt": "2026-11-11 20:35:00",
+                    "seg_arrival_dt": "2026-11-11 20:50:00",
+                    "seg_flight_number": "1017",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "G",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "GYS72BLA"
+                  }
+                ],
+                "fl_origin_location_code": "AMS",
+                "fl_destination_location_code": "LHR"
+              },
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "LHR",
+                    "seg_arrival_airport_code": "AMS",
+                    "seg_airline_code": "KL",
+                    "seg_air_equip_type": "295",
+                    "seg_departure_dt": "2026-11-18 15:45:00",
+                    "seg_arrival_dt": "2026-11-18 18:00:00",
+                    "seg_flight_number": "1010",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "G",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "GYS72BLA"
+                  }
+                ],
+                "fl_origin_location_code": "LHR",
+                "fl_destination_location_code": "AMS"
+              }
+            ],
+            "contact_phone": "+1 7075642084",
+            "country_code": "+1",
+            "contact_email": "zahid.bernell@kiv.dev",
+            "selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "agency_selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "account_code": "EURKIV",
+            "agency_phone": "18888633910"
+          },
+          "account_info": null
+        }
+      },
+      "response": {
+        "status": 422,
+        "name": "Unprocessable Entity",
+        "code": 26,
+        "message": "{\"data\":{\"priceDetails\":{\"AmountReturned\":379.7,\"AmountSpecified\":215.9,\"data\":{\"priceQuotes\":[{\"baseFare\":{\"amount\":35,\"currencyCode\":\"GBP\"},\"taxes\":{\"amount\":154.85,\"currencyCode\":\"GBP\"},\"totalFare\":{\"amount\":189.85,\"currencyCode\":\"GBP\"},\"passengerType\":\"ADT\",\"passengerQty\":2}]}}}}",
+        "type": "Price change",
+        "data": {
+          "response": {
+            "total_price": 379.7,
+            "currency": "GBP"
+          },
+          "additionalInfo": {
+            "key": "5HLLmCVqWDKABUWevAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "5HLLmCVqWDKArDWevAAAAA==",
+              "5HLLmCVqWDKA6DWevAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      },
+      "meta": {
+        "status": 422,
+        "receivedAt": "2026-10-01T10:17:59.516Z"
+      }
+    },
+    "retry": {
+      "request": {
+        "method": "POST",
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "gds": {
+            "gds_id": 9,
+            "gds_pcc": "DFWG32100",
+            "backoffice_id": 11111,
+            "hybrid_id": "A6F17DE"
+          },
+          "additionalInfo": {
+            "key": "5HLLmCVqWDKABUWevAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "5HLLmCVqWDKArDWevAAAAA==",
+              "5HLLmCVqWDKA6DWevAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "contact_info": {
+            "address": "701 BENNETT ST",
+            "country": "US",
+            "city": "BOTTINEAU",
+            "state": "ND",
+            "zip": "58318"
+          },
+          "data": {
+            "payments": [
+              {
+                "pay_airline": "BA",
+                "pay_amount": 474,
+                "pay_cc_cvv": "***",
+                "pay_cc_expire_month": 9,
+                "pay_cc_expire_year": 2025,
+                "pay_cc_first_name": "Kathleen",
+                "pay_cc_holder": "Kathleen Pankanin",
+                "pay_cc_last_name": "Pankanin",
+                "pay_cc_name": "Kathleen Pankanin",
+                "pay_cc_number": "****8299",
+                "pay_cc_type": "VI",
+                "pay_type": 1
+              }
+            ]
+          },
+          "payments": {
+            "pay_type": 1
+          },
+          "trip": {
+            "booking_type": 2,
+            "cabin": 1,
+            "validating_carrier": "KL",
+            "total_price": 379.7,
+            "passengers": [
+              {
+                "pas_first_name": "Morgan",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Brooks",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Casey",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Parker",
+                "pas_dob": "2025-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              }
+            ],
+            "flights": [
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "AMS",
+                    "seg_arrival_airport_code": "LHR",
+                    "seg_airline_code": "KL",
+                    "seg_air_equip_type": "32Q",
+                    "seg_departure_dt": "2026-11-11 20:35:00",
+                    "seg_arrival_dt": "2026-11-11 20:50:00",
+                    "seg_flight_number": "1017",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "G",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "GYS72BLA"
+                  }
+                ],
+                "fl_origin_location_code": "AMS",
+                "fl_destination_location_code": "LHR"
+              },
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "LHR",
+                    "seg_arrival_airport_code": "AMS",
+                    "seg_airline_code": "KL",
+                    "seg_air_equip_type": "295",
+                    "seg_departure_dt": "2026-11-18 15:45:00",
+                    "seg_arrival_dt": "2026-11-18 18:00:00",
+                    "seg_flight_number": "1010",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "G",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "GYS72BLA"
+                  }
+                ],
+                "fl_origin_location_code": "LHR",
+                "fl_destination_location_code": "AMS"
+              }
+            ],
+            "contact_phone": "+1 7075642084",
+            "country_code": "+1",
+            "contact_email": "zahid.bernell@kiv.dev",
+            "selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "agency_selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "account_code": "EURKIV",
+            "agency_phone": "18888633910"
+          },
+          "account_info": null
+        }
+      },
+      "response": {
+        "status": 200,
+        "name": "Success",
+        "code": 0,
+        "message": "OK",
+        "data": {
+          "response": {
+            "pnr": "HN8X59",
+            "booking_id": "IBE15530648",
+            "locator_code": "YYSU3G",
+            "total_price": 379.7,
+            "currency": "GBP",
+            "pnrInfo": {
+              "pnrCode": "HN8X59",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "KL*YYSU3G",
+                  "departureAirportCode": "AMS",
+                  "departureDate": "2026-11-11 20:35",
+                  "arrivalAirportCode": "LHR",
+                  "arrivalDate": "2026-11-11 20:50",
+                  "arrivalTerminal": "4",
+                  "marketingAirlineCode": "KL",
+                  "marketingFlightNumber": "1017",
+                  "operatingAirlineCode": "KL",
+                  "operatingFlightNumber": "1017",
+                  "airEquipmentType": "32Q",
+                  "bookingClass": "G",
+                  "cabinCode": "Y",
+                  "brandName": "LIGHT",
+                  "fareCode": "GYS72BLA",
+                  "flightDuration": 75,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                },
+                {
+                  "tripId": 2,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "KL*YYSU3G",
+                  "departureAirportCode": "LHR",
+                  "departureDate": "2026-11-18 15:45",
+                  "departureTerminal": "4",
+                  "arrivalAirportCode": "AMS",
+                  "arrivalDate": "2026-11-18 18:00",
+                  "marketingAirlineCode": "KL",
+                  "marketingFlightNumber": "1010",
+                  "operatingAirlineCode": "KL",
+                  "operatingFlightNumber": "1010",
+                  "airEquipmentType": "295",
+                  "bookingClass": "G",
+                  "cabinCode": "Y",
+                  "brandName": "LIGHT",
+                  "fareCode": "GYS72BLA",
+                  "flightDuration": 75,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                }
+              ]
+            }
+          },
+          "additionalInfo": {
+            "key": "5HLLmCVqWDKABUWevAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "5HLLmCVqWDKArDWevAAAAA==",
+              "5HLLmCVqWDKA6DWevAAAAA=="
+            ],
+            "recLoc": "HN8X59",
+            "brightsunReference": "IBE15530648",
+            "fareType": "PUB",
+            "tripType": "RT",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      },
+      "meta": {
+        "status": 200,
+        "receivedAt": "2026-10-01T10:18:11.734Z"
+      }
+    },
+    "error": null
+  },
+  {
+    "scenario_id": "mc-2adt",
+    "provenance": "new live booking",
+    "initial": {
+      "request": {
+        "method": "POST",
+        "url": "https://api.search.dev.travel-dev.com/brightsun/v1/book/create",
+        "body": {
+          "gds": {
+            "gds_id": 9,
+            "gds_pcc": "DFWG32100",
+            "backoffice_id": 11111,
+            "hybrid_id": "A6F17DE"
+          },
+          "additionalInfo": {
+            "key": "5HLLmCVqWDKA7odevAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "5HLLmCVqWDKANjdevAAAAA==",
+              "5HLLmCVqWDKARjdevAAAAA=="
+            ],
+            "fareType": "PUB",
+            "tripType": "MC",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "contact_info": {
+            "address": "701 BENNETT ST",
+            "country": "US",
+            "city": "BOTTINEAU",
+            "state": "ND",
+            "zip": "58318"
+          },
+          "data": {
+            "payments": [
+              {
+                "pay_airline": "BA",
+                "pay_amount": 474,
+                "pay_cc_cvv": "***",
+                "pay_cc_expire_month": 9,
+                "pay_cc_expire_year": 2025,
+                "pay_cc_first_name": "Kathleen",
+                "pay_cc_holder": "Kathleen Pankanin",
+                "pay_cc_last_name": "Pankanin",
+                "pay_cc_name": "Kathleen Pankanin",
+                "pay_cc_number": "****8299",
+                "pay_cc_type": "VI",
+                "pay_type": 1
+              }
+            ]
+          },
+          "payments": {
+            "pay_type": 1
+          },
+          "trip": {
+            "booking_type": 2,
+            "cabin": 1,
+            "validating_carrier": "SK",
+            "total_price": 1356.6,
+            "passengers": [
+              {
+                "pas_first_name": "Casey",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Reed",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              },
+              {
+                "pas_first_name": "Alex",
+                "pas_middle_name": "KIVO",
+                "pas_last_name": "Brooks",
+                "pas_dob": "2001-10-01",
+                "pas_type_id": 1,
+                "pas_nationality": "US",
+                "pas_country": "US",
+                "pas_gender_id": 2,
+                "pas_doc_expiration_date": "2030-04-01",
+                "pas_doc_number": "AA111222A0"
+              }
+            ],
+            "flights": [
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "LAX",
+                    "seg_arrival_airport_code": "CPH",
+                    "seg_airline_code": "SK",
+                    "seg_air_equip_type": "333",
+                    "seg_departure_dt": "2026-11-11 19:30:00",
+                    "seg_arrival_dt": "2026-11-12 15:25:00",
+                    "seg_flight_number": "932",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "N",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "NLXA6GHT"
+                  },
+                  {
+                    "seg_departure_airport_code": "CPH",
+                    "seg_arrival_airport_code": "FRA",
+                    "seg_airline_code": "SK",
+                    "seg_air_equip_type": "CR9",
+                    "seg_departure_dt": "2026-11-12 18:15:00",
+                    "seg_arrival_dt": "2026-11-12 19:45:00",
+                    "seg_flight_number": "1635",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "N",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "NLXA6GHT"
+                  }
+                ],
+                "fl_origin_location_code": "LAX",
+                "fl_destination_location_code": "FRA"
+              },
+              {
+                "segments": [
+                  {
+                    "seg_departure_airport_code": "MUC",
+                    "seg_arrival_airport_code": "CPH",
+                    "seg_airline_code": "SK",
+                    "seg_air_equip_type": "319",
+                    "seg_departure_dt": "2026-11-18 10:15:00",
+                    "seg_arrival_dt": "2026-11-18 11:55:00",
+                    "seg_flight_number": "662",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "L",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "LLXA6GHT"
+                  },
+                  {
+                    "seg_departure_airport_code": "CPH",
+                    "seg_arrival_airport_code": "LAX",
+                    "seg_airline_code": "SK",
+                    "seg_air_equip_type": "333",
+                    "seg_departure_dt": "2026-11-18 14:20:00",
+                    "seg_arrival_dt": "2026-11-18 17:00:00",
+                    "seg_flight_number": "931",
+                    "seg_cabin_type_id": 1,
+                    "seg_booking_class": "L",
+                    "seg_marriage_grp": "",
+                    "seg_fare_basis": "LLXA6GHT"
+                  }
+                ],
+                "fl_origin_location_code": "MUC",
+                "fl_destination_location_code": "LAX"
+              }
+            ],
+            "contact_phone": "+1 7075642084",
+            "country_code": "+1",
+            "contact_email": "zahid.bernell@kiv.dev",
+            "selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "agency_selling_price": {
+              "amount": 1,
+              "currency_code": "USD"
+            },
+            "account_code": "EURKIV",
+            "agency_phone": "18888633910"
+          },
+          "account_info": null
+        }
+      },
+      "response": {
+        "status": 200,
+        "name": "Success",
+        "code": 0,
+        "message": "OK",
+        "data": {
+          "response": {
+            "pnr": "HN8X5G",
+            "booking_id": "IBE15530649",
+            "locator_code": "YYSSWA",
+            "total_price": 1356.6,
+            "currency": "GBP",
+            "pnrInfo": {
+              "pnrCode": "HN8X5G",
+              "segments": [
+                {
+                  "tripId": 1,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "SK*YYSSWA",
+                  "departureAirportCode": "LAX",
+                  "departureDate": "2026-11-11 19:30",
+                  "departureTerminal": "B",
+                  "arrivalAirportCode": "CPH",
+                  "arrivalDate": "2026-11-12 15:25",
+                  "arrivalTerminal": "3",
+                  "marketingAirlineCode": "SK",
+                  "marketingFlightNumber": "932",
+                  "operatingAirlineCode": "SK",
+                  "operatingFlightNumber": "932",
+                  "airEquipmentType": "333",
+                  "bookingClass": "N",
+                  "cabinCode": "Y",
+                  "brandName": "LIGHT",
+                  "fareCode": "NLXA6GHT",
+                  "flightDuration": 655,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                },
+                {
+                  "tripId": 1,
+                  "segmentId": 2,
+                  "segmentNumber": 2,
+                  "airlineRefId": "SK*YYSSWA",
+                  "departureAirportCode": "CPH",
+                  "departureDate": "2026-11-12 18:15",
+                  "departureTerminal": "3",
+                  "arrivalAirportCode": "FRA",
+                  "arrivalDate": "2026-11-12 19:45",
+                  "arrivalTerminal": "3",
+                  "marketingAirlineCode": "SK",
+                  "marketingFlightNumber": "1635",
+                  "operatingAirlineCode": "WX",
+                  "operatingFlightNumber": "1635",
+                  "airEquipmentType": "CR9",
+                  "bookingClass": "N",
+                  "cabinCode": "Y",
+                  "brandName": "LIGHT",
+                  "fareCode": "NLXA6GHT",
+                  "flightDuration": 90,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                },
+                {
+                  "tripId": 2,
+                  "segmentId": 1,
+                  "segmentNumber": 1,
+                  "airlineRefId": "SK*YYSSWA",
+                  "departureAirportCode": "MUC",
+                  "departureDate": "2026-11-18 10:15",
+                  "departureTerminal": "1",
+                  "arrivalAirportCode": "CPH",
+                  "arrivalDate": "2026-11-18 11:55",
+                  "arrivalTerminal": "3",
+                  "marketingAirlineCode": "SK",
+                  "marketingFlightNumber": "662",
+                  "operatingAirlineCode": "SK",
+                  "operatingFlightNumber": "662",
+                  "airEquipmentType": "319",
+                  "bookingClass": "L",
+                  "cabinCode": "Y",
+                  "brandName": "LIGHT",
+                  "fareCode": "LLXA6GHT",
+                  "flightDuration": 100,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                },
+                {
+                  "tripId": 2,
+                  "segmentId": 2,
+                  "segmentNumber": 2,
+                  "airlineRefId": "SK*YYSSWA",
+                  "departureAirportCode": "CPH",
+                  "departureDate": "2026-11-18 14:20",
+                  "departureTerminal": "3",
+                  "arrivalAirportCode": "LAX",
+                  "arrivalDate": "2026-11-18 17:00",
+                  "arrivalTerminal": "B",
+                  "marketingAirlineCode": "SK",
+                  "marketingFlightNumber": "931",
+                  "operatingAirlineCode": "SK",
+                  "operatingFlightNumber": "931",
+                  "airEquipmentType": "333",
+                  "bookingClass": "L",
+                  "cabinCode": "Y",
+                  "brandName": "LIGHT",
+                  "fareCode": "LLXA6GHT",
+                  "flightDuration": 700,
+                  "baggageAllowance": "0P",
+                  "carryOnAllowance": "1P"
+                }
+              ]
+            }
+          },
+          "additionalInfo": {
+            "key": "5HLLmCVqWDKA7odevAAAAA==",
+            "token": "[REDACTED]",
+            "supp": "GAL",
+            "outboundKey": "outgal",
+            "inboundKey": "ingal",
+            "optionKeys": [
+              "5HLLmCVqWDKANjdevAAAAA==",
+              "5HLLmCVqWDKARjdevAAAAA=="
+            ],
+            "recLoc": "HN8X5G",
+            "brightsunReference": "IBE15530649",
+            "fareType": "PUB",
+            "tripType": "MC",
+            "cabin": "Y",
+            "fare": {
+              "checkedBaggage": false,
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      },
+      "meta": {
+        "status": 200,
+        "receivedAt": "2026-10-01T10:18:40.646Z"
+      }
+    },
+    "retry": null,
+    "error": null
+  }
+]

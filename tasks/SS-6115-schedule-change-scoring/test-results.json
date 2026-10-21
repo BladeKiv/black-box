@@ -1,0 +1,137 @@
+[
+  {
+    "id": "RUN-01",
+    "data": "UA / S / 1A1J; two changed trips; normal mode",
+    "expected": "Returned choices contain no excluded trips",
+    "actual": "HTTP 200; 30 itineraries; 60 trips; 0 excluded",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-02",
+    "data": "Three-segment reroute MSP-FRA-BRU-NBO to MSP-ORD-BRU-NBO; ruleId=2; U=2,V=2; identical counterpart trip",
+    "expected": "Lower scores first; equal-score eligible reroutes ordered by smaller time deviation",
+    "actual": "Matched score-5 alternatives occur in ascending deviation order: 20 / 1450 / 2990 minutes. PASS covers observed ordering, not activation of Closest Departure",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-11a",
+    "data": "All 60 normal-response trips",
+    "expected": "Minutes = max(abs(first departure delta), abs(last arrival delta))",
+    "actual": "60 calculations checked; 0 mismatches",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-11b",
+    "data": "Fresh run, trip 1, U=1,V=1,score=1",
+    "expected": "Equal-score alternatives prefer smaller minute deviation",
+    "actual": "Returned positions 1 / 2 / 3: 1440 / 1567 / 2970 minutes; trip 2 identical",
+    "status": "PASS"
+  },
+  {
+    "id": "RUN-02",
+    "data": "Minimal UA expert request; explicit HK; one candidate",
+    "expected": "Usable scored response for controlled comparisons",
+    "actual": "HTTP 200; one candidate; U=1,V=1; score=1; 30 min; ruleId=2; excluded=false. Earlier multi-candidate requests remain empty-body evidence",
+    "status": "PASS",
+    "requestFile": "request-expert-minimal.json",
+    "responseFile": "expert-minimal-response.json"
+  },
+  {
+    "id": "TC-03",
+    "data": "Returned UA alternatives; country-aware penalty comparison",
+    "expected": "Same-country reroute receives softer penalty than cross-country reroute",
+    "actual": "User sign-off: accepted as PASS; no additional API execution. No matched same-country/cross-country pair with controlled other score inputs established",
+    "status": "PASS",
+    "acceptanceSource": "Explicit user sign-off"
+  },
+  {
+    "id": "TC-12",
+    "data": "Normal response quality and representative trips",
+    "expected": "Top-level policy flag reflects in-policy non-excluded options for every changed trip",
+    "actual": "Top-level true; representative trip 1 true /20 min and trip 2 true /23 min; both non-excluded",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-05",
+    "data": "BA expert reroute JFK-LHR-CDG to JFK-LGW-CDG; U=1,V=2; 30 min",
+    "expected": "True behavior: preserve actual V=2, score as V=1",
+    "actual": "ruleId=46; V=2; score=1; excluded=false. Attachment identifies BA as True; deployed rule numbering differs",
+    "status": "PASS",
+    "requestFile": "tc05-true-request.json",
+    "responseFile": "tc05-true-response.json"
+  },
+  {
+    "id": "TC-06",
+    "data": "UA expert reroute; class H; U=1,V=2; 30 min",
+    "expected": "False behavior retains regular score 4",
+    "actual": "ruleId=2; score=4; excluded=false; attachment UA rules 1/2 are False",
+    "status": "PASS",
+    "requestFile": "tc06-false-h-request.json",
+    "responseFile": "tc06-false-h-response.json"
+  },
+  {
+    "id": "TC-07",
+    "data": "BA True-behavior request plus attached policy allow-lists",
+    "expected": "V=2 is excluded when not explicitly allowed under True",
+    "actual": "User sign-off: accepted as PASS; no additional API execution. All attached True rows allow V=2; no restrictive True fixture available. Positive BA request remains eligible; negative branch not evaluated",
+    "status": "PASS",
+    "requestFile": "tc05-true-request.json",
+    "responseFile": "tc05-true-response.json",
+    "acceptanceSource": "Explicit user sign-off"
+  },
+  {
+    "id": "TC-08",
+    "data": "BA unchanged routing and one-extra-stop; single candidate per request",
+    "expected": "True does not promote V=1 or added-stop V=3; regular scores 1 and 7",
+    "actual": "ruleId=46; U=1,V=1 score=1; U=1,V=3 score=7; both excluded=false",
+    "status": "PASS",
+    "requestFile": "tc08-v3-request.json",
+    "responseFile": "tc08-v3-response.json"
+  },
+  {
+    "id": "TC-09",
+    "data": "BA reroutes, U=1 at 120 min vs U=5 at 30 min, separate requests",
+    "expected": "Carrier dimension retained: scores 1 versus 12 despite closer U=5",
+    "actual": "Both ruleId=46 and non-excluded; scores 1 and 12. Combined response ordering not tested",
+    "status": "PASS",
+    "requestFile": "tc09-u5-request.json",
+    "responseFile": "tc09-u5-response.json"
+  },
+  {
+    "id": "TC-10-cabin",
+    "data": "BA promoted reroute; segment 2 changed from Y to C",
+    "expected": "Cabin violation remains excluded under True",
+    "actual": "score=1; excluded=true; CabinFilterTerm reported (also booking-class violations)",
+    "status": "PASS",
+    "requestFile": "tc10-cabin-request.json",
+    "responseFile": "tc10-cabin-response.json"
+  },
+  {
+    "id": "TC-10-flex",
+    "data": "BA promoted reroute; departure shifted +3 days and 30 min",
+    "expected": "Date-flex violation remains excluded under True",
+    "actual": "score=1; 4350 min; excluded=true; ReprotectionFlexTerm reported",
+    "status": "PASS",
+    "requestFile": "tc10-flex-request.json",
+    "responseFile": "tc10-flex-response.json"
+  },
+  {
+    "id": "TC-10-booking",
+    "data": "BA promoted reroute; economy cabin with booking class J",
+    "expected": "Unacceptable booking class remains excluded under True",
+    "actual": "score=1; excluded=true; BclassFilterTerm reported",
+    "status": "PASS",
+    "requestFile": "tc10-booking-request.json",
+    "responseFile": "tc10-booking-response.json"
+  },
+  {
+    "id": "TC-10-JV",
+    "data": "GET /algo/conf schedule_change plus BA control request",
+    "expected": "JV rejection remains enforced when enabled",
+    "actual": "User sign-off: accepted as PASS; no additional API execution. STAGE schedule_change.enable_jv=false; no enabled-JV fixture tested. Configuration was not changed",
+    "status": "PASS",
+    "requestFile": "tc05-true-request.json",
+    "responseFile": "tc05-true-response.json",
+    "acceptanceSource": "Explicit user sign-off"
+  }
+]

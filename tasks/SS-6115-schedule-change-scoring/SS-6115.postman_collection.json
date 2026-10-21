@@ -1,0 +1,760 @@
+{
+  "info": {
+    "name": "SS-6115 STAGE schedule-change regression",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "AirAPI only. HTTP 200 is the observed baseline, not a universal contract. Credentials blank. Expert fixtures are synthetic, not claims of live schedules. Select the matching request and CSV row. Lower score first and closest-time tie ordering for eligible reroutes. Includes BA promotion, UA regular scoring, V=1/V=3, preserved U and cabin/date/class filtering. No restrictive True V=2 fixture; JV disabled. Policy attachment is historical guidance; runtime rule IDs differ. Newman was not run."
+  },
+  "item": [
+    {
+      "name": "normal",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"sender\": null,\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"bookingId\": \"O5C0C91\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"files\": true,\n  \"debug\": false,\n  \"validatingCarrier\": \"UA\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 1235,\n      \"segments\": [\n        {\n          \"departureTime\": \"2026-12-20 15:20\",\n          \"arrivalTime\": \"2026-12-21 06:40\",\n          \"flightNumber\": \"9497\",\n          \"bookingClass\": \"H\",\n          \"stop\": 0,\n          \"stops\": null,\n          \"duration\": 500,\n          \"departureAirportCode\": \"MSP\",\n          \"departureAirportTerminal\": null,\n          \"arrivalAirportCode\": \"FRA\",\n          \"arrivalAirportTerminal\": null,\n          \"operatingAirline\": \"LH\",\n          \"airEquipType\": \"789\",\n          \"marketingAirline\": \"UA\",\n          \"marriageGroup\": \"\",\n          \"mileage\": null,\n          \"cabin\": \"Y\",\n          \"meal\": null,\n          \"fareCode\": \"HH173NCE/TZA2\",\n          \"baggage\": {\n            \"ADT\": {\n              \"airlineCode\": \"UA\",\n              \"allowPieces\": 2,\n              \"allowWeight\": null,\n              \"allowUnit\": null,\n              \"allowMaxWeight\": null,\n              \"allowMaxSize\": null,\n              \"charge\": null\n            }\n          },\n          \"brandId\": null,\n          \"segmentId\": 1,\n          \"scheduleChange\": true\n        },\n        {\n          \"departureTime\": \"2026-12-21 07:40\",\n          \"arrivalTime\": \"2026-12-21 08:40\",\n          \"flightNumber\": \"8987\",\n          \"bookingClass\": \"H\",\n          \"stop\": 0,\n          \"stops\": null,\n          \"duration\": 60,\n          \"departureAirportCode\": \"FRA\",\n          \"departureAirportTerminal\": null,\n          \"arrivalAirportCode\": \"BRU\",\n          \"arrivalAirportTerminal\": null,\n          \"operatingAirline\": \"LH\",\n          \"airEquipType\": null,\n          \"marketingAirline\": \"UA\",\n          \"marriageGroup\": \"\",\n          \"mileage\": null,\n          \"cabin\": \"Y\",\n          \"meal\": null,\n          \"fareCode\": \"HH173NCE/TZA2\",\n          \"baggage\": {\n            \"ADT\": {\n              \"airlineCode\": \"UA\",\n              \"allowPieces\": 2,\n              \"allowWeight\": null,\n              \"allowUnit\": \"P\",\n              \"allowMaxWeight\": null,\n              \"allowMaxSize\": null,\n              \"charge\": null\n            }\n          },\n          \"brandId\": null,\n          \"segmentId\": 2,\n          \"scheduleChange\": true\n        },\n        {\n          \"departureTime\": \"2026-12-21 10:25\",\n          \"arrivalTime\": \"2026-12-21 20:55\",\n          \"flightNumber\": \"481\",\n          \"bookingClass\": \"H\",\n          \"stop\": 0,\n          \"stops\": null,\n          \"duration\": 510,\n          \"departureAirportCode\": \"BRU\",\n          \"departureAirportTerminal\": null,\n          \"arrivalAirportCode\": \"NBO\",\n          \"arrivalAirportTerminal\": null,\n          \"operatingAirline\": \"SN\",\n          \"airEquipType\": \"333\",\n          \"marketingAirline\": \"SN\",\n          \"marriageGroup\": \"\",\n          \"mileage\": null,\n          \"cabin\": \"Y\",\n          \"meal\": null,\n          \"fareCode\": \"HH173NCE/TZA2\",\n          \"baggage\": {\n            \"ADT\": {\n              \"airlineCode\": \"SN\",\n              \"allowPieces\": 2,\n              \"allowWeight\": null,\n              \"allowUnit\": null,\n              \"allowMaxWeight\": null,\n              \"allowMaxSize\": null,\n              \"charge\": null\n            }\n          },\n          \"brandId\": null,\n          \"segmentId\": 3,\n          \"scheduleChange\": true\n        }\n      ]\n    },\n    {\n      \"tripId\": 2,\n      \"duration\": 1499,\n      \"segments\": [\n        {\n          \"departureTime\": \"2027-01-20 23:55\",\n          \"arrivalTime\": \"2027-01-21 06:50\",\n          \"flightNumber\": \"491\",\n          \"bookingClass\": \"T\",\n          \"stop\": 0,\n          \"stops\": null,\n          \"duration\": 535,\n          \"departureAirportCode\": \"NBO\",\n          \"departureAirportTerminal\": null,\n          \"arrivalAirportCode\": \"BRU\",\n          \"arrivalAirportTerminal\": null,\n          \"operatingAirline\": \"SN\",\n          \"airEquipType\": \"333\",\n          \"marketingAirline\": \"SN\",\n          \"marriageGroup\": \"O\",\n          \"mileage\": null,\n          \"cabin\": \"Y\",\n          \"meal\": null,\n          \"fareCode\": \"TLX30NCS\",\n          \"baggage\": {\n            \"ADT\": {\n              \"airlineCode\": \"SN\",\n              \"allowPieces\": 2,\n              \"allowWeight\": null,\n              \"allowUnit\": null,\n              \"allowMaxWeight\": null,\n              \"allowMaxSize\": null,\n              \"charge\": null\n            }\n          },\n          \"brandId\": null,\n          \"segmentId\": 1,\n          \"scheduleChange\": true\n        },\n        {\n          \"departureTime\": \"2027-01-21 10:10\",\n          \"arrivalTime\": \"2027-01-21 12:15\",\n          \"flightNumber\": \"8803\",\n          \"bookingClass\": \"T\",\n          \"stop\": 0,\n          \"stops\": null,\n          \"duration\": 545,\n          \"departureAirportCode\": \"BRU\",\n          \"departureAirportTerminal\": null,\n          \"arrivalAirportCode\": \"ORD\",\n          \"arrivalAirportTerminal\": null,\n          \"operatingAirline\": \"UA\",\n          \"airEquipType\": \"781\",\n          \"marketingAirline\": \"SN\",\n          \"marriageGroup\": \"I\",\n          \"mileage\": null,\n          \"cabin\": \"Y\",\n          \"meal\": null,\n          \"fareCode\": \"TLX30NCS\",\n          \"baggage\": {\n            \"ADT\": {\n              \"airlineCode\": \"SN\",\n              \"allowPieces\": 2,\n              \"allowWeight\": null,\n              \"allowUnit\": null,\n              \"allowMaxWeight\": null,\n              \"allowMaxSize\": null,\n              \"charge\": null\n            }\n          },\n          \"brandId\": null,\n          \"segmentId\": 2,\n          \"scheduleChange\": true\n        },\n        {\n          \"departureTime\": \"2027-01-21 14:20\",\n          \"arrivalTime\": \"2027-01-21 15:54\",\n          \"flightNumber\": \"8865\",\n          \"bookingClass\": \"T\",\n          \"stop\": 0,\n          \"stops\": null,\n          \"duration\": 94,\n          \"departureAirportCode\": \"ORD\",\n          \"departureAirportTerminal\": null,\n          \"arrivalAirportCode\": \"MSP\",\n          \"arrivalAirportTerminal\": null,\n          \"operatingAirline\": \"UA\",\n          \"airEquipType\": \"7M9\",\n          \"marketingAirline\": \"SN\",\n          \"marriageGroup\": \"I\",\n          \"mileage\": null,\n          \"cabin\": \"Y\",\n          \"meal\": null,\n          \"fareCode\": \"TLX30NCS\",\n          \"baggage\": {\n            \"ADT\": {\n              \"airlineCode\": \"SN\",\n              \"allowPieces\": 2,\n              \"allowWeight\": null,\n              \"allowUnit\": null,\n              \"allowMaxWeight\": null,\n              \"allowMaxSize\": null,\n              \"charge\": null\n            }\n          },\n          \"brandId\": null,\n          \"segmentId\": 3,\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"cabin\": \"Y\",\n  \"scheduledPnrReason\": \"failure MinConnectionTime\"\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200 observed baseline\", () => pm.response.to.have.status(200));",
+              "const r = pm.response.json();",
+              "pm.test(\"count matches results\", () => pm.expect(r.count).to.eql(r.results.length));",
+              "const trips = r.results.flatMap(x => x.trips);",
+              "pm.test(\"No excluded trips offered in normal mode\", () => trips.forEach(t => pm.expect(t.quality.excluded).to.eql(false)));",
+              "const original = JSON.parse(pm.request.body.raw).trips;",
+              "const stamp = s => Date.parse(s.replace(\" \", \"T\") + \":00Z\");",
+              "pm.test(\"Policy minutes match endpoint deltas\", () => trips.forEach(t => { const o=original.find(x=>x.tripId===t.tripId); const d=Math.abs(stamp(t.segments[0].departureTime)-stamp(o.segments[0].departureTime))/60000; const a=Math.abs(stamp(t.segments.at(-1).arrivalTime)-stamp(o.segments.at(-1).arrivalTime))/60000; pm.expect(t.quality.scheduleChangePolicyMins).to.eql(Math.max(d,a)); }));",
+              "const cohorts={}; r.results.forEach(it=>it.trips.forEach(t=>{const o=original.find(x=>x.tripId===t.tripId); if(t.quality.changeConnectionPoints!==2 || t.segments.length!==o.segments.length) return; const signature=t.segments.map(s=>[s.departureAirportCode,s.arrivalAirportCode,s.marketingAirline,s.operatingAirline,s.bookingClass,s.cabin].join(\"/\")).join(\"|\");const k=JSON.stringify([t.tripId,signature,t.quality.ruleId,t.quality.changeOperatingMarketing,t.quality.score,it.trips.filter(x=>x.tripId!==t.tripId)]);(cohorts[k] ||= []).push(t.quality);}));",
+              "const comparable=Object.values(cohorts).filter(c=>new Set(c.map(q=>q.scheduleChangePolicyMins)).size>1);",
+              "if (!comparable.length) { pm.test.skip(\"Reroute time ordering: WARN, comparable inventory unavailable\",()=>{}); } else { pm.test(\"Equal-score same-length reroutes: closest time first\",()=>comparable.forEach(c=>{for(let i=1;i<c.length;i++)pm.expect(c[i].scheduleChangePolicyMins).to.be.at.least(c[i-1].scheduleChangePolicyMins);})); }"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "fresh",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"sender\": null,\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"bookingId\": \"O5C0C91\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"files\": true,\n  \"debug\": false,\n  \"validatingCarrier\": \"UA\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"status\": \"\",\n          \"departureTime\": \"2026-12-20 15:10\",\n          \"arrivalTime\": \"2026-12-20 17:00\",\n          \"flightNumber\": \"3465\",\n          \"bookingClass\": \"H\",\n          \"scheduledBookingClasses\": [\n            \"Y\",\n            \"B\",\n            \"M\",\n            \"E\",\n            \"U\",\n            \"H\",\n            \"Q\",\n            \"V\",\n            \"W\",\n            \"S\",\n            \"T\",\n            \"L\",\n            \"K\",\n            \"G\",\n            \"N\"\n          ],\n          \"departureAirportCode\": \"MSP\",\n          \"arrivalAirportCode\": \"ORD\",\n          \"operatingAirline\": \"UA\",\n          \"marketingAirline\": \"UA\",\n          \"cabin\": \"Y\",\n          \"scheduleChange\": true,\n          \"stop\": 0,\n          \"duration\": 110,\n          \"departureAirportTerminal\": \"1\",\n          \"arrivalAirportTerminal\": \"2\"\n        },\n        {\n          \"segmentId\": 2,\n          \"status\": \"\",\n          \"departureTime\": \"2026-12-20 17:50\",\n          \"arrivalTime\": \"2026-12-21 08:55\",\n          \"flightNumber\": \"972\",\n          \"bookingClass\": \"H\",\n          \"scheduledBookingClasses\": [\n            \"Y\",\n            \"B\",\n            \"M\",\n            \"E\",\n            \"U\",\n            \"H\",\n            \"Q\",\n            \"V\",\n            \"L\",\n            \"K\",\n            \"G\",\n            \"N\"\n          ],\n          \"departureAirportCode\": \"ORD\",\n          \"arrivalAirportCode\": \"BRU\",\n          \"operatingAirline\": \"UA\",\n          \"marketingAirline\": \"UA\",\n          \"cabin\": \"Y\",\n          \"scheduleChange\": true,\n          \"stop\": 0,\n          \"duration\": 485,\n          \"departureAirportTerminal\": \"1\",\n          \"arrivalAirportTerminal\": \"\"\n        },\n        {\n          \"segmentId\": 3,\n          \"status\": \"\",\n          \"departureTime\": \"2026-12-21 10:25\",\n          \"arrivalTime\": \"2026-12-21 21:15\",\n          \"flightNumber\": \"481\",\n          \"bookingClass\": \"H\",\n          \"scheduledBookingClasses\": [\n            \"Y\",\n            \"B\",\n            \"M\",\n            \"U\",\n            \"H\",\n            \"X\",\n            \"Q\",\n            \"V\",\n            \"W\",\n            \"S\",\n            \"T\",\n            \"L\",\n            \"K\"\n          ],\n          \"departureAirportCode\": \"BRU\",\n          \"arrivalAirportCode\": \"NBO\",\n          \"operatingAirline\": \"SN\",\n          \"marketingAirline\": \"SN\",\n          \"cabin\": \"Y\",\n          \"scheduleChange\": true,\n          \"stop\": 0,\n          \"duration\": 530,\n          \"departureAirportTerminal\": \"\",\n          \"arrivalAirportTerminal\": \"1B\"\n        }\n      ],\n      \"duration\": 1265\n    },\n    {\n      \"tripId\": 2,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"status\": \"\",\n          \"departureTime\": \"2027-01-20 23:55\",\n          \"arrivalTime\": \"2027-01-21 07:00\",\n          \"flightNumber\": \"487\",\n          \"bookingClass\": \"T\",\n          \"scheduledBookingClasses\": [\n            \"Y\",\n            \"B\",\n            \"M\",\n            \"U\",\n            \"H\",\n            \"X\",\n            \"Q\",\n            \"V\",\n            \"W\",\n            \"S\",\n            \"T\",\n            \"L\",\n            \"K\"\n          ],\n          \"departureAirportCode\": \"NBO\",\n          \"arrivalAirportCode\": \"BRU\",\n          \"operatingAirline\": \"SN\",\n          \"marketingAirline\": \"SN\",\n          \"cabin\": \"Y\",\n          \"scheduleChange\": true,\n          \"stop\": 0,\n          \"duration\": 545,\n          \"departureAirportTerminal\": \"1B\",\n          \"arrivalAirportTerminal\": \"\"\n        },\n        {\n          \"segmentId\": 2,\n          \"status\": \"\",\n          \"departureTime\": \"2027-01-21 10:10\",\n          \"arrivalTime\": \"2027-01-21 12:10\",\n          \"flightNumber\": \"8803\",\n          \"bookingClass\": \"T\",\n          \"scheduledBookingClasses\": [\n            \"Y\",\n            \"B\",\n            \"M\",\n            \"U\",\n            \"H\",\n            \"Q\",\n            \"V\",\n            \"W\",\n            \"S\",\n            \"T\",\n            \"L\",\n            \"K\"\n          ],\n          \"departureAirportCode\": \"BRU\",\n          \"arrivalAirportCode\": \"ORD\",\n          \"operatingAirline\": \"UA\",\n          \"marketingAirline\": \"SN\",\n          \"cabin\": \"Y\",\n          \"scheduleChange\": true,\n          \"stop\": 0,\n          \"duration\": 540,\n          \"departureAirportTerminal\": \"\",\n          \"arrivalAirportTerminal\": \"5\"\n        },\n        {\n          \"segmentId\": 3,\n          \"status\": \"\",\n          \"departureTime\": \"2027-01-21 14:05\",\n          \"arrivalTime\": \"2027-01-21 15:31\",\n          \"flightNumber\": \"8865\",\n          \"bookingClass\": \"T\",\n          \"scheduledBookingClasses\": [\n            \"Y\",\n            \"B\",\n            \"M\",\n            \"U\",\n            \"H\",\n            \"Q\",\n            \"V\",\n            \"W\",\n            \"S\",\n            \"T\",\n            \"L\",\n            \"K\"\n          ],\n          \"departureAirportCode\": \"ORD\",\n          \"arrivalAirportCode\": \"MSP\",\n          \"operatingAirline\": \"UA\",\n          \"marketingAirline\": \"SN\",\n          \"cabin\": \"Y\",\n          \"scheduleChange\": true,\n          \"stop\": 0,\n          \"duration\": 86,\n          \"departureAirportTerminal\": \"1\",\n          \"arrivalAirportTerminal\": \"1\"\n        }\n      ],\n      \"duration\": 1476\n    }\n  ],\n  \"cabin\": \"Y\",\n  \"scheduledPnrReason\": \"failure MinConnectionTime\"\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200 observed baseline\", () => pm.response.to.have.status(200));",
+              "const r = pm.response.json();",
+              "pm.test(\"count matches results\", () => pm.expect(r.count).to.eql(r.results.length));",
+              "const trips = r.results.flatMap(x => x.trips);",
+              "pm.test(\"No excluded trips offered in normal mode\", () => trips.forEach(t => pm.expect(t.quality.excluded).to.eql(false)));",
+              "const original = JSON.parse(pm.request.body.raw).trips;",
+              "const stamp = s => Date.parse(s.replace(\" \", \"T\") + \":00Z\");",
+              "pm.test(\"Policy minutes match endpoint deltas\", () => trips.forEach(t => { const o=original.find(x=>x.tripId===t.tripId); const d=Math.abs(stamp(t.segments[0].departureTime)-stamp(o.segments[0].departureTime))/60000; const a=Math.abs(stamp(t.segments.at(-1).arrivalTime)-stamp(o.segments.at(-1).arrivalTime))/60000; pm.expect(t.quality.scheduleChangePolicyMins).to.eql(Math.max(d,a)); }));",
+              "const cohorts={}; r.results.forEach(it=>it.trips.forEach(t=>{const o=original.find(x=>x.tripId===t.tripId); if(t.quality.changeConnectionPoints!==2 || t.segments.length!==o.segments.length) return; const signature=t.segments.map(s=>[s.departureAirportCode,s.arrivalAirportCode,s.marketingAirline,s.operatingAirline,s.bookingClass,s.cabin].join(\"/\")).join(\"|\");const k=JSON.stringify([t.tripId,signature,t.quality.ruleId,t.quality.changeOperatingMarketing,t.quality.score,it.trips.filter(x=>x.tripId!==t.tripId)]);(cohorts[k] ||= []).push(t.quality);}));",
+              "const comparable=Object.values(cohorts).filter(c=>new Set(c.map(q=>q.scheduleChangePolicyMins)).size>1);",
+              "if (!comparable.length) { pm.test.skip(\"Reroute time ordering: WARN, comparable inventory unavailable\",()=>{}); } else { pm.test(\"Equal-score same-length reroutes: closest time first\",()=>comparable.forEach(c=>{for(let i=1;i<c.length;i++)pm.expect(c[i].scheduleChangePolicyMins).to.be.at.least(c[i-1].scheduleChangePolicyMins);})); }"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc05-true",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"BA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LGW\",\n          \"departureTime\": \"2026-12-20 18:30\",\n          \"arrivalTime\": \"2026-12-21 06:30\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LGW\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:30\",\n          \"arrivalTime\": \"2026-12-21 10:30\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(1));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(2));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(1));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(false));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc06-false-h",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"UA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"UA\",\n          \"operatingAirline\": \"UA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"H\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"UA\",\n          \"operatingAirline\": \"UA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"H\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LGW\",\n          \"departureTime\": \"2026-12-20 18:30\",\n          \"arrivalTime\": \"2026-12-21 06:30\",\n          \"duration\": 420,\n          \"marketingAirline\": \"UA\",\n          \"operatingAirline\": \"UA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"H\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LGW\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:30\",\n          \"arrivalTime\": \"2026-12-21 10:30\",\n          \"duration\": 60,\n          \"marketingAirline\": \"UA\",\n          \"operatingAirline\": \"UA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"H\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(1));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(2));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(4));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(false));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc08-v1",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"BA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-21 18:00\",\n          \"arrivalTime\": \"2026-12-22 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-22 08:00\",\n          \"arrivalTime\": \"2026-12-22 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(1));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(1));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(1));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(false));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc08-v3",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"BA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"AMS\",\n          \"departureTime\": \"2026-12-21 07:00\",\n          \"arrivalTime\": \"2026-12-21 09:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 3,\n          \"departureAirportCode\": \"AMS\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 10:00\",\n          \"arrivalTime\": \"2026-12-21 11:30\",\n          \"duration\": 90,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"103\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(1));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(3));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(7));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(false));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc09-u1",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"BA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"AA\",\n          \"operatingAirline\": \"AA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LGW\",\n          \"departureTime\": \"2026-12-20 20:00\",\n          \"arrivalTime\": \"2026-12-21 08:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"AA\",\n          \"operatingAirline\": \"AA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LGW\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 10:00\",\n          \"arrivalTime\": \"2026-12-21 12:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(1));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(2));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(1));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(false));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc09-u5",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"BA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"AA\",\n          \"operatingAirline\": \"AA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LGW\",\n          \"departureTime\": \"2026-12-20 18:30\",\n          \"arrivalTime\": \"2026-12-21 06:30\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"AA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LGW\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:30\",\n          \"arrivalTime\": \"2026-12-21 10:30\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"AA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(5));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(2));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(12));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(false));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc10-cabin",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"BA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LGW\",\n          \"departureTime\": \"2026-12-20 18:30\",\n          \"arrivalTime\": \"2026-12-21 06:30\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LGW\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:30\",\n          \"arrivalTime\": \"2026-12-21 10:30\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"C\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(1));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(2));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(1));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(true));",
+              "pm.test(\"Required filter violation\",()=>pm.expect(q.violations.some(x=>x.includes(\"CabinFilterTerm\"))).to.eql(true));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc10-flex",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"BA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LGW\",\n          \"departureTime\": \"2026-12-23 18:30\",\n          \"arrivalTime\": \"2026-12-24 06:30\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LGW\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-24 08:30\",\n          \"arrivalTime\": \"2026-12-24 10:30\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(1));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(2));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(1));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(true));",
+              "pm.test(\"Required filter violation\",()=>pm.expect(q.violations.some(x=>x.includes(\"ReprotectionFlexTerm\"))).to.eql(true));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    },
+    {
+      "name": "tc10-booking",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "raw": "{\n  \"gds\": \"S\",\n  \"pcc\": \"1A1J\",\n  \"issueDate\": \"2024-10-13\",\n  \"paxCnt\": 1,\n  \"debug\": true,\n  \"validatingCarrier\": \"BA\",\n  \"cabin\": \"Y\",\n  \"trips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LHR\",\n          \"departureTime\": \"2026-12-20 18:00\",\n          \"arrivalTime\": \"2026-12-21 06:00\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LHR\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:00\",\n          \"arrivalTime\": \"2026-12-21 10:00\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"Y\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ],\n  \"expertTrips\": [\n    {\n      \"tripId\": 1,\n      \"duration\": 900,\n      \"segments\": [\n        {\n          \"segmentId\": 1,\n          \"departureAirportCode\": \"JFK\",\n          \"arrivalAirportCode\": \"LGW\",\n          \"departureTime\": \"2026-12-20 18:30\",\n          \"arrivalTime\": \"2026-12-21 06:30\",\n          \"duration\": 420,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"101\",\n          \"bookingClass\": \"J\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        },\n        {\n          \"segmentId\": 2,\n          \"departureAirportCode\": \"LGW\",\n          \"arrivalAirportCode\": \"CDG\",\n          \"departureTime\": \"2026-12-21 08:30\",\n          \"arrivalTime\": \"2026-12-21 10:30\",\n          \"duration\": 60,\n          \"marketingAirline\": \"BA\",\n          \"operatingAirline\": \"BA\",\n          \"flightNumber\": \"102\",\n          \"bookingClass\": \"J\",\n          \"cabin\": \"Y\",\n          \"status\": \"HK\",\n          \"scheduleChange\": true\n        }\n      ]\n    }\n  ]\n}",
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "url": "{{search_url}}",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "type": "string",
+              "value": "{{auth_login}}",
+              "key": "username"
+            },
+            {
+              "type": "string",
+              "value": "{{auth_password}}",
+              "key": "password"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const row = pm.iterationData.toObject();",
+              "if (row.scenario_id) pm.variables.set(\"scenario_id\", row.scenario_id);",
+              "pm.variables.set(\"expected_result\", row.expected_result || \"Recorded inventory checks\");",
+              "if (row.search_url) pm.variables.set(\"search_url\", row.search_url);"
+            ]
+          },
+          "listen": "prerequest"
+        },
+        {
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Observed HTTP 200\",()=>pm.response.to.have.status(200));",
+              "const r=pm.response.json(); pm.test(\"One controlled expert alternative\",()=>pm.expect(r.count).to.eql(1));",
+              "const q=r.results[0].trips[0].quality;",
+              "pm.test(\"Carrier dimension\",()=>pm.expect(q.changeOperatingMarketing).to.eql(1));",
+              "pm.test(\"Connection dimension\",()=>pm.expect(q.changeConnectionPoints).to.eql(2));",
+              "pm.test(\"Expected score\",()=>pm.expect(q.score).to.eql(1));",
+              "pm.test(\"Expected exclusion\",()=>pm.expect(q.excluded).to.eql(true));",
+              "pm.test(\"Required filter violation\",()=>pm.expect(q.violations.some(x=>x.includes(\"BclassFilterTerm\"))).to.eql(true));"
+            ]
+          },
+          "listen": "test"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "search_url",
+      "value": "https://api.search.stage.travel-dev.com/v1/schedules"
+    },
+    {
+      "key": "auth_login",
+      "value": ""
+    },
+    {
+      "key": "auth_password",
+      "value": ""
+    }
+  ]
+}

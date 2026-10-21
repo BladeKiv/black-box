@@ -1,0 +1,12 @@
+{
+  "phase": "Round G; full ticket remains in progress",
+  "cases": [
+    {
+      "id": "G01",
+      "data": "Source GTT; configured source_cons=VZU; exact TST101 CID eligible",
+      "expected": "Source consolidator mismatch skips NDC mapping using pre-mapping values",
+      "actual": "200/200 retain E / 8C4T / VZU; original_info.cons=GTT; NDC marker/asset absent; all match disabled baseline",
+      "status": "PASS"
+    }
+  ]
+}

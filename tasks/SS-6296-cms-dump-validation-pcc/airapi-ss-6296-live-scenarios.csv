@@ -1,0 +1,7 @@
+scenario_id,search_url,provider_filter,expected_result,validation_url,pcc,expected_pcc,expected_gds,dump_payload
+ss-6296-w2gm-no-commission,,,no_commission,http://airapi51.kivops.info/v1/commission/EXPBBP/validation/dump-pub/true?pcc=W2GM,W2GM,W2GM,S,"1 DL3013D 02JAN J INDATL*SS1   247P  429P /DCDL /E
+2 DL 279D 02JAN J ATLEZE*SS1   735P  735A  03JAN S /DCDL /E"
+ss-6296-6nvg-s-no-commission,,,no_commission,http://airapi51.kivops.info/v1/commission/EXPBBP/validation/dump-pub/true?pcc=6NVG,6NVG,6NVG,S,"1 LH7479C 21SEP M LAXIAD GK1   817A  423P /E
+2 LH 419C 21SEP M IADFRA GK1   555P  755A  22SEP T"
+ss-6296-8c4t-e-commission-applied,,,commission_applied,http://airapi51.kivops.info/v1/commission/EXPBBP/validation/dump-pub/true?pcc=8C4T,8C4T,8C4T,E,"1 LH7479C 21SEP M LAXIAD GK1   817A  423P /E
+2 LH 419C 21SEP M IADFRA GK1   555P  755A  22SEP T"

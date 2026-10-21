@@ -1,0 +1,410 @@
+{
+  "info": {
+    "name": "SS-6390 Atlas DEV six-step cash flow",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "AirAPI endpoints from SERVICE APIs TEST ENV only. Creates DEV sandbox booking and requests cash issuance. Configure local api_authorization, atlas_client_id, atlas_client_secret, booking_username and booking_password. No retries or extra endpoints. Baggage schema assertions run even on Retry responses; Cash 408/Retry is an accepted DEV sandbox outcome per user clarification; ticket numbers are not required."
+  },
+  "variable": [
+    {
+      "key": "searchhost",
+      "value": "https://api.search.dev.travel-dev.com"
+    },
+    {
+      "key": "search_url",
+      "value": "https://api.search.dev.travel-dev.com/atlas/v1/search?adt=1&cid=TST103&debug=1&fl[0][o]=NYC&fl[0][d]=MAD&fl[0][dt]=2026-11-11&tripType=OW&cabin=Y"
+    },
+    {
+      "key": "segments_path",
+      "value": "data.response.pnrInfo.segments"
+    }
+  ],
+  "item": [
+    {
+      "name": "01-search",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-atlas-client-id",
+            "value": "{{atlas_client_id}}"
+          },
+          {
+            "key": "x-atlas-client-secret",
+            "value": "{{atlas_client_secret}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{api_authorization}}"
+          }
+        ],
+        "url": "{{search_url}}"
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const host=pm.variables.get('searchhost'); if(host!=='https://api.search.dev.travel-dev.com'){pm.execution.skipRequest();throw new Error('DEV only');}",
+              "const url=pm.iterationData.get('search_url')||pm.collectionVariables.get('search_url');if(new URL(url).origin!==host){pm.execution.skipRequest();throw new Error('DEV Search only');}pm.variables.set('search_url',url);for(const key of ['selected','booking_body','booking_info','ticket_attempted'])pm.collectionVariables.unset(key);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();",
+              "pm.test('Search has selectable inventory',()=>pm.expect(d.results).to.be.an('array').and.not.empty);if(!d.results?.length){pm.execution.setNextRequest(null);}else pm.collectionVariables.set('selected',JSON.stringify(d.results[0]));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "02-result",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-atlas-client-id",
+            "value": "{{atlas_client_id}}"
+          },
+          {
+            "key": "x-atlas-client-secret",
+            "value": "{{atlas_client_secret}}"
+          },
+          {
+            "key": "Authorization",
+            "value": "{{api_authorization}}"
+          }
+        ],
+        "url": "{{searchhost}}/atlas/v1/result",
+        "body": {
+          "mode": "raw",
+          "raw": "{{step_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const host=pm.variables.get('searchhost'); if(host!=='https://api.search.dev.travel-dev.com'){pm.execution.skipRequest();throw new Error('DEV only');}",
+              "const key=\"selected\"; const saved=pm.collectionVariables.get(key); if(!saved){pm.execution.skipRequest();throw new Error('Run previous steps first');}",
+              "pm.variables.set('step_body',saved);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();",
+              "function ensure(ok,message){if(!ok)throw new Error(message||\"Missing or unsupported fresh booking input\");}",
+              "function bookBody(r){\n  ensure(r.keys?.atlas && r.trips?.length && Number.isFinite(r.prices?.totalPrice));\n  const cabin=c=>{ensure(['Y','W','C','F'].includes(c));return {Y:1,W:2,C:3,F:4}[c];};\n  const b={additionalInfo:{},payments:{},trip:{}};\n  b.additionalInfo=JSON.parse(JSON.stringify(r.keys.atlas));\n  b.payments={pay_type:1};b.trip.total_price=r.prices.totalPrice;b.trip.cabin=cabin(r.trips[0].segments[0].cabin);\n  b.trip.passengers=[{pas_first_name:'Alex',pas_middle_name:'QA',pas_last_name:'Bennett',pas_dob:'1995-01-15',pas_type_id:1,pas_nationality:'US',pas_gender_id:1,pas_country:'US',pas_doc_number:'AA111222A0',pas_doc_expiration_date:'2030-05-16'}];\n  b.trip.contact_email='atlas-qa@example.com';b.trip.contact_phone='+1 2025550100';\n  b.trip.flights=r.trips.map(t=>({segments:t.segments.map(s=>({seg_departure_airport_code:s.departureAirportCode,seg_arrival_airport_code:s.arrivalAirportCode,seg_airline_code:s.marketingAirline,seg_air_equip_type:s.airEquipType,seg_departure_dt:s.departureTime,seg_arrival_dt:s.arrivalTime,seg_flight_number:s.flightNumber,seg_cabin_type_id:cabin(s.cabin),seg_booking_class:s.bookingClass,seg_marriage_grp:s.marriageGroup||'',seg_fare_basis:s.fareCode})),fl_origin_location_code:t.segments[0].departureAirportCode,fl_destination_location_code:t.segments.at(-1).arrivalAirportCode}));\n  return b;\n}\n",
+              "pm.test('Result has booking inputs',()=>pm.expect(d.keys.atlas).to.be.an('object'));try{pm.collectionVariables.set('booking_body',JSON.stringify(bookBody(d)));}catch(e){pm.execution.setNextRequest(null);throw e;}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "03-book-create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-atlas-client-id",
+            "value": "{{atlas_client_id}}"
+          },
+          {
+            "key": "x-atlas-client-secret",
+            "value": "{{atlas_client_secret}}"
+          }
+        ],
+        "url": "{{searchhost}}/atlas/v1/book/create",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{booking_username}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{booking_password}}",
+              "type": "string"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{{step_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const host=pm.variables.get('searchhost'); if(host!=='https://api.search.dev.travel-dev.com'){pm.execution.skipRequest();throw new Error('DEV only');}",
+              "const key=\"booking_body\"; const saved=pm.collectionVariables.get(key); if(!saved){pm.execution.skipRequest();throw new Error('Run previous steps first');}",
+              "pm.variables.set('step_body',saved);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();",
+              "const cm=pm.iterationData.get('expected_carry_on_length_cm');const inch=pm.iterationData.get('expected_carry_on_length_inch');const path=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segments=path.split('.').reduce((v,k)=>v?.[k],d);if(cm!==undefined && cm!=='')for(const seg of segments||[])pm.test('Source-supplied carry-on dimensions mapped',()=>{pm.expect(seg.carryOn.ADT.lengthCm).to.equal(Number(cm));pm.expect(seg.carryOn.ADT.lengthInch).to.be.oneOf(String(inch).split(';').map(Number));});",
+              "pm.test('Book/Create succeeds',()=>{pm.expect(d.status).to.equal(200);pm.expect(d.code).to.equal(0);});if(d.data?.additionalInfo)pm.collectionVariables.set('booking_info',JSON.stringify(d.data.additionalInfo));else pm.execution.setNextRequest(null);",
+              "const p=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segs=p.split('.').reduce((v,k)=>v?.[k],d);pm.test('SS-6390: segment baggage exists',()=>pm.expect(segs).to.be.an('array').and.not.empty);if(Array.isArray(segs))for(const s of segs){for(const type of ['baggage','carryOn'])for(const [ptc,b] of Object.entries(s[type]||{})){pm.test(type+' full texts are null',()=>{pm.expect(b.baggageFullTextA == null).to.equal(true);pm.expect(b.baggageFullTextD == null).to.equal(true);});pm.test(type+' piece formatting',()=>pm.expect(b.numberOfPcs).to.match(type==='baggage'?/^\\d{2}P$/:/^\\d+P$/));}}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "04-book-info",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-atlas-client-id",
+            "value": "{{atlas_client_id}}"
+          },
+          {
+            "key": "x-atlas-client-secret",
+            "value": "{{atlas_client_secret}}"
+          }
+        ],
+        "url": "{{searchhost}}/atlas/v1/book/info",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{booking_username}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{booking_password}}",
+              "type": "string"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{{step_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const host=pm.variables.get('searchhost'); if(host!=='https://api.search.dev.travel-dev.com'){pm.execution.skipRequest();throw new Error('DEV only');}",
+              "const key=\"booking_info\"; const saved=pm.collectionVariables.get(key); if(!saved){pm.execution.skipRequest();throw new Error('Run previous steps first');}",
+              "pm.variables.set('step_body',JSON.stringify({additionalInfo:JSON.parse(saved)}));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();",
+              "const cm=pm.iterationData.get('expected_carry_on_length_cm');const inch=pm.iterationData.get('expected_carry_on_length_inch');const path=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segments=path.split('.').reduce((v,k)=>v?.[k],d);if(cm!==undefined && cm!=='')for(const seg of segments||[])pm.test('Source-supplied carry-on dimensions mapped',()=>{pm.expect(seg.carryOn.ADT.lengthCm).to.equal(Number(cm));pm.expect(seg.carryOn.ADT.lengthInch).to.be.oneOf(String(inch).split(';').map(Number));});",
+              "pm.collectionVariables.set('info_before_done','1');",
+              "const p=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segs=p.split('.').reduce((v,k)=>v?.[k],d);pm.test('SS-6390: segment baggage exists',()=>pm.expect(segs).to.be.an('array').and.not.empty);if(Array.isArray(segs))for(const s of segs){for(const type of ['baggage','carryOn'])for(const [ptc,b] of Object.entries(s[type]||{})){pm.test(type+' full texts are null',()=>{pm.expect(b.baggageFullTextA == null).to.equal(true);pm.expect(b.baggageFullTextD == null).to.equal(true);});pm.test(type+' piece formatting',()=>pm.expect(b.numberOfPcs).to.match(type==='baggage'?/^\\d{2}P$/:/^\\d+P$/));}}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "05-ticket-create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-atlas-client-id",
+            "value": "{{atlas_client_id}}"
+          },
+          {
+            "key": "x-atlas-client-secret",
+            "value": "{{atlas_client_secret}}"
+          }
+        ],
+        "url": "{{searchhost}}/atlas/v1/ticket/create",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{booking_username}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{booking_password}}",
+              "type": "string"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{{step_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const host=pm.variables.get('searchhost'); if(host!=='https://api.search.dev.travel-dev.com'){pm.execution.skipRequest();throw new Error('DEV only');}",
+              "const key=\"booking_info\"; const saved=pm.collectionVariables.get(key); if(!saved){pm.execution.skipRequest();throw new Error('Run previous steps first');}",
+              "if(!pm.collectionVariables.get('info_before_done')){pm.execution.skipRequest();throw new Error('Run Book/Info before ticketing');} const b=JSON.parse(pm.collectionVariables.get('booking_body'));delete b.payments;b.additionalInfo=JSON.parse(saved);b.data={payments:[{pay_type:1}]};pm.variables.set('step_body',JSON.stringify(b));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();",
+              "const cm=pm.iterationData.get('expected_carry_on_length_cm');const inch=pm.iterationData.get('expected_carry_on_length_inch');const path=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segments=path.split('.').reduce((v,k)=>v?.[k],d);if(cm!==undefined && cm!=='')for(const seg of segments||[])pm.test('Source-supplied carry-on dimensions mapped',()=>{pm.expect(seg.carryOn.ADT.lengthCm).to.equal(Number(cm));pm.expect(seg.carryOn.ADT.lengthInch).to.be.oneOf(String(inch).split(';').map(Number));});",
+              "pm.collectionVariables.set('ticket_attempted','1');pm.test('DEV cash outcome accepted',()=>{pm.expect(d.status).to.be.oneOf([200,408]);if(d.status===408)pm.expect(d.name).to.equal('Retry');});",
+              "const p=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segs=p.split('.').reduce((v,k)=>v?.[k],d);pm.test('SS-6390: segment baggage exists',()=>pm.expect(segs).to.be.an('array').and.not.empty);if(Array.isArray(segs))for(const s of segs){for(const type of ['baggage','carryOn'])for(const [ptc,b] of Object.entries(s[type]||{})){pm.test(type+' full texts are null',()=>{pm.expect(b.baggageFullTextA == null).to.equal(true);pm.expect(b.baggageFullTextD == null).to.equal(true);});pm.test(type+' piece formatting',()=>pm.expect(b.numberOfPcs).to.match(type==='baggage'?/^\\d{2}P$/:/^\\d+P$/));}}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "06-book-info",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-atlas-client-id",
+            "value": "{{atlas_client_id}}"
+          },
+          {
+            "key": "x-atlas-client-secret",
+            "value": "{{atlas_client_secret}}"
+          }
+        ],
+        "url": "{{searchhost}}/atlas/v1/book/info",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{booking_username}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{booking_password}}",
+              "type": "string"
+            }
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{{step_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const host=pm.variables.get('searchhost'); if(host!=='https://api.search.dev.travel-dev.com'){pm.execution.skipRequest();throw new Error('DEV only');}",
+              "const key=\"booking_info\"; const saved=pm.collectionVariables.get(key); if(!saved){pm.execution.skipRequest();throw new Error('Run previous steps first');}",
+              "pm.variables.set('step_body',JSON.stringify({additionalInfo:JSON.parse(saved)}));",
+              "if(!pm.collectionVariables.get('ticket_attempted')){pm.execution.skipRequest();throw new Error('Run Ticket/Create first');}"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();",
+              "const cm=pm.iterationData.get('expected_carry_on_length_cm');const inch=pm.iterationData.get('expected_carry_on_length_inch');const path=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segments=path.split('.').reduce((v,k)=>v?.[k],d);if(cm!==undefined && cm!=='')for(const seg of segments||[])pm.test('Source-supplied carry-on dimensions mapped',()=>{pm.expect(seg.carryOn.ADT.lengthCm).to.equal(Number(cm));pm.expect(seg.carryOn.ADT.lengthInch).to.be.oneOf(String(inch).split(';').map(Number));});",
+              "const p=pm.iterationData.get('segments_path')||pm.collectionVariables.get('segments_path');const segs=p.split('.').reduce((v,k)=>v?.[k],d);pm.test('SS-6390: segment baggage exists',()=>pm.expect(segs).to.be.an('array').and.not.empty);if(Array.isArray(segs))for(const s of segs){for(const type of ['baggage','carryOn'])for(const [ptc,b] of Object.entries(s[type]||{})){pm.test(type+' full texts are null',()=>{pm.expect(b.baggageFullTextA == null).to.equal(true);pm.expect(b.baggageFullTextD == null).to.equal(true);});pm.test(type+' piece formatting',()=>pm.expect(b.numberOfPcs).to.match(type==='baggage'?/^\\d{2}P$/:/^\\d+P$/));}}",
+              "pm.test('DEV cash outcome accepted',()=>{pm.expect(d.status).to.be.oneOf([200,408]);if(d.status===408)pm.expect(d.name).to.equal('Retry');});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

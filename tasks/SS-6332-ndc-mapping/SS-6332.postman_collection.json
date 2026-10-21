@@ -1,0 +1,58 @@
+{
+  "info": {
+    "name": "SS-6332 — Search mapping",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Search-only mapping checks. Set local environment authorization to the full Basic header. Run only the expected-outcomes-round-X.csv whose config-round-X.json matches the currently applied configuration. Do not mix configurations in one run. Missing required inventory fails the executable prerequisite and is WARN in QA assessment. CSV baseline rows assert observed final triples; captured evidence comparison additionally matches itineraries across rounds. No credentials included; exact pricing and unexecuted ticket rules are not certified."
+  },
+  "variable": [
+    {
+      "key": "search_url",
+      "value": "https://api.search.dev.travel-dev.com/v1/search?extra=false&cabin=Y&adt=1&debug=true&fare=PUB&cid=TST101&gds=S&pcc=6NVG&fl.0.dt=2026-10-14&fl.0.o=LHR&fl.0.d=LAS&val_cr=UA"
+    }
+  ],
+  "item": [
+    {
+      "name": "{{scenario_id}} — Search mapping",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const url=pm.iterationData.get('search_url')||pm.collectionVariables.get('search_url'); if(!url) throw new Error('search_url is required'); if(new URL(url).origin!=='https://api.search.dev.travel-dev.com') throw new Error('This collection is restricted to the authorized DEV origin'); pm.variables.set('scenario_search_url',url); if(!pm.environment.get('authorization')) throw new Error('Set authorization in the local Postman environment');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const mode = pm.iterationData.get('expected_result') || 'target';",
+              "const carrier = pm.iterationData.get('validating_carrier') || 'UA';",
+              "const target = {gds:pm.iterationData.get('target_gds')||'G',pcc:pm.iterationData.get('target_pcc')||'DEF',cons:pm.iterationData.get('target_cons')||'GTT'};",
+              "const body = pm.response.json();",
+              "pm.test('Search results is an array',()=>pm.expect(body.results).to.be.an('array'));",
+              "if(Array.isArray(body.results)) {",
+              " const candidates = body.results.filter(r=>r.validatingCarrier===carrier);",
+              " const rows = mode==='codeshare_target' ? candidates.filter(r=>r.trips.some(t=>t.segments.some(s=>s.operatingAirline!==carrier))) : candidates;",
+              " if(rows.length===0) { console.warn('WARN: no required inventory; mapping cannot be evaluated'); pm.test('Required inventory is available',()=>pm.expect(rows.length).to.be.above(0)); }",
+              " else { pm.test('All selected results have the expected mapping outcome',()=>rows.forEach(r=>{const actual={gds:r.gds,pcc:r.pcc,cons:r.cons}; if(mode==='not_target') pm.expect(actual).not.to.deep.equal(target); else {pm.expect(actual).to.deep.equal(target);pm.expect(r.trips.flatMap(t=>t.segments).every(s=>s.marketingAirline===carrier)).to.equal(true);}})); }",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{authorization}}"
+          }
+        ],
+        "url": "{{scenario_search_url}}"
+      }
+    }
+  ]
+}

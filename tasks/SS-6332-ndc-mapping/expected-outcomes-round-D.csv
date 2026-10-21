@@ -1,0 +1,2 @@
+scenario_id,expected_result,provider_filter,search_url,validating_carrier,target_gds,target_pcc,target_cons,config_round
+"D01","target","S/6NVG","https://api.search.dev.travel-dev.com/v1/search?extra=false&cabin=Y&adt=1&debug=true&fare=PUB&cid=TST101&gds=S&pcc=6NVG&fl.0.dt=2026-10-14&fl.0.o=LHR&fl.0.d=LAS&val_cr=UA","UA","G","DEF","GTT","D"

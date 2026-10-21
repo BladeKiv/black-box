@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "id": "TC-01",
+      "data": "Ticket itinerary: PR105 / PR2813; PR2818 / PR104. S/8KI0, GTT102, 1 ADT, cabin Y, fare SR.",
+      "expected": "Affected COMFORT CLASS feature breakdowns equal [\"1:2\",\"2:1\"].",
+      "actual": "1 matching itinerary; 7 features. Breakdown values: [[\"1:2\", \"2:1\"], [\"1:2\", \"2:1\"], [\"1:2\", \"2:1\"], [\"1:2\", \"2:1\"], [\"1:2\", \"2:1\"], [\"1:2\", \"2:1\"], [\"1:2\", \"2:1\"]]. Trip IDs: [1,2].",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-02",
+      "data": "All 40 results from the same ticket Search; 280 features, 560 breakdown references.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using confirmed one-based numbering.",
+      "actual": "0 invalid references across 0/40 results.",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-03",
+      "data": "SFO\u2013DVO return; 2026-10-30 / 2026-12-01. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "60 results; 49 with breakdown references; 616 references; 0 invalid. Validating carriers: BR, PR.",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-04",
+      "data": "LAX\u2013DVO return; 2026-10-23 / 2026-11-24. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "84 results; 47 with breakdown references; 691 references; 0 invalid. Validating carriers: BR, CI, CX, PR, SQ.",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-05",
+      "data": "JFK\u2013DVO return; 2026-10-23 / 2026-11-24. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "54 results; 52 with breakdown references; 1355 references; 0 invalid. Validating carriers: BR, CI, CX, EY, JL, PR, QR.",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-06",
+      "data": "SFO\u2013MNL return; 2026-10-23 / 2026-11-24. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "149 results; 57 with breakdown references; 1706 references; 0 invalid. Validating carriers: AA, BR, CI, CX, JL, JX, KE, NH, OZ, PR, SQ, UA.",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-07",
+      "data": "LAX\u2013MNL return; 2026-10-23 / 2026-11-24. S/8KI0, GTT102, 1 ADT, Y, SR; no val_cr.",
+      "expected": "Every returned breakdown reference resolves to an existing trip and segment using one-based numbering; at least one reference is required for a conclusive check.",
+      "actual": "199 results; 125 with breakdown references; 3146 references; 0 invalid. Validating carriers: AA, BR, CA, CI, CX, DL, JL, JX, KE, MU, NH, OZ, PR, SQ, UA.",
+      "status": "PASS"
+    }
+  ],
+  "reference_count": 8074,
+  "invalid_reference_count": 0,
+  "baseline_run_utc": "2026-09-22T12:13:17.6474026Z",
+  "regression_runs": [
+    "2026-09-22T12:18:23.8322198Z",
+    "2026-09-22T12:18:29.4245854Z",
+    "2026-09-22T12:18:35.7604099Z",
+    "2026-09-22T12:18:42.8173737Z",
+    "2026-09-22T12:18:48.4951168Z"
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "key": "51_U0FMS0lWKkMxMDAwL0NQSERFTjIwMjctMDYtMzBfMTAxMypMSH4jTEg4MjcjTEg0NDZ+bGM6ZW5fdXM=",
+  "routingId": 2,
+  "priceElement": {
+    "NotValid": false,
+    "NotValidErr": null,
+    "GdsCurrency": "USD",
+    "TargetCurrency": "USD",
+    "oBaseFare": {
+      "ADT": 4247.13
+    },
+    "oBaseTax": {
+      "ADT": 1030.23
+    },
+    "CpanelMK": {
+      "markupId": 0,
+      "markupUid": ""
+    },
+    "CK": {
+      "IsCK": false,
+      "CkScenario": 0,
+      "PaymentTypeSupported": 0
+    }
+  },
+  "prices": {
+    "lastTicketDate": "",
+    "totalPrice": 5277.36,
+    "totalTax": 1030.23,
+    "comm": 0,
+    "isCk": false,
+    "markupId": 0,
+    "markupUid": "",
+    "markup": 0
+  },
+  "passengers": {
+    "ADT": {
+      "codeAs": "ADT",
+      "cnt": 1,
+      "baseFare": 4247.13,
+      "pubBaseFare": 0,
+      "baseTax": 1030.23,
+      "pubBaseTax": 0,
+      "markup": 0,
+      "comm": 0,
+      "price": 5277.36,
+      "tax": 1030.23,
+      "oBaseFare": {
+        "amount": 4247.13,
+        "currency": "USD"
+      },
+      "oBaseTax": {
+        "amount": 1030.23,
+        "currency": "USD"
+      }
+    }
+  },
+  "penalties": {
+    "exchange": true,
+    "refund": false,
+    "list": [
+      {
+        "type": "ex",
+        "applicability": "before",
+        "permitted": true,
+        "amount": 567.75,
+        "oAmount": {
+          "amount": 500,
+          "currency": "EUR"
+        }
+      },
+      {
+        "type": "re",
+        "applicability": "before",
+        "permitted": false
+      }
+    ]
+  },
+  "trips": [
+    {
+      "tripId": 1,
+      "segments": [
+        {
+          "segmentId": 1,
+          "departureTime": "2027-06-30 10:00",
+          "arrivalTime": "2027-06-30 11:30",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "827",
+          "operatingFlightNumber": "827",
+          "bookingClass": "D",
+          "duration": 90,
+          "departureAirportCode": "CPH",
+          "departureAirportTerminal": "2",
+          "arrivalAirportCode": "FRA",
+          "arrivalAirportTerminal": "1",
+          "operatingAirline": "LH",
+          "airEquipType": "320",
+          "aircraft": "Airbus A320-100",
+          "marketingAirline": "LH",
+          "marriageGroup": "",
+          "cabin": "C",
+          "brandName": "Business Light",
+          "meal": "",
+          "fareCode": "DXOXKDBZ",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "cpanel",
+              "allowPieces": 1,
+              "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+              "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+              "charge": [
+                {
+                  "firstPiece": 1,
+                  "lastPiece": 1,
+                  "price": 114,
+                  "currency": "USD"
+                }
+              ],
+              "kg": 32,
+              "lbs": 70,
+              "cm": 158,
+              "inch": 62
+            }
+          },
+          "recheckBaggage": false
+        },
+        {
+          "segmentId": 2,
+          "departureTime": "2027-06-30 13:30",
+          "arrivalTime": "2027-06-30 15:40",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "446",
+          "operatingFlightNumber": "446",
+          "bookingClass": "D",
+          "duration": 610,
+          "departureAirportCode": "FRA",
+          "departureAirportTerminal": "1",
+          "arrivalAirportCode": "DEN",
+          "arrivalAirportTerminal": "",
+          "operatingAirline": "LH",
+          "airEquipType": "359",
+          "aircraft": "Airbus A350-900",
+          "marketingAirline": "LH",
+          "marriageGroup": "",
+          "cabin": "C",
+          "brandName": "Business Light",
+          "meal": "",
+          "fareCode": "DXOXKDBZ",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "cpanel",
+              "allowPieces": 1,
+              "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+              "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+              "charge": [
+                {
+                  "firstPiece": 1,
+                  "lastPiece": 1,
+                  "price": 114,
+                  "currency": "USD"
+                }
+              ],
+              "kg": 32,
+              "lbs": 70,
+              "cm": 158,
+              "inch": 62
+            }
+          },
+          "recheckBaggage": false
+        }
+      ],
+      "duration": 820,
+      "airlineRating": "4",
+      "baggage": {
+        "carryOn": true,
+        "carryOnSource": "cpanel",
+        "allowPieces": 1,
+        "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+        "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+        "charge": [
+          {
+            "firstPiece": 1,
+            "lastPiece": 1,
+            "price": 114,
+            "currency": "USD"
+          }
+        ],
+        "kg": 32,
+        "lbs": 70,
+        "cm": 158,
+        "inch": 62
+      }
+    }
+  ],
+  "maxSeats": 0,
+  "paxCnt": 1,
+  "validatingCarrier": "LH",
+  "gds": "G",
+  "pcc": "DEF",
+  "cons": "GTT",
+  "fareType": "PUB",
+  "tripType": "OW",
+  "cabin": "C",
+  "currency": "USD",
+  "currencySymbol": "$",
+  "currencies": [
+    "USD",
+    "EUR"
+  ],
+  "currencyRates": {
+    "EURUSD": {
+      "from": "EUR",
+      "to": "USD",
+      "rate": 1.1355
+    },
+    "USDUSD": {
+      "from": "USD",
+      "to": "USD",
+      "rate": 1
+    }
+  },
+  "founded_dt": "2026-09-30 12:54:56.838",
+  "keys": {
+    "services": {
+      "serviceFee": {
+        "amount": 350,
+        "currency": "USD"
+      }
+    },
+    "agent_profit": {
+      "gp": 0,
+      "np": 0,
+      "currency": "USD"
+    },
+    "baggage": {
+      "carryOn": true,
+      "carryOnSource": "cpanel",
+      "allowPieces": 1,
+      "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+      "allowMaxSize": "UP TO 62 LINEAR INCHES/158 LINEAR CENTIMETERS",
+      "charge": [
+        {
+          "firstPiece": 1,
+          "lastPiece": 1,
+          "price": 114,
+          "currency": "USD"
+        }
+      ],
+      "priceWithBag0": {
+        "ADT": 5277.36,
+        "total": 5277.36
+      },
+      "priceWithBag1": {
+        "ADT": 5277.36,
+        "total": 5277.36
+      },
+      "priceWithBag2": {
+        "ADT": 5391.36,
+        "total": 5391.36
+      },
+      "kg": 32,
+      "lbs": 70,
+      "cm": 158,
+      "inch": 62
+    },
+    "ndc_keys": {
+      "ownerCode": "LHG",
+      "pcc": "BEZ1",
+      "fare": "PUB",
+      "currency": "USD",
+      "bags": 1,
+      "offers": [
+        {
+          "offerId": "X9D5B2DC1-2973-41B1-9667-23",
+          "responseId": "X9D5B2DC1-2973-41B1-9667",
+          "offerItems": [
+            {
+              "offerItemId": "X9D5B2DC1-2973-41B1-9667-23-1",
+              "paxRefIds": [
+                "PAX1"
+              ]
+            }
+          ]
+        }
+      ],
+      "passengers": [
+        {
+          "id": "PAX1",
+          "ptc": "ADT"
+        }
+      ]
+    }
+  },
+  "ngsFeatures": {
+    "stars": 1,
+    "name": "Business Light",
+    "list": [
+      {
+        "id": "18",
+        "application": "N",
+        "serviceType": "T",
+        "tag": "REFUND",
+        "commercialName": "REFUND BEFORE DEPARTURE",
+        "atpco": "06K",
+        "breakdown": [
+          "1:1",
+          "1:2"
+        ]
+      },
+      {
+        "id": "20",
+        "application": "C",
+        "serviceType": "T",
+        "tag": "CHANGE",
+        "commercialName": "CHANGE BEFORE DEPARTURE",
+        "atpco": "06I",
+        "breakdown": [
+          "1:1",
+          "1:2"
+        ]
+      },
+      {
+        "id": "27",
+        "application": "F",
+        "serviceType": "C",
+        "tag": "CABIN",
+        "commercialName": "CARRY ON HAND BAGGAGE",
+        "atpco": "0L5",
+        "breakdown": [
+          "1:1",
+          "1:2"
+        ]
+      },
+      {
+        "id": "30",
+        "application": "F",
+        "serviceType": "C",
+        "tag": "CHECKED",
+        "commercialName": "1PC UPTO50LB 23KG AND62LI 158LCM",
+        "atpco": "0GO",
+        "breakdown": [
+          "1:1",
+          "1:2"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "eip": 0,
+    "noavail": false,
+    "searchId": "U0FMS0lWQzEwMDB8Q1BIREVOMjAyNy0wNi0zMA==",
+    "traceId": "0ecfced9-b6aa-408f-a722-e2740bd66a41",
+    "lang": "en",
+    "rank": 5.4588795,
+    "rank_v2": {
+      "points_diff": -81.02123,
+      "money_diff": 0,
+      "scaled_points_diff": 5.4588795,
+      "scaled_money_diff": 0,
+      "rank_v_1": 0
+    },
+    "cheapest": false,
+    "fastest": true,
+    "best": false,
+    "bags": 1,
+    "country": "us",
+    "prod_types": [
+      "PUB"
+    ],
+    "voidWindow": "24H",
+    "voidWindowDeadline": "2026-10-01 12:54Z",
+    "alliance": "Star Alliance",
+    "partner_quote_id": "0ecfced9-b6aa-408f-a722-e2740bd66a41-2",
+    "is_lowcoster": false,
+    "flex": false,
+    "latestSaveDt": "2026-09-30 12:54:56.838"
+  }
+}

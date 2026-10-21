@@ -1,0 +1,12 @@
+{
+  "phase": "Round C; full ticket remains in progress",
+  "cases": [
+    {
+      "id": "C01",
+      "data": "Request cid=TST101; enabled=true; configured cid=[TST102]; projects=[]",
+      "expected": "CID rejection prevents UA NDC mapping",
+      "actual": "200/200 UA options retain E / 8C4T / VZU and match the disabled baseline; NDC marker/asset absent",
+      "status": "PASS"
+    }
+  ]
+}

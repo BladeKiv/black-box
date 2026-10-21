@@ -1,0 +1,12 @@
+{
+  "phase": "Round K; full ticket remains in progress",
+  "cases": [
+    {
+      "id": "K01",
+      "data": "UA; Search fare=PUB; configured source_fare=[SR]; source S/6NVG eligible",
+      "expected": "Source fare-type mismatch skips NDC mapping",
+      "actual": "200/200 UA options have fareType=PUB and return E / 8C4T / VZU; NDC marker/asset absent",
+      "status": "PASS"
+    }
+  ]
+}

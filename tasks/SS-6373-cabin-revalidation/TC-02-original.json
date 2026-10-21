@@ -1,0 +1,385 @@
+{
+  "key": "51_U0FMS0lWKkMxMDAwL0NQSERFTjIwMjctMDYtMzBfMDYxNDIxKlRLfiNUSzE3ODgjVEs1I1VBNTkwfmxjOmVuX3Vz",
+  "routingId": 1,
+  "priceElement": {
+    "NotValid": false,
+    "NotValidErr": null,
+    "GdsCurrency": "USD",
+    "TargetCurrency": "USD",
+    "oBaseFare": {
+      "ADT": 1674
+    },
+    "oBaseTax": {
+      "ADT": 687.93
+    },
+    "CpanelMK": {
+      "markupId": 0,
+      "markupUid": ""
+    },
+    "CK": {
+      "IsCK": false,
+      "CkScenario": 0,
+      "PaymentTypeSupported": 0
+    }
+  },
+  "prices": {
+    "lastTicketDate": "",
+    "totalPrice": 2361.93,
+    "totalTax": 687.93,
+    "comm": 0,
+    "isCk": false,
+    "markupId": 0,
+    "markupUid": "",
+    "markup": 0
+  },
+  "passengers": {
+    "ADT": {
+      "codeAs": "ADT",
+      "cnt": 1,
+      "baseFare": 1674,
+      "pubBaseFare": 0,
+      "baseTax": 687.93,
+      "pubBaseTax": 0,
+      "markup": 0,
+      "comm": 0,
+      "price": 2361.93,
+      "tax": 687.93,
+      "oBaseFare": {
+        "amount": 1674,
+        "currency": "USD"
+      },
+      "oBaseTax": {
+        "amount": 687.93,
+        "currency": "USD"
+      }
+    }
+  },
+  "penalties": {
+    "exchange": true,
+    "refund": true,
+    "list": [
+      {
+        "type": "ex",
+        "applicability": "before",
+        "permitted": true,
+        "amount": 284,
+        "oAmount": {
+          "amount": 284,
+          "currency": "USD"
+        }
+      },
+      {
+        "type": "re",
+        "applicability": "before",
+        "permitted": true,
+        "amount": 455,
+        "oAmount": {
+          "amount": 455,
+          "currency": "USD"
+        }
+      }
+    ]
+  },
+  "trips": [
+    {
+      "tripId": 1,
+      "segments": [
+        {
+          "segmentId": 1,
+          "departureTime": "2027-06-30 06:30",
+          "arrivalTime": "2027-06-30 10:50",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "1788",
+          "operatingFlightNumber": "1788",
+          "bookingClass": "Z",
+          "duration": 200,
+          "departureAirportCode": "CPH",
+          "departureAirportTerminal": "2",
+          "arrivalAirportCode": "IST",
+          "arrivalAirportTerminal": "",
+          "operatingAirline": "TK",
+          "airEquipType": "73H",
+          "aircraft": "Boeing 737-800",
+          "marketingAirline": "TK",
+          "marriageGroup": "",
+          "cabin": "",
+          "brandName": "Business Fly",
+          "meal": "",
+          "fareCode": "ZNBFO",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "allowPieces": 2,
+              "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+              "kg": 32,
+              "lbs": 70
+            }
+          },
+          "recheckBaggage": false,
+          "earlyMorning": true
+        },
+        {
+          "segmentId": 2,
+          "departureTime": "2027-06-30 14:45",
+          "arrivalTime": "2027-06-30 18:15",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "5",
+          "operatingFlightNumber": "5",
+          "bookingClass": "Z",
+          "duration": 690,
+          "departureAirportCode": "IST",
+          "departureAirportTerminal": "",
+          "arrivalAirportCode": "ORD",
+          "arrivalAirportTerminal": "5",
+          "operatingAirline": "TK",
+          "airEquipType": "77W",
+          "aircraft": "Boeing 777-300ER",
+          "marketingAirline": "TK",
+          "marriageGroup": "",
+          "cabin": "",
+          "brandName": "Business Fly",
+          "meal": "",
+          "fareCode": "ZNBFO",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "allowPieces": 2,
+              "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+              "kg": 32,
+              "lbs": 70
+            }
+          },
+          "recheckBaggage": false
+        },
+        {
+          "segmentId": 3,
+          "departureTime": "2027-06-30 21:30",
+          "arrivalTime": "2027-06-30 23:03",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "590",
+          "operatingFlightNumber": "590",
+          "bookingClass": "Z",
+          "duration": 153,
+          "departureAirportCode": "ORD",
+          "departureAirportTerminal": "1",
+          "arrivalAirportCode": "DEN",
+          "arrivalAirportTerminal": "",
+          "operatingAirline": "UA",
+          "airEquipType": "739",
+          "aircraft": "Boeing 737-900",
+          "marketingAirline": "UA",
+          "marriageGroup": "",
+          "cabin": "",
+          "brandName": "Business Fly",
+          "meal": "",
+          "fareCode": "ZNBFO",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "allowPieces": 2,
+              "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+              "kg": 32,
+              "lbs": 70
+            }
+          },
+          "recheckBaggage": false
+        }
+      ],
+      "duration": 1473,
+      "airlineRating": "4",
+      "baggage": {
+        "carryOn": true,
+        "carryOnSource": "provider",
+        "allowPieces": 2,
+        "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+        "kg": 32,
+        "lbs": 70
+      }
+    }
+  ],
+  "maxSeats": 0,
+  "paxCnt": 1,
+  "validatingCarrier": "TK",
+  "gds": "G",
+  "pcc": "DEF",
+  "cons": "GTT",
+  "fareType": "PUB",
+  "tripType": "OW",
+  "cabin": "C",
+  "currency": "USD",
+  "currencySymbol": "$",
+  "currencies": [
+    "USD"
+  ],
+  "currencyRates": {
+    "USDUSD": {
+      "from": "USD",
+      "to": "USD",
+      "rate": 1
+    }
+  },
+  "founded_dt": "2026-09-30 12:54:56.838",
+  "keys": {
+    "services": {
+      "serviceFee": {
+        "amount": 350,
+        "currency": "USD"
+      }
+    },
+    "agent_profit": {
+      "gp": 0,
+      "np": 0,
+      "currency": "USD"
+    },
+    "baggage": {
+      "carryOn": true,
+      "carryOnSource": "provider",
+      "allowPieces": 2,
+      "allowMaxWeight": "UP TO 70 POUNDS/32 KILOGRAMS",
+      "priceWithBag0": {
+        "ADT": 2361.93,
+        "total": 2361.93
+      },
+      "priceWithBag1": {
+        "ADT": 2361.93,
+        "total": 2361.93
+      },
+      "priceWithBag2": {
+        "ADT": 2361.93,
+        "total": 2361.93
+      },
+      "kg": 32,
+      "lbs": 70
+    },
+    "ndc_keys": {
+      "ownerCode": "TK",
+      "pcc": "6ME",
+      "fare": "PUB",
+      "currency": "USD",
+      "bags": 2,
+      "offers": [
+        {
+          "offerId": "F2C6606266C6A45BC89F4ABA9DC097B28-7",
+          "responseId": "F2C6606266C6A45BC89F4ABA9DC097B28-7",
+          "offerItems": [
+            {
+              "offerItemId": "F2C6606266C6A45BC89F4ABA9DC097B28-7-1",
+              "paxRefIds": [
+                "PAX_1"
+              ],
+              "segmentRefs": [
+                "SEG_16",
+                "SEG_13",
+                "SEG_1"
+              ]
+            }
+          ]
+        }
+      ],
+      "passengers": [
+        {
+          "id": "PAX_1",
+          "ptc": "ADT"
+        }
+      ]
+    }
+  },
+  "ngsFeatures": {
+    "stars": 1,
+    "name": "Business Fly",
+    "list": [
+      {
+        "id": "4",
+        "application": "C",
+        "serviceType": "T",
+        "tag": "CHANGE",
+        "commercialName": "CHANGE BEFORE DEPARTURE",
+        "atpco": "06I",
+        "breakdown": [
+          "1:1",
+          "1:2",
+          "1:3"
+        ]
+      },
+      {
+        "id": "8",
+        "application": "C",
+        "serviceType": "T",
+        "tag": "REFUND",
+        "commercialName": "REFUND BEFORE DEPARTURE",
+        "atpco": "06K",
+        "breakdown": [
+          "1:1",
+          "1:2",
+          "1:3"
+        ]
+      },
+      {
+        "id": "11",
+        "application": "F",
+        "serviceType": "C",
+        "tag": "CABIN",
+        "commercialName": "CARRY ON HAND BAGGAGE",
+        "atpco": "0L5",
+        "breakdown": [
+          "1:1",
+          "1:2",
+          "1:3"
+        ]
+      },
+      {
+        "id": "15",
+        "application": "F",
+        "serviceType": "C",
+        "tag": "CHECKED",
+        "commercialName": "2PC UPTO50LB 23KG AND62LI 158LCM",
+        "atpco": "0GO",
+        "breakdown": [
+          "1:1",
+          "1:2",
+          "1:3"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "eip": 0,
+    "noavail": false,
+    "searchId": "U0FMS0lWQzEwMDB8Q1BIREVOMjAyNy0wNi0zMA==",
+    "traceId": "0ecfced9-b6aa-408f-a722-e2740bd66a41",
+    "lang": "en",
+    "rank": 10,
+    "rank_v2": {
+      "points_diff": 0,
+      "money_diff": 0,
+      "scaled_points_diff": 10,
+      "scaled_money_diff": 0,
+      "rank_v_1": 0
+    },
+    "cheapest": true,
+    "fastest": false,
+    "best": true,
+    "auto": 1,
+    "bags": 2,
+    "country": "us",
+    "prod_types": [
+      "PUB"
+    ],
+    "voidWindow": "24H",
+    "voidWindowDeadline": "2026-10-01 12:54Z",
+    "alliance": "Star Alliance",
+    "partner_quote_id": "0ecfced9-b6aa-408f-a722-e2740bd66a41-1",
+    "is_lowcoster": false,
+    "flex": false,
+    "latestSaveDt": "2026-09-30 12:54:56.838"
+  }
+}
