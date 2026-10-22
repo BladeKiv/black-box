@@ -1,0 +1,268 @@
+{
+  "info": {
+    "name": "SS-6400 Preprod GTT cabin cache",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Run once in displayed order: Y,Q,C,J,P,F,omitted. TC-05/06 use SFO-LHR and deliberately seed P before F. Cache criteria require correlated GTT logs; response-only tests cannot establish cache behavior."
+  },
+  "variable": [
+    {
+      "key": "search_authorization",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "TC-01 cabin Y",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "http://airapi51.kivops.info/v1/search?cid=GTT101&agency=SBCSFO&adt=1&fl.0.o=JFK&fl.0.d=LHR&fl.0.dt=2026-11-20&debug=true&rules=true&files=true&cabin=Y",
+        "description": "GTT CabinType=Economy; uses its own converted-cabin cache entry and rules. Cache acceptance requires separately correlated Preprod logs; HTTP success is not cache proof."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set(\"scenario_id\", \"TC-01\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Search returns JSON results array\", function () { pm.expect(pm.response.json().results).to.be.an(\"array\"); });",
+              "pm.test.skip(\"Cache acceptance requires correlated GTT GetMarkups/cache logs\", function () {});",
+              "if (pm.response.json().results.length === 0) console.warn(\"WARN/NO_DATA: empty inventory\");"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-02 cabin Q",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "http://airapi51.kivops.info/v1/search?cid=GTT101&agency=SBCSFO&adt=1&fl.0.o=JFK&fl.0.d=LHR&fl.0.dt=2026-11-20&debug=true&rules=true&files=true&cabin=Q",
+        "description": "GTT CabinType=Economy; shares the converted-cabin cache entry with Y. Cache acceptance requires separately correlated Preprod logs; HTTP success is not cache proof."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set(\"scenario_id\", \"TC-02\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Search returns JSON results array\", function () { pm.expect(pm.response.json().results).to.be.an(\"array\"); });",
+              "pm.test.skip(\"Cache acceptance requires correlated GTT GetMarkups/cache logs\", function () {});",
+              "if (pm.response.json().results.length === 0) console.warn(\"WARN/NO_DATA: empty inventory\");"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-03 cabin C",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "http://airapi51.kivops.info/v1/search?cid=GTT101&agency=SBCSFO&adt=1&fl.0.o=JFK&fl.0.d=LHR&fl.0.dt=2026-11-20&debug=true&rules=true&files=true&cabin=C",
+        "description": "GTT CabinType=Business; uses its own converted-cabin cache entry and rules. Cache acceptance requires separately correlated Preprod logs; HTTP success is not cache proof."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set(\"scenario_id\", \"TC-03\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Search returns JSON results array\", function () { pm.expect(pm.response.json().results).to.be.an(\"array\"); });",
+              "pm.test.skip(\"Cache acceptance requires correlated GTT GetMarkups/cache logs\", function () {});",
+              "if (pm.response.json().results.length === 0) console.warn(\"WARN/NO_DATA: empty inventory\");"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-04 cabin J",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "http://airapi51.kivops.info/v1/search?cid=GTT101&agency=SBCSFO&adt=1&fl.0.o=JFK&fl.0.d=LHR&fl.0.dt=2026-11-20&debug=true&rules=true&files=true&cabin=J",
+        "description": "GTT CabinType=Business; shares the converted-cabin cache entry with C. Cache acceptance requires separately correlated Preprod logs; HTTP success is not cache proof."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set(\"scenario_id\", \"TC-04\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Search returns JSON results array\", function () { pm.expect(pm.response.json().results).to.be.an(\"array\"); });",
+              "pm.test.skip(\"Cache acceptance requires correlated GTT GetMarkups/cache logs\", function () {});",
+              "if (pm.response.json().results.length === 0) console.warn(\"WARN/NO_DATA: empty inventory\");"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-06 cabin P",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "http://airapi51.kivops.info/v1/search?cid=GTT101&agency=SBCSFO&adt=1&fl.0.o=SFO&fl.0.d=LHR&fl.0.dt=2026-12-10&debug=true&rules=true&files=true&cabin=P",
+        "description": "GTT CabinType=First; shares the converted-cabin cache entry with F. Cache acceptance requires separately correlated Preprod logs; HTTP success is not cache proof."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set(\"scenario_id\", \"TC-06\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Search returns JSON results array\", function () { pm.expect(pm.response.json().results).to.be.an(\"array\"); });",
+              "pm.test.skip(\"Cache acceptance requires correlated GTT GetMarkups/cache logs\", function () {});",
+              "if (pm.response.json().results.length === 0) console.warn(\"WARN/NO_DATA: empty inventory\");"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-05 cabin F",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "http://airapi51.kivops.info/v1/search?cid=GTT101&agency=SBCSFO&adt=1&fl.0.o=SFO&fl.0.d=LHR&fl.0.dt=2026-12-10&debug=true&rules=true&files=true&cabin=F",
+        "description": "GTT CabinType=First; uses its own converted-cabin cache entry and rules. Cache acceptance requires separately correlated Preprod logs; HTTP success is not cache proof."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set(\"scenario_id\", \"TC-05\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Search returns JSON results array\", function () { pm.expect(pm.response.json().results).to.be.an(\"array\"); });",
+              "pm.test.skip(\"Cache acceptance requires correlated GTT GetMarkups/cache logs\", function () {});",
+              "if (pm.response.json().results.length === 0) console.warn(\"WARN/NO_DATA: empty inventory\");"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-07 cabin omitted",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "http://airapi51.kivops.info/v1/search?cid=GTT101&agency=SBCSFO&adt=1&fl.0.o=JFK&fl.0.d=LHR&fl.0.dt=2026-11-20&debug=true&rules=true&files=true",
+        "description": "Uses a separate empty-cabin cache entry from all specific cabins. Cache acceptance requires separately correlated Preprod logs; HTTP success is not cache proof."
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.set(\"scenario_id\", \"TC-07\");"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Search returns JSON results array\", function () { pm.expect(pm.response.json().results).to.be.an(\"array\"); });",
+              "pm.test.skip(\"Cache acceptance requires correlated GTT GetMarkups/cache logs\", function () {});",
+              "if (pm.response.json().results.length === 0) console.warn(\"WARN/NO_DATA: empty inventory\");"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -30,6 +30,7 @@ tasks/**/flow-state.json
 tasks/**/execution-state.json
 tasks/**/latest-run.txt
 tasks/**/latest-matrix.txt
+tasks/**/latest-retest-path.txt
 
 # Local audit output inventories private filenames and paths
 /docs/security-audit.json

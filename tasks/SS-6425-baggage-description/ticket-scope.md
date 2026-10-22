@@ -2,6 +2,8 @@
 
 ## Approved checked-baggage extension - 2026-10-21
 
+Current-run supersession: user explicitly requested another Book/Info rerun, then HTTPS and TLS bypass. Calls were already HTTPS with verification disabled. Restricted-network attempts on 8089 and one 443 diagnostic produced connection refused; these were transport-only and did not establish a service outage. Authorized execution outside the restricted network succeeded on 8089. Final fresh run: runs/2026-10-21-preprod-live, trace 1bcda170-cd44-11f1-a61b-960002c633fe, 2 PASS. Six segments return checked 2 pieces / 23 kg and the FBD template; carry-on 1 piece / 7 kg / 115 cm remains correct. Earlier requests retain independent outcomes. No additional retries, polling, input variation or state-changing calls are authorized by this result.
+
 Current user request and live Chris P comment: for FBA, if allowPieces >= 1, detect the trigger "up to #kg" in checked-baggage DescText and create the template. Supplied example: "Check-in baggage - 25kg (or 2 pieces up to 23kg each for flights to/from the USA or Canada only)". Test the same existing SQ booking on PREPROD and retain carry-on regression evidence. Source evidence must be fresh and trace-correlated.
 
 Execution permissions for this extension: allow_retry=false, allow_poll=false, allow_retest=true, approved_inputs=[SQ CPS9CG]. One read-only Book/Info request; no input variation. Direct standing user TLS bypass applies. Lesson 609bbba636414a1c879738a99b5b2dc0 is candidate-only, not auto-applied. New evidence goes in a separate run; earlier failures/passes remain historical.

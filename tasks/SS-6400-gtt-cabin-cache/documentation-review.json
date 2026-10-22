@@ -1,0 +1,162 @@
+{
+  "documentation": [
+    {
+      "url": "https://markupws.gttglobal.com/MarkupWS/MarkupWebService.asmx?op=GetMarkupRules",
+      "observed": "SOAP GetMarkupRules request has accountCode only."
+    },
+    {
+      "url": "https://markupws.gttglobal.com/MarkupWS/MarkupWebService.asmx?op=GetFareSearchMarkups",
+      "observed": "SOAP GetFareSearchMarkups request has req.CabinType enum Economy/Business/First/PremiumEco/ALL."
+    }
+  ],
+  "capture_review": [
+    {
+      "cabin": "Y",
+      "files_parameter": "true",
+      "capture_names": [
+        "Sabre_S_0RY9_TOUR_2026-11-20_0",
+        "Sabre_S_8KI0_PUB_2026-11-20_0",
+        "Amadeus_I_DFWG32100_SR_2026-11-20_0",
+        "Travelport_E_1ED5_PUB_2026-11-20_0",
+        "Amadeus_A_DFWG32100_PUB_2026-11-20_0",
+        "Amadeus_I_DFWG32100_COMM_2026-11-20_0",
+        "Sabre_S_M27K_SR_2026-11-20_0",
+        "Sabre_S_1A1J_SR_2026-11-20_0",
+        "Amadeus_A_LAXG3210X_TOUR_2026-11-20_0",
+        "Travelport_E_1ED5_SR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_PUB_2026-11-20_0",
+        "Amadeus_A_DFWG32100_SR_2026-11-20_0",
+        "Travelport_T_EKG_COMM_2026-11-20_0",
+        "Sabre_S_8KI0_SR_2026-11-20_0",
+        "H_GTTNDC_PUB_2026-11-20"
+      ]
+    },
+    {
+      "cabin": "Q",
+      "files_parameter": "true",
+      "capture_names": [
+        "Amadeus_I_DFWG32100_SR_2026-11-20_0",
+        "Travelport_T_EKG_COMM_2026-11-20_0",
+        "Amadeus_I_DFWG32100_PUB_2026-11-20_0",
+        "Sabre_S_8KI0_PUB_2026-11-20_0",
+        "Sabre_S_0RY9_TOUR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_COMM_2026-11-20_0",
+        "Travelport_E_1ED5_PUB_2026-11-20_0",
+        "Amadeus_A_DFWG32100_PUB_2026-11-20_0",
+        "Sabre_S_M27K_SR_2026-11-20_0",
+        "Amadeus_A_LAXG3210X_TOUR_2026-11-20_0",
+        "Travelport_E_1ED5_SR_2026-11-20_0",
+        "Sabre_S_1A1J_SR_2026-11-20_0",
+        "Sabre_S_8KI0_SR_2026-11-20_0",
+        "Amadeus_A_DFWG32100_SR_2026-11-20_0",
+        "H_GTTNDC_PUB_2026-11-20"
+      ]
+    },
+    {
+      "cabin": "C",
+      "files_parameter": "true",
+      "capture_names": [
+        "Sabre_S_8KI0_PUB_2026-11-20_0",
+        "Amadeus_I_DFWG32100_PUB_2026-11-20_0",
+        "Sabre_S_0RY9_TOUR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_SR_2026-11-20_0",
+        "H_GTTNDC_PUB_2026-11-20",
+        "Amadeus_I_DFWG32100_COMM_2026-11-20_0",
+        "Travelport_E_1ED5_SR_2026-11-20_0",
+        "Amadeus_A_DFWG32100_PUB_2026-11-20_0",
+        "Travelport_E_1ED5_PUB_2026-11-20_0",
+        "Amadeus_A_LAXG3210X_TOUR_2026-11-20_0",
+        "Sabre_S_M27K_SR_2026-11-20_0",
+        "Amadeus_A_DFWG32100_SR_2026-11-20_0",
+        "Sabre_S_8KI0_SR_2026-11-20_0",
+        "Sabre_S_1A1J_SR_2026-11-20_0",
+        "Travelport_T_EKG_COMM_2026-11-20_0"
+      ]
+    },
+    {
+      "cabin": "J",
+      "files_parameter": "true",
+      "capture_names": [
+        "Sabre_S_1A1J_SR_2026-11-20_0",
+        "Sabre_S_0RY9_TOUR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_SR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_PUB_2026-11-20_0",
+        "Travelport_E_1ED5_SR_2026-11-20_0",
+        "Sabre_S_8KI0_PUB_2026-11-20_0",
+        "Amadeus_I_DFWG32100_COMM_2026-11-20_0",
+        "Travelport_T_EKG_COMM_2026-11-20_0",
+        "Sabre_S_M27K_SR_2026-11-20_0",
+        "Amadeus_A_DFWG32100_PUB_2026-11-20_0",
+        "Travelport_E_1ED5_PUB_2026-11-20_0",
+        "Sabre_S_8KI0_SR_2026-11-20_0",
+        "Amadeus_A_DFWG32100_SR_2026-11-20_0",
+        "Amadeus_A_LAXG3210X_TOUR_2026-11-20_0",
+        "H_GTTNDC_PUB_2026-11-20"
+      ]
+    },
+    {
+      "cabin": "F",
+      "files_parameter": "true",
+      "capture_names": [
+        "Sabre_S_8KI0_PUB_2026-11-20_0",
+        "Amadeus_I_DFWG32100_COMM_2026-11-20_0",
+        "Sabre_S_0RY9_TOUR_2026-11-20_0",
+        "Sabre_S_8KI0_SR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_PUB_2026-11-20_0",
+        "Amadeus_A_DFWG32100_PUB_2026-11-20_0",
+        "Amadeus_A_LAXG3210X_TOUR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_SR_2026-11-20_0",
+        "H_GTTNDC_PUB_2026-11-20",
+        "Amadeus_A_DFWG32100_SR_2026-11-20_0",
+        "Sabre_S_M27K_SR_2026-11-20_0",
+        "Travelport_E_1ED5_SR_2026-11-20_0",
+        "Travelport_E_1ED5_PUB_2026-11-20_0",
+        "Sabre_S_1A1J_SR_2026-11-20_0",
+        "Travelport_T_EKG_COMM_2026-11-20_0"
+      ]
+    },
+    {
+      "cabin": "P",
+      "files_parameter": "true",
+      "capture_names": [
+        "Travelport_T_EKG_COMM_2026-11-20_0",
+        "Amadeus_I_DFWG32100_SR_2026-11-20_0",
+        "Sabre_S_M27K_SR_2026-11-20_0",
+        "Sabre_S_8KI0_PUB_2026-11-20_0",
+        "Sabre_S_0RY9_TOUR_2026-11-20_0",
+        "Sabre_S_1A1J_SR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_COMM_2026-11-20_0",
+        "Amadeus_A_LAXG3210X_TOUR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_PUB_2026-11-20_0",
+        "Travelport_E_1ED5_PUB_2026-11-20_0",
+        "Sabre_S_8KI0_SR_2026-11-20_0",
+        "Amadeus_A_DFWG32100_PUB_2026-11-20_0",
+        "Amadeus_A_DFWG32100_SR_2026-11-20_0",
+        "Travelport_E_1ED5_SR_2026-11-20_0",
+        "H_GTTNDC_PUB_2026-11-20"
+      ]
+    },
+    {
+      "cabin": "omitted",
+      "files_parameter": "true",
+      "capture_names": [
+        "Travelport_E_1ED5_SR_2026-11-20_0",
+        "Travelport_T_EKG_COMM_2026-11-20_0",
+        "Travelport_E_1ED5_PUB_2026-11-20_0",
+        "Amadeus_I_DFWG32100_COMM_2026-11-20_0",
+        "Sabre_S_8KI0_PUB_2026-11-20_0",
+        "Amadeus_I_DFWG32100_PUB_2026-11-20_0",
+        "Sabre_S_0RY9_TOUR_2026-11-20_0",
+        "Amadeus_A_DFWG32100_PUB_2026-11-20_0",
+        "H_GTTNDC_PUB_2026-11-20",
+        "Sabre_S_8KI0_SR_2026-11-20_0",
+        "Sabre_S_1A1J_SR_2026-11-20_0",
+        "Amadeus_A_DFWG32100_SR_2026-11-20_0",
+        "Sabre_S_M27K_SR_2026-11-20_0",
+        "Amadeus_I_DFWG32100_SR_2026-11-20_0",
+        "Amadeus_A_LAXG3210X_TOUR_2026-11-20_0"
+      ]
+    }
+  ],
+  "conclusion": "Documentation defines provider request fields but does not prove calls made or cache entries used by the seven AirAPI requests. No additional endpoint executions in this follow-up."
+}
