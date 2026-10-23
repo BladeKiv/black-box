@@ -3,6 +3,7 @@ import subprocess
 import json
 import base64
 import tempfile
+import shutil
 from pathlib import Path
 
 
@@ -42,6 +43,59 @@ def test_scanner():
         assert scan_history(Path(tmp)), 'must scan old blobs too'
 
 
+def test_assignment_formats():
+    from scripts.check_secrets import scan_bytes
+    value = 'dummy' + '-sensitive-value'
+    encoded = base64.b64encode(('example:' + value).encode()).decode()
+    field = 'to' + 'ken'
+    positives = [
+        field + ' = "' + value + '"', field + ': ' + value, field.upper() + '=' + value,
+        "apiKey: '" + value + "'", '$token = "' + value + '"',
+        'Authorization: Bearer ' + value, 'Basic ' + encoded,
+        '"token": "' + value + '"', 'token\t=\t"' + value + '"',
+    ]
+    negatives = [
+        'token = {{token}}', 'token: "{{token}}"', 'TOKEN=process.env.X',
+        "apiKey: 'INVALID_TEST_TOKEN'", 'token = os.environ["TOKEN"]',
+        'Authorization: Bearer {{token}}', 'Authorization: Bearer INVALID_TEST_TOKEN',
+        'Authorization: Basic {{token}}', 'Bearer process.env.X',
+        'Fare label: Basic Economy', 'token == other',
+    ]
+    with tempfile.TemporaryDirectory() as tmp:
+        for suffix in ('.py', '.cjs', '.mjs', '.json', '.md', '.csv', '.ps1'):
+            path = Path(tmp) / ('fixture' + suffix)
+            for i, text in enumerate(positives):
+                path.write_text(text, encoding='utf-8')
+                assert scan_bytes(path.read_bytes()), f'missed positive {suffix} #{i}'
+            for i, text in enumerate(negatives):
+                path.write_text(text, encoding='utf-8')
+                assert not scan_bytes(path.read_bytes()), f'flagged placeholder {suffix} #{i}'
+
+
+def test_precommit_hook():
+    root = Path(__file__).resolve().parents[1]
+    with tempfile.TemporaryDirectory() as tmp:
+        folder = Path(tmp)
+        for name in ('bb/__init__.py', 'bb/security.py', 'scripts/check_secrets.py', '.githooks/pre-commit'):
+            target = folder / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(root / name, target)
+        def git(*args):
+            return subprocess.run(['git', '-C', tmp, *args], capture_output=True)
+        assert git('init').returncode == 0
+        assert git('config', 'core.hooksPath', '.githooks').returncode == 0
+        (folder / 'dummy.py').write_text('to' + 'ken = "dummy-sensitive-value"\n')
+        assert git('add', 'dummy.py').returncode == 0
+        result = git('-c', 'user.name=Scanner Test', '-c', 'user.email=scanner@example.invalid',
+                     'commit', '-m', 'must be blocked')
+        assert result.returncode == 1 and b'credential' in result.stderr, 'hook did not reject assignment'
+        assert git('rev-parse', '--verify', 'HEAD').returncode != 0
+
+
 if __name__ == '__main__':
     test_scanner()
     print('test_scanner: PASS')
+    test_assignment_formats()
+    print('test_assignment_formats: PASS')
+    test_precommit_hook()
+    print('test_precommit_hook: PASS')

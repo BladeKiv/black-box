@@ -21,7 +21,7 @@ PATTERNS = {
 # Literal prefilters avoid expensive regex passes over gigabytes of unrelated QA data.
 HINTS = {
     'credential': ('password', 'passwd', 'bookpass', 'booklogin', 'booking_username',
-                   '"token"', "'token'", 'access_token', 'refresh_token', 'api_key',
+                   'token', 'access_token', 'refresh_token', 'api_key',
                    'api-key', 'apikey', 'secret', 'session_cookie'),
     'author' + 'ization': ('basic', 'bearer'),
     'session_cookie': ('cookie',),
@@ -49,9 +49,13 @@ def credential_match(kind, match):
         return False
     if kind == 'auth_value':
         value = match.group(1)
+        if value.lower() in ('basic', 'bearer'):
+            suffix = re.match(r'''[ \t]+([^\s"',]+)''', match.string[match.end():])
+            if suffix and placeholder(suffix.group(1)):
+                return False
         if re.match(r'^[A-Za-z_]\w*(?:\.\w+)*[\[(]', value):
             return False  # Computed source expression, not a header value.
-        if value in ('Basic', 'Bearer') and re.match(r'''\s*['"]\s*\+\s*[A-Za-z_$]''', match.string[match.end():]):
+        if value.lower() in ('basic', 'bearer') and re.match(r'''\s*['"]\s*\+\s*[A-Za-z_$]''', match.string[match.end():]):
             return False
     if kind == 'authorization' and match.group().lower().startswith('basic'):
         # A fare named Basic Economy is not an HTTP Basic credential.
