@@ -8,6 +8,7 @@ ticket work. Existing ticket scripts and dispatch rendering are unchanged.
 Python 3, standard library only. Run from the repo root:
 
 ```powershell
+python -m bb.selftest
 python -B -m tests.test_learning
 python -B -m bb.lessons search --tags SS-6425 retest --text "human reported fix"
 python -B -m bb.lessons list
@@ -16,6 +17,14 @@ python -B -m bb.lessons record-use --id <lesson-id> --run <unique-reuse-id> --su
 python -B -m bb.lessons deprecate --id <lesson-id>
 python -B -m bb.report
 ```
+
+`bb.selftest` runs every `tests/test_*.py` module and the five ticket-local
+offline checks, using Python 3 and Node.js. It prints a PASS/SKIP/FAIL table
+and exits non-zero on failure. It copies tracked working files into a temporary
+directory, so report generators cannot modify the checkout and ignored evidence
+is never loaded. The two checks requiring ignored captures report
+`SKIP: evidence not in repo` (exit 77). Missing runtimes and malformed evidence
+are failures. Stage new test files before running so they enter this snapshot.
 
 `lesson.json` fields: tags (list), trigger_pattern, situation, action, outcome,
 created_run, scope_conditions (object). Source defaults to agent. Actions are

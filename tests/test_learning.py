@@ -134,29 +134,50 @@ def test_lessons_and_loop():
                 pass
             else:
                 assert False, 'forbidden learning accepted'
-        # A separate route starts without a trusted match. No network requests.
+
+def test_escalation_learning_end_to_end():
+    from bb.lessons import Store
+    from bb.escalations import Escalations, handle_outcome
+    from bb.report import summarize
+    from bb.classify import classify_outcome
+    import subprocess
+    import sys
+    with tempfile.TemporaryDirectory() as tmp:
+        store = Store(Path(tmp) / 'lessons.jsonl')
+        escalations = Escalations(Path(tmp) / 'escalations.jsonl', store)
         scope = {'environment': 'dev', 'route': 'CCC-DDD'}
-        outcome = {'reason_code': 'NO_DATA', 'status': 'WARN', 'retryable': False}
+        outcome = classify_outcome(200, '{"results":[]}', None, {'inventory_field': 'results'})
         with patch('bb.transport.request', return_value=outcome) as mocked:
             from bb.transport import request
             result = request('https://example.invalid')
             first = handle_outcome(store, escalations, result, 'run1', ['search'], 'empty inventory', scope)
             again = handle_outcome(store, escalations, result, 'run1', ['search'], 'empty inventory', scope)
             assert first['escalation_id'] == again['escalation_id']
+            before = summarize(store, escalations)
+            assert before['human_questions'] == 1
+            assert list(before['weekly'].values())[0]['escalation_rate'] == 1
             escalations.answer(first['escalation_id'], 'Preserve evidence and report unavailable inventory',
                                action='report_warn', scope_conditions=scope)
             second = handle_outcome(store, escalations, request('https://example.invalid'), 'run2', ['search'], 'empty inventory', scope)
             assert mocked.call_count == 2
         assert second['lesson_id'] and second['status'] == 'WARN' and not second.get('escalation_id')
+        assert Store(store.path).latest()[second['lesson_id']]['status'] == 'trusted'
         store.record_use(second['lesson_id'], True, 'run2')
         summary = summarize(store, escalations)
         assert summary['runs']['run1']['escalated'] and not summary['runs']['run2']['escalated']
         assert summary['tasks_by_status']['WARN'] == 2
         assert list(summary['weekly'].values())[0]['escalation_rate'] == 0.5
         assert len([e for e in escalations.events() if e['event'] == 'question']) == 1
+        reported = subprocess.run([sys.executable, '-B', '-m', 'bb.report', '--lessons', str(store.path),
+                                   '--escalations', str(escalations.path)],
+                                  cwd=Path(__file__).resolve().parents[1], check=True, capture_output=True)
+        report = json.loads(reported.stdout)
+        assert report['human_questions'] == 1
+        assert report['runs']['run1']['escalated'] and not report['runs']['run2']['escalated']
 
 
 if __name__ == '__main__':
-    for test in (test_classification, test_security_transport, test_lessons_and_loop):
+    for test in (test_classification, test_security_transport, test_lessons_and_loop,
+                 test_escalation_learning_end_to_end):
         test()
         print(test.__name__ + ': PASS')
