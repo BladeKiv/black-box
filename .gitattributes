@@ -1,0 +1,3 @@
+# These bytes are embedded in the SS-6332 report's downloadable artifacts.
+tasks/SS-6332-ndc-mapping/SS-6332.postman_collection.json text eol=lf
+tasks/SS-6332-ndc-mapping/expected-outcomes*.csv text eol=lf

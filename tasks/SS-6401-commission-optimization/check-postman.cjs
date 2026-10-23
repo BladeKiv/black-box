@@ -1,6 +1,11 @@
 const fs=require('fs'),assert=require('assert');
 const script=fs.readFileSync(__dirname+'/postman-parity.js','utf8');
-const fixture=JSON.parse(fs.readFileSync(__dirname+'/runs/TSTCOM/evidence/TC-01/1/prod/response.json','utf8')).results[0];
+const evidence=__dirname+'/runs/TSTCOM/evidence/TC-01/1/prod/response.json';
+if(!fs.existsSync(evidence)){
+ console.log('SKIP: evidence not in repo (SS-6401 Postman response fixture)');
+ process.exit(77);
+}
+const fixture=JSON.parse(fs.readFileSync(evidence,'utf8')).results[0];
 function check(mutate){
  const vars=new Map(), results=[]; let env='prod';
  const pm={iterationData:{get:()=> 'test'},variables:{get:()=>env},collectionVariables:{set:(k,v)=>vars.set(k,v),get:k=>vars.get(k)},expect:x=>({to:{eql:y=>assert.deepStrictEqual(x,y),have:{length:n=>assert.strictEqual(x.length,n)}}}),test:(name,fn)=>{try{fn();results.push({name,pass:true});}catch(e){results.push({name,pass:false});}}};

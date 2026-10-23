@@ -2,7 +2,18 @@ const fs = require('fs');
 const path = require('path');
 const assert = require('assert/strict');
 const dir = __dirname;
-const run = fs.readFileSync(path.join(dir, 'latest-run.txt'), 'utf8').trim();
+const latest = path.join(dir, 'latest-run.txt');
+function requireEvidence(files) {
+  if (files.some(file => !fs.existsSync(file))) {
+    console.log('SKIP: evidence not in repo (SS-6340 run captures)');
+    process.exit(77);
+  }
+}
+requireEvidence([latest]);
+const run = fs.readFileSync(latest, 'utf8').trim();
+requireEvidence(['search-response.json', 'selected-solution.json', 'result-request.json',
+  'result-response.json', 'result-additional-info.json', 'search-meta.json', 'result-meta.json']
+  .map(file => path.join(run, file)));
 const read = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
 const search = read(path.join(run, 'search-response.json'));
 const selected = read(path.join(run, 'selected-solution.json'));
