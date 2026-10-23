@@ -11,7 +11,7 @@ function requireEvidence(files) {
 }
 requireEvidence([latest]);
 const run = fs.readFileSync(latest, 'utf8').trim();
-requireEvidence(['search-response.json', 'selected-solution.json', 'result-request.json',
+requireEvidence(['search-request.json', 'search-response.json', 'selected-solution.json', 'result-request.json',
   'result-response.json', 'result-additional-info.json', 'search-meta.json', 'result-meta.json']
   .map(file => path.join(run, file)));
 const read = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));

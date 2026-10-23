@@ -30,6 +30,8 @@ def test_evidence_skips():
                 for name in ('search-response', 'selected-solution', 'result-request', 'result-response',
                              'result-additional-info', 'search-meta', 'result-meta'):
                     (folder / (name + '.json')).write_text('invalid JSON')
+                assert run().returncode == 77, 'missing Search request must skip before parsing or writes'
+                (folder / 'search-request.json').write_text('invalid JSON')
             assert run().returncode not in (0, 77), 'malformed evidence must fail'
 
 
