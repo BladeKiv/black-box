@@ -76,6 +76,43 @@ Handoff rule: stop after delivering the report and collection. Only after
 explicit user approval, preview a proposed ledger entry; write it only after a
 second explicit user confirmation.
 
+## Preparation before testing
+
+User-confirmed workflow (2026-10-27). Complete these prerequisites in order
+before executing the ticket's testing flow:
+
+1. Use the environment specified by the user; do not silently substitute another.
+2. Retrieve that environment's Search host and secure authentication-source
+   reference from available project memory/context and local environment
+   references. Resolve the Search auth token securely at runtime; never print
+   or persist it in reports, knowledge, or lessons, and never retrieve credentials
+   from old chat/session logs. Verify that the reference matches the requested
+   environment. Ask only when the required access remains missing or ambiguous
+   after discovery; do not ask the user to repeat available information.
+3. Independently prepare at least five relevant Search examples within the
+   ticket's stated or approved coverage. This is preparation, not authorization
+   to execute extra requests, vary inputs, retry, or add speculative edge cases.
+   If explicit scope allows fewer examples, retain that limit and flag the
+   difference before any expansion.
+4. Understand and record the task's endpoint flow: required endpoints, their
+   order, inputs carried between them, and evidence needed for each assertion.
+   A Search-only task such as SS-6412 has one endpoint; do not add downstream
+   endpoints unnecessarily. Preserve opaque keys unchanged where required.
+
+Then proceed with the ticket-specific testing sequence and existing operational
+lesson search. Missing test-critical expectations still require live clarification;
+this preparation does not expand endpoint permissions or execution budgets.
+
+## Hybrid service execution
+
+For a ticket with a supported `service-scope.json`, use the separate local
+service documented in `docs/hybrid-qa-service.md`. Codex prepares the structured
+plan; the service validates scope, executes requests and generates artifacts.
+Do not execute the same live checks a second time from chat or dashboard, change
+scope to bypass rejection, or silently fall back when the service is unavailable.
+No live run is authorized merely by installing/starting the service. Other tickets
+retain the existing workflow. Never expose `.qa-service/runtime.json` access keys.
+
 ## Operational learning loop
 
 Use the stdlib-only `bb` helpers for operational triage; existing ticket scripts

@@ -1,5 +1,6 @@
 # Generated caches and dependencies
 __pycache__/
+.qa-service/
 *.py[cod]
 node_modules/
 

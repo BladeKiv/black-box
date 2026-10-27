@@ -16,7 +16,8 @@ def render(folder):
     esc = lambda value: html.escape(str(value))
     template = (Path(__file__).parent / 'airapi-qa-dispatch-template.html').read_text(encoding='utf-8')
     template = template.replace('&lt;Ticket title&gt;', esc(data['title']))
-    template = template.replace('&lt;YYYY-MM-DD&gt;', '2026-10-21').replace('&lt;Endpoint / route / scope&gt;', esc(data['scope']))
+    date = data.get('date', '2026-10-21')
+    template = template.replace('&lt;YYYY-MM-DD&gt;', esc(date)).replace('&lt;Endpoint / route / scope&gt;', esc(data['scope']))
     template = template.replace('value fail">&lt;PASS / FAIL / WARN&gt;', f'value {signal.lower()}">{signal}')
     for status in ('PASS', 'FAIL', 'WARN'):
         template = template.replace(f'value {status.lower()}">&lt;0&gt;', f'value {status.lower()}">{counts[status]}')
@@ -40,7 +41,7 @@ def render(folder):
         template = template.replace(f'<{label}-base64>', base64.b64encode((folder / filename).read_bytes()).decode())
     assert '&lt;0&gt;' not in template and '<collection-' not in template and '<csv-' not in template
     (folder / 'qa-report.html').write_text(template, encoding='utf-8')
-    md = [data['title'], f'\n**{signal} — {counts["PASS"]} PASS / {counts["FAIL"]} FAIL / {counts["WARN"]} WARN**', '\n2026-10-21 | ' + data['scope'], '\n' + data['summary'], '\nIntended behavior: ' + data['intended'], '\n| ID | Test data | Expected result | Actual result | Status |', '|---|---|---|---|---|']
+    md = [data['title'], f'\n**{signal} — {counts["PASS"]} PASS / {counts["FAIL"]} FAIL / {counts["WARN"]} WARN**', '\n' + date + ' | ' + data['scope'], '\n' + data['summary'], '\nIntended behavior: ' + data['intended'], '\n| ID | Test data | Expected result | Actual result | Status |', '|---|---|---|---|---|']
     for row in rows:
         md.append('| ' + ' | '.join(str(row[k]).replace('|', '\\|') for k in ('id', 'data', 'expected', 'actual', 'status')) + ' |')
     md.extend(['\nSupporting evidence and rerun artifacts', '\n' + data['limits'], f'\nCollection: {data["collection"]}; CSV: expected-outcomes.csv.'] + md_evidence)

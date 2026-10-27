@@ -19,6 +19,8 @@
     .eyebrow, th, h2 { font-family:"Barlow Condensed",sans-serif; letter-spacing:.11em; text-transform:uppercase; }
     .eyebrow { color:var(--muted); font-size:.8rem; font-weight:600; }
     h1 { font-family:"Barlow Condensed",sans-serif; font-size:2.35rem; letter-spacing:.01em; line-height:.95; margin:.4rem 0 0; text-transform:uppercase; }
+    header > :first-child { grid-column:1 / -1; min-width:0; }
+    h1 { overflow-wrap:anywhere; line-height:1.1; }
     .run { color:var(--muted); font-size:.85rem; line-height:1.6; }.theme-toggle { background:transparent; border:1px solid var(--rule); color:var(--ink); cursor:pointer; font:600 .72rem "Barlow Condensed",sans-serif; letter-spacing:.09em; margin-top:10px; padding:6px 9px; text-transform:uppercase; }
     .signal { border-bottom:1px solid var(--rule); display:grid; grid-template-columns:1.3fr repeat(3,.7fr); }
     .metric { border-right:1px solid var(--rule); padding:16px 20px; } .metric:last-child { border:0; }

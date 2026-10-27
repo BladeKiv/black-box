@@ -1,0 +1,75 @@
+{
+  "ticket": "SS-6412",
+  "workflow": "currency_points_diff",
+  "title": "Different rankings on currency switch - investigate.",
+  "environment": "STAGE1",
+  "base_url": "https://api.search.stage1.travel-dev.com",
+  "scope_sha256": "6df1b0afeb564d5f9b9bd17bf513d7ca01929d0506d6293524f202fab75717cc",
+  "intended_behavior": "Compare only meta.rank_v2.points_diff for identical opaque keys across USD, GBP and INR; absolute difference from USD must be <= 0.5. Rank, array position, price and first-three exclusions are outside scope.",
+  "currencies": [
+    "USD",
+    "GBP",
+    "INR"
+  ],
+  "tolerance": 0.5,
+  "max_requests": 12,
+  "examples": [
+    {
+      "id": "EWR-LHR",
+      "query": {
+        "cid": "TST103",
+        "original_cid": "1",
+        "adt": "1",
+        "debug": "true",
+        "cabin": "Y",
+        "fl[0][o]": "EWR",
+        "fl[0][d]": "LHR",
+        "fl[0][dt]": "2026-12-14",
+        "limit": "50"
+      }
+    },
+    {
+      "id": "JFK-LHR",
+      "query": {
+        "cid": "TST103",
+        "original_cid": "1",
+        "adt": "1",
+        "debug": "true",
+        "cabin": "Y",
+        "fl[0][o]": "JFK",
+        "fl[0][d]": "LHR",
+        "fl[0][dt]": "2026-12-14",
+        "limit": "50"
+      }
+    },
+    {
+      "id": "JFK-CDG",
+      "query": {
+        "cid": "TST103",
+        "original_cid": "1",
+        "adt": "1",
+        "debug": "true",
+        "cabin": "Y",
+        "fl[0][o]": "JFK",
+        "fl[0][d]": "CDG",
+        "fl[0][dt]": "2026-12-14",
+        "limit": "50"
+      }
+    },
+    {
+      "id": "JFK-FRA",
+      "query": {
+        "cid": "TST103",
+        "original_cid": "1",
+        "adt": "1",
+        "debug": "true",
+        "cabin": "Y",
+        "fl[0][o]": "JFK",
+        "fl[0][d]": "FRA",
+        "fl[0][dt]": "2026-12-14",
+        "limit": "50"
+      }
+    }
+  ],
+  "preparation_exception": "Existing approved ticket scope contains four routes; do not add a fifth example or vary inputs. One Search per route/currency; no retries or polling of AirAPI."
+}

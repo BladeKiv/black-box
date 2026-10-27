@@ -12,6 +12,15 @@ are historical fixtures. Verify current prerequisites without changing configura
 Reuse assertions and artifact structure, not old credentials, tokens or Search keys.
 Booking permission and TLS exceptions from old tasks never authorize a new run.
 
+## Preparation workflow
+
+Follow [AGENTS.md preparation before testing](../AGENTS.md#preparation-before-testing)
+in order: user-selected environment; discover its Search host and secure runtime
+authentication source from existing context; prepare at least five in-scope
+Search examples; understand the endpoint flow; then execute the ticket's testing
+sequence. The preparation workflow was confirmed by the user on 2026-10-27.
+Explicit ticket limits and existing permission boundaries continue to apply.
+
 ## Reusable assertion lessons
 
 - Baggage: correlate fresh source evidence by retrieval traceID and associated

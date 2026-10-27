@@ -3,6 +3,14 @@
 Read `AGENTS.md`, `knowledge/airapi-contract.md`, and the evidence ledger before
 ticket work. Existing ticket scripts and dispatch rendering are unchanged.
 
+## Hybrid QA service
+
+The separate local execution service starts with `python -B -m bb.service`.
+Codex chat and QA Control can prepare supported plans; the service enforces
+ticket-local scope and executes deterministic checks. Initially only SS-6412's
+Search currency `points_diff` flow is supported. See
+[launch, integration and limits](docs/hybrid-qa-service.md).
+
 ## Operational lessons
 
 Python 3, standard library only. Run from the repo root:
