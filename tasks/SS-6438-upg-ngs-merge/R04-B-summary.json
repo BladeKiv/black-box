@@ -1,0 +1,9 @@
+{
+  "http_status": 200,
+  "results": 463,
+  "groups": 128,
+  "regular_mains": 0,
+  "UPG_mains": 128,
+  "regular_main_examples": [],
+  "retained_violations": []
+}

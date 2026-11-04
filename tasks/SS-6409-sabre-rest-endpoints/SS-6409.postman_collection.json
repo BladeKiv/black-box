@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "SS-6409 DEV CID routing and read-only Result",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Run current expected-outcomes.csv with TST101 present in BOTH CID lists (overlap phase). Empty-list CSV is preserved under runs/2026-10-22-empty-lists/. Original configured-route CSV is preserved in runs/2026-10-22/expected-outcomes.csv and requires the original routing config. Supply search_authorization at runtime. No booking or checkout writes. Cross-route schema comparison is in the saved report; this runner checks each route and Result independently."
+  },
+  "variable": [
+    {
+      "key": "search_authorization",
+      "value": ""
+    },
+    {
+      "key": "base_url",
+      "value": "https://api.search.dev.travel-dev.com"
+    }
+  ],
+  "item": [
+    {
+      "name": "Search configured CID route",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.variables.unset('selected_key'); pm.variables.unset('encoded_key');",
+              "['scenario_id','expected_result','provider_filter','search_url','cid','expected_endpoint','endpoint_path'].forEach(k => { if (!pm.iterationData.get(k)) throw new Error('CSV input missing: ' + k); });"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const b = pm.response.json();",
+              "const at = (o,p) => p.split('.').reduce((v,k) => v == null ? undefined : v[k], o);",
+              "const expected = pm.iterationData.get('expected_endpoint');",
+              "const path = pm.iterationData.get('endpoint_path');",
+              "pm.test('Search exposes nonempty results', () => {",
+              "  pm.expect(b.results).to.be.an('array').that.is.not.empty;",
+              "});",
+              "pm.test('Every option has the configured endpoint marker', () => {",
+              "  pm.expect(expected).to.be.a('string').that.is.not.empty;",
+              "  pm.expect(path).to.be.a('string').that.is.not.empty;",
+              "  pm.expect(b.results).to.be.an('array').that.is.not.empty;",
+              "  b.results.forEach(r => pm.expect(at(r,path)).to.eql(expected));",
+              "});",
+              "pm.test('Legacy meta.sabreRest is absent', () => {",
+              "  b.results.forEach(r => pm.expect(r.meta || {}).not.to.have.property('sabreRest'));",
+              "});",
+              "if (Array.isArray(b.results) && b.results.length) {",
+              "  pm.variables.set('selected_key', b.results[0].key);",
+              "  pm.variables.set('encoded_key', encodeURIComponent(b.results[0].key));",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "{{search_url}}"
+      }
+    },
+    {
+      "name": "Read-only Result for selected Search key",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (!pm.variables.get('selected_key')) throw new Error('Search inventory is required');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const b=pm.response.json();",
+              "pm.test('Selected key retained',()=>pm.expect(b.key).to.eql(pm.variables.get('selected_key')));",
+              "pm.test('Endpoint marker retained',()=>pm.expect(b.keys.sabre.endpoint).to.eql(pm.iterationData.get('expected_endpoint')));",
+              "pm.test('Readable itinerary and prices',()=>{pm.expect(b.trips).to.be.an('array').that.is.not.empty;pm.expect(b.prices).to.be.an('object');});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "{{base_url}}/v1/result/ANY/{{encoded_key}}?cid={{cid}}&debug=true"
+      }
+    }
+  ]
+}

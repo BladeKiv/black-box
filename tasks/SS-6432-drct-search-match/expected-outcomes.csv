@@ -1,0 +1,4 @@
+scenario_id,expected_result,provider_filter,search_url,selected_index
+nonD-A,gds=D,A,https://api.search.dev.travel-dev.com/v1/search?gds=A&pcc=DFWG32100&fare=PUB&cid=TST101&adt=1&cabin=Y&debug=true&fl.0.o=LHR&fl.0.d=JFK&fl.0.dt=2026-11-20,175
+nonD-S,gds=D,S,https://api.search.dev.travel-dev.com/v1/search?gds=S&pcc=6NVG&fare=PUB&cid=TST101&adt=1&cabin=Y&debug=true&fl.0.o=LHR&fl.0.d=JFK&fl.0.dt=2026-11-20,46
+nonD-A-LH,gds=D,A,https://api.search.dev.travel-dev.com/v1/search?gds=A&pcc=DFWG32100&fare=PUB&cid=TST101&adt=1&cabin=Y&debug=true&fl.0.o=LHR&fl.0.d=JFK&fl.0.dt=2026-11-20,107

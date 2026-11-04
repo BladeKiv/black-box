@@ -14,13 +14,19 @@ account, API key, dependency, dashboard screen or database is required.
   numeric `meta.rank_v2.points_diff` are compared, with tolerance 0.5.
 - Runtime credentials are held in memory, excluded from job records and report
   evidence. No credential is requested in an HTTP URL or CLI argument.
-- Each run produces JSON, Markdown/HTML dispatch, importable Postman collection,
-  expected-outcome CSV and minimal paired evidence. Downloads remain embedded
-  Blob downloads in the established template.
-- Missing authentication or comparable data remains WARN; observed differences
-  above the scoped tolerance are FAIL. Duplicate keys and invalid/missing scores
-  cannot produce PASS. No retries, input variation, AirAPI polling or downstream
-  endpoints are implemented.
+- Each run writes only `cases.json` (the complete plan before any request)
+  and `results.jsonl` (one completed case per appended line). No HTML, Markdown,
+  CSV, Postman collection or payload files for passed cases are generated.
+- QA statuses are `passed`, `failed`, `need_action`; pending is represented by
+  a planned case without a result yet. Run precedence: failed, then need_action,
+  then passed after all cases finish. Blockers include an exact `action_needed`.
+- Failed cases contain credential-free paired comparator excerpts capped at
+  2 KiB each, within an 8 KiB failure object. Full responses are unnecessary for
+  this comparator. Internal operational helpers retain their legacy statuses;
+  these never appear in the case output status.
+- No retries, input variation, AirAPI polling or downstream endpoints are
+  implemented. Cases continue after failures or blockers. Cancellation prevents
+  further requests and marks remaining cases need_action in the partial stream.
 
 ## Start and health
 
@@ -44,7 +50,7 @@ inherited user ACLs; POSIX permissions are restricted explicitly.
 This is a manually started background process, not an installed Windows service.
 Use Ctrl+C in a foreground terminal, or stop only the recorded Python process
 when started hidden. Restart does not replay queued/running jobs: it marks them
-interrupted. Partial request evidence is preserved under the fresh ticket run.
+interrupted. Partial case results are preserved under the fresh ticket run.
 Job polling reads local service state; it does not poll AirAPI.
 
 ## From this chat
@@ -79,9 +85,13 @@ live job. Outputs stay under `tasks/<ticket>/runs/service-<job-id>/`.
 The backend adapter is installed in the sibling Dashboard project. For SS-6412,
 the selected profile must match the scope's environment name `STAGE1` and HTTPS
 origin. Codex receives the scoped planning prompt with network disabled and
-Search/Kibana runtime credentials withheld. It writes `service-plan.json`, then
+Search/Kibana runtime credentials withheld. It writes the internal input plan under `.qa-service/plans/` (outside the run
+folder), then
 the backend submits it to the local service and captures its fresh artifacts
-using QA Control's existing report validator, evidence hashes and approval gates.
+as `cases.json` and `results.jsonl` in the dashboard run folder. The adapter
+copies the plan and new complete result lines while the service runs. The
+dashboard owns validation, pending-case insertion, DB ingestion and UI updates;
+its legacy results.json validator must be migrated separately before rollout.
 
 The adapter does not silently fall back to unrestricted agent execution if the
 service is unavailable or the plan is rejected. Other tickets keep their existing
@@ -114,7 +124,7 @@ this permission is not learned or obtained from the plan. The transport preserve
 HTTPS and rejects redirects. Neither configuration discovery nor operational
 lessons supply expected behavior.
 
-The service searches operational lessons and records WARN/FAIL triage. It does
+The service searches operational lessons and records internal WARN/FAIL triage. It does
 not execute suggested recovery actions or claim lesson successes. While the
 service executes jobs, it is the hosting writer of the operational stores;
 do not run a second writer concurrently. The durable QA evidence ledger is
@@ -123,7 +133,7 @@ unchanged and retains its separate approval workflow.
 ## Verification and current limits
 
 Run `python -B -m tests.test_service` for scope enforcement, comparisons,
-artifact/credential checks, Postman parity, API authentication, singleton lock,
+stream ordering, failure limits, credential checks, API authentication, singleton lock,
 cancellation, interrupted jobs and a real Node-adapter-to-Python-service bridge.
 The bridge uses a temporary project and missing authentication; it makes no
 AirAPI requests. QA Control adds adapter tests to its normal backend suite.

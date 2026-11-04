@@ -1,0 +1,4 @@
+scenario_id,expected_result,provider_filter,search_url,cid,origin,destination,departure_date
+TF-01,usable_offers_then_result,F,https://api.search.stage.travel-dev.com/v1/search?cid=TST101&gds=F&adt=1&cabin=Y&fl.0.o=LHR&fl.0.d=DUB&fl.0.dt=2026-11-20,TST101,LHR,DUB,2026-11-20
+TF-02,usable_offers_then_result,F,https://api.search.stage.travel-dev.com/v1/search?cid=TST101&gds=F&adt=1&cabin=Y&fl.0.o=STN&fl.0.d=DUB&fl.0.dt=2026-11-20,TST101,STN,DUB,2026-11-20
+TF-03,usable_offers_then_result,F,https://api.search.stage.travel-dev.com/v1/search?cid=TST101&gds=F&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20,TST101,SFO,FRA,2026-11-20

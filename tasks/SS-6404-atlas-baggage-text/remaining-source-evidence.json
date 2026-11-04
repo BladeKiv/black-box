@@ -1,0 +1,271 @@
+[
+  {
+    "baggageElements": [
+      {
+        "baggagePiece": 1,
+        "baggageSize": "45*35*20cm",
+        "baggageType": "CabinBaggageUnderSeat",
+        "baggageWeight": -1,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "45*35*20cm",
+        "baggageType": "CabinBaggageUnderSeat",
+        "baggageWeight": -1,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "45*35*20cm",
+        "baggageType": "CabinBaggageUnderSeat",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "45*35*20cm",
+        "baggageType": "CabinBaggageUnderSeat",
+        "baggageWeight": -1,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 2
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "45*35*20cm",
+        "baggageType": "CabinBaggageUnderSeat",
+        "baggageWeight": -1,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 2
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "45*35*20cm",
+        "baggageType": "CabinBaggageUnderSeat",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 2
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 2
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 2
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 2
+      }
+    ],
+    "host": "searchapi51",
+    "operation": "queryOrderDetails",
+    "pnr": "ML0MPQ",
+    "segments": [
+      {
+        "arr": "SJU",
+        "dep": "PHL",
+        "segmentNo": 1
+      },
+      {
+        "arr": "PHL",
+        "dep": "SJU",
+        "segmentNo": 2
+      }
+    ],
+    "timestamp": "2026-10-26T09:58:15.753Z",
+    "traceID": "fd7390ba-6f8a-4c1d-bb9f-e06d31a6dfc0"
+  },
+  {
+    "baggageElements": [
+      {
+        "baggagePiece": 1,
+        "baggageSize": "L+W+H<=158cm",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 15,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "L+W+H<=158cm",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 15,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "L+W+H<=158cm",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "55*35*25cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": 7,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "55*35*25cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": 7,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "55*35*25cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 1
+      }
+    ],
+    "host": "searchapi51",
+    "operation": "queryOrderDetails",
+    "pnr": "ZXCMYU",
+    "segments": [
+      {
+        "arr": "VNS",
+        "dep": "VGA",
+        "segmentNo": 1
+      }
+    ],
+    "timestamp": "2026-10-26T09:58:14.752Z",
+    "traceID": "7be917f4-18f0-4ece-bc87-fe10cc9a51a9"
+  },
+  {
+    "baggageElements": [
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "56*36*23cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": -1,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "56*36*23cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": -1,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "56*36*23cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 1
+      }
+    ],
+    "host": "searchapi51",
+    "operation": "queryOrderDetails",
+    "pnr": "US74GX",
+    "segments": [
+      {
+        "arr": "LIR",
+        "dep": "LAX",
+        "segmentNo": 1
+      }
+    ],
+    "timestamp": "2026-10-26T09:58:14.751Z",
+    "traceID": "8564c880-c919-47d2-a132-7270be87a683"
+  }
+]

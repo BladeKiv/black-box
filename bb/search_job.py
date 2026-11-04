@@ -1,6 +1,6 @@
 """Controlled Search-only execution. Ticket scope, never an AI plan, grants inputs."""
-import csv
-from datetime import datetime, timezone
+import os
+from time import monotonic
 import hashlib
 import json
 import math
@@ -14,8 +14,7 @@ from .transport import request
 
 ROOT = Path(__file__).resolve().parents[1]
 PLAN_KEYS = {'ticket', 'workflow', 'environment', 'scope_sha256', 'examples'}
-ARTIFACTS = ('results.json', 'qa-report.html', 'qa-report.md', 'report-data.json',
-             'collection.json', 'expected-outcomes.csv', 'paired-evidence.json', 'plan.json', 'run-notes.md')
+ARTIFACTS = ('cases.json', 'results.jsonl')
 
 
 class JobCancelled(Exception):
@@ -135,106 +134,128 @@ def evidence_response(response, credential):
             'body': {'results': projected}}
 
 
-def execute_job(root, plan, credential, job_id, *, transport=request, cancelled=lambda: False):
+def truncate(text, limit=2048):
+    data = text.encode('utf-8')
+    if len(data) <= limit:
+        return text
+    kept = max(0, limit - 48)
+    prefix = data[:kept].decode('utf-8', errors='ignore')
+    return prefix + '...[truncated ' + str(len(data) - len(prefix.encode('utf-8'))) + ' bytes]'
+
+
+def excerpt(value):
+    return truncate(json.dumps(value, ensure_ascii=False, allow_nan=False))
+
+
+def execute_job(root, plan, credential, job_id, *, transport=request, cancelled=lambda: False, base_url=None):
     scope = validate_plan(root, plan)
+    # The selected runtime URL must agree with the immutable ticket scope.
+    selected_url = base_url if base_url is not None else os.environ.get('AIRAPI_BASE_URL', '')
+    if selected_url.rstrip('/') != scope['base_url'].rstrip('/'):
+        raise ValueError('AIRAPI_BASE_URL must match the selected service environment')
     if not re.fullmatch(r'[a-f0-9]{32}', job_id):
         raise ValueError('Invalid job ID')
     folder = ticket_folder(root, scope['ticket']) / 'runs' / ('service-' + job_id)
     if not folder.resolve().is_relative_to(Path(root).resolve()):
         raise ValueError('Output resolves outside project')
     folder.mkdir(parents=True, exist_ok=False)
-    dump = lambda name, data: (folder / name).write_text(json.dumps(data, indent=2, allow_nan=False) + '\n', encoding='utf-8')
-    dump('plan.json', plan)
-    captures, cases = [], []
+    expected = 'Exact opaque keys: abs(target.meta.rank_v2.points_diff - USD.meta.rank_v2.points_diff) <= ' + str(scope['tolerance'])
+    planned = []
+    for example in scope['examples']:
+        for currency in scope['currencies'][1:]:
+            planned.append({'case_id': 'TC-' + str(len(planned) + 1),
+                'title': example['id'] + ' USD/' + currency,
+                'steps': ['GET /v1/search in USD (shared baseline) and ' + currency,
+                          'Compare numeric meta.rank_v2.points_diff for unchanged identical opaque keys'],
+                'test_data': {'query': example['query'], 'currencies': ['USD', currency]}, 'expected': expected})
+    (folder / 'cases.tmp').write_text(json.dumps({'v': 1, 'task': scope['ticket'],
+        'environment': scope['environment'], 'intended_behavior': scope['intended_behavior'],
+        'cases': planned}, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+    (folder / 'cases.tmp').replace(folder / 'cases.json')
+    (folder / 'results.jsonl').touch(exist_ok=False)
     from .lessons import Store
     from .escalations import Escalations, handle_outcome
     lessons = Store(Path(root) / 'knowledge/lessons/lessons.jsonl')
     escalations = Escalations(Path(root) / 'knowledge/lessons/escalations.jsonl', lessons)
-    matches = lessons.search([scope['ticket'], scope['environment']], 'currency points_diff comparison prerequisites')
+    lessons.search([scope['ticket'], scope['environment']], 'currency points_diff comparison prerequisites')
     operational_scope = {'ticket': scope['ticket'], 'environment': scope['environment'], 'endpoint': '/v1/search',
                          'allow_retry': False, 'allow_poll': False, 'allow_retest': False, 'approved_inputs': []}
-    (folder / 'run-notes.md').write_text('Lesson search matches (not applied): ' + (', '.join(m['id'] for m in matches) or 'none') +
-        '\nNo operational actions/retries are executed by this workflow. Missing prerequisites remain WARN.\n', encoding='utf-8')
+    cases = []
+    stopped = False
+    def capture(example, currency):
+        url = selected_url.rstrip('/') + '/v1/search?' + urlencode({**example['query'], 'currency': currency})
+        if credential:
+            try:
+                response = transport(url, headers={'Accept': 'application/json', 'Authorization': str(credential)},
+                    credentials_required=True, verify_tls=False, tls_bypass_authorized=True, timeout=30)
+            except Exception:
+                response = {'http_status': None, 'reason_code': 'TRANSPORT_ERROR', 'body': None}
+        else:
+            response = {'http_status': None, 'reason_code': 'AUTH_MISSING', 'body': None}
+        return {'request': {'method': 'GET', 'url': url}, 'response': evidence_response(response, credential)}
+
     for example in scope['examples']:
-        pair = {}
-        for currency in scope['currencies']:
-            if cancelled():
-                raise JobCancelled()
-            url = scope['base_url'].rstrip('/') + '/v1/search?' + urlencode({**example['query'], 'currency': currency})
-            headers = {'Accept': 'application/json'}
-            headers['Authorization'] = credential
-            response = transport(url, headers=headers,
-                                 credentials_required=True, verify_tls=False, tls_bypass_authorized=True, timeout=30) if credential else {
-                                     'http_status': None, 'reason_code': 'AUTH_MISSING', 'body': None}
-            evidence = {'request': {'method': 'GET', 'url': url, 'executed': bool(credential)}, 'response': evidence_response(response, credential)}
-            pair[currency] = evidence
-            captures.append(evidence)
-            dump('paired-evidence.json', captures)
+        baseline = None
         for currency in scope['currencies'][1:]:
-            baseline, target = pair['USD']['response'], pair[currency]['response']
-            blocker = next((r for r in (baseline, target) if r['http_status'] is None or not 200 <= r['http_status'] < 300 or
-                            r['reason_code'] not in ('OK', 'UNEVALUATED', 'NO_DATA')), None)
-            comparison = {'status': 'WARN', 'reason_code': blocker['reason_code'], 'detail': 'Search prerequisites or transport prevented evaluation.'} if blocker else compare_points(baseline['body']['results'], target['body']['results'], scope['tolerance'])
-            # Evaluate ticket expectation explicitly; operational classification never supplies it.
+            started = monotonic()
+            stopped = stopped or cancelled()
+            target = None
+            if not stopped:
+                if baseline is None:
+                    baseline = capture(example, 'USD')
+                stopped = cancelled()
+                if not stopped:
+                    target = capture(example, currency)
+            if stopped:
+                comparison = {'status': 'WARN', 'reason_code': 'CANCELLED', 'detail': 'Run cancelled before comparison completed.'}
+            else:
+                left, right = baseline['response'], target['response']
+                blocker = next((r for r in (left, right) if r['http_status'] is None or
+                    not 200 <= r['http_status'] < 300 or r['reason_code'] not in ('OK', 'UNEVALUATED', 'NO_DATA')), None)
+                comparison = {'status': 'WARN', 'reason_code': blocker['reason_code'],
+                    'detail': 'Search access or transport prevented evaluation.'} if blocker else compare_points(left['body']['results'], right['body']['results'], scope['tolerance'])
+            status = {'PASS': 'passed', 'FAIL': 'failed', 'WARN': 'need_action'}[comparison['status']]
+            case = {'case_id': planned[len(cases)]['case_id'], 'status': status,
+                    'duration_ms': int((monotonic() - started) * 1000), 'actual': comparison['detail']}
+            if status == 'passed':
+                case['actual'] = json.dumps({k: v for k, v in comparison.items() if k not in ('status', 'detail')}, allow_nan=False)
+            elif status == 'failed':
+                case['actual'] = json.dumps({k: v for k, v in comparison.items() if k != 'status'}, allow_nan=False)
+                left_points = index_points(baseline['response']['body']['results'])
+                right_points = index_points(target['response']['body']['results'])
+                case['failure'] = {'assertion': expected,
+                    'request': {'method': 'GET', 'url': truncate(target['request']['url']),
+                                'body_excerpt': excerpt({'USD': baseline['request'], currency: target['request']})},
+                    'response': {'status': target['response']['http_status'],
+                                 'body_excerpt': excerpt({'comparisons': [{'USD': left_points[k], currency: right_points[k], 'key': k}
+                                     for k in left_points.keys() & right_points.keys()
+                                     if numeric(left_points[k]) and numeric(right_points[k]) and abs(left_points[k] - right_points[k]) > scope['tolerance']]})}}
+                limit = 2048
+                while len(json.dumps(case['failure'], ensure_ascii=False).encode('utf-8')) > 8192:
+                    limit //= 2
+                    for side in ('request', 'response'):
+                        case['failure'][side]['body_excerpt'] = truncate(case['failure'][side]['body_excerpt'], limit)
+                    case['failure']['request']['url'] = truncate(case['failure']['request']['url'], limit)
+            else:
+                reason = comparison['reason_code']
+                need = ('Provide Search authentication through the selected profile' if reason == 'AUTH_MISSING' else
+                        'Authorize a new run after cancellation' if reason == 'CANCELLED' else
+                        'Provide comparable Search inventory with unique identical keys and numeric points_diff' if reason in ('NO_DATA', 'UNEVALUATED') else
+                        'Restore Search access through the selected profile')
+                case['action_needed'] = need + ' on ' + scope['environment'] + ' to evaluate ' + case['case_id'] + '.'
+            # Close each append before executing the next case so the dashboard can ingest it.
+            ensure_safe(case)
+            with (folder / 'results.jsonl').open('a', encoding='utf-8') as stream:
+                stream.write(json.dumps(case, ensure_ascii=False, allow_nan=False) + '\n')
+            cases.append(case)
             classified = classify_outcome(200, '{}', context={'inventory_field': None,
                 'expectation_observed': comparison['status'] == 'PASS'}) if comparison['status'] != 'WARN' else {'status': 'WARN', 'reason_code': comparison['reason_code']}
-            cases.append({'id': example['id'] + '-' + currency, 'title': example['id'] + ' USD/' + currency,
-                          'status': classified['status'], 'reason_code': comparison['reason_code'],
-                          'test_data': {'query': example['query'], 'currencies': ['USD', currency]},
-                          'expected': 'Exact opaque keys: abs(target.meta.rank_v2.points_diff - USD.meta.rank_v2.points_diff) <= ' + str(scope['tolerance']),
-                          'actual': json.dumps(comparison, allow_nan=False), 'evidence': [pair['USD'], pair[currency]]})
-            handle_outcome(lessons, escalations, {'status': comparison['status'], 'reason_code': comparison['reason_code'], 'retryable': False},
-                           scope['ticket'] + '-service-' + job_id + '-' + cases[-1]['id'],
-                           [scope['ticket'], scope['environment']], 'currency points_diff ' + comparison['reason_code'],
-                           operational_scope, retries=0, steps=2)
-    report = {'ticket': scope['ticket'], 'environment': scope['environment'], 'base_url': scope['base_url'],
-              'intended_behavior': scope['intended_behavior'], 'job_id': job_id, 'cases': cases}
-    dump('paired-evidence.json', captures)
-    dump('results.json', report)
-    write_artifacts(folder, scope, cases, captures)
-    return report, folder
-
-
-def write_artifacts(folder, scope, cases, captures):
-    from templates.render_dispatch import render
-    # Postman keeps exact-key comparator parity with the controlled Python runner.
-    script = '''let rows = null;
-try { if (pm.response.code >= 200 && pm.response.code < 300) rows = pm.response.json().results ?? null; } catch {}
-const c = pm.iterationData.get('currency');
-if (c === 'USD') pm.collectionVariables.set('baseline', JSON.stringify(rows));
-else {
- const baseline = JSON.parse(pm.collectionVariables.get('baseline') || 'null');
- const index = xs => { if (!Array.isArray(xs)) return null; const m = new Map(); for (const r of xs) { if (!r || typeof r.key !== 'string' || !r.key || m.has(r.key)) return null; m.set(r.key, r.meta?.rank_v2?.points_diff); } return m; };
- const a = index(baseline), b = index(rows);
- const keys = a && b ? [...a.keys()].filter(k => b.has(k)) : [];
- const values = keys.map(k => [a.get(k), b.get(k)]);
- const valid = values.filter(pair => pair.every(v => typeof v === 'number' && Number.isFinite(v)));
- const tolerance = Number(pm.iterationData.get('tolerance'));
- if (valid.some(([x,y]) => Math.abs(x-y) > tolerance)) pm.test('points_diff exceeds approved tolerance', () => { throw new Error('CONTRACT_MISMATCH'); });
- else if (!keys.length || valid.length !== keys.length) pm.test.skip('WARN: unavailable or ambiguous comparator inputs', () => {});
- else pm.test('Exact-key points_diff within approved tolerance', () => pm.expect(true).to.eql(true));
-}'''
-    setup = "if (pm.iterationData.get('currency') === 'USD') pm.collectionVariables.unset('baseline');\nif (!pm.variables.get('search_authorization')) throw new Error('Set Search authorization locally');"
-    collection = {'info': {'name': scope['ticket'] + ' controlled currency comparison',
-                           'schema': 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'},
-                  'item': [{'name': 'Search', 'request': {'method': 'GET', 'url': '{{search_url}}',
-                           'header': [{'key': 'Authorization', 'value': '{{search_authorization}}'}]},
-                           'event': [{'listen': 'prerequest', 'script': {'type': 'text/javascript', 'exec': setup.splitlines()}},
-                                     {'listen': 'test', 'script': {'type': 'text/javascript', 'exec': script.splitlines()}}]}]}
-    (folder / 'collection.json').write_text(json.dumps(collection, indent=2) + '\n', encoding='utf-8')
-    with (folder / 'expected-outcomes.csv').open('w', encoding='utf-8', newline='') as stream:
-        writer = csv.DictWriter(stream, fieldnames=['scenario_id', 'expected_result', 'provider_filter', 'search_url', 'currency', 'tolerance'])
-        writer.writeheader()
-        for example, group in zip(scope['examples'], [captures[i:i+3] for i in range(0, len(captures), 3)]):
-            for currency, capture in zip(scope['currencies'], group):
-                writer.writerow({'scenario_id': example['id'] + '-' + currency, 'expected_result': scope['intended_behavior'],
-                                 'provider_filter': example['query'].get('gds', ''), 'search_url': capture['request']['url'],
-                                 'currency': currency, 'tolerance': scope['tolerance']})
-    data = {'title': scope['ticket'] + ' ' + scope['title'], 'date': datetime.now(timezone.utc).isoformat(),
-            'scope': scope['environment'] + ' | GET /v1/search | currency_points_diff | one request per input; no retries',
-            'summary': str(len(cases)) + ' currency comparisons evaluated by the controlled service. See each case for its observed result.',
-            'intended': scope['intended_behavior'], 'limits': 'Only matched opaque keys and points_diff are assessed. Unmatched inventory is excluded. ' + scope.get('preparation_exception', ''),
-            'collection': 'collection.json', 'rows': [{'id': c['id'], 'data': json.dumps(c['test_data']), 'expected': c['expected'], 'actual': c['actual'], 'status': c['status']} for c in cases],
-            'evidence': [{'id': c['id'] + '-' + str(i+1), **e} for c in cases if c['status'] != 'PASS' for i, e in enumerate(c['evidence'])]}
-    (folder / 'report-data.json').write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
-    render(folder)
+            handle_outcome(lessons, escalations, {**classified, 'retryable': False},
+                scope['ticket'] + '-service-' + job_id + '-' + case['case_id'],
+                [scope['ticket'], scope['environment']], 'currency points_diff ' + comparison['reason_code'],
+                operational_scope, retries=0, steps=2 if target else 0)
+    if stopped:
+        raise JobCancelled()
+    status = 'failed' if any(c['status'] == 'failed' for c in cases) else 'need_action' if any(c['status'] == 'need_action' for c in cases) else 'passed'
+    return {'ticket': scope['ticket'], 'environment': scope['environment'], 'base_url': selected_url,
+            'status': status, 'cases': cases}, folder

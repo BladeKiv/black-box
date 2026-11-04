@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AirAPI QA Dispatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#15202b; --paper:#f7fafb; --rule:#cad7dc; --muted:#58707a; --accent:#08788e; --pass:#18794e; --fail:#b42832; --warn:#a85a00; }
+    @media (prefers-color-scheme: dark) { :root { --ink:#edf3f5; --paper:#101820; --rule:#344751; --muted:#a7bbc2; --accent:#63d2e7; --pass:#75d7a7; --fail:#ff9b9f; --warn:#f6b56d; } }
+    body[data-theme="light"] { --ink:#15202b; --paper:#f7fafb; --rule:#cad7dc; --muted:#58707a; --accent:#08788e; --pass:#18794e; --fail:#b42832; --warn:#a85a00; }
+    body[data-theme="dark"] { --ink:#edf3f5; --paper:#101820; --rule:#344751; --muted:#a7bbc2; --accent:#63d2e7; --pass:#75d7a7; --fail:#ff9b9f; --warn:#f6b56d; }
+    * { box-sizing:border-box; }
+    body { background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; margin:0; padding:24px; }
+    main { border:1px solid var(--rule); margin:auto; max-width:920px; }
+    header { border-bottom:3px solid var(--accent); display:grid; gap:20px; grid-template-columns:1fr; padding:26px 28px 22px; }
+    .eyebrow, th, h2 { font-family:"Barlow Condensed",sans-serif; letter-spacing:.11em; text-transform:uppercase; }
+    .eyebrow { color:var(--muted); font-size:.8rem; font-weight:600; }
+    h1 { font-family:"Barlow Condensed",sans-serif; font-size:2.35rem; letter-spacing:.01em; line-height:.95; margin:.4rem 0 0; text-transform:uppercase; }
+    header > :first-child { grid-column:1 / -1; min-width:0; }
+    h1 { overflow-wrap:anywhere; line-height:1.1; }
+    .run { color:var(--muted); font-size:.85rem; line-height:1.6; }.theme-toggle { background:transparent; border:1px solid var(--rule); color:var(--ink); cursor:pointer; font:600 .72rem "Barlow Condensed",sans-serif; letter-spacing:.09em; margin-top:10px; padding:6px 9px; text-transform:uppercase; }
+    .signal { border-bottom:1px solid var(--rule); display:grid; grid-template-columns:1.3fr repeat(3,.7fr); }
+    .metric { border-right:1px solid var(--rule); padding:16px 20px; } .metric:last-child { border:0; }
+    .metric span { display:block; } .metric .label { color:var(--muted); font-family:"Barlow Condensed",sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+    .metric .value { font-family:"Barlow Condensed",sans-serif; font-size:1.8rem; font-weight:600; margin-top:3px; }
+    .pass { color:var(--pass); } .fail { color:var(--fail); } .warn { color:var(--warn); }
+    article { padding:28px; } .finding { border-left:3px solid var(--accent); font-size:1rem; line-height:1.6; margin:0 0 30px; padding-left:14px; }
+    h2 { font-size:.9rem; margin:0 0 12px; } table { border-collapse:collapse; font-size:.9rem; width:100%; }
+    th { color:var(--muted); font-size:.72rem; font-weight:600; padding:0 12px 9px 0; text-align:left; }
+    td { border-top:1px solid var(--rule); line-height:1.45; padding:14px 12px 14px 0; vertical-align:top; } .test { font-weight:700; } .status { font-family:"Barlow Condensed",sans-serif; font-size:.86rem; font-weight:700; letter-spacing:.09em; }
+    .evidence { border-top:1px solid var(--rule); display:grid; gap:24px; grid-template-columns:1fr; margin-top:28px; padding-top:22px; } .evidence p { color:var(--muted); font-size:.86rem; line-height:1.55; margin:0; }
+    code { background:color-mix(in srgb,var(--accent) 10%,transparent); font-family:ui-monospace,monospace; font-size:.86em; padding:2px 4px; }
+    .failure-sample { background:color-mix(in srgb,var(--fail) 6%,transparent); border-left:3px solid var(--fail); margin:24px 0; padding:18px; } .failure-sample p { color:var(--muted); font-size:.86rem; line-height:1.55; margin:0 0 10px; } .failure-sample pre { border:1px solid var(--rule); font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; margin:0; overflow:auto; padding:12px; white-space:pre; }
+    .download-artifact { background:none; border:0; color:var(--accent); cursor:pointer; font:inherit; padding:0; text-decoration:underline; } @media (min-width:680px) { header { grid-template-columns:1fr auto; } .run { text-align:right; } .evidence { grid-template-columns:1fr 1fr; } }
+    @media (max-width:620px) { body { padding:12px; } header, article { padding:20px; } .signal { grid-template-columns:1fr 1fr; } .metric { border-bottom:1px solid var(--rule); } .metric:nth-child(2n) { border-right:0; } .metric:nth-last-child(-n+2) { border-bottom:0; } .table-wrap { overflow-x:auto; } table { min-width:650px; } }
+  </style>
+</head>
+<body data-theme="light">
+  <main>
+    <header>
+      <div><div class="eyebrow">AirAPI / QA dispatch</div><h1>SS-6432 DRCT S&amp;M</h1></div>
+      <div class="run">Run 2026-10-26<br>DEV | non-D to D | LHR-JFK 2026-11-20 | PUB/TST101<br><button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
+    </header>
+    <section class="signal" aria-label="Release signal">
+      <div class="metric"><span class="label">Release signal</span><span class="value pass">PASS</span></div>
+      <div class="metric"><span class="label">Passed</span><span class="value pass">4</span></div>
+      <div class="metric"><span class="label">Failed</span><span class="value fail">0</span></div>
+      <div class="metric"><span class="label">Warn</span><span class="value warn">0</span></div>
+    </section>
+    <article>
+      <p class="finding">All three previously failing non-D Result cases now return D/DEF with exact flights retained. Booking recovery retains its earlier user-confirmed PASS for the accepted Price change response. K and E are excluded at the user request because those GDSs are unavailable.<br><br><strong>Intended behavior:</strong> Add S&amp;M for DRCT and allow Result for non-DRCT itineraries. User confirms matching flights must recover as gds=D even when fare basis differs. For malformed-offer booking recovery, the user accepts Price change as PASS; successful booking confirmation is not required for this case.</p>
+      <h2>Executed tests</h2>
+      <div class="table-wrap"><table><thead><tr><th>ID</th><th>Test data</th><th>Expected → actual</th><th>Status</th></tr></thead><tbody>
+<tr><td>nonD-A</td><td class="test">LHR-JFK 2026-11-20; 1 ADT; Y; PUB; TST101; source A</td><td>Matching non-D offer is recovered as gds=D in Result → Fresh fixed-build retest: Search source A returned gds=A; unchanged key Result HTTP 200, gds=D, pcc=DEF; exact flights, airports and departure times retained.</td><td class="status pass">PASS</td></tr><tr><td>nonD-S</td><td class="test">LHR-JFK 2026-11-20; 1 ADT; Y; PUB; TST101; source S</td><td>Matching non-D offer is recovered as gds=D in Result → Fresh fixed-build retest: Search source S returned gds=E; unchanged key Result HTTP 200, gds=D, pcc=DEF; exact flights, airports and departure times retained.</td><td class="status pass">PASS</td></tr><tr><td>nonD-A-LH</td><td class="test">A/DFWG32100; LH923/LH400; LHR-FRA-JFK 2026-11-20; Q; PUB/TST101</td><td>Same flights recover as gds=D even with a different fare basis → Fresh fixed-build retest: Search source A returned gds=A; unchanged key Result HTTP 200, gds=D, pcc=DEF; exact flights, airports and departure times retained.</td><td class="status pass">PASS</td></tr><tr><td>booking-malformed-offer</td><td class="test">D/DEF; PUB/TST101; fresh Search -&gt; Result; additionalInfo.gdsOfferId=SS6432-MALFORMED-OFFER-ID; synthetic 1 ADT</td><td>Malformed offer ID triggers itinerary recovery and booking submission; a Price change response is an accepted outcome (user-confirmed). → User-confirmed PASS: HTTP 200 with application status 422 / Price change and replacement offer ID. User accepts this as successful itinerary matching and a new booking submission with changed price. No price-change retry executed.</td><td class="status pass">PASS</td></tr></tbody></table></div>
+<section class="failure-sample"><h2>booking-malformed-offer · Payload evidence</h2><h2>Request</h2><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://api.search.dev.travel-dev.com/drct/v1/book/create&quot;,
+  &quot;body&quot;: {
+    &quot;gds&quot;: {
+      &quot;gds_id&quot;: 9,
+      &quot;gds_pcc&quot;: &quot;DFWG32100&quot;,
+      &quot;backoffice_id&quot;: 11111,
+      &quot;hybrid_id&quot;: &quot;A6F17DE&quot;
+    },
+    &quot;additionalInfo&quot;: {
+      &quot;gdsOfferId&quot;: &quot;SS6432-MALFORMED-OFFER-ID&quot;
+    },
+    &quot;contact_info&quot;: {
+      &quot;address&quot;: &quot;1 TEST STREET&quot;,
+      &quot;country&quot;: &quot;US&quot;,
+      &quot;city&quot;: &quot;TEST&quot;,
+      &quot;state&quot;: &quot;NY&quot;,
+      &quot;zip&quot;: &quot;10001&quot;
+    },
+    &quot;data&quot;: {
+      &quot;payments&quot;: []
+    },
+    &quot;payments&quot;: {
+      &quot;pay_type&quot;: 1
+    },
+    &quot;trip&quot;: {
+      &quot;booking_type&quot;: 2,
+      &quot;cabin&quot;: 1,
+      &quot;validating_carrier&quot;: &quot;AZ&quot;,
+      &quot;total_price&quot;: 22898.23,
+      &quot;passengers&quot;: [
+        {
+          &quot;pas_first_name&quot;: &quot;TEST&quot;,
+          &quot;pas_middle_name&quot;: &quot;QA&quot;,
+          &quot;pas_last_name&quot;: &quot;DRCT&quot;,
+          &quot;pas_dob&quot;: &quot;2001-10-26&quot;,
+          &quot;pas_type_id&quot;: 1,
+          &quot;pas_nationality&quot;: &quot;US&quot;,
+          &quot;pas_country&quot;: &quot;US&quot;,
+          &quot;pas_gender_id&quot;: 2,
+          &quot;pas_doc_expiration_date&quot;: &quot;2030-04-01&quot;,
+          &quot;pas_doc_number&quot;: &quot;TEST6432&quot;
+        }
+      ],
+      &quot;flights&quot;: [
+        {
+          &quot;segments&quot;: [
+            {
+              &quot;seg_departure_airport_code&quot;: &quot;LHR&quot;,
+              &quot;seg_arrival_airport_code&quot;: &quot;FCO&quot;,
+              &quot;seg_airline_code&quot;: &quot;AZ&quot;,
+              &quot;seg_air_equip_type&quot;: &quot;&quot;,
+              &quot;seg_departure_dt&quot;: &quot;2026-11-20 10:30:00&quot;,
+              &quot;seg_arrival_dt&quot;: &quot;2026-11-20 14:10:00&quot;,
+              &quot;seg_flight_number&quot;: &quot;203&quot;,
+              &quot;seg_cabin_type_id&quot;: 1,
+              &quot;seg_booking_class&quot;: &quot;B&quot;,
+              &quot;seg_marriage_grp&quot;: &quot;&quot;,
+              &quot;seg_fare_basis&quot;: &quot;BXOXIXLQ&quot;
+            },
+            {
+              &quot;seg_departure_airport_code&quot;: &quot;FCO&quot;,
+              &quot;seg_arrival_airport_code&quot;: &quot;JFK&quot;,
+              &quot;seg_airline_code&quot;: &quot;AZ&quot;,
+              &quot;seg_air_equip_type&quot;: &quot;&quot;,
+              &quot;seg_departure_dt&quot;: &quot;2026-11-20 14:55:00&quot;,
+              &quot;seg_arrival_dt&quot;: &quot;2026-11-20 18:55:00&quot;,
+              &quot;seg_flight_number&quot;: &quot;610&quot;,
+              &quot;seg_cabin_type_id&quot;: 1,
+              &quot;seg_booking_class&quot;: &quot;B&quot;,
+              &quot;seg_marriage_grp&quot;: &quot;&quot;,
+              &quot;seg_fare_basis&quot;: &quot;BXOXIXLQ&quot;
+            }
+          ],
+          &quot;fl_origin_location_code&quot;: &quot;LHR&quot;,
+          &quot;fl_destination_location_code&quot;: &quot;JFK&quot;
+        }
+      ],
+      &quot;contact_phone&quot;: &quot;+12025550143&quot;,
+      &quot;country_code&quot;: &quot;+1&quot;,
+      &quot;contact_email&quot;: &quot;qa-ss6432@example.com&quot;,
+      &quot;selling_price&quot;: {
+        &quot;amount&quot;: 1,
+        &quot;currency_code&quot;: &quot;USD&quot;
+      },
+      &quot;agency_selling_price&quot;: {
+        &quot;amount&quot;: 1,
+        &quot;currency_code&quot;: &quot;USD&quot;
+      },
+      &quot;account_code&quot;: &quot;EURKIV&quot;,
+      &quot;agency_phone&quot;: &quot;+12025550143&quot;
+    },
+    &quot;account_info&quot;: null
+  }
+}</pre><h2>Response</h2><pre>{
+  &quot;http_status&quot;: 200,
+  &quot;body&quot;: {
+    &quot;status&quot;: 422,
+    &quot;name&quot;: &quot;Unprocessable entity&quot;,
+    &quot;code&quot;: 26,
+    &quot;message&quot;: &quot;{\&quot;data\&quot;:{\&quot;priceDetails\&quot;:{\&quot;AmountReturned\&quot;:92251,\&quot;AmountSpecified\&quot;:22898.23,\&quot;data\&quot;:{\&quot;priceQuotes\&quot;:[{\&quot;baseFare\&quot;:{\&quot;amount\&quot;:{\&quot;amount\&quot;:75594,\&quot;currency\&quot;:\&quot;UAH\&quot;},\&quot;currencyCode\&quot;:\&quot;UAH\&quot;},\&quot;taxes\&quot;:{\&quot;amount\&quot;:{\&quot;amount\&quot;:16657,\&quot;currency\&quot;:\&quot;UAH\&quot;},\&quot;currencyCode\&quot;:\&quot;UAH\&quot;},\&quot;totalFare\&quot;:{\&quot;amount\&quot;:{\&quot;amount\&quot;:92251,\&quot;currency\&quot;:\&quot;UAH\&quot;},\&quot;currencyCode\&quot;:\&quot;UAH\&quot;},\&quot;passengerType\&quot;:\&quot;ADT\&quot;,\&quot;passengerQty\&quot;:1}]}}}}&quot;,
+    &quot;type&quot;: &quot;Price change&quot;,
+    &quot;data&quot;: {
+      &quot;response&quot;: {
+        &quot;total_price&quot;: {
+          &quot;amount&quot;: 92251,
+          &quot;currency&quot;: &quot;UAH&quot;
+        },
+        &quot;currency&quot;: &quot;UAH&quot;
+      },
+      &quot;additionalInfo&quot;: {
+        &quot;gdsOfferId&quot;: &quot;LH_6adf5b2a0dc8e9003ffd3ef5&quot;
+      }
+    }
+  },
+  &quot;transport_error&quot;: null
+}</pre></section>      <section class="evidence"><div><h2>Live evidence</h2><p>Fresh evidence: tasks/SS-6432-drct-search-match/runs/fixed-retest-20261026T142752Z. Five Search requests and three Result requests, no retries or polling. DRCT=22 offers; S/6NVG=50, A/DFWG32100=184, K/DEF=7, E/2EH4=0. S request selected an offer returned as gds=E; this is E-to-D recovery from S-filtered Search, not a returned-S offer. Same flights means matching marketing airline, flight number, airports and departure time. Fare-basis differences are allowed by direct user clarification. Three fresh executed PASS plus one historical user-confirmed booking PASS; booking was not rerun for the non-D fix. No issuance or configuration changes. Previous report is preserved under previous-report/ in this run. All earlier run payloads remain preserved. No operational lesson matched this scope or was applied. Fresh empty/missing-match inventory remains WARN, not a fix failure. FINAL SCOPE: user explicitly excludes/skips K and E because those GDSs are unavailable. Their earlier WARN observations and payloads remain in the saved run evidence, but are not assessed cases and add no PASS. Final assessed total: three fresh executed Result PASS and one carried-forward user-confirmed booking PASS; 0 FAIL / 0 WARN.</p></div><div><h2>Evidence and rerun</h2><p><button class="download-artifact" type="button" data-file="SS-6432.postman_collection.json">Postman collection</button><br><button class="download-artifact" type="button" data-file="expected-outcomes.csv">Expected-outcome CSV</button></p></div></section>
+    </article>
+  </main>
+  <script>
+    // Keep the complete task name visible within three lines, including on narrow screens.
+    const heading = document.querySelector('h1');
+    function fitHeading() {
+      heading.style.fontSize = '';
+      let size = parseFloat(getComputedStyle(heading).fontSize);
+      while (heading.getBoundingClientRect().height > parseFloat(getComputedStyle(heading).lineHeight) * 3 + 1 && size > 8) {
+        size -= 0.5;
+        heading.style.fontSize = size + 'px';
+      }
+    }
+    new ResizeObserver(fitHeading).observe(heading.parentElement);
+    document.fonts.ready.then(fitHeading);
+    fitHeading();
+
+    const artifacts = {
+      'SS-6432.postman_collection.json': { type: 'application/json;charset=utf-8', content: 'ew0KICAiaW5mbyI6IHsNCiAgICAibmFtZSI6ICJTUy02NDMyIERSQ1QgUyZNIC0gbm9uLUQgUmVzdWx0IiwNCiAgICAic2NoZW1hIjogImh0dHBzOi8vc2NoZW1hLmdldHBvc3RtYW4uY29tL2pzb24vY29sbGVjdGlvbi92Mi4xLjAvY29sbGVjdGlvbi5qc29uIiwNCiAgICAiZGVzY3JpcHRpb24iOiAiRnJlc2ggZml4ZWQtYnVpbGQgbm9uLUQgUmVzdWx0IGNhc2VzLiBDU1YgaW5kaWNlcyBpZGVudGlmeSBjYXB0dXJlZCBpbnZlbnRvcnkgb25seTsgdmVyaWZ5IHNlbGVjdGVkIGZsaWdodHMgYWdhaW5zdCBmcmVzaCBEUkNUIGJlZm9yZSByZXJ1bi4gUnVudGltZSBTZWFyY2ggYXV0aG9yaXphdGlvbiBvbmx5OyBib29raW5nIG5vdCBpbmNsdWRlZC4iDQogIH0sDQogICJpdGVtIjogWw0KICAgIHsNCiAgICAgICJuYW1lIjogIlNlYXJjaCIsDQogICAgICAicmVxdWVzdCI6IHsNCiAgICAgICAgIm1ldGhvZCI6ICJHRVQiLA0KICAgICAgICAiaGVhZGVyIjogWw0KICAgICAgICAgIHsNCiAgICAgICAgICAgICJrZXkiOiAiQXV0aG9yaXphdGlvbiIsDQogICAgICAgICAgICAidmFsdWUiOiAie3tzZWFyY2hfYXV0aG9yaXphdGlvbn19Ig0KICAgICAgICAgIH0NCiAgICAgICAgXSwNCiAgICAgICAgInVybCI6ICJ7e3NlYXJjaF91cmx9fSINCiAgICAgIH0sDQogICAgICAiZXZlbnQiOiBbDQogICAgICAgIHsNCiAgICAgICAgICAibGlzdGVuIjogInByZXJlcXVlc3QiLA0KICAgICAgICAgICJzY3JpcHQiOiB7DQogICAgICAgICAgICAidHlwZSI6ICJ0ZXh0L2phdmFzY3JpcHQiLA0KICAgICAgICAgICAgImV4ZWMiOiBbDQogICAgICAgICAgICAgICJpZighcG0uZW52aXJvbm1lbnQuZ2V0KCdzZWFyY2hfYXV0aG9yaXphdGlvbicpKSB0aHJvdyBuZXcgRXJyb3IoJ1NldCBsb2NhbCBzZWFyY2hfYXV0aG9yaXphdGlvbicpOyINCiAgICAgICAgICAgIF0NCiAgICAgICAgICB9DQogICAgICAgIH0sDQogICAgICAgIHsNCiAgICAgICAgICAibGlzdGVuIjogInRlc3QiLA0KICAgICAgICAgICJzY3JpcHQiOiB7DQogICAgICAgICAgICAidHlwZSI6ICJ0ZXh0L2phdmFzY3JpcHQiLA0KICAgICAgICAgICAgImV4ZWMiOiBbDQogICAgICAgICAgICAgICJjb25zdCBiPXBtLnJlc3BvbnNlLmpzb24oKTsgcG0udGVzdCgnU2VhcmNoIHJlc3VsdHMgYXJyYXknLCgpPT5wbS5leHBlY3QoYi5yZXN1bHRzKS50by5iZS5hbignYXJyYXknKSk7IGNvbnN0IGk9TnVtYmVyKHBtLml0ZXJhdGlvbkRhdGEuZ2V0KCdzZWxlY3RlZF9pbmRleCcpKTsgaWYoIWIucmVzdWx0c1tpXSkgdGhyb3cgbmV3IEVycm9yKCdSZXF1aXJlZCBtYXRjaGluZyBpbnZlbnRvcnkgdW5hdmFpbGFibGUnKTsgcG0uY29sbGVjdGlvblZhcmlhYmxlcy5zZXQoJ3NlbGVjdGVkX2tleScsYi5yZXN1bHRzW2ldLmtleSk7Ig0KICAgICAgICAgICAgXQ0KICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgICAgXQ0KICAgIH0sDQogICAgew0KICAgICAgIm5hbWUiOiAiUmVzdWx0IiwNCiAgICAgICJyZXF1ZXN0Ijogew0KICAgICAgICAibWV0aG9kIjogIkdFVCIsDQogICAgICAgICJoZWFkZXIiOiBbDQogICAgICAgICAgew0KICAgICAgICAgICAgImtleSI6ICJBdXRob3JpemF0aW9uIiwNCiAgICAgICAgICAgICJ2YWx1ZSI6ICJ7e3NlYXJjaF9hdXRob3JpemF0aW9ufX0iDQogICAgICAgICAgfQ0KICAgICAgICBdLA0KICAgICAgICAidXJsIjogImh0dHBzOi8vYXBpLnNlYXJjaC5kZXYudHJhdmVsLWRldi5jb20vdjEvcmVzdWx0L0FOWS97e3NlbGVjdGVkX2tleX19Ig0KICAgICAgfSwNCiAgICAgICJldmVudCI6IFsNCiAgICAgICAgew0KICAgICAgICAgICJsaXN0ZW4iOiAidGVzdCIsDQogICAgICAgICAgInNjcmlwdCI6IHsNCiAgICAgICAgICAgICJ0eXBlIjogInRleHQvamF2YXNjcmlwdCIsDQogICAgICAgICAgICAiZXhlYyI6IFsNCiAgICAgICAgICAgICAgInBtLnRlc3QoJ1Jlc3VsdCByZWNvdmVycyB0byBEUkNUJywoKT0+cG0uZXhwZWN0KHBtLnJlc3BvbnNlLmpzb24oKS5nZHMpLnRvLmVxdWFsKCdEJykpOyINCiAgICAgICAgICAgIF0NCiAgICAgICAgICB9DQogICAgICAgIH0NCiAgICAgIF0NCiAgICB9DQogIF0NCn0=' },
+      'expected-outcomes.csv': { type: 'text/csv;charset=utf-8', content: 'c2NlbmFyaW9faWQsZXhwZWN0ZWRfcmVzdWx0LHByb3ZpZGVyX2ZpbHRlcixzZWFyY2hfdXJsLHNlbGVjdGVkX2luZGV4DQpub25ELUEsZ2RzPUQsQSxodHRwczovL2FwaS5zZWFyY2guZGV2LnRyYXZlbC1kZXYuY29tL3YxL3NlYXJjaD9nZHM9QSZwY2M9REZXRzMyMTAwJmZhcmU9UFVCJmNpZD1UU1QxMDEmYWR0PTEmY2FiaW49WSZkZWJ1Zz10cnVlJmZsLjAubz1MSFImZmwuMC5kPUpGSyZmbC4wLmR0PTIwMjYtMTEtMjAsMTc1DQpub25ELVMsZ2RzPUQsUyxodHRwczovL2FwaS5zZWFyY2guZGV2LnRyYXZlbC1kZXYuY29tL3YxL3NlYXJjaD9nZHM9UyZwY2M9Nk5WRyZmYXJlPVBVQiZjaWQ9VFNUMTAxJmFkdD0xJmNhYmluPVkmZGVidWc9dHJ1ZSZmbC4wLm89TEhSJmZsLjAuZD1KRksmZmwuMC5kdD0yMDI2LTExLTIwLDQ2DQpub25ELUEtTEgsZ2RzPUQsQSxodHRwczovL2FwaS5zZWFyY2guZGV2LnRyYXZlbC1kZXYuY29tL3YxL3NlYXJjaD9nZHM9QSZwY2M9REZXRzMyMTAwJmZhcmU9UFVCJmNpZD1UU1QxMDEmYWR0PTEmY2FiaW49WSZkZWJ1Zz10cnVlJmZsLjAubz1MSFImZmwuMC5kPUpGSyZmbC4wLmR0PTIwMjYtMTEtMjAsMTA3DQo=' }
+    };
+    const toggle = document.querySelector('.theme-toggle');
+    toggle.addEventListener('click', function () {
+      const dark = document.body.dataset.theme === 'dark';
+      document.body.dataset.theme = dark ? 'light' : 'dark';
+      toggle.textContent = dark ? 'Dark mode' : 'Light mode';
+      toggle.setAttribute('aria-pressed', String(!dark));
+    });
+    document.querySelectorAll('.download-artifact').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const artifact = artifacts[button.dataset.file];
+        const binary = atob(artifact.content);
+        const bytes = new Uint8Array(binary.length);
+        for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+        const blobUrl = URL.createObjectURL(new Blob([bytes], { type: artifact.type }));
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = button.dataset.file;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(function () { URL.revokeObjectURL(blobUrl); }, 0);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=V&pcc=8Ki0&fare=PUB&adt=1&cabin=Y&fl.0.o=LAX&fl.0.d=MAD&fl.0.dt=2027-02-15"
+  },
+  "response": {
+    "http_status": 200,
+    "body": {
+      "results": [],
+      "starUTCTime": "2026-11-02 14:52:36.723",
+      "endUTCTime": "2026-11-02 14:52:36.726",
+      "excutionTime": "2.878343ms",
+      "ngsMap": {},
+      "messages": [
+        {
+          "type": "TRACEID",
+          "value": "991a2268-1ad6-43cc-95fe-2dfbaac863c9"
+        }
+      ]
+    },
+    "transport_error": null,
+    "reason_code": "NO_DATA",
+    "status": "WARN",
+    "retryable": false
+  }
+}

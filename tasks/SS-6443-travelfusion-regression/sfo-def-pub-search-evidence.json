@@ -1,0 +1,132 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.stage.travel-dev.com/v1/search?cid=TST101&gds=F&pcc=DEF&fare=PUB&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20"
+  },
+  "http_status": 200,
+  "transport_error": null,
+  "results_count": 57,
+  "F_count": 37,
+  "provider_counts": {
+    "E": 20,
+    "F": 37
+  },
+  "body": {
+    "results": [
+      {
+        "key": "0_VFNUMTAxKlkxMDAwL1NGT0ZSQTIwMjYtMTEtMjBfMDYxNipERX4jQjY4MTYjREUyMDE3fmxjOmVuX3VzfmN1cjpVU0Q=",
+        "gds": "F",
+        "pcc": "DEF",
+        "trips": [
+          {
+            "tripId": 1,
+            "segments": [
+              {
+                "segmentId": 1,
+                "departureTime": "2026-11-20 06:00",
+                "arrivalTime": "2026-11-20 14:30",
+                "stop": 0,
+                "stops": null,
+                "flightNumber": "816",
+                "operatingFlightNumber": "816",
+                "bookingClass": "Y",
+                "duration": 330,
+                "departureAirportCode": "SFO",
+                "departureAirportTerminal": "",
+                "arrivalAirportCode": "JFK",
+                "arrivalAirportTerminal": "",
+                "operatingAirline": "B6",
+                "airEquipType": "",
+                "aircraft": "",
+                "marketingAirline": "B6",
+                "marriageGroup": "",
+                "cabin": "Y",
+                "brandId": "Economy Classic",
+                "brandName": "Economy Classic",
+                "meal": "",
+                "fareCode": "SPO",
+                "baggage": {
+                  "ADT": {
+                    "carryOn": true,
+                    "carryOnSet": true,
+                    "carryOnSource": "provider",
+                    "airlineCode": "B6",
+                    "allowPieces": 1,
+                    "allowMaxWeight": "UP TO 50 POUNDS/23 KILOGRAMS",
+                    "kg": 23,
+                    "lbs": 50
+                  }
+                },
+                "recheckBaggage": false,
+                "earlyMorning": true
+              },
+              {
+                "segmentId": 2,
+                "departureTime": "2026-11-20 16:25",
+                "arrivalTime": "2026-11-21 05:55",
+                "stop": 0,
+                "stops": null,
+                "flightNumber": "2017",
+                "operatingFlightNumber": "2017",
+                "bookingClass": "Y",
+                "duration": 450,
+                "departureAirportCode": "JFK",
+                "departureAirportTerminal": "",
+                "arrivalAirportCode": "FRA",
+                "arrivalAirportTerminal": "",
+                "operatingAirline": "DE",
+                "airEquipType": "",
+                "aircraft": "",
+                "marketingAirline": "DE",
+                "marriageGroup": "",
+                "cabin": "Y",
+                "brandId": "Economy Classic",
+                "brandName": "Economy Classic",
+                "meal": "",
+                "fareCode": "SPO",
+                "baggage": {
+                  "ADT": {
+                    "carryOn": true,
+                    "carryOnSet": true,
+                    "carryOnSource": "provider",
+                    "airlineCode": "B6",
+                    "allowPieces": 1,
+                    "allowMaxWeight": "UP TO 50 POUNDS/23 KILOGRAMS",
+                    "kg": 23,
+                    "lbs": 50
+                  }
+                },
+                "recheckBaggage": false,
+                "overnightFlight": true
+              }
+            ],
+            "duration": 895,
+            "airlineRating": "4",
+            "baggage": {
+              "carryOn": true,
+              "carryOnSource": "provider",
+              "allowPieces": 1,
+              "allowMaxWeight": "UP TO 50 POUNDS/23 KILOGRAMS",
+              "kg": 23,
+              "lbs": 50
+            }
+          }
+        ],
+        "prices": {
+          "lastTicketDate": "",
+          "totalPrice": 1171.17,
+          "totalTax": 39.28,
+          "comm": 0,
+          "isCk": false,
+          "markupId": 142309,
+          "markupUid": "0eedfe8d-b4e4-4d85-a44f-0c85b13e9e51",
+          "markup": 1,
+          "oMarkup": {
+            "amount": 1,
+            "currency": "USD"
+          }
+        }
+      }
+    ]
+  }
+}

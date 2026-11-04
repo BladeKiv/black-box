@@ -1,0 +1,47 @@
+{
+  "title": "SS-6436 Sabre NDC - Sabre OAuth token is never renewed after a 401 (dead retry branch, cached token never invalidated)",
+  "date": "2026-11-02",
+  "scope": "STAGE | Search \u2192 Result regression | SFO\u2013FRA 2026-11-20 | S/8D55 | cid=tst101",
+  "summary": "Search returned HTTP 200 with results: []. No offer key was available, so Result was not executed. The Search-to-Result regression remains inconclusive.",
+  "intended": "User-approved regression scope: Search returns usable Sabre REST offers for gds=S, pcc=8D55, cid=tst101; Result resolves a returned opaque key unchanged into itinerary and price data.",
+  "limits": "Regression only. One live Search; zero Result calls, retries or input variations. No authentication fault injection or OAuth-recovery assertions are part of this verdict. User states missing provider credentials are validated; this run did not establish provider credential configuration. No booking, ticketing or configuration changes. Sandbox refusal retained separately. No lessons applied; ledger unchanged.",
+  "collection": "SS-6436.postman_collection.json",
+  "rows": [
+    {
+      "id": "TC-01",
+      "data": "SFO\u2013FRA 2026-11-20; 1 ADT; Y; S/8D55; cid=tst101; fare=PUB",
+      "expected": "Usable S/8D55 offers and opaque key for Result",
+      "actual": "HTTP 200; results: []; no Result key (NO_DATA)",
+      "status": "WARN"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "TC-01",
+      "request": {
+        "method": "GET",
+        "url": "https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=S&pcc=8D55&fare=PUB&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20"
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "results": [],
+          "starUTCTime": "2026-11-02 14:38:14.604",
+          "endUTCTime": "2026-11-02 14:38:14.680",
+          "excutionTime": "75.851759ms",
+          "ngsMap": {},
+          "messages": [
+            {
+              "type": "TRACEID",
+              "value": "80982fb1-3461-41a5-a322-9e5995384c8d"
+            }
+          ]
+        },
+        "transport_error": null,
+        "reason_code": "NO_DATA",
+        "status": "WARN",
+        "retryable": false
+      }
+    }
+  ]
+}

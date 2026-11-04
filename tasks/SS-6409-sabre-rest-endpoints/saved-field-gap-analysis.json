@@ -1,0 +1,45 @@
+{
+  "provenance": "Additional analysis of saved 2026-10-22 execution; no new endpoint requests",
+  "observations": [
+    {
+      "cid": "TST101",
+      "options": 50,
+      "segments": 66,
+      "mileage_present": 0,
+      "meal_present": 66,
+      "meal_nonempty": 0,
+      "maxSeats_counts": {
+        "9": 50
+      }
+    },
+    {
+      "cid": "TST102",
+      "options": 95,
+      "segments": 156,
+      "mileage_present": 0,
+      "meal_present": 156,
+      "meal_nonempty": 0,
+      "maxSeats_counts": {
+        "9": 95
+      }
+    },
+    {
+      "cid": "TST104",
+      "options": 195,
+      "segments": 354,
+      "mileage_present": 354,
+      "meal_present": 354,
+      "meal_nonempty": 264,
+      "maxSeats_counts": {
+        "9": 94,
+        "8": 1,
+        "2": 4,
+        "4": 35,
+        "7": 57,
+        "1": 1,
+        "6": 1,
+        "5": 2
+      }
+    }
+  ]
+}

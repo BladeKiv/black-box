@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.dev.travel-dev.com/algo/conf"
+  },
+  "response": {
+    "http_status": 200,
+    "sabre_rest": {
+      "enable": true,
+      "enable_revalidate": true,
+      "flight_shop": {
+        "cid": [
+          "TST101"
+        ],
+        "projects": null
+      },
+      "flight_shop_lite": {
+        "cid": [
+          "TST102"
+        ],
+        "projects": null
+      }
+    }
+  },
+  "purpose": "configuration discovery only"
+}

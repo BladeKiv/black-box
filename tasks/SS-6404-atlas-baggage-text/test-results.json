@@ -1,0 +1,65 @@
+[
+  {
+    "id": "TC-01",
+    "pnr": "US74GX",
+    "kind": "baggage",
+    "data": "AS / US74GX / 1 segment(s) / ADT / baggage",
+    "expected": "Provider weight 0 means no free baggage; zero-piece checked allowance generates 0PC FBA text.",
+    "actual": "segment 1: {\"numberOfPcs\":\"00P\",\"baggageFullTextA\":\"FBA  FREE BAGGAGE ALLOWANCE 0PC\"}",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-02",
+    "pnr": "US74GX",
+    "kind": "carryOn",
+    "data": "AS / US74GX / 1 segment(s) / ADT / carryOn",
+    "expected": "Provider weight -1 means no weight limit. Do not expose a negative or finite weight limit; preserve supplied pieces and dimensions.",
+    "actual": "RETEST: provider weight remains -1; AirAPI omits weightKg and weightLb and negative weight text. 1 piece, 115 cm / 45 in retained. COD: COD UP TO 1  UPTO45LI 115LCM. Provider docs confirm -1 means no weight limit; omission of a numeric weight limit is consistent.",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-03",
+    "pnr": "ER0XZ8",
+    "kind": "baggage",
+    "data": "SM / ER0XZ8 / 2 segment(s) / ADT / baggage",
+    "expected": "Source pieces, positive weight and supplied dimensions appear in numeric fields and generated allowance/detail text.",
+    "actual": "segment 1: {\"weightLb\":50,\"weightKg\":23,\"numberOfPcs\":\"01P\",\"baggageFullTextA\":\"FBA  FREE BAGGAGE ALLOWANCE 1PC\",\"baggageFullTextD\":\"FBD UP TO 1  UPTO50LB 23KG\"} | segment 2: {\"weightLb\":50,\"weightKg\":23,\"numberOfPcs\":\"01P\",\"baggageFullTextA\":\"FBA  FREE BAGGAGE ALLOWANCE 1PC\",\"baggageFullTextD\":\"FBD UP TO 1  UPTO50LB 23KG\"}",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-04",
+    "pnr": "ER0XZ8",
+    "kind": "carryOn",
+    "data": "SM / ER0XZ8 / 2 segment(s) / ADT / carryOn",
+    "expected": "Source pieces, positive weight and supplied dimensions appear in numeric fields and generated allowance/detail text.",
+    "actual": "segment 1: {\"weightLb\":15,\"weightKg\":7,\"numberOfPcs\":\"1P\",\"baggageFullTextA\":\"COA  CARRYON HAND BAGGAGE ALLOWANCE1PC\",\"baggageFullTextD\":\"COD UP TO 1  UPTO15LB 7KG\"} | segment 2: {\"weightLb\":15,\"weightKg\":7,\"numberOfPcs\":\"1P\",\"baggageFullTextA\":\"COA  CARRYON HAND BAGGAGE ALLOWANCE1PC\",\"baggageFullTextD\":\"COD UP TO 1  UPTO15LB 7KG\"}",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-05",
+    "pnr": "ZXCMYU",
+    "kind": "baggage",
+    "data": "6E / ZXCMYU / 1 segment(s) / ADT / baggage",
+    "expected": "Source pieces, positive weight and supplied dimensions appear in numeric fields and generated allowance/detail text.",
+    "actual": "segment 1: {\"weightLb\":33,\"weightKg\":15,\"lengthInch\":62,\"lengthCm\":158,\"numberOfPcs\":\"01P\",\"baggageFullTextA\":\"FBA  FREE BAGGAGE ALLOWANCE 1PC\",\"baggageFullTextD\":\"FBD UP TO 1  UPTO33LB 15KG AND62LI 158LCM\"}",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-06",
+    "pnr": "ZXCMYU",
+    "kind": "carryOn",
+    "data": "6E / ZXCMYU / 1 segment(s) / ADT / carryOn",
+    "expected": "Source pieces, positive weight and supplied dimensions appear in numeric fields and generated allowance/detail text.",
+    "actual": "segment 1: {\"weightLb\":15,\"weightKg\":7,\"lengthInch\":45,\"lengthCm\":115,\"numberOfPcs\":\"1P\",\"baggageFullTextA\":\"COA  CARRYON HAND BAGGAGE ALLOWANCE1PC\",\"baggageFullTextD\":\"COD UP TO 1  UPTO15LB 7KG AND45LI 115LCM\"}",
+    "status": "PASS"
+  },
+  {
+    "id": "TC-07",
+    "pnr": "ML0MPQ",
+    "kind": "baggage",
+    "data": "F9 / ML0MPQ / 2 segment(s) / ADT / baggage",
+    "expected": "Provider weight 0 means no free baggage; zero-piece checked allowance generates 0PC FBA text.",
+    "actual": "segment 1: {\"numberOfPcs\":\"00P\",\"baggageFullTextA\":\"FBA  FREE BAGGAGE ALLOWANCE 0PC\"} | segment 2: {\"numberOfPcs\":\"00P\",\"baggageFullTextA\":\"FBA  FREE BAGGAGE ALLOWANCE 0PC\"}",
+    "status": "PASS"
+  }
+]

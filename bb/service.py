@@ -10,7 +10,7 @@ import secrets
 import threading
 import uuid
 
-from .search_job import ARTIFACTS, ROOT, JobCancelled, execute_job, validate_plan
+from .search_job import ARTIFACTS, ROOT, JobCancelled, execute_job, validate_plan, ticket_folder
 
 
 class LocalServer(ThreadingHTTPServer):
@@ -91,13 +91,13 @@ def create_server(root=ROOT, port=8766):
         jobs[record['id']] = record
         write_json(jobs_dir / (record['id'] + '.json'), record)
 
-    def run(job_id, plan, credential):
+    def run(job_id, plan, credential, base_url):
         try:
             with lock:
                 save({**jobs[job_id], 'state': 'running'})
             if validate_plan(root, plan) != scopes[plan['ticket']]:
                 raise ValueError('Service scope changed since startup; review and restart the service')
-            report, folder = execute_job(root, plan, credential, job_id, cancelled=cancellations[job_id].is_set)
+            report, folder = execute_job(root, plan, credential, job_id, cancelled=cancellations[job_id].is_set, base_url=base_url)
             with lock:
                 save({**jobs[job_id], 'state': 'completed', 'report': report,
                       'artifacts': list(ARTIFACTS), 'folder': str(folder.relative_to(root))})
@@ -156,17 +156,20 @@ def create_server(root=ROOT, port=8766):
                 return
             filename = match[2]
             if filename:
-                if record['state'] != 'completed' or filename not in ARTIFACTS:
+                if filename not in ARTIFACTS:
                     self.send(404, {'error': 'Artifact unavailable'})
                     return
-                path = (root / record['folder'] / filename).resolve()
+                folder = record.get('folder') or str((ticket_folder(root, record['ticket']) / 'runs' / ('service-' + record['id'])).relative_to(root))
+                path = (root / folder / filename).resolve()
                 if not path.is_relative_to(root) or not path.is_file():
                     self.send(404, {'error': 'Artifact unavailable'})
                     return
                 mime = 'application/json' if filename.endswith('.json') else 'text/html; charset=utf-8' if filename.endswith('.html') else 'text/plain; charset=utf-8'
                 self.send(200, path.read_bytes(), mime)
             else:
-                self.send(200, record)
+                folder = root / record.get('folder', str((ticket_folder(root, record['ticket']) / 'runs' / ('service-' + record['id'])).relative_to(root)))
+                available = [name for name in ARTIFACTS if (folder / name).is_file()]
+                self.send(200, {**record, 'available_artifacts': available})
 
         def do_POST(self):
             if not self.authorized():
@@ -194,8 +197,11 @@ def create_server(root=ROOT, port=8766):
                 if scopes.get(scope['ticket']) != scope:
                     raise ValueError('Scope was not registered at service startup')
                 runtime = data.get('runtime', {})
-                if not isinstance(runtime, dict) or set(runtime) - {'search_authorization'}:
+                if not isinstance(runtime, dict) or set(runtime) - {'search_authorization', 'base_url'}:
                     raise ValueError('Only runtime Search authentication is accepted')
+                base_url = runtime.get('base_url', '')
+                if not isinstance(base_url, str) or base_url.rstrip('/') != scope['base_url'].rstrip('/'):
+                    raise ValueError('Selected runtime base URL must match scope')
                 credential = runtime.get('search_authorization', '')
                 if not isinstance(credential, str) or len(credential) > 8192 or '\r' in credential or '\n' in credential:
                     raise ValueError('Invalid runtime authentication format')
@@ -209,7 +215,7 @@ def create_server(root=ROOT, port=8766):
             with lock:
                 cancellations[record['id']] = threading.Event()
                 save(record)
-            worker.submit(run, record['id'], plan, credential)
+            worker.submit(run, record['id'], plan, credential, base_url)
             self.send(202, record)
 
     server.RequestHandlerClass = Handler

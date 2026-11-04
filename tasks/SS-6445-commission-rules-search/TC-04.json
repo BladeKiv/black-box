@@ -1,0 +1,1710 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "https://api.search.dev.travel-dev.com/v1/commission/rules/search",
+    "body": {
+      "ids": [
+        7839,
+        7840
+      ]
+    }
+  },
+  "response": {
+    "http_status": 200,
+    "body": {
+      "rules": {
+        "95": [
+          {
+            "AirlineRefs": {
+              "Ids": "52",
+              "GroupIds": ""
+            },
+            "AllAirlines": false,
+            "Validating": [
+              "AA"
+            ],
+            "PaxCodes": 7,
+            "CombinationKey": "LATS6",
+            "Consolidator": "GTT",
+            "TourCode": "AGL1",
+            "FilterOptions": [
+              {
+                "FareTypes": [
+                  "PUB"
+                ]
+              },
+              {
+                "validatings": [
+                  "AA"
+                ]
+              }
+            ],
+            "FareRules": [
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    15
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "D",
+                      "F",
+                      "I",
+                      "J",
+                      "P",
+                      "R",
+                      "W"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        37,
+                        42,
+                        51,
+                        55,
+                        56,
+                        66,
+                        121,
+                        208,
+                        299
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23600,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    5
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {},
+                  {
+                    "excludeFareCodes": [
+                      "^.{6}B"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "B",
+                      "G",
+                      "H",
+                      "K",
+                      "L",
+                      "M",
+                      "N",
+                      "O",
+                      "Q",
+                      "S",
+                      "V",
+                      "Y"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        37,
+                        42,
+                        51,
+                        55,
+                        56,
+                        66,
+                        121,
+                        208,
+                        299
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23601,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    8
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "D",
+                      "F",
+                      "I",
+                      "J",
+                      "P",
+                      "R",
+                      "W"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "airportIds": [
+                        15,
+                        115,
+                        192,
+                        3104,
+                        5986,
+                        6122
+                      ]
+                    },
+                    "destination": {
+                      "airportIds": [
+                        59,
+                        296,
+                        501,
+                        747,
+                        748,
+                        858,
+                        859,
+                        861,
+                        862,
+                        865,
+                        867,
+                        868,
+                        869,
+                        1526,
+                        2590,
+                        2819,
+                        3580,
+                        4138,
+                        5418
+                      ],
+                      "countryIds": [
+                        71,
+                        89,
+                        97,
+                        119,
+                        139,
+                        153,
+                        156
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23602,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    3
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {},
+                  {
+                    "excludeFareCodes": [
+                      "^.{6}B"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "B",
+                      "G",
+                      "H",
+                      "K",
+                      "L",
+                      "M",
+                      "N",
+                      "O",
+                      "Q",
+                      "S",
+                      "V",
+                      "Y"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "airportIds": [
+                        15,
+                        115,
+                        192,
+                        3104,
+                        5986,
+                        6122
+                      ]
+                    },
+                    "destination": {
+                      "airportIds": [
+                        59,
+                        296,
+                        501,
+                        747,
+                        748,
+                        858,
+                        859,
+                        861,
+                        862,
+                        865,
+                        867,
+                        868,
+                        869,
+                        1526,
+                        2590,
+                        2819,
+                        3580,
+                        4138,
+                        5418
+                      ],
+                      "countryIds": [
+                        71,
+                        89,
+                        97,
+                        119,
+                        139,
+                        153,
+                        156
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23603,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    15
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "D",
+                      "F",
+                      "I",
+                      "J",
+                      "P",
+                      "R",
+                      "W"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "destination": {
+                      "airportIds": [
+                        59,
+                        296,
+                        501,
+                        747,
+                        748,
+                        858,
+                        859,
+                        861,
+                        862,
+                        865,
+                        867,
+                        868,
+                        869,
+                        1526,
+                        2590,
+                        2819,
+                        3580,
+                        4138,
+                        5418
+                      ],
+                      "countryIds": [
+                        71,
+                        89,
+                        97,
+                        119,
+                        139,
+                        153,
+                        156
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23604,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    5
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {},
+                  {
+                    "excludeFareCodes": [
+                      "^.{6}B"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "B",
+                      "G",
+                      "H",
+                      "K",
+                      "L",
+                      "M",
+                      "N",
+                      "O",
+                      "Q",
+                      "S",
+                      "V",
+                      "Y"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "destination": {
+                      "airportIds": [
+                        59,
+                        296,
+                        501,
+                        747,
+                        748,
+                        858,
+                        859,
+                        861,
+                        862,
+                        865,
+                        867,
+                        868,
+                        869,
+                        1526,
+                        2590,
+                        2819,
+                        3580,
+                        4138,
+                        5418
+                      ],
+                      "countryIds": [
+                        71,
+                        89,
+                        97,
+                        119,
+                        139,
+                        153,
+                        156
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23605,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    4
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "D",
+                      "F",
+                      "I",
+                      "J",
+                      "P",
+                      "R",
+                      "W"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "zoneIds": [
+                        "285"
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23606,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    4
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {},
+                  {
+                    "excludeFareCodes": [
+                      "^.{6}B"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "B",
+                      "G",
+                      "H",
+                      "K",
+                      "L",
+                      "M",
+                      "N",
+                      "O",
+                      "Q",
+                      "S",
+                      "V",
+                      "Y"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "zoneIds": [
+                        "285"
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23607,
+                "AllAirlines": false
+              }
+            ],
+            "FlightApplicationGroup": {
+              "Rules": [
+                {
+                  "codeshare": {
+                    "Airlines": [
+                      {
+                        "Marketing": [
+                          "AA"
+                        ],
+                        "Operating": [
+                          "AA"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "52",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "52",
+                          "GroupIds": ""
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  },
+                  "routing": {
+                    "between": [
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 128
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 129
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 130
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 27
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 128
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 129
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 130
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        },
+                        "Destination": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 27
+                        }
+                      }
+                    ],
+                    "Appliance": 2
+                  }
+                },
+                {
+                  "codeshare": {
+                    "Airlines": [
+                      {
+                        "Marketing": [
+                          "QR",
+                          "RJ",
+                          "UL",
+                          "AA",
+                          "AS",
+                          "AT",
+                          "AY",
+                          "BA",
+                          "MH",
+                          "QF",
+                          "CX",
+                          "IB",
+                          "JL"
+                        ],
+                        "Operating": [
+                          "QR",
+                          "CX",
+                          "IB",
+                          "MH",
+                          "QF",
+                          "RJ",
+                          "UL",
+                          "AA",
+                          "AS",
+                          "AT",
+                          "AY",
+                          "BA",
+                          "JL"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "",
+                          "GroupIds": "59"
+                        },
+                        "OperatingRefs": {
+                          "Ids": "",
+                          "GroupIds": "59"
+                        }
+                      },
+                      {
+                        "Marketing": [
+                          "AA"
+                        ],
+                        "Operating": [
+                          "G3"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "52",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "256",
+                          "GroupIds": ""
+                        }
+                      },
+                      {
+                        "Marketing": [
+                          "G3"
+                        ],
+                        "Operating": [
+                          "AA"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "256",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "52",
+                          "GroupIds": ""
+                        }
+                      },
+                      {
+                        "Marketing": [
+                          "G3"
+                        ],
+                        "Operating": [
+                          "G3"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "256",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "256",
+                          "GroupIds": ""
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  }
+                }
+              ],
+              "Relation": true
+            },
+            "Connection": {
+              "Allowed": false,
+              "AllLocations": false,
+              "Locations": {}
+            },
+            "Id": 7839,
+            "DistributionId": 2,
+            "DistributionPriority": 0,
+            "ContractType": "Pro-rate",
+            "ContractClass": "Standard",
+            "ClaimMethod": "upfront",
+            "DeductedAmount": 100,
+            "TravelDatesRelation": true,
+            "IsDeducted": true,
+            "FareTypes": [
+              "PUB"
+            ]
+          },
+          {
+            "AirlineRefs": {
+              "Ids": "52",
+              "GroupIds": ""
+            },
+            "AllAirlines": false,
+            "Validating": [
+              "AA"
+            ],
+            "PaxCodes": 7,
+            "CombinationKey": "LATS6",
+            "Consolidator": "GTT",
+            "TourCode": "AGL1",
+            "FilterOptions": [
+              {
+                "FareTypes": [
+                  "PUB"
+                ]
+              },
+              {
+                "validatings": [
+                  "AA"
+                ]
+              }
+            ],
+            "FareRules": [
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    12
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "D",
+                      "F",
+                      "I",
+                      "J",
+                      "P",
+                      "R",
+                      "W"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        37,
+                        42,
+                        51,
+                        55,
+                        56,
+                        66,
+                        121,
+                        208,
+                        299
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23608,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    2
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {},
+                  {
+                    "excludeFareCodes": [
+                      "^.{6}B"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "B",
+                      "G",
+                      "H",
+                      "K",
+                      "L",
+                      "M",
+                      "N",
+                      "O",
+                      "Q",
+                      "S",
+                      "V",
+                      "Y"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        37,
+                        42,
+                        51,
+                        55,
+                        56,
+                        66,
+                        121,
+                        208,
+                        299
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23609,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    5
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "D",
+                      "F",
+                      "I",
+                      "J",
+                      "P",
+                      "R",
+                      "W"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "airportIds": [
+                        15,
+                        115,
+                        192,
+                        3104,
+                        5986,
+                        6122
+                      ]
+                    },
+                    "destination": {
+                      "airportIds": [
+                        59,
+                        296,
+                        501,
+                        747,
+                        748,
+                        858,
+                        859,
+                        861,
+                        862,
+                        865,
+                        867,
+                        868,
+                        869,
+                        1526,
+                        2590,
+                        2819,
+                        3580,
+                        4138,
+                        5418
+                      ],
+                      "countryIds": [
+                        71,
+                        89,
+                        97,
+                        119,
+                        139,
+                        153,
+                        156
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23610,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    12
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "D",
+                      "F",
+                      "I",
+                      "J",
+                      "P",
+                      "R",
+                      "W"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "destination": {
+                      "airportIds": [
+                        59,
+                        296,
+                        501,
+                        747,
+                        748,
+                        858,
+                        859,
+                        861,
+                        862,
+                        865,
+                        867,
+                        868,
+                        869,
+                        1526,
+                        2590,
+                        2819,
+                        3580,
+                        4138,
+                        5418
+                      ],
+                      "countryIds": [
+                        71,
+                        89,
+                        97,
+                        119,
+                        139,
+                        153,
+                        156
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23611,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    2
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {},
+                  {
+                    "excludeFareCodes": [
+                      "^.{6}B"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "B",
+                      "G",
+                      "H",
+                      "K",
+                      "L",
+                      "M",
+                      "N",
+                      "O",
+                      "Q",
+                      "S",
+                      "V",
+                      "Y"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "destination": {
+                      "airportIds": [
+                        59,
+                        296,
+                        501,
+                        747,
+                        748,
+                        858,
+                        859,
+                        861,
+                        862,
+                        865,
+                        867,
+                        868,
+                        869,
+                        1526,
+                        2590,
+                        2819,
+                        3580,
+                        4138,
+                        5418
+                      ],
+                      "countryIds": [
+                        71,
+                        89,
+                        97,
+                        119,
+                        139,
+                        153,
+                        156
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23612,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    1
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "D",
+                      "F",
+                      "I",
+                      "J",
+                      "P",
+                      "R",
+                      "W"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "zoneIds": [
+                        "285"
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23613,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    1
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "AA"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {},
+                  {
+                    "excludeFareCodes": [
+                      "^.{6}B"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "B",
+                      "G",
+                      "H",
+                      "K",
+                      "L",
+                      "M",
+                      "N",
+                      "O",
+                      "Q",
+                      "S",
+                      "V",
+                      "Y"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "zoneIds": [
+                        "285"
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        6,
+                        11
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "52",
+                  "GroupIds": ""
+                },
+                "Id": 23614,
+                "AllAirlines": false
+              }
+            ],
+            "FlightApplicationGroup": {
+              "Rules": [
+                {
+                  "codeshare": {
+                    "Airlines": [
+                      {
+                        "Marketing": [
+                          "AA"
+                        ],
+                        "Operating": [
+                          "AA"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "52",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "52",
+                          "GroupIds": ""
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  },
+                  "routing": {
+                    "between": [
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 128
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 129
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 130
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 27
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 128
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 129
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 130
+                        }
+                      },
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        },
+                        "Destination": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 27
+                        }
+                      }
+                    ],
+                    "Appliance": 2
+                  }
+                }
+              ],
+              "Relation": true
+            },
+            "Connection": {
+              "Allowed": false,
+              "AllLocations": false,
+              "Locations": {}
+            },
+            "Id": 7840,
+            "DistributionId": 2,
+            "DistributionPriority": 0,
+            "ContractType": "Pro-rate",
+            "ContractClass": "Standard",
+            "ClaimMethod": "upfront",
+            "DeductedAmount": 100,
+            "TravelDatesRelation": true,
+            "IsDeducted": true,
+            "FareTypes": [
+              "PUB"
+            ]
+          }
+        ]
+      },
+      "distributions": {
+        "2": [
+          {
+            "PCC": [
+              "6NVG",
+              "8KI0",
+              "G9MJ"
+            ],
+            "GDS": "S"
+          },
+          {
+            "PCC": [
+              "SFOG3210A"
+            ],
+            "GDS": "A"
+          },
+          {
+            "PCC": [
+              "DFWG32100"
+            ],
+            "GDS": "A"
+          },
+          {
+            "PCC": [
+              "2HE4"
+            ],
+            "GDS": "E"
+          }
+        ]
+      },
+      "distributionJobs": {
+        "95": [
+          {
+            "GDS": "A",
+            "PCC": [
+              "DFWG32100",
+              "SFOG3210A"
+            ],
+            "FareType": [
+              "PUB"
+            ],
+            "IsTarget": false
+          },
+          {
+            "GDS": "E",
+            "PCC": [
+              "2HE4"
+            ],
+            "FareType": [
+              "PUB"
+            ],
+            "IsTarget": false
+          },
+          {
+            "GDS": "S",
+            "PCC": [
+              "6NVG",
+              "8KI0",
+              "G9MJ"
+            ],
+            "FareType": [
+              "PUB"
+            ],
+            "IsTarget": false
+          }
+        ]
+      },
+      "distributionSources": {
+        "2": {
+          "A": [
+            "DFWG32100",
+            "SFOG3210A"
+          ],
+          "E": [
+            "2HE4"
+          ],
+          "S": [
+            "6NVG",
+            "8KI0",
+            "G9MJ"
+          ]
+        }
+      },
+      "enabledGds": {
+        "95": [
+          "A",
+          "E",
+          "S"
+        ]
+      },
+      "repoLastUpdate": "2026-11-02 20:14"
+    },
+    "transport_error": null,
+    "reason_code": "UNEVALUATED",
+    "status": "WARN",
+    "retryable": false
+  }
+}

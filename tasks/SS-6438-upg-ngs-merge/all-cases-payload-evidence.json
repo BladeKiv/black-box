@@ -1,0 +1,2598 @@
+{
+  "TC-02": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 389,
+          "results": [
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 6249.35
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6469.45
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMz",
+                  "gdsOfferId": ":UPG#:NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6517.39
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjNA==",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6849.02
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNQ==",
+                  "gdsOfferId": ":NGS#5",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7405
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKkxIfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5851.85
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKkxIfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6119.89
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKlVBfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6496.54
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKkxIfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMyOk5HUyM0",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6876.11
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKlVBfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMzOk5HUyM1",
+                  "gdsOfferId": ":NGS#5",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7432.09
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5717.79
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5986.22
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKlVBfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6509.01
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKlVBfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMyOk5HUyM0",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6865.41
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKlVBfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMzOk5HUyM1",
+                  "gdsOfferId": ":NGS#5",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7444.56
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKkxIfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5851.85
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKkxIfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6119.89
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKlVBfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6496.54
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKkxIfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMyOk5HUyM0",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6876.11
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5717.79
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5986.22
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6532.18
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMyOk5HUyM0",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6888.58
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNS9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDExMiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5717.79
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNS9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDExMiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5986.22
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNS9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDExMiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMz",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6532.18
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5320.34
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5588.77
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6559.27
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5320.34
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5588.77
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6559.27
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5320.34
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5588.77
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6559.27
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5320.34
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5588.77
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6559.27
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "TC-03": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=SFO&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=BCKDCR"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 203,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4275.32
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzI=",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6864.58
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7354.78
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4385.27
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpVQX4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6459.51
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjMw==",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6946.51
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=BCKDCR"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 205,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 3945.42
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzI=",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6069.4
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6499.9
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzQ=",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 15490.85
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 3
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 3409.73
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipVQX4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6081.8
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipVQX4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjMw==",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6508.3
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNA==",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 15535.25
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 3
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=BCKDCR&fl%5B0%5D%5Bo%5D=SFO&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=FRA&fl%5B1%5D%5Bd%5D=SFO&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 274,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQvRlJBU0ZPMjAyNy0wMy0xMV8xMCpMSH4jTEg0NTUjTEg0NTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 6099.6
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQvRlJBU0ZPMjAyNy0wMy0xMV8xMCpVQX4jTEg0NTUjTEg0NTR+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6537.58
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQvRlJBU0ZPMjAyNy0wMy0xMV8xNDE2KkxIfiNMSDQ1NSNMSDExMCNMSDQ1OH5sYzplbl91c35jdXI6VVNEOlVQRyM=",
+              "gdsOfferId": ":UPG#",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 6193.28
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=BCKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 368,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 6244.19
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6462.19
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjMw==",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6841.33
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNA==",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7396.69
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKkxIfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5846.7
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKlVBfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMy",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6489.25
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKkxIfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMyOk5HUyMz",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6868.39
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKlVBfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMzOk5HUyM0",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7423.75
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=BCKDCR&fl%5B0%5D%5Bo%5D=ORD&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2026-11-20&fl%5B1%5D%5Bo%5D=FRA&fl%5B1%5D%5Bd%5D=ORD&fl%5B1%5D%5Bdt%5D=2026-12-04"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 210,
+          "results": []
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=BCKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 463,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+              "gdsOfferId": ":UPG#",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5262.14
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              }
+            },
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTUjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+              "gdsOfferId": ":UPG#",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5262.14
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "TC-04": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 583,
+          "results": [
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4262.65
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5535.34
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA5MTMqVUF+I0xYMTcjTFgzMTYjTFgzMTcjTFgxNH5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4237.6
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA5MTMqTFh+I0xYMTcjTFgzMTYjTFgzMTcjTFgxNH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5562.76
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTcjTFgzMTYjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4257.64
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTcjTFgzMTYjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5562.76
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMC9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMTgjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4262.65
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMC9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMTgjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5597.19
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4262.65
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5535.34
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTgxMi9MSFJKRksyMDI3LTAzLTExXzA2MTAqT1N+I09TMzYjT1MzMzUjT1MzNDAjT1MzNX5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4270.12
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTgxMi9MSFJKRksyMDI3LTAzLTExXzA2MTAqT1N+I09TMzYjT1MzMzUjT1MzNDAjT1MzNX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5308.89
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTUjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4984.33
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTUjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5535.34
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTcwOS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTEh+I0xINDExI0xIMjQ3MiNMSDkyMyNMSDQwMH5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5010
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTcwOS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTEh+I0xINDExI0xIMjQ3MiNMSDkyMyNMSDQwMH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6114.88
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            },
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExNS9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTUjTFgzMjQjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+              "gdsOfferId": ":NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4984.33
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                }
+              },
+              "penalties": {
+                "exchange": true,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExNS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTUjTFgzMjQjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5535.34
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "TC-07": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=SFO&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=BCKDCR"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 203,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4275.32
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzI=",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6864.58
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7354.78
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=SFO&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=AKKDCR"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 208,
+          "results": [
+            {
+              "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 4280.47
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 4414.49
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6866.58
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7356.78
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=BCKDCR"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 205,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 3945.42
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzI=",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6069.4
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6499.9
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzQ=",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 15490.85
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 3
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=AKKDCR"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 213,
+          "results": [
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 3950.58
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 4084.6
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6071.4
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6501.9
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzU=",
+                  "gdsOfferId": ":NGS#5",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 15492.85
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 3
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=ORD&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=AKKDCR"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 258,
+          "results": [
+            {
+              "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 3267.03
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 3401.05
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5733.16
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqVUF+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7190.11
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkYxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzU=",
+                  "gdsOfferId": ":NGS#5",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 16928.64
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 3
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=BCKDCR&fl%5B0%5D%5Bo%5D=SFO&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=FRA&fl%5B1%5D%5Bd%5D=SFO&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 274,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQvRlJBU0ZPMjAyNy0wMy0xMV8xMCpMSH4jTEg0NTUjTEg0NTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 6099.6
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQvRlJBU0ZPMjAyNy0wMy0xMV8xMCpVQX4jTEg0NTUjTEg0NTR+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6537.58
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=SFO&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=FRA&fl%5B1%5D%5Bd%5D=SFO&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 217,
+          "results": [
+            {
+              "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQvRlJBU0ZPMjAyNy0wMy0xMV8xMCpMSH4jTEg0NTUjTEg0NTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 6104.76
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQvRlJBU0ZPMjAyNy0wMy0xMV8xMCpMSH4jTEg0NTUjTEg0NTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6372.8
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQvRlJBU0ZPMjAyNy0wMy0xMV8xMCpVQX4jTEg0NTUjTEg0NTR+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6544.92
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=BCKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 368,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 6244.19
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6462.19
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjMw==",
+                  "gdsOfferId": ":NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6841.33
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNA==",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7396.69
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 389,
+          "results": [
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 6249.35
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+                  "gdsOfferId": ":NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6469.45
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 1
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMz",
+                  "gdsOfferId": ":UPG#:NGS#3",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6517.39
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjNA==",
+                  "gdsOfferId": ":NGS#4",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 6849.02
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": false
+                  }
+                },
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNQ==",
+                  "gdsOfferId": ":NGS#5",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 7405
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    }
+                  },
+                  "penalties": {
+                    "exchange": true,
+                    "refund": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=BCKDCR&fl%5B0%5D%5Bo%5D=ORD&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2026-11-20&fl%5B1%5D%5Bo%5D=FRA&fl%5B1%5D%5Bd%5D=ORD&fl%5B1%5D%5Bdt%5D=2026-12-04"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 210,
+          "results": []
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=ORD&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2026-11-20&fl%5B1%5D%5Bo%5D=FRA&fl%5B1%5D%5Bd%5D=ORD&fl%5B1%5D%5Bdt%5D=2026-12-04"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 325,
+          "results": []
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=BCKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 463,
+          "results": [
+            {
+              "key": "51_QkNLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+              "gdsOfferId": ":UPG#",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5262.14
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "response_excerpt": {
+        "http_status": 200,
+        "body": {
+          "count": 583,
+          "results": [
+            {
+              "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTUjTFgzMzIjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+              "gdsOfferId": ":UPG#:NGS#1",
+              "currency": "USD",
+              "prices": {
+                "totalPrice": 5294.72
+              },
+              "keys": {
+                "baggage": {
+                  "allowPieces": 1
+                },
+                "upgrade_info": {
+                  "upgrade_program": "LHG"
+                }
+              },
+              "penalties": {
+                "exchange": false,
+                "refund": false
+              },
+              "ngsItineraries": [
+                {
+                  "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTUjTFgzMzIjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+                  "gdsOfferId": ":UPG#:NGS#2",
+                  "currency": "USD",
+                  "prices": {
+                    "totalPrice": 5562.76
+                  },
+                  "keys": {
+                    "baggage": {
+                      "allowPieces": 2
+                    },
+                    "upgrade_info": {
+                      "upgrade_program": "LHG"
+                    }
+                  },
+                  "penalties": {
+                    "exchange": false,
+                    "refund": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3875 @@
+[
+  {
+    "scenario_id": "M01",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=SFO&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=BCKDCR"
+    },
+    "http_status": 200,
+    "started_at": "2026-11-02T08:41:24.870758+00:00",
+    "result_count": 203,
+    "keepBothBagOptions": false,
+    "groups": [
+      {
+        "result_index": 0,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4275.32
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzI=",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6864.58
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 7354.78
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 2,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 2,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4385.27
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpVQX4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6459.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6946.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 2,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 3,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4692.85
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6485.81
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6940.81
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkYxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNA==",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15665.6
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 3,
+        "regular_children": 3,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 4,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0NTkjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4385.27
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0NTkjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6491.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 5,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwNypMSH4jTEg0NTkjTEgxMjV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4409.97
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwNypMSH4jTEg0NTkjTEgxMjV+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 7034
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 6,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOCpMSH4jTEg0NTkjTEgxMjd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4409.97
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOCpMSH4jTEg0NTkjTEgxMjd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6515.41
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 7,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOSpMSH4jTEg0NTkjTEg5NX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4409.97
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOSpMSH4jTEg0NTkjTEg5NX5sYzplbl91c35jdXI6VVNEOk5HUyMy",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6515.41
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 8,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMCpMSH4jTEg0NTkjTEg5N35sYzplbl91c35jdXI6VVNEOlVQRyM=",
+            "gdsOfferId": ":UPG#",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4409.97
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 0,
+        "regular_children": 0,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": null
+      },
+      {
+        "result_index": 9,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMipMSH4jTEg0NTkjTEgxMDN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+            "gdsOfferId": ":UPG#",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4409.97
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 0,
+        "regular_children": 0,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": null
+      },
+      {
+        "result_index": 10,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExNCpMSH4jTEg0NTkjTEgxMDd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+            "gdsOfferId": ":UPG#",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4409.97
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 0,
+        "regular_children": 0,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": null
+      },
+      {
+        "result_index": 11,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxMypMWH4jTFgzOSNMWDM2MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+            "gdsOfferId": ":UPG#",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4692.85
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 0,
+        "regular_children": 0,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": null
+      },
+      {
+        "result_index": 12,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxNipMWH4jTFgzOSNMSDExOTN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5728.92
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxNipMWH4jTFgzOSNMSDExOTN+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 13471.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 13,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOSpMWH4jTFgzOSNMSDExOTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5833.19
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOSpMWH4jTFgzOSNMSDExOTd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 13471.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      }
+    ]
+  },
+  {
+    "scenario_id": "M02",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=SFO&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=AKKDCR"
+    },
+    "http_status": 200,
+    "started_at": "2026-11-02T08:41:40.853107+00:00",
+    "result_count": 208,
+    "keepBothBagOptions": true,
+    "groups": [
+      {
+        "result_index": 0,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4280.47
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4414.49
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6866.58
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 7356.78
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 3,
+        "regular_children": 2,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 2,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4390.42
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4524.44
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpVQX4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6461.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjNA==",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6948.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 3,
+        "regular_children": 2,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 3,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4698.01
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4832.03
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6317.81
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjNA==",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6772.81
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkYxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNQ==",
+            "gdsOfferId": ":NGS#5",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15497.6
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 4,
+        "regular_children": 3,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 4,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0NTkjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4390.42
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0NTkjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4524.44
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0NTkjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6493.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 5,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwNypMSH4jTEg0NTkjTEgxMjV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4415.13
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwNypMSH4jTEg0NTkjTEgxMjV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4549.15
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwNypMSH4jTEg0NTkjTEgxMjV+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 7086
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 6,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOCpMSH4jTEg0NTkjTEgxMjd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4415.13
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOCpMSH4jTEg0NTkjTEgxMjd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4549.15
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 7,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOSpMSH4jTEg0NTkjTEg5NX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4415.13
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOSpMSH4jTEg0NTkjTEg5NX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4549.15
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 8,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMCpMSH4jTEg0NTkjTEg5N35sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4415.13
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMCpMSH4jTEg0NTkjTEg5N35sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4549.15
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 9,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMipMSH4jTEg0NTkjTEgxMDN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4415.13
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMipMSH4jTEg0NTkjTEgxMDN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4549.15
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 10,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExNCpMSH4jTEg0NTkjTEgxMDd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4415.13
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExNCpMSH4jTEg0NTkjTEgxMDd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4549.15
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 11,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxMypMWH4jTFgzOSNMWDM2MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4698.01
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxMypMWH4jTFgzOSNMWDM2MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4832.03
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 12,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxNipMWH4jTFgzOSNMSDExOTN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5734.08
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxNipMWH4jTFgzOSNMSDExOTN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5868.3
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxNipMWH4jTFgzOSNMSDExOTN+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 13303.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 13,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOSpMWH4jTFgzOSNMSDExOTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5838.34
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOSpMWH4jTFgzOSNMSDExOTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5972.36
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      }
+    ]
+  },
+  {
+    "scenario_id": "M03",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=BCKDCR"
+    },
+    "http_status": 200,
+    "started_at": "2026-11-02T08:42:09.471299+00:00",
+    "result_count": 205,
+    "keepBothBagOptions": false,
+    "groups": [
+      {
+        "result_index": 0,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3945.42
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzI=",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6069.4
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6499.9
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzQ=",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15490.85
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 3,
+        "regular_children": 3,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 2,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3409.73
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipVQX4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6081.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipVQX4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6508.3
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNA==",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15535.25
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 3,
+        "regular_children": 3,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 3,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNSpMSH4jTEg0NTcjTEgxMTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3409.73
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNSpVQX4jTEg0NTcjTEgxMTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6081.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 4,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNipMSH4jTEg0NTcjTEgxMTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3409.73
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNipVQX4jTEg0NTcjTEgxMTR+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6081.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 5,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNypMSH4jTEg0NTcjTEgxMTZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3409.73
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNypMSH4jTEg0NTcjTEgxMTZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6113.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 6,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOCpMSH4jTEg0NTcjTEgxMjB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3409.73
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOCpMSH4jTEg0NTcjTEgxMjB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6113.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 7,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOSpMSH4jTEg0NTcjTEgxMjJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3409.73
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOSpMSH4jTEg0NTcjTEgxMjJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6113.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 8,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwNypMSH4jTEg0NTcjTEg5NH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3434.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwNypMSH4jTEg0NTcjTEg5NH5sYzplbl91c35jdXI6VVNEOk5HUyMy",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6137.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 9,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwOCpMSH4jTEg0NTcjTEg5Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3434.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwOCpVQX4jTEg0NTcjTEg5Nn5sYzplbl91c35jdXI6VVNEOk5HUyMy",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6105.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 1,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 10,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMCpMSH4jTEg0NTcjTEgxMDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+            "gdsOfferId": ":UPG#",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3434.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 0,
+        "regular_children": 0,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": null
+      },
+      {
+        "result_index": 11,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkxNypMWH4jTFg0MSNMSDIzNzF+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+            "gdsOfferId": ":UPG#",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5429.96
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 0,
+        "regular_children": 0,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": null
+      },
+      {
+        "result_index": 13,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkyMCpMWH4jTFg0MSNMSDIzNzN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+            "gdsOfferId": ":UPG#",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5409.34
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 0,
+        "regular_children": 0,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": null
+      },
+      {
+        "result_index": 14,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkwNypMWH4jTFg0MSNMSDIzNzV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj",
+            "gdsOfferId": ":UPG#",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5409.34
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 0,
+        "regular_children": 0,
+        "upg_children": 0,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": null
+      }
+    ]
+  },
+  {
+    "scenario_id": "M04",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=AKKDCR"
+    },
+    "http_status": 200,
+    "started_at": "2026-11-02T08:42:17.268061+00:00",
+    "result_count": 213,
+    "keepBothBagOptions": true,
+    "groups": [
+      {
+        "result_index": 0,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3950.58
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4084.6
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6071.4
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6501.9
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzU=",
+            "gdsOfferId": ":NGS#5",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15492.85
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 4,
+        "regular_children": 3,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 2,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3414.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3548.91
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipVQX4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6083.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipVQX4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjNA==",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6510.3
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNQ==",
+            "gdsOfferId": ":NGS#5",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15537.25
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 4,
+        "regular_children": 3,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 3,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNSpMSH4jTEg0NTcjTEgxMTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3414.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNSpMSH4jTEg0NTcjTEgxMTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3548.91
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNSpVQX4jTEg0NTcjTEgxMTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6083.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 4,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNipMSH4jTEg0NTcjTEgxMTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3414.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNipMSH4jTEg0NTcjTEgxMTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3548.91
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNipVQX4jTEg0NTcjTEgxMTR+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6083.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 5,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNypMSH4jTEg0NTcjTEgxMTZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3414.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNypMSH4jTEg0NTcjTEgxMTZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3548.91
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNypMSH4jTEg0NTcjTEgxMTZ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6115.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 6,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOCpMSH4jTEg0NTcjTEgxMjB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3414.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOCpMSH4jTEg0NTcjTEgxMjB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3548.91
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOCpMSH4jTEg0NTcjTEgxMjB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6115.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 7,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOSpMSH4jTEg0NTcjTEgxMjJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3414.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOSpMSH4jTEg0NTcjTEgxMjJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3548.91
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOSpMSH4jTEg0NTcjTEgxMjJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6115.8
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 8,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwNypMSH4jTEg0NTcjTEg5NH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3439.67
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwNypMSH4jTEg0NTcjTEg5NH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3573.69
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwNypMSH4jTEg0NTcjTEg5NH5sYzplbl91c35jdXI6VVNEOk5HUyMz",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6462.14
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 9,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwOCpMSH4jTEg0NTcjTEg5Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3439.67
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwOCpMSH4jTEg0NTcjTEg5Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3573.69
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwOCpVQX4jTEg0NTcjTEg5Nn5sYzplbl91c35jdXI6VVNEOk5HUyMz",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6843.78
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 10,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMCpMSH4jTEg0NTcjTEgxMDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3439.67
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMCpMSH4jTEg0NTcjTEgxMDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3573.69
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 11,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkxNypMWH4jTFg0MSNMSDIzNzF+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5435.11
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkxNypMWH4jTFg0MSNMSDIzNzF+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5569.33
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkxNypMWH4jTFg0MSNMSDIzNzF+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 12657
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 13,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkyMCpMWH4jTFg0MSNMSDIzNzN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5414.49
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkyMCpMWH4jTFg0MSNMSDIzNzN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5548.71
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 14,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkwNypMWH4jTFg0MSNMSDIzNzV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5414.49
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkwNypMWH4jTFg0MSNMSDIzNzV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5548.71
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      }
+    ]
+  },
+  {
+    "scenario_id": "M05",
+    "request": {
+      "method": "GET",
+      "url": "http://airapi51.kivops.info/v1/search?adt=1&debug=1&original_cid=1&cabin=C&fl%5B0%5D%5Bo%5D=ORD&fl%5B0%5D%5Bd%5D=FRA&fl%5B0%5D%5Bdt%5D=2027-02-25&cid=AKKDCR"
+    },
+    "http_status": 200,
+    "started_at": "2026-11-02T08:42:24.708428+00:00",
+    "result_count": 258,
+    "keepBothBagOptions": true,
+    "groups": [
+      {
+        "result_index": 0,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3267.03
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 3401.05
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5733.16
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqVUF+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 7190.11
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkYxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzU=",
+            "gdsOfferId": ":NGS#5",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 16928.64
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 4,
+        "regular_children": 3,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 2,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExNypMSH4jTEg0MzUjTEgxMTN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4034.72
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExNypMSH4jTEg0MzUjTEgxMTN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4168.74
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExNypMSH4jTEg0MzUjTEgxMTN+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5756.22
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExNypMSH4jTEg0MzUjTEgxMTN+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjNA==",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6511.71
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkYxMDAwL09SREZSQTIwMjctMDItMjVfMjExNypMSH4jTEg0MzUjTEgxMTN+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNQ==",
+            "gdsOfferId": ":NGS#5",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15723.81
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 4,
+        "regular_children": 3,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 3,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOCpMSH4jTEg0MzUjTEgxMTV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4034.72
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOCpMSH4jTEg0MzUjTEgxMTV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4168.74
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOCpMSH4jTEg0MzUjTEgxMTV+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5756.22
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOCpMSH4jTEg0MzUjTEgxMTV+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMjpOR1MjNA==",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6511.71
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkYxMDAwL09SREZSQTIwMjctMDItMjVfMjExOCpMSH4jTEg0MzUjTEgxMTV+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMzpOR1MjNQ==",
+            "gdsOfferId": ":NGS#5",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15723.81
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 4,
+        "regular_children": 3,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 4,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0MzUjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4034.72
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0MzUjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4168.74
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0MzUjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5756.22
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 5,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0MzUjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4034.72
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0MzUjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4168.74
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0MzUjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMw==",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6081.21
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 2,
+        "regular_children": 1,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 6,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxOCpMWH4jTFg5I0xYMzY0Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4672.2
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxOCpMWH4jTFg5I0xYMzY0Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4806.22
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxOCpMWH4jTFg5I0xYMzY0Mn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5905.51
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxOCpMWH4jTFg5I0xYMzY0Mn5sYzplbl91c35jdXI6VVNEOk5HUyMyOk5HUyM0",
+            "gdsOfferId": ":NGS#4",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6336.01
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkYxMDAwL09SREZSQTIwMjctMDItMjVfMTgxOCpMWH4jTFg5I0xYMzY0Mn5sYzplbl91c35jdXI6VVNEOk5HUyMzOk5HUyM1",
+            "gdsOfferId": ":NGS#5",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 15548.11
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 3
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": true
+            }
+          }
+        ],
+        "children_count": 4,
+        "regular_children": 3,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 9,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxMypMWH4jTFg5I0xIMTE4OX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5734.08
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxMypMWH4jTFg5I0xIMTE4OX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5868.3
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      },
+      {
+        "result_index": 10,
+        "main_source": "UPG",
+        "options": [
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxNipMWH4jTFg5I0xIMTE5M35sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+            "gdsOfferId": ":UPG#:NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5734.08
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          {
+            "key": "51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxNipMWH4jTFg5I0xIMTE5M35sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5868.3
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        ],
+        "children_count": 1,
+        "regular_children": 0,
+        "upg_children": 1,
+        "price_order_ok": true,
+        "main_minimum_retained": true,
+        "features_ok": true,
+        "flight_identity_ok": true,
+        "numbering_ok": true
+      }
+    ]
+  }
+]

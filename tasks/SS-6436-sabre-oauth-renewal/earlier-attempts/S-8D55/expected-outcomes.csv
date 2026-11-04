@@ -1,0 +1,2 @@
+scenario_id,expected_result,provider_filter,search_url,pcc,cid,fare,origin,destination,departure_date,adt,cabin
+TC-01,usable Sabre REST offers and Result,S,https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=S&pcc=8D55&fare=PUB&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20,8D55,tst101,PUB,SFO,FRA,2026-11-20,1,Y

@@ -1,0 +1,38 @@
+{
+  "run": "SS-6438-20261102-http-prerequisites",
+  "signal": "WARN",
+  "counts": {
+    "PASS": 0,
+    "FAIL": 0,
+    "WARN": 3
+  },
+  "tests": [
+    {
+      "id": "TC-01",
+      "data": "PREPROD GET /algo/conf",
+      "expected": "Ticket prerequisite: upgrade_config.enable_merge=true; ngs_jobs enabled for eligible CID/OD.",
+      "actual": "HTTP 200; upgrade_config.enable_merge=false; upgrade_config.enable=true; ngs_jobs.enable=true. Merge matrix blocked.",
+      "status": "WARN",
+      "reason_code": "NO_DATA",
+      "response_paths": "$.upgrade_config.enable_merge"
+    },
+    {
+      "id": "TC-02",
+      "data": "S02: TST101; C; LH/S/6NVG/SR; FRA-CDG 2026-11-20, CDG-MUC 2026-11-30",
+      "expected": "A qualifying group with UPG options is required to evaluate cheapest-main and progressive feature filtering.",
+      "actual": "HTTP 200; 40 PUB results; 0 UPG results; no ngsItineraries fields. TST101 is absent from the returned UPG/ngs CID lists.",
+      "status": "WARN",
+      "reason_code": "NO_DATA",
+      "response_paths": "$.results[*].keys.upgrade_info; $.results[*].ngsItineraries"
+    },
+    {
+      "id": "TC-03",
+      "data": "S01: initial HTTP Search through inherited localhost proxy",
+      "expected": "Reach Search and obtain evaluable response data.",
+      "actual": "No HTTP response; WinError 10061 from inherited proxy route. Direct HTTP access later succeeded independently in S02.",
+      "status": "WARN",
+      "reason_code": "TRANSPORT_ERROR",
+      "response_paths": "$.response.transport_error"
+    }
+  ]
+}

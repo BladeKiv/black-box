@@ -1,0 +1,17 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://airapi51.kivops.info/algo/conf"
+  },
+  "started_at": "2026-11-02T08:31:16.655356+00:00",
+  "response": {
+    "http_status": 401,
+    "body": {
+      "ErrorCode": "Err.NotAuthorized",
+      "Status": "Error",
+      "Message": "Access token is missing or invalid"
+    },
+    "transport_error": null
+  },
+  "finished_at": "2026-11-02T08:31:16.954109+00:00"
+}

@@ -1,0 +1,1148 @@
+{
+  "environment": "PREPROD",
+  "cid": "AKKDCR",
+  "groups": 19,
+  "note": "Saved-response keys are preserved unchanged; a fresh Search may return different inventory or keys. No live request executed for this extraction.",
+  "failures": [
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[0]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMz",
+          "failing_response_path": "results[0].ngsItineraries[1]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipVQX4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMTpOR1MjMg==",
+            "gdsOfferId": ":NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6469.45
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8xMipMSH4jTEg0NTMjTEg0NTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMz",
+            "gdsOfferId": ":UPG#:NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6517.39
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[2]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKkxIfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKkxIfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKlVBfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+          "failing_response_path": "results[2].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKkxIfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6119.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wODEwKlVBfiNMSDQ1MyNMSDEyNyNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6496.54
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[3]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKlVBfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+          "failing_response_path": "results[3].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5986.22
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzEyKlVBfiNMSDQ1NyNMSDEwNiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6509.01
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[4]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKkxIfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKkxIfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKlVBfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+          "failing_response_path": "results[4].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKkxIfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6119.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcvTVVDTEFYMjAyNy0wMy0xMV8wNzEwKlVBfiNMSDQ1MyNMSDEyNSNMSDQ1Nn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6496.54
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[5]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+          "failing_response_path": "results[5].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5986.22
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDEwOCNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMxOk5HUyMz",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6532.18
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[6]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNS9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDExMiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNS9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDExMiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNS9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDExMiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMz",
+          "failing_response_path": "results[6].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNS9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDExMiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5986.22
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNS9NVUNMQVgyMDI3LTAzLTExXzEyKkxIfiNMSDQ1NyNMSDExMiNMSDQ1Mn5sYzplbl91c35jdXI6VVNEOk5HUyMz",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6532.18
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[7]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+          "failing_response_path": "results[7].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5588.77
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6559.27
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[8]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+          "failing_response_path": "results[8].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5588.77
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA4MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI3I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6559.27
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[9]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+          "failing_response_path": "results[9].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5588.77
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMi9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA2I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6559.27
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R02-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=LAX&fl%5B0%5D%5Bd%5D=MUC&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=MUC&fl%5B1%5D%5Bd%5D=LAX&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:01:51.026108+00:00",
+      "trace_id": "939a6233-f2ab-44dd-876a-0f2542ef9288",
+      "main_response_path": "results[10]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+          "failing_response_path": "results[10].ngsItineraries[1]",
+          "lost_features": [
+            "bags"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5588.77
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMy9NVUNMQVgyMDI3LTAzLTExXzA3MTAqTEh+I0xINDU3I0xIMTA4I0xIMTI1I0xINDU2fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM=",
+            "gdsOfferId": ":NGS#3",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6559.27
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[514]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+          "failing_response_path": "results[514].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4262.65
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMTYjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5535.34
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[516]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA5MTMqVUF+I0xYMTcjTFgzMTYjTFgzMTcjTFgxNH5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA5MTMqVUF+I0xYMTcjTFgzMTYjTFgzMTcjTFgxNH5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA5MTMqTFh+I0xYMTcjTFgzMTYjTFgzMTcjTFgxNH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_response_path": "results[516].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA5MTMqVUF+I0xYMTcjTFgzMTYjTFgzMTcjTFgxNH5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4237.6
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA5MTMqTFh+I0xYMTcjTFgzMTYjTFgzMTcjTFgxNH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5562.76
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[518]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTcjTFgzMTYjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTcjTFgzMTYjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTcjTFgzMTYjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_response_path": "results[518].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTcjTFgzMTYjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4257.64
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYwNy9MSFJKRksyMDI3LTAzLTExXzA2MDkqTFh+I0xYMTcjTFgzMTYjTFgzNDUjTFgxNn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5562.76
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[521]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMC9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMTgjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMC9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMTgjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMC9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMTgjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+          "failing_response_path": "results[521].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMC9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMTgjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4262.65
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMC9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMTgjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5597.19
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[524]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+          "failing_response_path": "results[524].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTcjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4262.65
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTYxMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTcjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5535.34
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[528]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTgxMi9MSFJKRksyMDI3LTAzLTExXzA2MTAqT1N+I09TMzYjT1MzMzUjT1MzNDAjT1MzNX5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTgxMi9MSFJKRksyMDI3LTAzLTExXzA2MTAqT1N+I09TMzYjT1MzMzUjT1MzNDAjT1MzNX5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTgxMi9MSFJKRksyMDI3LTAzLTExXzA2MTAqT1N+I09TMzYjT1MzMzUjT1MzNDAjT1MzNX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_response_path": "results[528].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTgxMi9MSFJKRksyMDI3LTAzLTExXzA2MTAqT1N+I09TMzYjT1MzMzUjT1MzNDAjT1MzNX5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4270.12
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTgxMi9MSFJKRksyMDI3LTAzLTExXzA2MTAqT1N+I09TMzYjT1MzMzUjT1MzNDAjT1MzNX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5308.89
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[567]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTUjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTUjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTUjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+          "failing_response_path": "results[567].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTUjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4984.33
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExMi9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTUjTFgzMzIjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5535.34
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[574]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTcwOS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTEh+I0xINDExI0xIMjQ3MiNMSDkyMyNMSDQwMH5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTcwOS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTEh+I0xINDExI0xIMjQ3MiNMSDkyMyNMSDQwMH5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTcwOS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTEh+I0xINDExI0xIMjQ3MiNMSDkyMyNMSDQwMH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+          "failing_response_path": "results[574].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTcwOS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTEh+I0xINDExI0xIMjQ3MiNMSDkyMyNMSDQwMH5sYzplbl91c35jdXI6VVNEOk5HUyMx",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5010
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMTcwOS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTEh+I0xINDExI0xIMjQ3MiNMSDkyMyNMSDQwMH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzI=",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 6114.88
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "scenario_id": "R04-A",
+      "status": "FAIL",
+      "search_request": {
+        "method": "GET",
+        "url": "http://airapi51.kivops.info/v1/search?adt=1&cabin=C&debug=1&original_cid=1&cid=AKKDCR&fl%5B0%5D%5Bo%5D=JFK&fl%5B0%5D%5Bd%5D=LHR&fl%5B0%5D%5Bdt%5D=2027-02-25&fl%5B1%5D%5Bo%5D=LHR&fl%5B1%5D%5Bd%5D=JFK&fl%5B1%5D%5Bdt%5D=2027-03-11"
+      },
+      "captured_at": "2026-11-02T10:04:05.209172+00:00",
+      "trace_id": "43a22248-fa7b-4b28-af5c-b6f28d549583",
+      "main_response_path": "results[577]",
+      "main_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExNS9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTUjTFgzMjQjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+      "expected_result": "Each retained option must be equal or better on every confirmed feature and strictly better on at least one.",
+      "violations": [
+        {
+          "previous_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExNS9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTUjTFgzMjQjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+          "failing_key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExNS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTUjTFgzMjQjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+          "failing_response_path": "results[577].ngsItineraries[0]",
+          "lost_features": [
+            "exchange"
+          ],
+          "previous": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExNS9MSFJKRksyMDI3LTAzLTExXzA3MTEqVUF+I0xYMTUjTFgzMjQjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpOR1MjMQ==",
+            "gdsOfferId": ":NGS#1",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 4984.33
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 1
+              }
+            },
+            "penalties": {
+              "exchange": true,
+              "refund": false
+            }
+          },
+          "actual": {
+            "key": "51_QUtLRENSKkMxMDAwL0pGS0xIUjIwMjctMDItMjVfMjExNS9MSFJKRksyMDI3LTAzLTExXzA3MTEqTFh+I0xYMTUjTFgzMjQjTEg5MjMjTEg0MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMy",
+            "gdsOfferId": ":UPG#:NGS#2",
+            "currency": "USD",
+            "prices": {
+              "totalPrice": 5535.34
+            },
+            "keys": {
+              "baggage": {
+                "allowPieces": 2
+              },
+              "upgrade_info": {
+                "upgrade_program": "LHG"
+              }
+            },
+            "penalties": {
+              "exchange": false,
+              "refund": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

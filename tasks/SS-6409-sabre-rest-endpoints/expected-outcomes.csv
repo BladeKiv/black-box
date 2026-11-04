@@ -1,0 +1,2 @@
+scenario_id,expected_result,provider_filter,search_url,cid,expected_endpoint,endpoint_path,fare
+TC-12,flightShop wins CID overlap,S/6NVG,https://api.search.dev.travel-dev.com/v1/search?gds=S&pcc=6NVG&fare=PUB&cid=TST101&adt=1&cabin=Y&debug=true&fl.0.o=LHR&fl.0.d=JFK&fl.0.dt=2026-11-20,TST101,flightShop,keys.sabre.endpoint,PUB

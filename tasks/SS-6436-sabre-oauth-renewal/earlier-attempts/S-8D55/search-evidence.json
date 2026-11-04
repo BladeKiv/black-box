@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=S&pcc=8D55&fare=PUB&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20"
+  },
+  "response": {
+    "http_status": 200,
+    "body": {
+      "results": [],
+      "starUTCTime": "2026-11-02 14:38:14.604",
+      "endUTCTime": "2026-11-02 14:38:14.680",
+      "excutionTime": "75.851759ms",
+      "ngsMap": {},
+      "messages": [
+        {
+          "type": "TRACEID",
+          "value": "80982fb1-3461-41a5-a322-9e5995384c8d"
+        }
+      ]
+    },
+    "transport_error": null,
+    "reason_code": "NO_DATA",
+    "status": "WARN",
+    "retryable": false
+  }
+}

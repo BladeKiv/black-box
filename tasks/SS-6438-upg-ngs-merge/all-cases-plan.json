@@ -1,0 +1,182 @@
+[
+  {
+    "id": "R01-B",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": false,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "BCKDCR",
+      "fl[0][o]": "SFO",
+      "fl[0][d]": "FRA",
+      "fl[0][dt]": "2027-02-25",
+      "fl[1][o]": "FRA",
+      "fl[1][d]": "SFO",
+      "fl[1][dt]": "2027-03-11"
+    }
+  },
+  {
+    "id": "R01-A",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": true,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "AKKDCR",
+      "fl[0][o]": "SFO",
+      "fl[0][d]": "FRA",
+      "fl[0][dt]": "2027-02-25",
+      "fl[1][o]": "FRA",
+      "fl[1][d]": "SFO",
+      "fl[1][dt]": "2027-03-11"
+    }
+  },
+  {
+    "id": "R02-B",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": false,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "BCKDCR",
+      "fl[0][o]": "LAX",
+      "fl[0][d]": "MUC",
+      "fl[0][dt]": "2027-02-25",
+      "fl[1][o]": "MUC",
+      "fl[1][d]": "LAX",
+      "fl[1][dt]": "2027-03-11"
+    }
+  },
+  {
+    "id": "R02-A",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": true,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "AKKDCR",
+      "fl[0][o]": "LAX",
+      "fl[0][d]": "MUC",
+      "fl[0][dt]": "2027-02-25",
+      "fl[1][o]": "MUC",
+      "fl[1][d]": "LAX",
+      "fl[1][dt]": "2027-03-11"
+    }
+  },
+  {
+    "id": "R03-B",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": false,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "BCKDCR",
+      "fl[0][o]": "ORD",
+      "fl[0][d]": "FRA",
+      "fl[0][dt]": "2026-11-20",
+      "fl[1][o]": "FRA",
+      "fl[1][d]": "ORD",
+      "fl[1][dt]": "2026-12-04"
+    }
+  },
+  {
+    "id": "R03-A",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": true,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "AKKDCR",
+      "fl[0][o]": "ORD",
+      "fl[0][d]": "FRA",
+      "fl[0][dt]": "2026-11-20",
+      "fl[1][o]": "FRA",
+      "fl[1][d]": "ORD",
+      "fl[1][dt]": "2026-12-04"
+    }
+  },
+  {
+    "id": "R04-B",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": false,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "BCKDCR",
+      "fl[0][o]": "JFK",
+      "fl[0][d]": "LHR",
+      "fl[0][dt]": "2027-02-25",
+      "fl[1][o]": "LHR",
+      "fl[1][d]": "JFK",
+      "fl[1][dt]": "2027-03-11"
+    }
+  },
+  {
+    "id": "R04-A",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": true,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "AKKDCR",
+      "fl[0][o]": "JFK",
+      "fl[0][d]": "LHR",
+      "fl[0][dt]": "2027-02-25",
+      "fl[1][o]": "LHR",
+      "fl[1][d]": "JFK",
+      "fl[1][dt]": "2027-03-11"
+    }
+  },
+  {
+    "id": "R05-B",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": false,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "BCKDCR",
+      "fl[0][o]": "SFO",
+      "fl[0][d]": "CDG",
+      "fl[0][dt]": "2026-11-20",
+      "fl[1][o]": "CDG",
+      "fl[1][d]": "SFO",
+      "fl[1][dt]": "2026-12-04"
+    }
+  },
+  {
+    "id": "R05-A",
+    "purpose": "Find regular-cheapest groups and ticket feature-filter examples in round-trip inventory",
+    "keepBothBagOptions": true,
+    "params": {
+      "adt": "1",
+      "cabin": "C",
+      "debug": "1",
+      "original_cid": "1",
+      "cid": "AKKDCR",
+      "fl[0][o]": "SFO",
+      "fl[0][d]": "CDG",
+      "fl[0][dt]": "2026-11-20",
+      "fl[1][o]": "CDG",
+      "fl[1][d]": "SFO",
+      "fl[1][dt]": "2026-12-04"
+    }
+  }
+]

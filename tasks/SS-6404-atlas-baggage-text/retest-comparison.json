@@ -1,0 +1,20 @@
+{
+  "pnr": "US74GX",
+  "before": {
+    "weightLb": -3,
+    "weightKg": -1,
+    "lengthInch": 45,
+    "lengthCm": 115,
+    "numberOfPcs": "1P",
+    "baggageFullTextA": "COA  CARRYON HAND BAGGAGE ALLOWANCE1PC",
+    "baggageFullTextD": "COD UP TO 1  UPTO-3LB -1KG AND45LI 115LCM"
+  },
+  "after": {
+    "lengthInch": 45,
+    "lengthCm": 115,
+    "numberOfPcs": "1P",
+    "baggageFullTextA": "COA  CARRYON HAND BAGGAGE ALLOWANCE1PC",
+    "baggageFullTextD": "COD UP TO 1  UPTO45LI 115LCM"
+  },
+  "observed_change": "Negative weight fields and text removed; source -1 means no weight limit per user-supplied Atlas docs. PASS based on saved fresh retest; no further API execution."
+}

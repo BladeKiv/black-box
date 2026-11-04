@@ -1,0 +1,155 @@
+{
+  "run": "SS-6438-20261102-merge-enabled",
+  "signal": "WARN",
+  "counts": {
+    "PASS": 7,
+    "FAIL": 0,
+    "WARN": 3
+  },
+  "searches": 5,
+  "groups": 60,
+  "options": 158,
+  "tests": [
+    {
+      "id": "TC-01",
+      "data": "M01/M03 \u00b7 BCKDCR \u00b7 keepBothBagOptions=false \u00b7 SFO-FRA / LAX-MUC",
+      "expected": "UPG-cheapest main with qualifying regular children; numbered main is NGS#1 when children exist.",
+      "actual": "26 UPG groups: 18 with regular children, 8 valid singletons; 26 regular children total. All 18 multi-option groups use main :UPG#:NGS#1.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M03"
+      ]
+    },
+    {
+      "id": "TC-02",
+      "data": "M02/M04/M05 \u00b7 AKKDCR \u00b7 keepBothBagOptions=true \u00b7 SFO-FRA / LAX-MUC / ORD-FRA",
+      "expected": "Retain eligible regular and other UPG options; cheapest returned option is main NGS#1.",
+      "actual": "34 groups: all UPG mains; 34 two-bag UPG children and 38 regular children. All 34 mains are NGS#1 with sequential child identifiers.",
+      "status": "PASS",
+      "sources": [
+        "M02",
+        "M04",
+        "M05"
+      ]
+    },
+    {
+      "id": "TC-03",
+      "data": "60 returned UPG-containing groups \u00b7 158 retained USD options",
+      "expected": "Prices ascend within each group; main is cheapest among returned options.",
+      "actual": "60/60 main minima and 98/98 retained transitions satisfy prices.totalPrice ordering.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05"
+      ]
+    },
+    {
+      "id": "TC-04",
+      "data": "User-confirmed bags / exchange / refund fields \u00b7 98 retained transitions",
+      "expected": "Each retained child is no worse on all three features and better on at least one than the last kept option.",
+      "actual": "98/98 transitions strictly improve the confirmed feature vector. No equal-feature or feature-losing retained transition.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05"
+      ]
+    },
+    {
+      "id": "TC-05",
+      "data": "60 group mains and 98 children; exact flights, airports and departure/arrival times",
+      "expected": "Children belong to the same itinerary; one returned main for each exact flight sequence in these groups.",
+      "actual": "98/98 child flight sequences match their main. No other top-level result shares any of the 60 group flight sequences.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05"
+      ]
+    },
+    {
+      "id": "TC-06",
+      "data": "BCKDCR \u00b7 26 groups \u00b7 keepBothBagOptions=false",
+      "expected": "Other UPG options are not retained as NGS children.",
+      "actual": "0 UPG children across 26 groups; the retained children are regular options.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M03"
+      ]
+    },
+    {
+      "id": "TC-07",
+      "data": "Eight singleton BCKDCR UPG groups in M01/M03",
+      "expected": "User clarification: :UPG# alone is valid when no children remain.",
+      "actual": "8/8 singleton mains have gdsOfferId=:UPG# and no retained children.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M03"
+      ]
+    },
+    {
+      "id": "TC-08",
+      "data": "M01/M03 \u00b7 BCKDCR \u00b7 keepBothBagOptions=false",
+      "expected": "Ticket example 3: a qualifying regular-cheapest option becomes main; UPG/regular improvements become children.",
+      "actual": "0 regular-cheapest groups among the 26 observed groups. User confirmed no example is available; branch untested.",
+      "status": "WARN",
+      "sources": [
+        "M01",
+        "M03"
+      ],
+      "reason_code": "NO_DATA",
+      "response_paths": [
+        "$.results[*].keys.upgrade_info",
+        "$.results[*].ngsItineraries",
+        "$.results[*].gdsOfferId"
+      ]
+    },
+    {
+      "id": "TC-09",
+      "data": "M02/M04/M05 \u00b7 AKKDCR \u00b7 keepBothBagOptions=true",
+      "expected": "Ticket example 4: a qualifying regular-cheapest option becomes main; eligible UPG/regular improvements become children.",
+      "actual": "0 regular-cheapest groups among the 34 observed groups. User confirmed no example is available; branch untested.",
+      "status": "WARN",
+      "sources": [
+        "M02",
+        "M04",
+        "M05"
+      ],
+      "reason_code": "NO_DATA",
+      "response_paths": [
+        "$.results[*].keys.upgrade_info",
+        "$.results[*].ngsItineraries",
+        "$.results[*].gdsOfferId"
+      ]
+    },
+    {
+      "id": "TC-10",
+      "data": "Five final Search responses \u00b7 candidate elimination/completeness",
+      "expected": "Verify excluded equal-feature higher-price and feature-losing candidates against the complete pre-filter candidate set.",
+      "actual": "Final retained chains satisfy the rule, but responses do not provide a certified pre-filter candidate baseline. Complete elimination and retention completeness are unverified.",
+      "status": "WARN",
+      "sources": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05"
+      ],
+      "reason_code": "NO_DATA",
+      "response_paths": [
+        "$.results",
+        "$.results[*].ngsItineraries"
+      ]
+    }
+  ]
+}

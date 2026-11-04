@@ -13,6 +13,11 @@ Search currency `points_diff` flow is supported. See
 
 ## Operational lessons
 
+Preparation playbooks and verified relative-date inputs are documented in
+[Playbooks](docs/playbooks.md). Start with `python -B -m bb.playbooks search
+--tags <family> <provider> <endpoint> --text "<ticket summary>" --top 3`.
+Playbooks provide guidance only; the operational lessons layer remains separate.
+
 Python 3, standard library only. Run from the repo root:
 
 ```powershell

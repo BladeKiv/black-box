@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "https://api.search.dev.travel-dev.com/v1/commission/rules/search",
+    "body": {
+      "ids": [
+        563,
+        1900
+      ]
+    }
+  },
+  "response": {
+    "http_status": 200,
+    "body": {
+      "rules": {},
+      "distributions": {},
+      "distributionJobs": {},
+      "distributionSources": {},
+      "enabledGds": {},
+      "repoLastUpdate": "2026-11-02 20:14"
+    },
+    "transport_error": null,
+    "reason_code": "UNEVALUATED",
+    "status": "WARN",
+    "retryable": false
+  }
+}

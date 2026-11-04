@@ -1,0 +1,131 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "https://airapi51.kivops.info:8090/atlas/v1/book/info",
+    "body": {
+      "additionalInfo": {
+        "orderNo": "AYKCR****1181",
+        "pnrCode": "US74GX",
+        "segments": [
+          "20261028:AS616:LAX:LIR"
+        ]
+      },
+      "data": {
+        "historical": 0,
+        "pnr": "US74GX",
+        "provider_locator_code": "US74GX",
+        "rebook": 0
+      },
+      "gds": {
+        "backoffice_id": 3604557,
+        "gds_pcc": "DEF"
+      }
+    },
+    "note": "Original logged request replayed unchanged; unrelated and personal fields excluded from evidence."
+  },
+  "AirAPI_response": {
+    "http_status": 200,
+    "status": 200,
+    "code": 0,
+    "name": "Success",
+    "traceID": "8564c880-c919-47d2-a132-7270be87a683",
+    "segments": [
+      {
+        "tripId": 1,
+        "segmentNumber": 1,
+        "departureAirportCode": "LAX",
+        "arrivalAirportCode": "LIR",
+        "marketingAirlineCode": "AS",
+        "baggageAllowance": "0P",
+        "baggage": {
+          "ADT": {
+            "numberOfPcs": "00P",
+            "baggageFullTextA": "FBA  FREE BAGGAGE ALLOWANCE 0PC"
+          }
+        },
+        "carryOnAllowance": "1P",
+        "carryOn": {
+          "ADT": {
+            "lengthInch": 45,
+            "lengthCm": 115,
+            "numberOfPcs": "1P",
+            "baggageFullTextA": "COA  CARRYON HAND BAGGAGE ALLOWANCE1PC",
+            "baggageFullTextD": "COD UP TO 1  UPTO45LI 115LCM"
+          }
+        }
+      }
+    ],
+    "transport_error": null,
+    "trace_source": "Matched fresh CheckBookingStatus and queryOrderDetails logs on searchapi51"
+  },
+  "provider_response": {
+    "baggageElements": [
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "",
+        "baggageType": "StandardCheckInBaggage",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "56*36*23cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": -1,
+        "isAllWeight": false,
+        "passengerType": 0,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 1,
+        "baggageSize": "56*36*23cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": -1,
+        "isAllWeight": false,
+        "passengerType": 1,
+        "segmentNo": 1
+      },
+      {
+        "baggagePiece": 0,
+        "baggageSize": "56*36*23cm",
+        "baggageType": "CabinBaggageOverheadLocker",
+        "baggageWeight": 0,
+        "isAllWeight": false,
+        "passengerType": 2,
+        "segmentNo": 1
+      }
+    ],
+    "host": "searchapi51",
+    "operation": "queryOrderDetails",
+    "pnr": "US74GX",
+    "segments": [
+      {
+        "arr": "LIR",
+        "dep": "LAX",
+        "segmentNo": 1
+      }
+    ],
+    "timestamp": "2026-10-26T09:58:14.751Z",
+    "traceID": "8564c880-c919-47d2-a132-7270be87a683"
+  }
+}

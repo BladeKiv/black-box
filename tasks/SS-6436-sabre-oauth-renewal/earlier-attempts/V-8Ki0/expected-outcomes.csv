@@ -1,0 +1,4 @@
+scenario_id,expected_result,provider_filter,search_url,pcc,cid,fare,origin,destination,departure_date,adt,cabin
+TC-01,usable Sabre NDC offers and Result,V,https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=V&pcc=8Ki0&fare=PUB&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20,8Ki0,tst101,PUB,SFO,FRA,2026-11-20,1,Y
+TC-02,usable Sabre NDC offers and Result,V,https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=V&pcc=8Ki0&fare=PUB&adt=1&cabin=Y&fl.0.o=LAX&fl.0.d=LHR&fl.0.dt=2027-01-15,8Ki0,tst101,PUB,LAX,LHR,2027-01-15,1,Y
+TC-03,usable Sabre NDC offers and Result,V,https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=V&pcc=8Ki0&fare=PUB&adt=1&cabin=Y&fl.0.o=LAX&fl.0.d=MAD&fl.0.dt=2027-02-15,8Ki0,tst101,PUB,LAX,MAD,2027-02-15,1,Y

@@ -1,0 +1,62 @@
+[
+  {
+    "scenario_id": "TF-01",
+    "query": {
+      "cid": "TST101",
+      "gds": "F",
+      "adt": "1",
+      "cabin": "Y",
+      "fl.0.o": "LHR",
+      "fl.0.d": "DUB",
+      "fl.0.dt": "2026-11-20"
+    }
+  },
+  {
+    "scenario_id": "TF-02",
+    "query": {
+      "cid": "TST101",
+      "gds": "F",
+      "adt": "1",
+      "cabin": "Y",
+      "fl.0.o": "LGW",
+      "fl.0.d": "BCN",
+      "fl.0.dt": "2026-11-20"
+    }
+  },
+  {
+    "scenario_id": "TF-03",
+    "query": {
+      "cid": "TST101",
+      "gds": "F",
+      "adt": "1",
+      "cabin": "Y",
+      "fl.0.o": "STN",
+      "fl.0.d": "DUB",
+      "fl.0.dt": "2026-11-20"
+    }
+  },
+  {
+    "scenario_id": "TF-04",
+    "query": {
+      "cid": "TST101",
+      "gds": "F",
+      "adt": "1",
+      "cabin": "Y",
+      "fl.0.o": "LTN",
+      "fl.0.d": "AMS",
+      "fl.0.dt": "2026-11-20"
+    }
+  },
+  {
+    "scenario_id": "TF-05",
+    "query": {
+      "cid": "TST101",
+      "gds": "F",
+      "adt": "1",
+      "cabin": "Y",
+      "fl.0.o": "MAN",
+      "fl.0.d": "ALC",
+      "fl.0.dt": "2026-11-20"
+    }
+  }
+]

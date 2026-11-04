@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=V&pcc=8Ki0&fare=PUB&adt=1&cabin=Y&fl.0.o=LAX&fl.0.d=LHR&fl.0.dt=2027-01-15"
+  },
+  "response": {
+    "http_status": 200,
+    "body": {
+      "results": [],
+      "starUTCTime": "2026-11-02 14:57:23.816",
+      "endUTCTime": "2026-11-02 14:57:23.819",
+      "excutionTime": "3.297191ms",
+      "ngsMap": {},
+      "messages": [
+        {
+          "type": "TRACEID",
+          "value": "83c26de7-53cc-41cc-9f47-4d0c6b89d06c"
+        }
+      ]
+    },
+    "transport_error": null,
+    "reason_code": "NO_DATA",
+    "status": "WARN",
+    "retryable": false
+  }
+}

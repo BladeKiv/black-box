@@ -1,0 +1,72 @@
+[
+  {
+    "id": "M01",
+    "purpose": "SFO-FRA; configured keepBothBagOptions=false; cheapest-main and regular children",
+    "params": {
+      "adt": "1",
+      "debug": "1",
+      "original_cid": "1",
+      "cabin": "C",
+      "fl[0][o]": "SFO",
+      "fl[0][d]": "FRA",
+      "fl[0][dt]": "2027-02-25",
+      "cid": "BCKDCR"
+    }
+  },
+  {
+    "id": "M02",
+    "purpose": "SFO-FRA; configured keepBothBagOptions=true; regular and other UPG children",
+    "params": {
+      "adt": "1",
+      "debug": "1",
+      "original_cid": "1",
+      "cabin": "C",
+      "fl[0][o]": "SFO",
+      "fl[0][d]": "FRA",
+      "fl[0][dt]": "2027-02-25",
+      "cid": "AKKDCR"
+    }
+  },
+  {
+    "id": "M03",
+    "purpose": "LAX-MUC; configured keepBothBagOptions=false; cheapest-main and filtering",
+    "params": {
+      "adt": "1",
+      "debug": "1",
+      "original_cid": "1",
+      "cabin": "C",
+      "fl[0][o]": "LAX",
+      "fl[0][d]": "MUC",
+      "fl[0][dt]": "2027-02-25",
+      "cid": "BCKDCR"
+    }
+  },
+  {
+    "id": "M04",
+    "purpose": "LAX-MUC; configured keepBothBagOptions=true; cheapest-main and filtering",
+    "params": {
+      "adt": "1",
+      "debug": "1",
+      "original_cid": "1",
+      "cabin": "C",
+      "fl[0][o]": "LAX",
+      "fl[0][d]": "MUC",
+      "fl[0][dt]": "2027-02-25",
+      "cid": "AKKDCR"
+    }
+  },
+  {
+    "id": "M05",
+    "purpose": "ORD-FRA; configured keepBothBagOptions=true; equal-feature/feature-losing filtering",
+    "params": {
+      "adt": "1",
+      "debug": "1",
+      "original_cid": "1",
+      "cabin": "C",
+      "fl[0][o]": "ORD",
+      "fl[0][d]": "FRA",
+      "fl[0][dt]": "2027-02-25",
+      "cid": "AKKDCR"
+    }
+  }
+]

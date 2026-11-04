@@ -1,0 +1,1997 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AirAPI QA Dispatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#15202b; --paper:#f7fafb; --rule:#cad7dc; --muted:#58707a; --accent:#08788e; --pass:#18794e; --fail:#b42832; --warn:#a85a00; }
+    @media (prefers-color-scheme: dark) { :root { --ink:#edf3f5; --paper:#101820; --rule:#344751; --muted:#a7bbc2; --accent:#63d2e7; --pass:#75d7a7; --fail:#ff9b9f; --warn:#f6b56d; } }
+    body[data-theme="light"] { --ink:#15202b; --paper:#f7fafb; --rule:#cad7dc; --muted:#58707a; --accent:#08788e; --pass:#18794e; --fail:#b42832; --warn:#a85a00; }
+    body[data-theme="dark"] { --ink:#edf3f5; --paper:#101820; --rule:#344751; --muted:#a7bbc2; --accent:#63d2e7; --pass:#75d7a7; --fail:#ff9b9f; --warn:#f6b56d; }
+    * { box-sizing:border-box; }
+    body { background:var(--paper); color:var(--ink); font-family:"DM Sans",sans-serif; margin:0; padding:24px; }
+    main { border:1px solid var(--rule); margin:auto; max-width:920px; }
+    header { border-bottom:3px solid var(--accent); display:grid; gap:20px; grid-template-columns:1fr; padding:26px 28px 22px; }
+    .eyebrow, th, h2 { font-family:"Barlow Condensed",sans-serif; letter-spacing:.11em; text-transform:uppercase; }
+    .eyebrow { color:var(--muted); font-size:.8rem; font-weight:600; }
+    h1 { font-family:"Barlow Condensed",sans-serif; font-size:2.35rem; letter-spacing:.01em; line-height:.95; margin:.4rem 0 0; text-transform:uppercase; }
+    header > :first-child { grid-column:1 / -1; min-width:0; }
+    h1 { overflow-wrap:anywhere; line-height:1.1; }
+    .run { color:var(--muted); font-size:.85rem; line-height:1.6; }.theme-toggle { background:transparent; border:1px solid var(--rule); color:var(--ink); cursor:pointer; font:600 .72rem "Barlow Condensed",sans-serif; letter-spacing:.09em; margin-top:10px; padding:6px 9px; text-transform:uppercase; }
+    .signal { border-bottom:1px solid var(--rule); display:grid; grid-template-columns:1.3fr repeat(3,.7fr); }
+    .metric { border-right:1px solid var(--rule); padding:16px 20px; } .metric:last-child { border:0; }
+    .metric span { display:block; } .metric .label { color:var(--muted); font-family:"Barlow Condensed",sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+    .metric .value { font-family:"Barlow Condensed",sans-serif; font-size:1.8rem; font-weight:600; margin-top:3px; }
+    .pass { color:var(--pass); } .fail { color:var(--fail); } .warn { color:var(--warn); }
+    article { padding:28px; } .finding { border-left:3px solid var(--accent); font-size:1rem; line-height:1.6; margin:0 0 30px; padding-left:14px; }
+    h2 { font-size:.9rem; margin:0 0 12px; } table { border-collapse:collapse; font-size:.9rem; width:100%; }
+    th { color:var(--muted); font-size:.72rem; font-weight:600; padding:0 12px 9px 0; text-align:left; }
+    td { border-top:1px solid var(--rule); line-height:1.45; padding:14px 12px 14px 0; vertical-align:top; } .test { font-weight:700; } .status { font-family:"Barlow Condensed",sans-serif; font-size:.86rem; font-weight:700; letter-spacing:.09em; }
+    .evidence { border-top:1px solid var(--rule); display:grid; gap:24px; grid-template-columns:1fr; margin-top:28px; padding-top:22px; } .evidence p { color:var(--muted); font-size:.86rem; line-height:1.55; margin:0; }
+    code { background:color-mix(in srgb,var(--accent) 10%,transparent); font-family:ui-monospace,monospace; font-size:.86em; padding:2px 4px; }
+    .failure-sample { background:color-mix(in srgb,var(--fail) 6%,transparent); border-left:3px solid var(--fail); margin:24px 0; padding:18px; } .failure-sample p { color:var(--muted); font-size:.86rem; line-height:1.55; margin:0 0 10px; } .failure-sample pre { border:1px solid var(--rule); font:12px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; margin:0; overflow:auto; padding:12px; white-space:pre; }
+    .download-artifact { background:none; border:0; color:var(--accent); cursor:pointer; font:inherit; padding:0; text-decoration:underline; } @media (min-width:680px) { header { grid-template-columns:1fr auto; } .run { text-align:right; } .evidence { grid-template-columns:1fr 1fr; } }
+    @media (max-width:620px) { body { padding:12px; } header, article { padding:20px; } .signal { grid-template-columns:1fr 1fr; } .metric { border-bottom:1px solid var(--rule); } .metric:nth-child(2n) { border-right:0; } .metric:nth-last-child(-n+2) { border-bottom:0; } .table-wrap { overflow-x:auto; } table { min-width:650px; } }
+  </style>
+</head>
+<body data-theme="light">
+  <main>
+    <header>
+      <div><div class="eyebrow">AirAPI / QA dispatch</div><h1>SS-6438 — Build UPG itineraries as main itineraries with NGS children (regular + upgrade options)</h1></div>
+      <div class="run">PREPROD | 2026-11-02 | HTTP Search | 5 calls · 3 routes · 2 CIDs | merge=true<br><button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button></div>
+    </header>
+    <section class="signal" aria-label="Release signal">
+      <div class="metric"><span class="label">Release signal</span><span class="value warn">WARN · PARTIAL</span></div>
+      <div class="metric"><span class="label">Passed</span><span class="value pass">7</span></div>
+      <div class="metric"><span class="label">Failed</span><span class="value fail">0</span></div>
+      <div class="metric"><span class="label">Warn</span><span class="value warn">3</span></div>
+    </section>
+    <article>
+      <p class="finding">Five fresh PREPROD Searches returned 1,087 main results. All checked retained-output rules pass across 60 UPG-containing groups and 158 options: 64 regular children and 34 UPG children. Regular-cheapest branches and complete pre-filter candidate elimination remain unverified.<br><strong>Intended behavior:</strong> For an itinerary with UPG options, choose the cheapest eligible regular or UPG option as main NGS#1; retain successive options only when all three features are at least equal and one is better. Regular children require ngs_jobs; other UPG children also require keepBothBagOptions=true. A singleton UPG main may remain :UPG# under the user clarification.</p>
+      <h2>Executed tests</h2>
+      <div class="table-wrap"><table><thead><tr><th>ID</th><th>Test data</th><th>Expected → actual</th><th>Status</th></tr></thead><tbody><tr><td>TC-01</td><td class="test">M01/M03 · BCKDCR · keepBothBagOptions=false · SFO-FRA / LAX-MUC</td><td>UPG-cheapest main with qualifying regular children; numbered main is NGS#1 when children exist. → 26 UPG groups: 18 with regular children, 8 valid singletons; 26 regular children total. All 18 multi-option groups use main :UPG#:NGS#1.</td><td class="status pass">PASS</td></tr>
+<tr><td>TC-02</td><td class="test">M02/M04/M05 · AKKDCR · keepBothBagOptions=true · SFO-FRA / LAX-MUC / ORD-FRA</td><td>Retain eligible regular and other UPG options; cheapest returned option is main NGS#1. → 34 groups: all UPG mains; 34 two-bag UPG children and 38 regular children. All 34 mains are NGS#1 with sequential child identifiers.</td><td class="status pass">PASS</td></tr>
+<tr><td>TC-03</td><td class="test">60 returned UPG-containing groups · 158 retained USD options</td><td>Prices ascend within each group; main is cheapest among returned options. → 60/60 main minima and 98/98 retained transitions satisfy prices.totalPrice ordering.</td><td class="status pass">PASS</td></tr>
+<tr><td>TC-04</td><td class="test">User-confirmed bags / exchange / refund fields · 98 retained transitions</td><td>Each retained child is no worse on all three features and better on at least one than the last kept option. → 98/98 transitions strictly improve the confirmed feature vector. No equal-feature or feature-losing retained transition.</td><td class="status pass">PASS</td></tr>
+<tr><td>TC-05</td><td class="test">60 group mains and 98 children; exact flights, airports and departure/arrival times</td><td>Children belong to the same itinerary; one returned main for each exact flight sequence in these groups. → 98/98 child flight sequences match their main. No other top-level result shares any of the 60 group flight sequences.</td><td class="status pass">PASS</td></tr>
+<tr><td>TC-06</td><td class="test">BCKDCR · 26 groups · keepBothBagOptions=false</td><td>Other UPG options are not retained as NGS children. → 0 UPG children across 26 groups; the retained children are regular options.</td><td class="status pass">PASS</td></tr>
+<tr><td>TC-07</td><td class="test">Eight singleton BCKDCR UPG groups in M01/M03</td><td>User clarification: :UPG# alone is valid when no children remain. → 8/8 singleton mains have gdsOfferId=:UPG# and no retained children.</td><td class="status pass">PASS</td></tr>
+<tr><td>TC-08</td><td class="test">M01/M03 · BCKDCR · keepBothBagOptions=false</td><td>Ticket example 3: a qualifying regular-cheapest option becomes main; UPG/regular improvements become children. → 0 regular-cheapest groups among the 26 observed groups. User confirmed no example is available; branch untested.</td><td class="status warn">WARN</td></tr>
+<tr><td>TC-09</td><td class="test">M02/M04/M05 · AKKDCR · keepBothBagOptions=true</td><td>Ticket example 4: a qualifying regular-cheapest option becomes main; eligible UPG/regular improvements become children. → 0 regular-cheapest groups among the 34 observed groups. User confirmed no example is available; branch untested.</td><td class="status warn">WARN</td></tr>
+<tr><td>TC-10</td><td class="test">Five final Search responses · candidate elimination/completeness</td><td>Verify excluded equal-feature higher-price and feature-losing candidates against the complete pre-filter candidate set. → Final retained chains satisfy the rule, but responses do not provide a certified pre-filter candidate baseline. Complete elimination and retention completeness are unverified.</td><td class="status warn">WARN</td></tr></tbody></table></div>
+      <section class="failure-sample"><h2>TC-08 · Paired payload evidence</h2><p>0 regular-cheapest groups among the 26 observed groups. User confirmed no example is available; branch untested.</p><pre>[
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=SFO&amp;fl%5B0%5D%5Bd%5D=FRA&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=BCKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 203,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4275.32
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4385.27
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4692.85
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0NTkjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4385.27
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwNypMSH4jTEg0NTkjTEgxMjV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4409.97
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOCpMSH4jTEg0NTkjTEgxMjd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4409.97
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOSpMSH4jTEg0NTkjTEg5NX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4409.97
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMCpMSH4jTEg0NTkjTEg5N35sYzplbl91c35jdXI6VVNEOlVQRyM=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4409.97
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMipMSH4jTEg0NTkjTEgxMDN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4409.97
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExNCpMSH4jTEg0NTkjTEgxMDd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4409.97
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxMypMWH4jTFgzOSNMWDM2MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4692.85
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxNipMWH4jTFgzOSNMSDExOTN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5728.92
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOSpMWH4jTFgzOSNMSDExOTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5833.19
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 13,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  },
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=LAX&amp;fl%5B0%5D%5Bd%5D=MUC&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=BCKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 205,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3945.42
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3409.73
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNSpMSH4jTEg0NTcjTEgxMTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3409.73
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNipMSH4jTEg0NTcjTEgxMTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3409.73
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNypMSH4jTEg0NTcjTEgxMTZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3409.73
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOCpMSH4jTEg0NTcjTEgxMjB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3409.73
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOSpMSH4jTEg0NTcjTEgxMjJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3409.73
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwNypMSH4jTEg0NTcjTEg5NH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3434.51
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwOCpMSH4jTEg0NTcjTEg5Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3434.51
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMCpMSH4jTEg0NTcjTEgxMDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3434.51
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkxNypMWH4jTFg0MSNMSDIzNzF+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5429.96
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkyMCpMWH4jTFg0MSNMSDIzNzN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5409.34
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkwNypMWH4jTFg0MSNMSDIzNzV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcj&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5409.34
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 13,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  }
+]</pre></section>
+<section class="failure-sample"><h2>TC-09 · Paired payload evidence</h2><p>0 regular-cheapest groups among the 34 observed groups. User confirmed no example is available; branch untested.</p><pre>[
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=SFO&amp;fl%5B0%5D%5Bd%5D=FRA&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=AKKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 208,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4280.47
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0NTkjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4390.42
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOCpMWH4jTFgzOSNMWDM2NDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4698.01
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0NTkjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4390.42
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwNypMSH4jTEg0NTkjTEgxMjV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4415.13
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOCpMSH4jTEg0NTkjTEgxMjd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4415.13
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjEwOSpMSH4jTEg0NTkjTEg5NX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4415.13
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMCpMSH4jTEg0NTkjTEg5N35sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4415.13
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExMipMSH4jTEg0NTkjTEgxMDN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4415.13
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMjExNCpMSH4jTEg0NTkjTEgxMDd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4415.13
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxMypMWH4jTFgzOSNMWDM2MDB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4698.01
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxNipMWH4jTFgzOSNMSDExOTN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5734.08
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTkxOSpMWH4jTFgzOSNMSDExOTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5838.34
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 13,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  },
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=LAX&amp;fl%5B0%5D%5Bd%5D=MUC&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=AKKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 213,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3950.58
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMipMSH4jTEg0NTcjTEgxMDZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3414.89
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNSpMSH4jTEg0NTcjTEgxMTJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3414.89
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNipMSH4jTEg0NTcjTEgxMTR+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3414.89
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxNypMSH4jTEg0NTcjTEgxMTZ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3414.89
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOCpMSH4jTEg0NTcjTEgxMjB+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3414.89
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxOSpMSH4jTEg0NTcjTEgxMjJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3414.89
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwNypMSH4jTEg0NTcjTEg5NH5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3439.67
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUwOCpMSH4jTEg0NTcjTEg5Nn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3439.67
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTUxMCpMSH4jTEg0NTcjTEgxMDJ+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3439.67
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkxNypMWH4jTFg0MSNMSDIzNzF+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5435.11
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkyMCpMWH4jTFg0MSNMSDIzNzN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5414.49
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTkwNypMWH4jTFg0MSNMSDIzNzV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5414.49
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 13,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  },
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=ORD&amp;fl%5B0%5D%5Bd%5D=FRA&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=AKKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 258,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3267.03
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExNypMSH4jTEg0MzUjTEgxMTN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4034.72
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOCpMSH4jTEg0MzUjTEgxMTV+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4034.72
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjExOSpMSH4jTEg0MzUjTEgxMTd+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4034.72
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMjEyMSpMSH4jTEg0MzUjTEgxMjN+bGM6ZW5fdXN+Y3VyOlVTRDpVUEcjOk5HUyMx&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4034.72
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxOCpMWH4jTFg5I0xYMzY0Mn5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4672.2
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxMypMWH4jTFg5I0xIMTE4OX5sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5734.08
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          },
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTgxNipMWH4jTFg5I0xIMTE5M35sYzplbl91c35jdXI6VVNEOlVQRyM6TkdTIzE=&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 5734.08
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            }
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 8,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  }
+]</pre></section>
+<section class="failure-sample"><h2>TC-10 · Paired payload evidence</h2><p>Final retained chains satisfy the rule, but responses do not provide a certified pre-filter candidate baseline. Complete elimination and retention completeness are unverified.</p><pre>[
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=SFO&amp;fl%5B0%5D%5Bd%5D=FRA&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=BCKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 203,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4275.32
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            },
+            &quot;ngsItineraries&quot;: [
+              {
+                &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzI=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#2&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 6864.58
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: false
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzM=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#3&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 7354.78
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 13,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  },
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=SFO&amp;fl%5B0%5D%5Bd%5D=FRA&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=AKKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 208,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 4280.47
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            },
+            &quot;ngsItineraries&quot;: [
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqTEh+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==&quot;,
+                &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#2&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 4414.49
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  },
+                  &quot;upgrade_info&quot;: {
+                    &quot;upgrade_program&quot;: &quot;LHG&quot;
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: false,
+                  &quot;refund&quot;: false
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#3&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 6866.58
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: false
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL1NGT0ZSQTIwMjctMDItMjVfMTQqVUF+I0xINDU1fmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#4&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 7356.78
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 13,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  },
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=LAX&amp;fl%5B0%5D%5Bd%5D=MUC&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=BCKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 205,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3945.42
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            },
+            &quot;ngsItineraries&quot;: [
+              {
+                &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzI=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#2&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 6069.4
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: false
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QkNLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzM=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#3&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 6499.9
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: true
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QkNLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzQ=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#4&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 15490.85
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 3
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 13,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  },
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=LAX&amp;fl%5B0%5D%5Bd%5D=MUC&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=AKKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 213,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3950.58
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            },
+            &quot;ngsItineraries&quot;: [
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==&quot;,
+                &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#2&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 4084.6
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  },
+                  &quot;upgrade_info&quot;: {
+                    &quot;upgrade_program&quot;: &quot;LHG&quot;
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: false,
+                  &quot;refund&quot;: false
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#3&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 6071.4
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: false
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#4&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 6501.9
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: true
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkYxMDAwL0xBWE1VQzIwMjctMDItMjVfMTcqTEh+I0xINDUzfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzU=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#5&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 15492.85
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 3
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 13,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  },
+  {
+    &quot;request&quot;: {
+      &quot;method&quot;: &quot;GET&quot;,
+      &quot;url&quot;: &quot;http://airapi51.kivops.info/v1/search?adt=1&amp;debug=1&amp;original_cid=1&amp;cabin=C&amp;fl%5B0%5D%5Bo%5D=ORD&amp;fl%5B0%5D%5Bd%5D=FRA&amp;fl%5B0%5D%5Bdt%5D=2027-02-25&amp;cid=AKKDCR&quot;
+    },
+    &quot;response_excerpt&quot;: {
+      &quot;http_status&quot;: 200,
+      &quot;body&quot;: {
+        &quot;count&quot;: 258,
+        &quot;results&quot;: [
+          {
+            &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMQ==&quot;,
+            &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#1&quot;,
+            &quot;currency&quot;: &quot;USD&quot;,
+            &quot;prices&quot;: {
+              &quot;totalPrice&quot;: 3267.03
+            },
+            &quot;keys&quot;: {
+              &quot;baggage&quot;: {
+                &quot;allowPieces&quot;: 1
+              },
+              &quot;upgrade_info&quot;: {
+                &quot;upgrade_program&quot;: &quot;LHG&quot;
+              }
+            },
+            &quot;penalties&quot;: {
+              &quot;exchange&quot;: false,
+              &quot;refund&quot;: false
+            },
+            &quot;ngsItineraries&quot;: [
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6VVBHIzpOR1MjMg==&quot;,
+                &quot;gdsOfferId&quot;: &quot;:UPG#:NGS#2&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 3401.05
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  },
+                  &quot;upgrade_info&quot;: {
+                    &quot;upgrade_program&quot;: &quot;LHG&quot;
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: false,
+                  &quot;refund&quot;: false
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzE6TkdTIzM=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#3&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 5733.16
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: false
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkMxMDAwL09SREZSQTIwMjctMDItMjVfMTYqVUF+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzI6TkdTIzQ=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#4&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 7190.11
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 2
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: true
+                }
+              },
+              {
+                &quot;key&quot;: &quot;51_QUtLRENSKkYxMDAwL09SREZSQTIwMjctMDItMjVfMTYqTEh+I0xINDMxfmxjOmVuX3VzfmN1cjpVU0Q6TkdTIzM6TkdTIzU=&quot;,
+                &quot;gdsOfferId&quot;: &quot;:NGS#5&quot;,
+                &quot;currency&quot;: &quot;USD&quot;,
+                &quot;prices&quot;: {
+                  &quot;totalPrice&quot;: 16928.64
+                },
+                &quot;keys&quot;: {
+                  &quot;baggage&quot;: {
+                    &quot;allowPieces&quot;: 3
+                  }
+                },
+                &quot;penalties&quot;: {
+                  &quot;exchange&quot;: true,
+                  &quot;refund&quot;: true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    &quot;observations&quot;: {
+      &quot;body_top_level_fields&quot;: [
+        &quot;count&quot;,
+        &quot;results&quot;,
+        &quot;starUTCTime&quot;,
+        &quot;endUTCTime&quot;,
+        &quot;excutionTime&quot;,
+        &quot;timing&quot;,
+        &quot;ngsMap&quot;,
+        &quot;messages&quot;
+      ],
+      &quot;qualifying_groups&quot;: 8,
+      &quot;regular_mains&quot;: 0,
+      &quot;complete_prefilter_candidate_set&quot;: &quot;not exposed in captured response&quot;
+    }
+  }
+]</pre></section>
+      <section class="evidence"><div><h2>Evidence and limits</h2><p>M01–M05 paired captures; merge-analysis.json; configuration-merge-enabled.json. Comparators and singleton behavior were confirmed live. Regular-cheapest inventory and complete pre-filter candidate sets are unavailable. No retries or downstream calls. Initial blocked-run evidence is preserved separately.</p></div><div><h2>Rerun artifacts</h2><p><button class="download-artifact" type="button" data-file="collection.json">Postman collection</button><br><button class="download-artifact" type="button" data-file="expected-outcomes.csv">Expected-outcome CSV</button></p></div></section>
+    </article>
+  </main>
+  <script>
+    // Keep the complete task name visible within three lines, including on narrow screens.
+    const heading = document.querySelector('h1');
+    function fitHeading() {
+      heading.style.fontSize = '';
+      let size = parseFloat(getComputedStyle(heading).fontSize);
+      while (heading.getBoundingClientRect().height > parseFloat(getComputedStyle(heading).lineHeight) * 3 + 1 && size > 8) {
+        size -= 0.5;
+        heading.style.fontSize = size + 'px';
+      }
+    }
+    new ResizeObserver(fitHeading).observe(heading.parentElement);
+    document.fonts.ready.then(fitHeading);
+    fitHeading();
+
+    const artifacts = {"collection.json": {"type": "application/json;charset=utf-8", "content": "ew0KICAiaW5mbyI6IHsNCiAgICAibmFtZSI6ICJTUy02NDM4IFx1MjAxNCBCdWlsZCBVUEcgaXRpbmVyYXJpZXMgYXMgbWFpbiBpdGluZXJhcmllcyB3aXRoIE5HUyBjaGlsZHJlbiAocmVndWxhciArIHVwZ3JhZGUgb3B0aW9ucykiLA0KICAgICJzY2hlbWEiOiAiaHR0cHM6Ly9zY2hlbWEuZ2V0cG9zdG1hbi5jb20vanNvbi9jb2xsZWN0aW9uL3YyLjEuMC9jb2xsZWN0aW9uLmpzb24iLA0KICAgICJkZXNjcmlwdGlvbiI6ICJBaXJBUEkgb25seS4gUnVuIHRoZSBzaW5nbGUgU2VhcmNoIHJlcXVlc3QgdXNpbmcgZXhwZWN0ZWQtb3V0Y29tZXMuY3N2IChmaXZlIHJvd3MpLiBQUkVQUk9EIG1lcmdlL25ncyBwcmVyZXF1aXNpdGVzIG11c3QgYmUgZW5hYmxlZCBiZWZvcmUgcnVubmluZy4gRXhpc3RpbmcgZW52aXJvbm1lbnQgc3VwcGxpZXMgc2VhcmNoX2F1dGhvcml6YXRpb247IG5vIGNyZWRlbnRpYWwgdmFsdWVzIGFyZSBlbWJlZGRlZC4gS25vd24gc2luZ2xldG9uIGV4Y2VwdGlvbiBpcyB0aWNrZXQtc2NvcGVkLiBTa2lwcGVkIGludmVudG9yeSBjaGVja3MgbWVhbiBXQVJOLCBub3QgUEFTUy4gQ29tcGxldGUgcHJlLWZpbHRlciBjYW5kaWRhdGUgZWxpbWluYXRpb24gaXMgbm90IGNlcnRpZmllZCBieSB0aGVzZSByZXRhaW5lZC1vdXRwdXQgY2hlY2tzLiINCiAgfSwNCiAgIml0ZW0iOiBbDQogICAgew0KICAgICAgIm5hbWUiOiAie3tzY2VuYXJpb19pZH19IFx1MjAxNCBtZXJnZSByZXRhaW5lZC1vdXRwdXQgY2hlY2tzIiwNCiAgICAgICJldmVudCI6IFsNCiAgICAgICAgew0KICAgICAgICAgICJsaXN0ZW4iOiAicHJlcmVxdWVzdCIsDQogICAgICAgICAgInNjcmlwdCI6IHsNCiAgICAgICAgICAgICJ0eXBlIjogInRleHQvamF2YXNjcmlwdCIsDQogICAgICAgICAgICAiZXhlYyI6IFsNCiAgICAgICAgICAgICAgImNvbnN0IHJlcXVpcmVkPVsnc2NlbmFyaW9faWQnLCdzZWFyY2hfdXJsJywnZXhwZWN0ZWRfcmVzdWx0Jywna2VlcEJvdGhCYWdPcHRpb25zJywnYmFnc19wYXRoJywnZXhjaGFuZ2VfcGF0aCcsJ3JlZnVuZF9wYXRoJywncHJpY2VfcGF0aCcsJ2NoaWxkcmVuX3BhdGgnLCd1cGdyYWRlX3BhdGgnXTsiLA0KICAgICAgICAgICAgICAiZm9yIChjb25zdCBrZXkgb2YgcmVxdWlyZWQpIHsgY29uc3Qgdj1wbS5pdGVyYXRpb25EYXRhLmdldChrZXkpOyBpZiAodj09PXVuZGVmaW5lZCB8fCB2PT09JycpIHRocm93IG5ldyBFcnJvcignQ1NWIHJvdyBtaXNzaW5nICcra2V5KTsgcG0udmFyaWFibGVzLnNldChrZXksdik7IH0iLA0KICAgICAgICAgICAgICAiaWYgKCFTdHJpbmcocG0udmFyaWFibGVzLmdldCgnc2VhcmNoX3VybCcpKS5zdGFydHNXaXRoKCdodHRwOi8vYWlyYXBpNTEua2l2b3BzLmluZm8vdjEvc2VhcmNoPycpKSB0aHJvdyBuZXcgRXJyb3IoJ1NlYXJjaCBVUkwgb3V0c2lkZSB0aGUgYXBwcm92ZWQgaG9zdC9lbmRwb2ludCcpOyINCiAgICAgICAgICAgIF0NCiAgICAgICAgICB9DQogICAgICAgIH0sDQogICAgICAgIHsNCiAgICAgICAgICAibGlzdGVuIjogInRlc3QiLA0KICAgICAgICAgICJzY3JpcHQiOiB7DQogICAgICAgICAgICAidHlwZSI6ICJ0ZXh0L2phdmFzY3JpcHQiLA0KICAgICAgICAgICAgImV4ZWMiOiBbDQogICAgICAgICAgICAgICJjb25zdCByb3cgPSBwbS5pdGVyYXRpb25EYXRhOyIsDQogICAgICAgICAgICAgICJmdW5jdGlvbiB2YWx1ZShuYW1lKSB7IHJldHVybiByb3cuZ2V0KG5hbWUpID8/IHBtLnZhcmlhYmxlcy5nZXQobmFtZSk7IH0iLA0KICAgICAgICAgICAgICAiZnVuY3Rpb24gYXQob2JqLCBwYXRoKSB7IHJldHVybiBTdHJpbmcocGF0aCkuc3BsaXQoJy4nKS5yZWR1Y2UoKGEsIGspID0+IGEgPT0gbnVsbCA/IHVuZGVmaW5lZCA6IGFba10sIG9iaik7IH0iLA0KICAgICAgICAgICAgICAiY29uc3QgYm9keSA9IHBtLnJlc3BvbnNlLmpzb24oKTsiLA0KICAgICAgICAgICAgICAicG0udGVzdCgnU2VhcmNoIGV4cG9zZXMgcmVzdWx0c1tdJywgKCkgPT4gcG0uZXhwZWN0KGJvZHkucmVzdWx0cykudG8uYmUuYW4oJ2FycmF5JykpOyIsDQogICAgICAgICAgICAgICJjb25zdCBjaGlsZFBhdGggPSB2YWx1ZSgnY2hpbGRyZW5fcGF0aCcpOyIsDQogICAgICAgICAgICAgICJjb25zdCBtYXJrZXJQYXRoID0gdmFsdWUoJ3VwZ3JhZGVfcGF0aCcpOyIsDQogICAgICAgICAgICAgICJjb25zdCB1cGcgPSBvID0+IGF0KG8sIG1hcmtlclBhdGgpICE9PSB1bmRlZmluZWQ7IiwNCiAgICAgICAgICAgICAgImNvbnN0IGdyb3VwcyA9IGJvZHkucmVzdWx0cy5maWx0ZXIociA9PiB1cGcocikgfHwgKGF0KHIsIGNoaWxkUGF0aCkgfHwgW10pLnNvbWUodXBnKSk7IiwNCiAgICAgICAgICAgICAgImlmICghZ3JvdXBzLmxlbmd0aCkgeyIsDQogICAgICAgICAgICAgICIgIGNvbnNvbGUud2FybignV0FSTi9OT19EQVRBOiBubyBxdWFsaWZ5aW5nIFVQRyBncm91cHM7IG1lcmdlIGNoZWNrcyBjYW5ub3QgYmUgZXZhbHVhdGVkLicpOyIsDQogICAgICAgICAgICAgICIgIHBtLnRlc3Quc2tpcCgnUXVhbGlmeWluZyBtZXJnZSBpbnZlbnRvcnkgaXMgYXZhaWxhYmxlJywgKCkgPT4ge30pOyIsDQogICAgICAgICAgICAgICJ9IGVsc2UgeyIsDQogICAgICAgICAgICAgICIgIGNvbnN0IGtlZXBCb3RoID0gU3RyaW5nKHZhbHVlKCdrZWVwQm90aEJhZ09wdGlvbnMnKSkgPT09ICd0cnVlJzsiLA0KICAgICAgICAgICAgICAiICBjb25zdCB2ZWN0b3JzID0gbyA9PiBbYXQobyx2YWx1ZSgnYmFnc19wYXRoJykpLCBhdChvLHZhbHVlKCdleGNoYW5nZV9wYXRoJykpLCBhdChvLHZhbHVlKCdyZWZ1bmRfcGF0aCcpKV07IiwNCiAgICAgICAgICAgICAgIiAgY29uc3QgcHJpY2UgPSBvID0+IGF0KG8sdmFsdWUoJ3ByaWNlX3BhdGgnKSk7IiwNCiAgICAgICAgICAgICAgIiAgY29uc3Qgc2lnbmF0dXJlID0gbyA9PiBKU09OLnN0cmluZ2lmeSgoby50cmlwcyB8fCBbXSkubWFwKHQgPT4gKHQuc2VnbWVudHMgfHwgW10pLm1hcChzID0+IFtzLmRlcGFydHVyZUFpcnBvcnRDb2RlLHMuYXJyaXZhbEFpcnBvcnRDb2RlLHMuZGVwYXJ0dXJlVGltZSxzLmFycml2YWxUaW1lLHMubWFya2V0aW5nQWlybGluZSxzLmZsaWdodE51bWJlcl0pKSk7IiwNCiAgICAgICAgICAgICAgIiAgcG0udGVzdCgnUmV0YWluZWQgZ3JvdXBzIGZvbGxvdyB0aGUgc2NvcGVkIG1lcmdlIHJ1bGVzJywgKCkgPT4geyIsDQogICAgICAgICAgICAgICIgICAgZm9yIChjb25zdCBtYWluIG9mIGdyb3VwcykgeyIsDQogICAgICAgICAgICAgICIgICAgICBjb25zdCBjaGlsZHJlbiA9IGF0KG1haW4sY2hpbGRQYXRoKSB8fCBbXTsiLA0KICAgICAgICAgICAgICAiICAgICAgcG0uZXhwZWN0KGNoaWxkcmVuKS50by5iZS5hbignYXJyYXknKTsiLA0KICAgICAgICAgICAgICAiICAgICAgY29uc3Qgb3B0aW9ucyA9IFttYWluLC4uLmNoaWxkcmVuXTsiLA0KICAgICAgICAgICAgICAiICAgICAgZm9yIChsZXQgaT0wO2k8b3B0aW9ucy5sZW5ndGg7aSsrKSB7IiwNCiAgICAgICAgICAgICAgIiAgICAgICAgY29uc3Qgbz1vcHRpb25zW2ldLCBmPXZlY3RvcnMobyk7IiwNCiAgICAgICAgICAgICAgIiAgICAgICAgcG0uZXhwZWN0KGZbMF0pLnRvLmJlLmEoJ251bWJlcicpOyIsDQogICAgICAgICAgICAgICIgICAgICAgIHBtLmV4cGVjdChmWzFdKS50by5iZS5hKCdib29sZWFuJyk7IiwNCiAgICAgICAgICAgICAgIiAgICAgICAgcG0uZXhwZWN0KGZbMl0pLnRvLmJlLmEoJ2Jvb2xlYW4nKTsiLA0KICAgICAgICAgICAgICAiICAgICAgICBwbS5leHBlY3QocHJpY2UobykpLnRvLmJlLmEoJ251bWJlcicpOyIsDQogICAgICAgICAgICAgICIgICAgICAgIHBtLmV4cGVjdChvLmN1cnJlbmN5KS50by5lcXVhbChtYWluLmN1cnJlbmN5KTsiLA0KICAgICAgICAgICAgICAiICAgICAgICBpZiAoY2hpbGRyZW4ubGVuZ3RoKSBwbS5leHBlY3Qoby5nZHNPZmZlcklkLmVuZHNXaXRoKCc6TkdTIycrKGkrMSkpKS50by5lcXVhbCh0cnVlKTsiLA0KICAgICAgICAgICAgICAiICAgICAgICBpZiAoaSkgeyIsDQogICAgICAgICAgICAgICIgICAgICAgICAgY29uc3QgcHJldmlvdXM9b3B0aW9uc1tpLTFdLCBwZj12ZWN0b3JzKHByZXZpb3VzKTsiLA0KICAgICAgICAgICAgICAiICAgICAgICAgIHBtLmV4cGVjdChwcmljZShvKSkudG8uYmUuYXQubGVhc3QocHJpY2UocHJldmlvdXMpKTsiLA0KICAgICAgICAgICAgICAiICAgICAgICAgIHBtLmV4cGVjdChmLmV2ZXJ5KCh4LGopPT54Pj1wZltqXSkgJiYgZi5zb21lKCh4LGopPT54PnBmW2pdKSkudG8uZXF1YWwodHJ1ZSk7IiwNCiAgICAgICAgICAgICAgIiAgICAgICAgICBwbS5leHBlY3Qoc2lnbmF0dXJlKG8pKS50by5lcXVhbChzaWduYXR1cmUobWFpbikpOyIsDQogICAgICAgICAgICAgICIgICAgICAgICAgaWYgKCFrZWVwQm90aCkgcG0uZXhwZWN0KHVwZyhvKSkudG8uZXF1YWwoZmFsc2UpOyIsDQogICAgICAgICAgICAgICIgICAgICAgIH0iLA0KICAgICAgICAgICAgICAiICAgICAgfSIsDQogICAgICAgICAgICAgICIgICAgfSIsDQogICAgICAgICAgICAgICIgIH0pOyIsDQogICAgICAgICAgICAgICIgIGNvbnN0IHJlZ3VsYXJNYWluQ291bnQ9Z3JvdXBzLmZpbHRlcihnPT4hdXBnKGcpKS5sZW5ndGg7IiwNCiAgICAgICAgICAgICAgIiAgaWYgKCFyZWd1bGFyTWFpbkNvdW50KSB7IiwNCiAgICAgICAgICAgICAgIiAgICBjb25zb2xlLndhcm4oJ1dBUk4vTk9fREFUQTogcmVndWxhci1jaGVhcGVzdCBicmFuY2ggdW5hdmFpbGFibGUuJyk7IiwNCiAgICAgICAgICAgICAgIiAgICBwbS50ZXN0LnNraXAoJ1JlZ3VsYXItY2hlYXBlc3QgYnJhbmNoIGhhcyBxdWFsaWZ5aW5nIGludmVudG9yeScsKCk9Pnt9KTsiLA0KICAgICAgICAgICAgICAiICB9IiwNCiAgICAgICAgICAgICAgIiAgY29uc29sZS53YXJuKCdDb3ZlcmFnZSBsaW1pdDogcmV0dXJuZWQgZ3JvdXBzIGRvIG5vdCBleHBvc2UgdGhlIGNvbXBsZXRlIHByZS1maWx0ZXIgY2FuZGlkYXRlIHNldC4nKTsiLA0KICAgICAgICAgICAgICAifSINCiAgICAgICAgICAgIF0NCiAgICAgICAgICB9DQogICAgICAgIH0NCiAgICAgIF0sDQogICAgICAicmVxdWVzdCI6IHsNCiAgICAgICAgIm1ldGhvZCI6ICJHRVQiLA0KICAgICAgICAiaGVhZGVyIjogWw0KICAgICAgICAgIHsNCiAgICAgICAgICAgICJrZXkiOiAiQXV0aG9yaXphdGlvbiIsDQogICAgICAgICAgICAidmFsdWUiOiAie3tzZWFyY2hfYXV0aG9yaXphdGlvbn19IiwNCiAgICAgICAgICAgICJ0eXBlIjogInRleHQiDQogICAgICAgICAgfQ0KICAgICAgICBdLA0KICAgICAgICAidXJsIjogInt7c2VhcmNoX3VybH19Ig0KICAgICAgfQ0KICAgIH0NCiAgXQ0KfQ=="}, "expected-outcomes.csv": {"type": "text/csv;charset=utf-8", "content": "c2NlbmFyaW9faWQsZXhwZWN0ZWRfcmVzdWx0LHByb3ZpZGVyX2ZpbHRlcixzZWFyY2hfdXJsLGNpZCxvcmlnaW4sZGVzdGluYXRpb24sZGVwYXJ0dXJlX2RhdGUsa2VlcEJvdGhCYWdPcHRpb25zLGJhZ3NfcGF0aCxleGNoYW5nZV9wYXRoLHJlZnVuZF9wYXRoLHByaWNlX3BhdGgsY2hpbGRyZW5fcGF0aCx1cGdyYWRlX3BhdGgNDQpNMDEsY2hlYXBlc3QgcmV0YWluZWQgbWFpbjsgc3RyaWN0bHkgaW1wcm92aW5nIHJldGFpbmVkIGZlYXR1cmUgY2hhaW47IGVsaWdpYmxlIGNoaWxkIHNvdXJjZXMsQWlyQVBJIGFnZ3JlZ2F0ZSxodHRwOi8vYWlyYXBpNTEua2l2b3BzLmluZm8vdjEvc2VhcmNoP2FkdD0xJmRlYnVnPTEmb3JpZ2luYWxfY2lkPTEmY2FiaW49QyZmbCU1QjAlNUQlNUJvJTVEPVNGTyZmbCU1QjAlNUQlNUJkJTVEPUZSQSZmbCU1QjAlNUQlNUJkdCU1RD0yMDI3LTAyLTI1JmNpZD1CQ0tEQ1IsQkNLRENSLFNGTyxGUkEsMjAyNy0wMi0yNSxmYWxzZSxrZXlzLmJhZ2dhZ2UuYWxsb3dQaWVjZXMscGVuYWx0aWVzLmV4Y2hhbmdlLHBlbmFsdGllcy5yZWZ1bmQscHJpY2VzLnRvdGFsUHJpY2UsbmdzSXRpbmVyYXJpZXMsa2V5cy51cGdyYWRlX2luZm8NDQpNMDIsY2hlYXBlc3QgcmV0YWluZWQgbWFpbjsgc3RyaWN0bHkgaW1wcm92aW5nIHJldGFpbmVkIGZlYXR1cmUgY2hhaW47IGVsaWdpYmxlIGNoaWxkIHNvdXJjZXMsQWlyQVBJIGFnZ3JlZ2F0ZSxodHRwOi8vYWlyYXBpNTEua2l2b3BzLmluZm8vdjEvc2VhcmNoP2FkdD0xJmRlYnVnPTEmb3JpZ2luYWxfY2lkPTEmY2FiaW49QyZmbCU1QjAlNUQlNUJvJTVEPVNGTyZmbCU1QjAlNUQlNUJkJTVEPUZSQSZmbCU1QjAlNUQlNUJkdCU1RD0yMDI3LTAyLTI1JmNpZD1BS0tEQ1IsQUtLRENSLFNGTyxGUkEsMjAyNy0wMi0yNSx0cnVlLGtleXMuYmFnZ2FnZS5hbGxvd1BpZWNlcyxwZW5hbHRpZXMuZXhjaGFuZ2UscGVuYWx0aWVzLnJlZnVuZCxwcmljZXMudG90YWxQcmljZSxuZ3NJdGluZXJhcmllcyxrZXlzLnVwZ3JhZGVfaW5mbw0NCk0wMyxjaGVhcGVzdCByZXRhaW5lZCBtYWluOyBzdHJpY3RseSBpbXByb3ZpbmcgcmV0YWluZWQgZmVhdHVyZSBjaGFpbjsgZWxpZ2libGUgY2hpbGQgc291cmNlcyxBaXJBUEkgYWdncmVnYXRlLGh0dHA6Ly9haXJhcGk1MS5raXZvcHMuaW5mby92MS9zZWFyY2g/YWR0PTEmZGVidWc9MSZvcmlnaW5hbF9jaWQ9MSZjYWJpbj1DJmZsJTVCMCU1RCU1Qm8lNUQ9TEFYJmZsJTVCMCU1RCU1QmQlNUQ9TVVDJmZsJTVCMCU1RCU1QmR0JTVEPTIwMjctMDItMjUmY2lkPUJDS0RDUixCQ0tEQ1IsTEFYLE1VQywyMDI3LTAyLTI1LGZhbHNlLGtleXMuYmFnZ2FnZS5hbGxvd1BpZWNlcyxwZW5hbHRpZXMuZXhjaGFuZ2UscGVuYWx0aWVzLnJlZnVuZCxwcmljZXMudG90YWxQcmljZSxuZ3NJdGluZXJhcmllcyxrZXlzLnVwZ3JhZGVfaW5mbw0NCk0wNCxjaGVhcGVzdCByZXRhaW5lZCBtYWluOyBzdHJpY3RseSBpbXByb3ZpbmcgcmV0YWluZWQgZmVhdHVyZSBjaGFpbjsgZWxpZ2libGUgY2hpbGQgc291cmNlcyxBaXJBUEkgYWdncmVnYXRlLGh0dHA6Ly9haXJhcGk1MS5raXZvcHMuaW5mby92MS9zZWFyY2g/YWR0PTEmZGVidWc9MSZvcmlnaW5hbF9jaWQ9MSZjYWJpbj1DJmZsJTVCMCU1RCU1Qm8lNUQ9TEFYJmZsJTVCMCU1RCU1QmQlNUQ9TVVDJmZsJTVCMCU1RCU1QmR0JTVEPTIwMjctMDItMjUmY2lkPUFLS0RDUixBS0tEQ1IsTEFYLE1VQywyMDI3LTAyLTI1LHRydWUsa2V5cy5iYWdnYWdlLmFsbG93UGllY2VzLHBlbmFsdGllcy5leGNoYW5nZSxwZW5hbHRpZXMucmVmdW5kLHByaWNlcy50b3RhbFByaWNlLG5nc0l0aW5lcmFyaWVzLGtleXMudXBncmFkZV9pbmZvDQ0KTTA1LGNoZWFwZXN0IHJldGFpbmVkIG1haW47IHN0cmljdGx5IGltcHJvdmluZyByZXRhaW5lZCBmZWF0dXJlIGNoYWluOyBlbGlnaWJsZSBjaGlsZCBzb3VyY2VzLEFpckFQSSBhZ2dyZWdhdGUsaHR0cDovL2FpcmFwaTUxLmtpdm9wcy5pbmZvL3YxL3NlYXJjaD9hZHQ9MSZkZWJ1Zz0xJm9yaWdpbmFsX2NpZD0xJmNhYmluPUMmZmwlNUIwJTVEJTVCbyU1RD1PUkQmZmwlNUIwJTVEJTVCZCU1RD1GUkEmZmwlNUIwJTVEJTVCZHQlNUQ9MjAyNy0wMi0yNSZjaWQ9QUtLRENSLEFLS0RDUixPUkQsRlJBLDIwMjctMDItMjUsdHJ1ZSxrZXlzLmJhZ2dhZ2UuYWxsb3dQaWVjZXMscGVuYWx0aWVzLmV4Y2hhbmdlLHBlbmFsdGllcy5yZWZ1bmQscHJpY2VzLnRvdGFsUHJpY2UsbmdzSXRpbmVyYXJpZXMsa2V5cy51cGdyYWRlX2luZm8NDQo="}};
+    const toggle = document.querySelector('.theme-toggle');
+    toggle.addEventListener('click', function () {
+      const dark = document.body.dataset.theme === 'dark';
+      document.body.dataset.theme = dark ? 'light' : 'dark';
+      toggle.textContent = dark ? 'Dark mode' : 'Light mode';
+      toggle.setAttribute('aria-pressed', String(!dark));
+    });
+    document.querySelectorAll('.download-artifact').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const artifact = artifacts[button.dataset.file];
+        const binary = atob(artifact.content);
+        const bytes = new Uint8Array(binary.length);
+        for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
+        const blobUrl = URL.createObjectURL(new Blob([bytes], { type: artifact.type }));
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = button.dataset.file;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(function () { URL.revokeObjectURL(blobUrl); }, 0);
+      });
+    });
+  </script>
+</body>
+</html>

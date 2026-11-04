@@ -69,52 +69,63 @@ def test_job():
     with tempfile.TemporaryDirectory() as tmp:
         root = Path(tmp)
         scope, plan = fixture(root)
+        folder = root / 'tasks/SS-6412-currency-ranking/runs' / ('service-' + 'a' * 32)
         calls = []
-        private_value = 'dummy-' + 'sensitive-value'
+        private_value = 'dummy-sensitive-value'
         def transport(url, **kwargs):
+            planned = json.loads((folder / 'cases.json').read_text())
+            assert [c['case_id'] for c in planned['cases']] == ['TC-1', 'TC-2']
+            if len(calls) == 2:
+                lines = (folder / 'results.jsonl').read_text().splitlines()
+                assert len(lines) == 1, 'GBP comparison must be appended before INR request'
             calls.append((url, kwargs))
             return {'http_status': 200, 'body': {'results': [
                 {'key': 'opaque+/=', 'meta': {'rank_v2': {'points_diff': 7}}, 'unrelated': private_value}
-            ]}, 'transport_error': None, 'reason_code': 'UNEVALUATED'}
-        report, folder = execute_job(root, plan, private_value, 'a' * 32, transport=transport)
+            ]}, 'reason_code': 'UNEVALUATED'}
+        report, folder = execute_job(root, plan, private_value, 'a' * 32, transport=transport, base_url=scope['base_url'])
         assert len(calls) == 3
         assert all(c[1]['verify_tls'] is False and c[1]['tls_bypass_authorized'] for c in calls)
-        assert all(c['status'] == 'PASS' for c in report['cases'])
-        assert report['base_url'] == scope['base_url']
-        for file in folder.iterdir():
-            assert private_value not in file.read_text(encoding='utf-8'), file.name
-        assert '<' not in report['cases'][0]['id']
-        assert (folder / 'qa-report.html').exists()
-        assert '2026-10-21' not in (folder / 'qa-report.md').read_text()
-        check = r'''
-const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const collection=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));
-const source=collection.item[0].event.find(e=>e.listen==='test').script.exec.join('\n');
-const store=new Map();
-function run(currency,rows,code=200){
- const outcomes=[];const test=(name,fn)=>{try{fn();outcomes.push('PASS');}catch{outcomes.push('FAIL');}};test.skip=()=>outcomes.push('WARN');
- vm.runInNewContext(source,{pm:{response:{code,json:()=>({results:rows})},iterationData:{get:k=>k==='currency'?currency:0.5},collectionVariables:{set:(k,v)=>store.set(k,v),get:k=>store.get(k)},test,expect:x=>({to:{eql:y=>assert.deepEqual(x,y)}})}});
- return outcomes;
-}
-const row=n=>[{key:'opaque+/=',meta:{rank_v2:{points_diff:n}}}];
-run('USD',row(7));assert.deepEqual(run('GBP',row(7.5)),['PASS']);
-assert.deepEqual(run('GBP',row(8)),['FAIL']);
-assert.deepEqual(run('GBP',row(7),500),['WARN']);
-run('USD',row(7),500);assert.deepEqual(run('INR',row(7)),['WARN']);
-'''
-        replay = subprocess.run(['node', '-e', check, str(folder / 'collection.json')], capture_output=True)
-        assert replay.returncode == 0, 'Postman parity replay failed; output suppressed'
-        calls.clear()
-        missing, missing_folder = execute_job(root, plan, '', 'b' * 32, transport=transport)
-        assert not calls and all(c['status'] == 'WARN' for c in missing['cases'])
-        assert all(c['reason_code'] == 'AUTH_MISSING' for c in missing['cases'])
-        assert 'Request' in (missing_folder / 'qa-report.html').read_text()
+        assert report['status'] == 'passed'
+        assert set(p.name for p in folder.iterdir()) == {'cases.json', 'results.jsonl'}
+        rows = [json.loads(line) for line in (folder / 'results.jsonl').read_text().splitlines()]
+        assert all(set(c) == {'case_id', 'status', 'duration_ms', 'actual'} for c in rows)
+        assert all(c['status'] == 'passed' and c['duration_ms'] >= 0 for c in rows)
+        assert private_value not in ''.join(p.read_text() for p in folder.iterdir())
+        missing, _ = execute_job(root, plan, '', 'b' * 32, transport=transport, base_url=scope['base_url'])
+        assert len(calls) == 3 and missing['status'] == 'need_action'
+        assert all(c['action_needed'] for c in missing['cases'])
         try:
-            execute_job(root, plan, private_value, 'a' * 32, transport=transport)
+            execute_job(root, plan, private_value, 'a' * 32, transport=transport, base_url=scope['base_url'])
         except FileExistsError:
             pass
         else:
             assert False, 'historical run overwritten'
+
+
+def test_failure_stream():
+    from bb.search_job import execute_job
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        scope, plan = fixture(root)
+        scope['examples'][0]['query']['cid'] = 'x' * 6000
+        plan['examples'] = copy.deepcopy(scope['examples'])
+        (root / 'tasks/SS-6412-currency-ranking/service-scope.json').write_text(json.dumps(scope))
+        def transport(url, **kwargs):
+            score = 9 if 'currency=GBP' in url else 7
+            return {'http_status': 200, 'reason_code': 'OK', 'body': {'results': [
+                {'key': 'opaque-' + str(i) + chr(233) * 100, 'meta': {'rank_v2': {'points_diff': score}}}
+                for i in range(100)]}}
+        report, folder = execute_job(root, plan, 'private-fixture', 'e' * 32, transport=transport, base_url=scope['base_url'])
+        assert report['status'] == 'failed'
+        failed, passed = report['cases']
+        assert failed['status'] == 'failed' and passed['status'] == 'passed'
+        failure = failed['failure']
+        assert len(json.dumps(failure, ensure_ascii=False).encode()) <= 8192
+        for side in ('request', 'response'):
+            excerpt = failure[side]['body_excerpt']
+            assert len(excerpt.encode()) <= 2048
+        assert '[truncated ' in failure['response']['body_excerpt']
+        assert 'failure' not in passed
 
 
 def test_http():
@@ -149,14 +160,14 @@ def test_http():
                     assert error.code in (401, 403)
                 else:
                     assert False, 'unauthenticated/cross-origin request accepted'
-            job = call('/jobs', {'plan': plan, 'runtime': {'search_authorization': ''}})
+            job = call('/jobs', {'plan': plan, 'runtime': {'search_authorization': '', 'base_url': 'https://fixture.example.invalid'}})
             server.worker.shutdown(wait=True)
             result = call('/jobs/' + job['id'])
             assert result['state'] == 'completed'
-            assert all(c['status'] == 'WARN' for c in result['report']['cases'])
+            assert all(c['status'] == 'need_action' for c in result['report']['cases'])
             assert runtime['access_key'] not in json.dumps(result)
             assert (root / '.qa-service/jobs' / (job['id'] + '.json')).exists()
-            assert call('/jobs/' + job['id'] + '/artifacts/results.json')['environment'] == 'STAGE1'
+            assert call('/jobs/' + job['id'] + '/artifacts/cases.json')['environment'] == 'STAGE1'
             try:
                 call('/jobs', {'plan': {**plan, 'environment': 'PROD'}})
             except HTTPError as error:
@@ -180,14 +191,14 @@ def test_cancel_restart():
             calls.append(url)
             return {'http_status': 200, 'body': {'results': []}, 'reason_code': 'NO_DATA'}
         try:
-            execute_job(root, plan, 'private-fixture', 'c' * 32, transport=transport, cancelled=lambda: bool(calls))
+            execute_job(root, plan, 'private-fixture', 'c' * 32, transport=transport, cancelled=lambda: bool(calls), base_url='https://fixture.example.invalid')
         except JobCancelled:
             pass
         else:
             assert False, 'cancelled job continued'
         assert len(calls) == 1
-        captures = json.loads((root / 'tasks/SS-6412-currency-ranking/runs' / ('service-' + 'c' * 32) / 'paired-evidence.json').read_text())
-        assert len(captures) == 1, 'partial evidence must survive cancellation'
+        rows = (root / 'tasks/SS-6412-currency-ranking/runs' / ('service-' + 'c' * 32) / 'results.jsonl').read_text().splitlines()
+        assert len(rows) == 2 and all(json.loads(row)['status'] == 'need_action' for row in rows)
         jobs = root / '.qa-service/jobs'
         jobs.mkdir(parents=True)
         job_file = jobs / ('d' * 32 + '.json')
@@ -209,7 +220,9 @@ def test_dashboard_bridge():
         thread.start()
         output = root / 'dashboard-output'
         output.mkdir()
-        (output / 'service-plan.json').write_text(json.dumps(plan))
+        plans = root / '.qa-service/plans'
+        plans.mkdir()
+        (plans / (hashlib.sha256(str(output / 'results.json').encode()).hexdigest() + '.json')).write_text(json.dumps(plan))
         module = (Path(__file__).resolve().parents[1] / 'integrations/qa-control/hybridService.js').as_uri()
         code = '''
 import {readFileSync} from 'node:fs';
@@ -217,13 +230,11 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 const {runHybridService}=await import(process.argv[1]);
 const root=process.argv[2],scope=JSON.parse(readFileSync(path.join(root,'tasks/SS-6412-currency-ranking/service-scope.json')));
-const settings={project_path:root,output_report:path.join(root,'dashboard-output/results.json'),runtime_environment:{search_authorization:''}};
+const settings={project_path:root,output_report:path.join(root,'dashboard-output/results.json'),runtime_environment:{search_authorization:'',base_url:scope.base_url}};
 await runHybridService({task:{key:'SS-6412'},settings,scope,onEvent:async()=>{}});
-const report=JSON.parse(readFileSync(settings.output_report));
-assert.equal(report.cases.length,2);assert.ok(report.cases.every(c=>c.status==='WARN'&&c.reason_code==='AUTH_MISSING'));
-const html=readFileSync(path.join(root,'dashboard-output/qa-report.html'),'utf8');
-const collection=readFileSync(path.join(root,'dashboard-output/collection.json'));
-assert.ok(html.includes(collection.toString('base64')));
+const planned=JSON.parse(readFileSync(path.join(root,'dashboard-output/cases.json')));
+const rows=readFileSync(path.join(root,'dashboard-output/results.jsonl'),'utf8').trim().split('\\n').map(JSON.parse);
+assert.equal(planned.cases.length,2);assert.ok(rows.every(c=>c.status==='need_action'&&c.action_needed));
 '''
         try:
             result = subprocess.run(['node', '--input-type=module', '-e', code, module, str(root)], capture_output=True, timeout=30)
@@ -235,6 +246,6 @@ assert.ok(html.includes(collection.toString('base64')));
 
 
 if __name__ == '__main__':
-    for test in (test_scope, test_compare, test_job, test_http, test_cancel_restart, test_dashboard_bridge):
+    for test in (test_scope, test_compare, test_job, test_failure_stream, test_http, test_cancel_restart, test_dashboard_bridge):
         test()
         print(test.__name__ + ': PASS')

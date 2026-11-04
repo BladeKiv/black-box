@@ -1,0 +1,150 @@
+SS-6432 DRCT S&M
+
+**PASS — 4 PASS / 0 FAIL / 0 WARN**
+
+2026-10-26 | DEV | non-D to D | LHR-JFK 2026-11-20 | PUB/TST101
+
+All three previously failing non-D Result cases now return D/DEF with exact flights retained. Booking recovery retains its earlier user-confirmed PASS for the accepted Price change response. K and E are excluded at the user request because those GDSs are unavailable.
+
+Intended behavior: Add S&M for DRCT and allow Result for non-DRCT itineraries. User confirms matching flights must recover as gds=D even when fare basis differs. For malformed-offer booking recovery, the user accepts Price change as PASS; successful booking confirmation is not required for this case.
+
+| ID | Test data | Expected result | Actual result | Status |
+|---|---|---|---|---|
+| nonD-A | LHR-JFK 2026-11-20; 1 ADT; Y; PUB; TST101; source A | Matching non-D offer is recovered as gds=D in Result | Fresh fixed-build retest: Search source A returned gds=A; unchanged key Result HTTP 200, gds=D, pcc=DEF; exact flights, airports and departure times retained. | PASS |
+| nonD-S | LHR-JFK 2026-11-20; 1 ADT; Y; PUB; TST101; source S | Matching non-D offer is recovered as gds=D in Result | Fresh fixed-build retest: Search source S returned gds=E; unchanged key Result HTTP 200, gds=D, pcc=DEF; exact flights, airports and departure times retained. | PASS |
+| nonD-A-LH | A/DFWG32100; LH923/LH400; LHR-FRA-JFK 2026-11-20; Q; PUB/TST101 | Same flights recover as gds=D even with a different fare basis | Fresh fixed-build retest: Search source A returned gds=A; unchanged key Result HTTP 200, gds=D, pcc=DEF; exact flights, airports and departure times retained. | PASS |
+| booking-malformed-offer | D/DEF; PUB/TST101; fresh Search -> Result; additionalInfo.gdsOfferId=SS6432-MALFORMED-OFFER-ID; synthetic 1 ADT | Malformed offer ID triggers itinerary recovery and booking submission; a Price change response is an accepted outcome (user-confirmed). | User-confirmed PASS: HTTP 200 with application status 422 / Price change and replacement offer ID. User accepts this as successful itinerary matching and a new booking submission with changed price. No price-change retry executed. | PASS |
+
+Supporting evidence and rerun artifacts
+
+Fresh evidence: tasks/SS-6432-drct-search-match/runs/fixed-retest-20261026T142752Z. Five Search requests and three Result requests, no retries or polling. DRCT=22 offers; S/6NVG=50, A/DFWG32100=184, K/DEF=7, E/2EH4=0. S request selected an offer returned as gds=E; this is E-to-D recovery from S-filtered Search, not a returned-S offer. Same flights means matching marketing airline, flight number, airports and departure time. Fare-basis differences are allowed by direct user clarification. Three fresh executed PASS plus one historical user-confirmed booking PASS; booking was not rerun for the non-D fix. No issuance or configuration changes. Previous report is preserved under previous-report/ in this run. All earlier run payloads remain preserved. No operational lesson matched this scope or was applied. Fresh empty/missing-match inventory remains WARN, not a fix failure. FINAL SCOPE: user explicitly excludes/skips K and E because those GDSs are unavailable. Their earlier WARN observations and payloads remain in the saved run evidence, but are not assessed cases and add no PASS. Final assessed total: three fresh executed Result PASS and one carried-forward user-confirmed booking PASS; 0 FAIL / 0 WARN.
+
+Collection: SS-6432.postman_collection.json; CSV: expected-outcomes.csv.
+### booking-malformed-offer
+
+Request:
+```json
+{
+  "method": "POST",
+  "url": "https://api.search.dev.travel-dev.com/drct/v1/book/create",
+  "body": {
+    "gds": {
+      "gds_id": 9,
+      "gds_pcc": "DFWG32100",
+      "backoffice_id": 11111,
+      "hybrid_id": "A6F17DE"
+    },
+    "additionalInfo": {
+      "gdsOfferId": "SS6432-MALFORMED-OFFER-ID"
+    },
+    "contact_info": {
+      "address": "1 TEST STREET",
+      "country": "US",
+      "city": "TEST",
+      "state": "NY",
+      "zip": "10001"
+    },
+    "data": {
+      "payments": []
+    },
+    "payments": {
+      "pay_type": 1
+    },
+    "trip": {
+      "booking_type": 2,
+      "cabin": 1,
+      "validating_carrier": "AZ",
+      "total_price": 22898.23,
+      "passengers": [
+        {
+          "pas_first_name": "TEST",
+          "pas_middle_name": "QA",
+          "pas_last_name": "DRCT",
+          "pas_dob": "2001-10-26",
+          "pas_type_id": 1,
+          "pas_nationality": "US",
+          "pas_country": "US",
+          "pas_gender_id": 2,
+          "pas_doc_expiration_date": "2030-04-01",
+          "pas_doc_number": "TEST6432"
+        }
+      ],
+      "flights": [
+        {
+          "segments": [
+            {
+              "seg_departure_airport_code": "LHR",
+              "seg_arrival_airport_code": "FCO",
+              "seg_airline_code": "AZ",
+              "seg_air_equip_type": "",
+              "seg_departure_dt": "2026-11-20 10:30:00",
+              "seg_arrival_dt": "2026-11-20 14:10:00",
+              "seg_flight_number": "203",
+              "seg_cabin_type_id": 1,
+              "seg_booking_class": "B",
+              "seg_marriage_grp": "",
+              "seg_fare_basis": "BXOXIXLQ"
+            },
+            {
+              "seg_departure_airport_code": "FCO",
+              "seg_arrival_airport_code": "JFK",
+              "seg_airline_code": "AZ",
+              "seg_air_equip_type": "",
+              "seg_departure_dt": "2026-11-20 14:55:00",
+              "seg_arrival_dt": "2026-11-20 18:55:00",
+              "seg_flight_number": "610",
+              "seg_cabin_type_id": 1,
+              "seg_booking_class": "B",
+              "seg_marriage_grp": "",
+              "seg_fare_basis": "BXOXIXLQ"
+            }
+          ],
+          "fl_origin_location_code": "LHR",
+          "fl_destination_location_code": "JFK"
+        }
+      ],
+      "contact_phone": "+12025550143",
+      "country_code": "+1",
+      "contact_email": "qa-ss6432@example.com",
+      "selling_price": {
+        "amount": 1,
+        "currency_code": "USD"
+      },
+      "agency_selling_price": {
+        "amount": 1,
+        "currency_code": "USD"
+      },
+      "account_code": "EURKIV",
+      "agency_phone": "+12025550143"
+    },
+    "account_info": null
+  }
+}
+```
+
+Response:
+```json
+{
+  "http_status": 200,
+  "body": {
+    "status": 422,
+    "name": "Unprocessable entity",
+    "code": 26,
+    "message": "{\"data\":{\"priceDetails\":{\"AmountReturned\":92251,\"AmountSpecified\":22898.23,\"data\":{\"priceQuotes\":[{\"baseFare\":{\"amount\":{\"amount\":75594,\"currency\":\"UAH\"},\"currencyCode\":\"UAH\"},\"taxes\":{\"amount\":{\"amount\":16657,\"currency\":\"UAH\"},\"currencyCode\":\"UAH\"},\"totalFare\":{\"amount\":{\"amount\":92251,\"currency\":\"UAH\"},\"currencyCode\":\"UAH\"},\"passengerType\":\"ADT\",\"passengerQty\":1}]}}}}",
+    "type": "Price change",
+    "data": {
+      "response": {
+        "total_price": {
+          "amount": 92251,
+          "currency": "UAH"
+        },
+        "currency": "UAH"
+      },
+      "additionalInfo": {
+        "gdsOfferId": "LH_6adf5b2a0dc8e9003ffd3ef5"
+      }
+    }
+  },
+  "transport_error": null
+}
+```

@@ -1,0 +1,366 @@
+{
+  "key": "0_VFNUMTAxKlkxMDAwL0xBWE1BRDIwMjYtMTEtMTRfMTAxNypBQX4jQkE0NzkyI0JBNDI3Mn5sYzplbl91c35jdXI6VVNE",
+  "url": "https://test.com/ms?cid=TST101&key=0_VFNUMTAxKlkxMDAwL0xBWE1BRDIwMjYtMTEtMTRfMTAxNypBQX4jQkE0NzkyI0JBNDI3Mn5sYzplbl91c35jdXI6VVNE&traceId=bb1dfd4f-6a3f-49c0-a673-e738822ae275",
+  "routingId": 1,
+  "priceElement": {
+    "NotValid": false,
+    "NotValidErr": null,
+    "GdsCurrency": "USD",
+    "TargetCurrency": "USD",
+    "oBaseFare": {
+      "ADT": 236
+    },
+    "oBaseTax": {
+      "ADT": 333
+    },
+    "CpanelMK": {
+      "markupId": 142309,
+      "markupUid": "0eedfe8d-b4e4-4d85-a44f-0c85b13e9e51",
+      "MarkupPerPax": {
+        "ADT": {
+          "amount": 1,
+          "currency": "USD"
+        }
+      }
+    },
+    "Assets": {
+      "MappedItin": {
+        "ValuePerPax": {
+          "ADT": {
+            "amount": 25,
+            "currency": "USD"
+          }
+        },
+        "AssetPlacement": "OrigMarkup"
+      }
+    },
+    "CK": {
+      "IsCK": false,
+      "CkScenario": 0,
+      "PaymentTypeSupported": 0
+    }
+  },
+  "prices": {
+    "lastTicketDate": "",
+    "totalPrice": 595,
+    "totalTax": 359,
+    "comm": 0,
+    "isCk": false,
+    "markupId": 142309,
+    "markupUid": "0eedfe8d-b4e4-4d85-a44f-0c85b13e9e51",
+    "markup": 26,
+    "oMarkup": {
+      "amount": 26,
+      "currency": "USD"
+    }
+  },
+  "passengers": {
+    "ADT": {
+      "codeAs": "ADT",
+      "cnt": 1,
+      "baseFare": 236,
+      "pubBaseFare": 0,
+      "baseTax": 333,
+      "pubBaseTax": 0,
+      "markup": 26,
+      "comm": 0,
+      "price": 595,
+      "tax": 359,
+      "oBaseFare": {
+        "amount": 236,
+        "currency": "USD"
+      },
+      "oBaseTax": {
+        "amount": 333,
+        "currency": "USD"
+      },
+      "oMarkup": {
+        "amount": 26,
+        "currency": "USD"
+      }
+    }
+  },
+  "penalties": {
+    "exchange": false,
+    "refund": false,
+    "list": [
+      {
+        "type": "ex",
+        "applicability": "before",
+        "permitted": false
+      },
+      {
+        "type": "re",
+        "applicability": "before",
+        "permitted": false
+      }
+    ]
+  },
+  "trips": [
+    {
+      "tripId": 1,
+      "segments": [
+        {
+          "segmentId": 1,
+          "departureTime": "2026-11-14 10:47",
+          "arrivalTime": "2026-11-14 16:56",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "4792",
+          "operatingFlightNumber": "3083",
+          "bookingClass": "B",
+          "duration": 249,
+          "departureAirportCode": "LAX",
+          "departureAirportTerminal": "0",
+          "arrivalAirportCode": "ORD",
+          "arrivalAirportTerminal": "3",
+          "operatingAirline": "AA",
+          "airEquipType": "7M8",
+          "aircraft": "Boeing 737 MAX 8",
+          "marketingAirline": "BA",
+          "marriageGroup": "",
+          "cabin": "Y",
+          "cabinIsBasic": true,
+          "brandId": "AAAT-BASIC",
+          "brandName": "[REDACTED]",
+          "meal": "",
+          "fareCode": "VLW0C9BV",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "airlineCode": "AA",
+              "allowPieces": 0,
+              "allowMaxWeight": "UP TO 50 POUNDS/23 KILOGRAMS",
+              "kg": 23,
+              "lbs": 50
+            }
+          },
+          "recheckBaggage": false
+        },
+        {
+          "segmentId": 2,
+          "departureTime": "2026-11-14 17:40",
+          "arrivalTime": "2026-11-15 08:50",
+          "stop": 0,
+          "stops": null,
+          "flightNumber": "4272",
+          "operatingFlightNumber": "342",
+          "bookingClass": "V",
+          "duration": 490,
+          "departureAirportCode": "ORD",
+          "departureAirportTerminal": "3",
+          "arrivalAirportCode": "MAD",
+          "arrivalAirportTerminal": "4S",
+          "operatingAirline": "IB",
+          "airEquipType": "330",
+          "aircraft": "Airbus A330",
+          "marketingAirline": "BA",
+          "marriageGroup": "",
+          "cabin": "Y",
+          "cabinIsBasic": true,
+          "brandId": "AAAT-BASIC",
+          "brandName": "[REDACTED]",
+          "meal": "",
+          "fareCode": "VLW0C9BV",
+          "baggage": {
+            "ADT": {
+              "carryOn": true,
+              "carryOnSet": true,
+              "carryOnSource": "provider",
+              "airlineCode": "AA",
+              "allowPieces": 0,
+              "allowMaxWeight": "UP TO 50 POUNDS/23 KILOGRAMS",
+              "kg": 23,
+              "lbs": 50
+            }
+          },
+          "recheckBaggage": false,
+          "overnightFlight": true
+        }
+      ],
+      "duration": 783,
+      "airlineRating": "4",
+      "baggage": {
+        "carryOn": true,
+        "carryOnSource": "provider",
+        "allowPieces": 0,
+        "allowMaxWeight": "UP TO 50 POUNDS/23 KILOGRAMS",
+        "kg": 23,
+        "lbs": 50
+      }
+    }
+  ],
+  "maxSeats": 9,
+  "paxCnt": 1,
+  "validatingCarrier": "AA",
+  "gds": "V",
+  "pcc": "8KI0",
+  "cons": "GTT",
+  "fareType": "PUB",
+  "tripType": "OW",
+  "cabin": "Y",
+  "currency": "USD",
+  "currencySymbol": "$",
+  "currencies": [
+    "USD"
+  ],
+  "currencyRates": {
+    "USDUSD": {
+      "from": "USD",
+      "to": "USD",
+      "rate": 1
+    }
+  },
+  "founded_dt": "2026-11-02 14:58:45.741",
+  "keys": {
+    "sabre_ndc": {
+      "cid": "TST101",
+      "pcc": "8KI0",
+      "jobFare": "PUB",
+      "basic": "",
+      "offerId": "ce5bb4bf9478mpzqlmvzdwejx0-6",
+      "selectedOfferItems": [
+        {
+          "id": "ce5bb4bf9478mpzqlmvzdwejx0-6-1",
+          "passengerRefIds": [
+            "Passenger1"
+          ]
+        }
+      ],
+      "validatingCarrier": "AA",
+      "passengers": [
+        {
+          "id": "Passenger1",
+          "ptc": "ADT",
+          "requestedPTC": "ADT"
+        }
+      ],
+      "isSellable": false,
+      "bags": 0
+    },
+    "seatHoldSeg": {
+      "trip": 0,
+      "segment": 0,
+      "seats": 9
+    },
+    "services": {
+      "serviceFee": {
+        "amount": 75,
+        "currency": "USD"
+      }
+    },
+    "baggage": {
+      "carryOn": true,
+      "carryOnSource": "provider",
+      "allowPieces": 0,
+      "allowMaxWeight": "UP TO 50 POUNDS/23 KILOGRAMS",
+      "priceWithBag0": {
+        "ADT": 595,
+        "total": 595
+      },
+      "kg": 23,
+      "lbs": 50
+    },
+    "mappingStrategies": [
+      "SAFE_PLUS"
+    ]
+  },
+  "custfm": {
+    "AA3083": "BA4792",
+    "AA8754": "BA4272"
+  },
+  "realfm": {
+    "BA4272": "AA8754",
+    "BA4792": "AA3083"
+  },
+  "ngsFeatures": {
+    "stars": 1,
+    "name": "[REDACTED]",
+    "list": [
+      {
+        "id": "2",
+        "application": "N",
+        "serviceType": "T",
+        "tag": "REFUND",
+        "commercialName": "REFUND BEFORE DEPARTURE",
+        "atpco": "06K",
+        "breakdown": [
+          "1:1",
+          "1:2"
+        ]
+      },
+      {
+        "id": "1",
+        "application": "N",
+        "serviceType": "T",
+        "tag": "CHANGE",
+        "commercialName": "CHANGE BEFORE DEPARTURE",
+        "atpco": "06I",
+        "breakdown": [
+          "1:1",
+          "1:2"
+        ]
+      },
+      {
+        "id": "11",
+        "application": "F",
+        "serviceType": "C",
+        "tag": "CABIN",
+        "commercialName": "CARRY ON HAND BAGGAGE",
+        "atpco": "0L5",
+        "breakdown": [
+          "1:1",
+          "1:2"
+        ]
+      },
+      {
+        "id": "13",
+        "application": "C",
+        "serviceType": "C",
+        "tag": "CHECKED",
+        "commercialName": "1PC UPTO50LB 23KG AND62LI 158LCM",
+        "atpco": "0CC",
+        "breakdown": [
+          "1:1",
+          "1:2"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "eip": 0,
+    "noavail": false,
+    "searchId": "VFNUMTAxWTEwMDB8TEFYTUFEMjAyNi0xMS0xNA==",
+    "traceId": "bb1dfd4f-6a3f-49c0-a673-e738822ae275",
+    "lang": "en",
+    "rank": 10,
+    "rank_v2": {
+      "points_diff": 1.85,
+      "money_diff": 0,
+      "scaled_points_diff": 10,
+      "scaled_money_diff": 0,
+      "rank_v_1": 0
+    },
+    "cheapest": false,
+    "fastest": false,
+    "best": true,
+    "fsr": true,
+    "auto": 1,
+    "bags": 0,
+    "country": "us",
+    "prod_types": [
+      "MAP",
+      "PUB",
+      "NDC"
+    ],
+    "voidWindow": "24H",
+    "voidWindowDeadline": "2026-11-03 14:58Z",
+    "alliance": "One World",
+    "partner_quote_id": "bb1dfd4f-6a3f-49c0-a673-e738822ae275-1",
+    "is_lowcoster": false,
+    "flex": false,
+    "latestSaveDt": "2026-11-02 14:58:45.741"
+  }
+}

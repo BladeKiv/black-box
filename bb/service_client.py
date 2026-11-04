@@ -46,7 +46,7 @@ def main():
         scope = validate_plan(ROOT, plan)
         if os.environ.get('AIRAPI_BASE_URL', '').rstrip('/') != scope['base_url'].rstrip('/'):
             raise ValueError('AIRAPI_BASE_URL must match the registered scope host')
-        result = call('/jobs', {'plan': plan, 'runtime': {'search_authorization': os.environ.get('AIRAPI_SEARCH_AUTHORIZATION', '')}})
+        result = call('/jobs', {'plan': plan, 'runtime': {'search_authorization': os.environ.get('AIRAPI_SEARCH_AUTHORIZATION', ''), 'base_url': os.environ['AIRAPI_BASE_URL']}})
     else:
         import re
         if not re.fullmatch(r'[a-f0-9]{32}', args.job_id):

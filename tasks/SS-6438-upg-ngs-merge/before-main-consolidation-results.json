@@ -1,0 +1,65 @@
+{
+  "run": "SS-6438-20261102-all-cases",
+  "signal": "FAIL",
+  "counts": {
+    "PASS": 3,
+    "FAIL": 2,
+    "WARN": 2
+  },
+  "searches": 13,
+  "main_results": 3916,
+  "groups": 451,
+  "options": 808,
+  "failing_groups": 19,
+  "tests": [
+    {
+      "id": "TC-01",
+      "data": "Ticket example 1 \u00b7 BCKDCR \u00b7 keepBothBagOptions=false",
+      "expected": "UPG-cheapest main; eligible regular children improve all three features monotonically.",
+      "actual": "196 UPG-containing groups across six Searches; no retained feature regression; no other UPG children. Representative R02-B reproduces the 1-bag/exchange \u2192 2-bag/exchange \u2192 refundable progression.",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-02",
+      "data": "Ticket example 2 \u00b7 AKKDCR \u00b7 keepBothBagOptions=true \u00b7 R02-A LAX-MUC return",
+      "expected": "After a 2-bag option is kept, filter a later 1-bag option even if exchange improves. Also filter an option that loses exchange.",
+      "actual": "FAIL in 10 UPG-main groups. Example: NGS#2 has 2 bags/exchange=false; NGS#3 is retained with 1 bag/exchange=true. A separate group retains a UPG option that loses exchange.",
+      "status": "FAIL"
+    },
+    {
+      "id": "TC-03",
+      "data": "Ticket example 3 \u00b7 BCKDCR \u00b7 regular cheapest \u00b7 keepBothBagOptions=false",
+      "expected": "Observe a regular-cheapest group with a retained improving UPG option and eligible regular children.",
+      "actual": "No qualifying positive regular-main/retained-UPG group found in the six BCKDCR Searches. Regular-only NGS groups are not proof that UPG candidates existed before filtering.",
+      "status": "WARN"
+    },
+    {
+      "id": "TC-04",
+      "data": "Ticket example 4 \u00b7 AKKDCR \u00b7 regular cheapest \u00b7 keepBothBagOptions=true \u00b7 R04-A JFK-LHR return",
+      "expected": "Regular-cheapest main is NGS#1; keep an UPG child only if it does not lose any confirmed feature.",
+      "actual": "Regular-cheapest branch observed in nine groups; all nine fail. Example: regular main USD 4262.65 has exchange=true; retained UPG child USD 5535.34 has exchange=false.",
+      "status": "FAIL"
+    },
+    {
+      "id": "TC-05",
+      "data": "451 UPG-containing groups \u00b7 808 returned options",
+      "expected": "Within each returned group, prices ascend and main is cheapest among retained options.",
+      "actual": "All 451 groups pass retained price ordering. This does not prove the absolute minimum of an unseen pre-filter candidate set.",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-06",
+      "data": "All returned UPG groups \u00b7 configured child-source flags \u00b7 user-confirmed singleton exception",
+      "expected": "Children share their main flight sequence; other UPG children require keepBothBagOptions=true; numbering is sequential, with :UPG# allowed for singletons.",
+      "actual": "All checked groups pass same-flight identity, configured UPG-child eligibility and numbering/singleton rules.",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-07",
+      "data": "Complete pre-filter candidate elimination/completeness",
+      "expected": "Evaluate every omitted or retained candidate against the ticket rule using a complete pre-filter candidate set.",
+      "actual": "The 19 observed retained-group failures conclusively violate the rule. Complete exclusion/retention completeness remains unverified because captures lack a certified pre-filter candidate set.",
+      "status": "WARN"
+    }
+  ]
+}

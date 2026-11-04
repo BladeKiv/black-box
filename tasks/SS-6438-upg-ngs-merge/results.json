@@ -1,0 +1,141 @@
+{
+  "signal": "PASS",
+  "counts": {
+    "PASS": 8,
+    "FAIL": 0,
+    "WARN": 0
+  },
+  "included_searches": 16,
+  "tests": [
+    {
+      "id": "TC-01",
+      "data": "Example 1 \u00b7 BCKDCR \u00b7 UPG cheapest \u00b7 keepBothBagOptions=false",
+      "expected": "Retain regular improvements under the UPG-cheapest main; each transition improves one feature without losing another.",
+      "actual": "198 observed UPG-containing groups; no retained-feature violations.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M03",
+        "R01-B",
+        "R02-B",
+        "R03-B",
+        "R04-B"
+      ],
+      "source_run": "2026-11-02-post-fix"
+    },
+    {
+      "id": "TC-02",
+      "data": "Example 2 \u00b7 AKKDCR \u00b7 UPG cheapest \u00b7 keepBothBagOptions=true",
+      "expected": "Filter any later option that loses bags, exchange or refund versus the last retained option.",
+      "actual": "236 observed UPG-main groups; no retained-feature violations.",
+      "status": "PASS",
+      "sources": [
+        "M02",
+        "M04",
+        "M05",
+        "R01-A",
+        "R02-A",
+        "R03-A",
+        "R04-A"
+      ],
+      "source_run": "2026-11-02-post-fix"
+    },
+    {
+      "id": "TC-05",
+      "data": "434 observable UPG-containing groups \u00b7 784 retained USD options",
+      "expected": "Prices ascend; main is cheapest among retained options.",
+      "actual": "434 groups / 784 retained USD options; no price-order violations within the returned groups.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "R01-B",
+        "R01-A",
+        "R02-B",
+        "R02-A",
+        "R03-B",
+        "R03-A",
+        "R04-B",
+        "R04-A"
+      ],
+      "source_run": "2026-11-02-post-fix"
+    },
+    {
+      "id": "TC-06",
+      "data": "Returned children \u00b7 configured eligibility \u00b7 numbering/singleton rule",
+      "expected": "Children match their main flights. Other UPG children require keepBothBagOptions=true. Numbered groups are sequential; singleton :UPG# is allowed.",
+      "actual": "0 same-flight, child-eligibility or numbering violations.",
+      "status": "PASS",
+      "sources": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "R01-B",
+        "R01-A",
+        "R02-B",
+        "R02-A",
+        "R03-B",
+        "R03-A",
+        "R04-B",
+        "R04-A"
+      ],
+      "source_run": "2026-11-02-post-fix"
+    },
+    {
+      "id": "TC-08",
+      "data": "Exact flight sequences of the 19 historically failing groups",
+      "expected": "Find the same itineraries and verify their current retained options satisfy the confirmed feature rule.",
+      "actual": "All 19 previously failing exact flight sequences matched; their current retained options satisfy the confirmed feature rule.",
+      "status": "PASS",
+      "sources": [
+        "R02-A",
+        "R04-A"
+      ],
+      "source_run": "2026-11-02-post-fix"
+    },
+    {
+      "id": "L01-B",
+      "data": "{\"adt\": \"1\", \"cabin\": \"C\", \"fl[0][o]\": \"SFO\", \"fl[0][d]\": \"FRA\", \"fl[0][dt]\": \"2027-02-25\", \"cid\": \"BCKDCR\", \"debug\": \"1\", \"original_cid\": \"1\"}",
+      "expected": "No BCKDCR main gdsOfferId combines UPG and NGS.",
+      "actual": "HTTP 200; 209 mains; 13 UPG parents; 0 UPG children; 0 invalid identifiers; 0 upgrade parents missing children.",
+      "status": "PASS",
+      "scope": "SS-6437 legacy identifier baseline; mergeWithRegular=false.",
+      "source_run": "2026-11-02-warn-and-disabled"
+    },
+    {
+      "id": "L01-A",
+      "data": "{\"adt\": \"1\", \"cabin\": \"C\", \"fl[0][o]\": \"SFO\", \"fl[0][d]\": \"FRA\", \"fl[0][dt]\": \"2027-02-25\", \"cid\": \"AKKDCR\", \"debug\": \"1\", \"original_cid\": \"1\"}",
+      "expected": "Each AKKDCR upgrade ngsItineraries child gdsOfferId contains both UPG and NGS; observe children to evaluate the baseline.",
+      "actual": "HTTP 200; 211 mains; 13 UPG parents; 13 UPG children; 0 invalid identifiers; 0 upgrade parents missing children.",
+      "status": "PASS",
+      "scope": "SS-6437 legacy identifier baseline; mergeWithRegular=false.",
+      "source_run": "2026-11-02-warn-and-disabled"
+    },
+    {
+      "id": "EXTRA-01",
+      "data": "BCKDCR \u00b7 mergeWithRegular=true \u00b7 extra=false \u00b7 SFO-FRA 2027-02-25 \u00b7 1 ADT / C",
+      "expected": "extra=false returns no NGS options even when the matching CID has mergeWithRegular=true.",
+      "actual": "199 results; ngsItineraries is absent from every result; no NGS offer identifiers. ngsFeatures/ngsMap metadata remains present and is not counted as an itinerary option.",
+      "status": "PASS",
+      "sources": [
+        "EXTRA-01"
+      ],
+      "source_run": "2026-11-02-extra-false"
+    }
+  ],
+  "scope_exclusions": [
+    "Positive regular-cheapest merge branches with keepBothBagOptions=false and true.",
+    "Complete pre-filter candidate-set elimination/retention completeness."
+  ],
+  "source_runs": [
+    "2026-11-02-post-fix",
+    "2026-11-02-warn-and-disabled",
+    "2026-11-02-extra-false"
+  ],
+  "note": "User-requested consolidation of supported passes only; excluded attempts retain their original outcomes in archived evidence. No new execution by this report builder."
+}

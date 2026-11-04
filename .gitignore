@@ -389,3 +389,8 @@ tasks/**/latest-retest-path.txt
 /tasks/SS-6401-commission-optimization/runs/TSTCOM/evidence/TC-30/3-retry1/preprod/response.json
 /tasks/SS-6401-commission-optimization/runs/TSTCOM/evidence/TC-30/3-retry1/prod/response.json
 /tasks/SS-6401-commission-optimization/runs/TSTCOM/evidence/TC-30/3/prod/response.json
+# Generated request/response evidence (including future task runs).
+tasks/**/runs/**/evidence/
+knowledge/playbooks/worker.lock
+knowledge/playbooks/*.tmp
+knowledge/testdata/*.tmp

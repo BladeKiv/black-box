@@ -1,0 +1,2 @@
+scenario_id,expected_result,provider_filter,search_url,cid,pcc,fare,origin,destination,departure_date
+TF-DEF-PUB,usable_F_offers_then_result,F,https://api.search.stage.travel-dev.com/v1/search?cid=TST101&gds=F&pcc=DEF&fare=PUB&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20,TST101,DEF,PUB,SFO,FRA,2026-11-20

@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "SS-6443 \u2014 TravelFusion Search and Result regression",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Final STAGE TravelFusion Search \u2192 Result regression. Use expected-outcomes.csv. Select only returned gds F; shared Search auth supplied locally. PROD login defect fixes excluded."
+  },
+  "variable": [
+    {
+      "key": "search_authorization",
+      "value": ""
+    },
+    {
+      "key": "result_url",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Search",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "{{search_url}}"
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.collectionVariables.unset('result_url');",
+              "if (!pm.variables.get('search_authorization')) throw new Error('Supply shared Search auth locally');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Search HTTP 200',()=>pm.response.to.have.status(200));",
+              "const b=pm.response.json(); const offers=Array.isArray(b.results)?b.results.filter(x=>x.gds==='F'):[];",
+              "pm.test('TravelFusion offers available',()=>pm.expect(offers.length).to.be.above(0));",
+              "if(offers.length){const o=offers[0];pm.collectionVariables.set('selected_key',o.key);pm.collectionVariables.set('result_url','https://api.search.stage.travel-dev.com/v1/result/ANY/'+encodeURIComponent(o.key)+'?cid=TST101&gds=F&pcc=DEF&fare=PUB');}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Result",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "{{result_url}}"
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (!pm.collectionVariables.get('result_url')) pm.execution.skipRequest();"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Result HTTP 200',()=>pm.response.to.have.status(200));",
+              "const b=pm.response.json();",
+              "pm.test('Same TravelFusion offer',()=>{pm.expect(b.key).to.eql(pm.collectionVariables.get('selected_key'));pm.expect(b.gds).to.eql('F');pm.expect(b.pcc).to.eql('DEF');});",
+              "pm.test('Itinerary and price',()=>{pm.expect(b.trips).to.be.an('array').that.is.not.empty;pm.expect(b.trips[0].segments).to.be.an('array').that.is.not.empty;pm.expect(b.prices.totalPrice).to.be.a('number');});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

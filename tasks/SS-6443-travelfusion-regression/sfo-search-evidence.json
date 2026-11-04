@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.stage.travel-dev.com/v1/search?cid=TST101&gds=F&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20"
+  },
+  "http_status": 200,
+  "transport_error": null,
+  "results_count": 0,
+  "body": {
+    "results": [],
+    "starUTCTime": "2026-11-02 12:35:58.885",
+    "endUTCTime": "2026-11-02 12:35:58.885",
+    "excutionTime": "301.197\u00b5s",
+    "ngsMap": {},
+    "messages": [
+      {
+        "type": "TRACEID",
+        "value": "181ed6f6-7746-4b7b-90de-507fe2f344d0"
+      }
+    ]
+  }
+}

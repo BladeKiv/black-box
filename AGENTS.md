@@ -22,59 +22,50 @@ ticket issuance, or actual ticket voiding.
 Standing user authorization (2026-10-21): bypass TLS certificate verification
 for every AirAPI QA HTTPS request in every environment. Do not ask again for
 TLS-bypass approval. Keep using HTTPS and exclude credentials from evidence.
-When a missing response path, unit, provider mapping, expected
-status, or other fact would affect a test or expected result, ask the user a
-concise live question before producing the final deliverable. Keep
-configuration discovery separate from endpoint execution assertions, and
+Keep configuration discovery separate from endpoint execution assertions, and
 preserve distinctions between missing optional fields and `false`, `0`, `[]`,
-and `{}`.
+and `{}`. Plan only ticket-stated or already approved edge cases.
 
-Every QA deliverable must include:
+## QA output contract (v1)
 
-- intended behavior; and
-- a test-case results table containing test data, expected result, actual
-  result, and status.
+Do NOT create HTML, CSV or markdown reports. Produce exactly these files in the
+run folder given by the dashboard (the path of results.json today; use its directory):
 
-Store every ticket's deliverables in its own `tasks/<task-slug>/` directory.
-Keep that ticket's QA report, importable Postman collection, expected-outcome
-CSV, and any ticket-specific evidence artifacts together in that directory.
-When a visual report offers artifact downloads, embed the collection and CSV
-content in the report and trigger a Blob download; do not rely on a local-file
-link or a browser fetch.
+1. cases.json — written FIRST, before any request is sent. Fields: v=1, task,
+   environment, intended_behavior, cases[]{case_id, title, steps[], test_data,
+   expected}. case_id values are TC-1, TC-2, ... and unique. Every case needs a
+   concrete expected result. Plan only cases that prove or disprove the ticket
+   requirements; no padding. The dashboard ingests these as pending.
+2. results.jsonl — append ONE line per case immediately after executing it, in
+   plan order, one case at a time. Fields: case_id, status, duration_ms, actual,
+   plus failure{assertion, request{method,url,body_excerpt},
+   response{status,body_excerpt}} for failed, plus action_needed for need_action.
 
-Format each report as a compact QA dispatch sheet: a release-signal line, a
-one-line scope/run strip, a short observed-behavior summary, then the test-case
-results table. Keep supporting evidence and rerun artifacts at the end.
-Generate the matching HTML dispatch sheet immediately when testing is complete.
-Every HTML report must use the established AirAPI dispatch styling from
-`templates/airapi-qa-dispatch-template.html`; do not introduce per-ticket
-visual variations.
+Statuses: passed | failed | need_action. WARN no longer exists in QA output.
+- passed: actual matches expected. Write no payloads.
+- failed: actual differs from expected. Include the small failure object:
+  excerpts max 2 KB each, total failure max 8 KB (UTF-8 bytes), mark cuts with
+  "...[truncated N bytes]". If the full response is needed, save a sanitized
+  <case_id>-response.json.gz in the run folder and set raw_file to its basename.
+- need_action: ONLY when you cannot decide or execute without the user (missing
+  test data, ambiguous requirement, no access). Put the exact request in
+  action_needed (one sentence: what, where, why). Do not ask anything in chat.
 
-Every executed test case has exactly one status: `PASS` when its expected
-result is observed, `FAIL` when the observed result contradicts it, or `WARN`
-when it cannot be conclusively evaluated because required access, test data,
-or stable inventory is unavailable. Do not place assumptions or unresolved
-questions in the report; ask the user live when they are test-critical.
-For every `WARN` or `FAIL`, include paired request and response payload
-evidence in the report, excluding credentials and unrelated fields.
+Run result: any failed case means failed; otherwise any need_action case means
+need_action; otherwise passed. Pending cases are not a completed run.
 
-Before adding edge-case scenarios that are not stated by the ticket/spec,
-ask the user which edge cases to include. Do not add speculative edge-case
-tests without that confirmation.
+Autonomy: never ask the user questions mid-run. For anything non-blocking, choose
+the most reasonable assumption and record it in the case title/steps. Never stop
+the run because one case fails or needs action; continue with the remaining
+cases. Every planned case must end with exactly one result line.
+Never print or store credentials, tokens or authorization headers. Sanitize any
+optional compressed response before saving it. The agent writes files only;
+the dashboard validates and ingests them. Never write directly to SQLite.
+Use only the selected environment base URL from AIRAPI_BASE_URL.
 
-When a collection is requested, provide an importable Postman Collection v2.1
-that tests AirAPI behavior only. Do not define or include provider-level tracks.
-
-Use expected-outcome CSV variables for non-deterministic inventory. Include
-`pm.test` assertions, pre-request setup, scenario variables, and the CSV row
-fields `scenario_id`, `expected_result`, `provider_filter`, `search_url`, plus
-ticket-specific inputs. Unknown response paths must be parameterized, never
-guessed. Ask the user for their meaning when that information is required to
-evaluate a test.
-
-Handoff rule: stop after delivering the report and collection. Only after
-explicit user approval, preview a proposed ledger entry; write it only after a
-second explicit user confirmation.
+Handoff rule: stop after delivering the case files. Only after explicit user
+approval, preview a proposed ledger entry; write it only after a second explicit
+user confirmation.
 
 ## Preparation before testing
 
@@ -87,8 +78,8 @@ before executing the ticket's testing flow:
    references. Resolve the Search auth token securely at runtime; never print
    or persist it in reports, knowledge, or lessons, and never retrieve credentials
    from old chat/session logs. Verify that the reference matches the requested
-   environment. Ask only when the required access remains missing or ambiguous
-   after discovery; do not ask the user to repeat available information.
+   environment. When access remains missing or ambiguous after discovery, record
+   need_action with the exact missing access; do not ask in chat.
 3. Independently prepare at least five relevant Search examples within the
    ticket's stated or approved coverage. This is preparation, not authorization
    to execute extra requests, vary inputs, retry, or add speculative edge cases.
@@ -99,8 +90,10 @@ before executing the ticket's testing flow:
    A Search-only task such as SS-6412 has one endpoint; do not add downstream
    endpoints unnecessarily. Preserve opaque keys unchanged where required.
 
+5. Playbook lookup (guidance only). Run `python -B -m bb.playbooks search    --tags <family> <provider> <endpoints> --text "<ticket title/summary>" --top 3`.    Use matches ONLY for: endpoint flow, verified test data (`bb.playbooks testdata    --provider <p> --env <env>`) to fill the five-example preparation, and known    pitfalls. Never take expected values, tolerances, extra edge cases or    permissions from a playbook; ticket text and ticket-scope.md always win.    List used playbook IDs in cases.json as `playbooks_used`. No match or no    verified test data is normal: continue, and record need_action with the exact    missing data if it blocks a case. Never write or edit playbooks; they are    created by `bb.playbooks distill` and approved by the user in the dashboard.
+
 Then proceed with the ticket-specific testing sequence and existing operational
-lesson search. Missing test-critical expectations still require live clarification;
+lesson search. Missing test-critical expectations become need_action results;
 this preparation does not expand endpoint permissions or execution budgets.
 
 ## Hybrid service execution
@@ -120,13 +113,12 @@ remain valid. Before testing, search `python -B -m bb.lessons search --tags
 <ticket> <environment> --text <pattern>` and cite selected lesson IDs in run
 notes. Read `ticket-scope.md`; lessons never define expected behavior.
 
-After each WARN/FAIL, call `bb.classify.classify_outcome` with explicit response
+After each need_action/failed result (map to internal WARN/FAIL for these helpers), call `bb.classify.classify_outcome` with explicit response
 paths and observed ticket expectation. Call `bb.escalations.handle_outcome` with
 the current scope and actual retry/step counters. Apply a trusted lesson only
 when all `scope_conditions` match. The helper selects an action; the hosting
-agent executes it, maintains counters across the entire case, and asks/logs one
-live question per unresolved pattern using `Escalations.ask`. Log any other
-human question there too, including whether a matching lesson existed.
+agent executes it, maintains counters across the entire case, and logs the blocker using `Escalations.ask` without asking in chat. Put the
+concrete user request in action_needed; operational logs do not replace it.
 Immediately pass an operational human answer to `Escalations.answer`; this is
 the only automatic human-confirmed trust path. Expectations, permissions and
 other prohibited answers stay in ticket scope, never in lessons.
@@ -147,10 +139,10 @@ Hard boundaries:
   or TLS exceptions. Comparator allowances belong in `ticket-scope.md`.
 - TLS verification defaults ON in `bb.transport`; pass the standing direct user
   AirAPI TLS authorization explicitly at the call site. It is not a lesson.
-- No lesson changes WARN to PASS. AUTH_MISSING, TLS_ERROR and NO_DATA remain WARN
-  with their reason codes. A fresh request gets a new independent evaluation.
+- No lesson changes need_action to passed. AUTH_MISSING, TLS_ERROR and NO_DATA
+  remain need_action in QA output with their reason recorded in actual. A fresh request gets a new independent evaluation.
 - Empty inventory ladder, within scope only: check prerequisites; retry once;
-  vary only explicitly approved inputs; report WARN/NO_DATA with paired evidence.
+  vary only explicitly approved inputs; record need_action/NO_DATA with the exact missing test data.
   Skip every disallowed step. Do not repeat the ladder past configured budgets.
 - `bb/config.json` defines promotion/deprecation thresholds, max retries and max
   steps. The agent must enforce both budgets across all actions and polls.

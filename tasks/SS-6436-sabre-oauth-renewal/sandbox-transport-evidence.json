@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.stage.travel-dev.com/v1/search?cid=tst101&gds=S&pcc=8D55&fare=PUB&adt=1&cabin=Y&fl.0.o=SFO&fl.0.d=FRA&fl.0.dt=2026-11-20"
+  },
+  "response": {
+    "http_status": null,
+    "body": {
+      "raw": ""
+    },
+    "transport_error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+    "reason_code": "TRANSPORT_ERROR",
+    "status": "WARN",
+    "retryable": true
+  }
+}

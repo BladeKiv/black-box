@@ -1,0 +1,6 @@
+scenario_id,expected_result,provider_filter,search_url,ids_json,rules_path,rule_id_field
+TC-01,exact requested IDs and baseline content,,https://api.search.dev.travel-dev.com/v1/commission/rules/search,[8378],rules,Id
+TC-02,exact requested IDs and baseline content,,https://api.search.dev.travel-dev.com/v1/commission/rules/search,[7839],rules,Id
+TC-03,exact requested IDs and baseline content,,https://api.search.dev.travel-dev.com/v1/commission/rules/search,"[8378, 8379]",rules,Id
+TC-04,exact requested IDs and baseline content,,https://api.search.dev.travel-dev.com/v1/commission/rules/search,"[7839, 7840]",rules,Id
+TC-05,exact requested IDs and baseline content,,https://api.search.dev.travel-dev.com/v1/commission/rules/search,"[8378, 7839]",rules,Id

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "S01",
+    "purpose": "UPG cheapest; regular children; keepBothBagOptions=false",
+    "params": {
+      "adt": "1",
+      "debug": "true",
+      "cid": "TST101",
+      "cabin": "C",
+      "val_cr": "LH",
+      "gds": "S",
+      "pcc": "6NVG",
+      "fare": "SR",
+      "fl.0.o": "FRA",
+      "fl.0.d": "CDG",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "CDG",
+      "fl.1.d": "MUC",
+      "fl.1.dt": "2026-11-30",
+      "secondBag": "true",
+      "keepBothBagOptions": "false"
+    }
+  },
+  {
+    "id": "S02",
+    "purpose": "UPG cheapest; regular and UPG children; keepBothBagOptions=true",
+    "params": {
+      "adt": "1",
+      "debug": "true",
+      "cid": "TST101",
+      "cabin": "C",
+      "val_cr": "LH",
+      "gds": "S",
+      "pcc": "6NVG",
+      "fare": "SR",
+      "fl.0.o": "FRA",
+      "fl.0.d": "CDG",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "CDG",
+      "fl.1.d": "MUC",
+      "fl.1.dt": "2026-11-30",
+      "secondBag": "true",
+      "keepBothBagOptions": "true"
+    }
+  },
+  {
+    "id": "S03",
+    "purpose": "Regular cheapest; keepBothBagOptions=false",
+    "params": {
+      "adt": "1",
+      "debug": "true",
+      "cid": "TST101",
+      "cabin": "Y",
+      "val_cr": "LH",
+      "gds": "S",
+      "pcc": "6NVG",
+      "fare": "SR",
+      "fl.0.o": "FRA",
+      "fl.0.d": "CDG",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "CDG",
+      "fl.1.d": "MUC",
+      "fl.1.dt": "2026-11-30",
+      "secondBag": "true",
+      "keepBothBagOptions": "false"
+    }
+  },
+  {
+    "id": "S04",
+    "purpose": "Regular cheapest; keepBothBagOptions=true",
+    "params": {
+      "adt": "1",
+      "debug": "true",
+      "cid": "TST101",
+      "cabin": "Y",
+      "val_cr": "LH",
+      "gds": "S",
+      "pcc": "6NVG",
+      "fare": "SR",
+      "fl.0.o": "FRA",
+      "fl.0.d": "CDG",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "CDG",
+      "fl.1.d": "MUC",
+      "fl.1.dt": "2026-11-30",
+      "secondBag": "true",
+      "keepBothBagOptions": "true"
+    }
+  },
+  {
+    "id": "S05",
+    "purpose": "Equal-feature and feature-losing option filtering on another itinerary",
+    "params": {
+      "adt": "1",
+      "debug": "true",
+      "cid": "TST101",
+      "cabin": "C",
+      "val_cr": "LH",
+      "gds": "S",
+      "pcc": "6NVG",
+      "fare": "SR",
+      "fl.0.o": "FRA",
+      "fl.0.d": "AMS",
+      "fl.0.dt": "2026-11-20",
+      "fl.1.o": "AMS",
+      "fl.1.d": "FRA",
+      "fl.1.dt": "2026-11-30",
+      "secondBag": "true",
+      "keepBothBagOptions": "true"
+    }
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.stage.travel-dev.com/v1/search?cid=TST101&gds=F&adt=1&cabin=Y&fl.0.o=LHR&fl.0.d=DUB&fl.0.dt=2026-11-20"
+  },
+  "http_status": null,
+  "transport_error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+  "root_fields": [
+    "raw"
+  ],
+  "results_count": 0,
+  "body": {
+    "raw": ""
+  }
+}

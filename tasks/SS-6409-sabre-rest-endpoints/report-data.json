@@ -1,0 +1,102 @@
+{
+  "title": "SS-6409 \u2014 Sabre REST \u2013 add /offers/flightShop and /offers/flightShopLite as config-switchable alternatives to /offers/shop",
+  "scope": "DEV | PUB; S/6NVG | TST101/TST102/TST104 | LHR-JFK 2026-11-20; Y; 1 ADT",
+  "summary": "Completed user-approved DEV scope: 13 PASS / 0 FAIL / 0 WARN. Configured CID routes, empty/unlisted routing, config-only switching, CID overlap priority, endpoint markers, matching top-level option fields and read-only Result retrieval passed. User ended testing at this coverage. No-fallback-on-error was separately user accepted without execution; this adds no executed PASS.",
+  "intended": "Route listed project/CID entries through their configured Sabre REST endpoint; unlisted traffic uses the default route. All three produce AirAPI output and support revalidation/checkout. User confirmed bargainFinderMax with RestBargainFinderMaxRQ is the intended default route for this test.",
+  "limits": "13 executed checks across 7 Search and 4 Result requests, without retries. Configuration discovery is separate evidence in config-discovery.json. Source pairs: runs/2026-10-22/TST101.json, TST102.json, TST104.json and corresponding -result.json files. Same top-level field set does not certify nested field/value parity. Search requests used S/6NVG; returned gds/pcc included E/8C4T for 48/50 TST101 and 183/195 TST104 options; TST102 returned S/6NVG throughout. No assertion of returned GDS/PCC equality was made. Result GET does not establish provider revalidation. Excluded: checkout, booking/ticket writes, revalidation execution, project routing, forced provider errors/no-fallback, SR, and debug=false. SS-6330 research lists mileage/meal/seat/surcharge gaps; no waiver or full nested parity assertion. No operational lessons applied or new reusable operational patterns observed. No ledger update. Empty-list phase evidence: runs/2026-10-22-empty-lists/. Actual list values were null; user explicitly approved this as empty for this test only. Root CSV is for the current CID-overlap phase; original CSV is retained under runs/2026-10-22/. No-fallback-on-error is user accepted but NOT EXECUTED and adds no executed PASS. See acceptance-notes.md. Overlap winner is confirmed as flight_shop; project routing and revalidation/checkout execution remain pending. Overlap evidence: runs/2026-10-22-overlap/; both CID lists contained TST101, both project lists were null. Earlier eight-check and empty-list results retain their original evidence and configuration contexts. User clarified v1/result as the revalidation test operation. TC-13 covers that requested operation for flightShop; TC-06/07/08 previously cover Result for all three routes. No separate provider-internal execution proof or booking checkout is claimed. FINAL HANDOFF: user explicitly ended testing and requested the final report. Project routing, separate booking checkout and full nested field/value parity remain unexecuted. The 13 PASS result certifies only the cases in this table, not every acceptance criterion. Data-gap analysis is in saved-field-gap-analysis.json; no waiver of those differences is inferred. Current rerun CSV requires TST101 in both CID lists. No additional endpoint execution was performed to generate this final report.",
+  "rows": [
+    {
+      "id": "TC-01",
+      "data": "TST101; PUB; S/6NVG; LHR-JFK 2026-11-20; Y/1 ADT",
+      "expected": "Nonempty results; all keys.sabre.endpoint=flightShop",
+      "actual": "HTTP 200; 50/50 options match",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-02",
+      "data": "TST102; PUB; S/6NVG; LHR-JFK 2026-11-20; Y/1 ADT",
+      "expected": "Nonempty results; all keys.sabre.endpoint=flightShopLite",
+      "actual": "HTTP 200; 95/95 options match",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-03",
+      "data": "TST104; PUB; S/6NVG; LHR-JFK 2026-11-20; Y/1 ADT",
+      "expected": "Nonempty results; all keys.sabre.endpoint=bargainFinderMax",
+      "actual": "HTTP 200; 195/195 options match",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-04",
+      "data": "All 340 returned Search options across three CIDs",
+      "expected": "Same top-level AirAPI option field set across all three routes",
+      "actual": "340 options; 25 top-level fields each; identical field sets=True",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-05",
+      "data": "All returned Search options; meta.sabreRest and keys.sabre.endpoint",
+      "expected": "Legacy meta.sabreRest absent; endpoint marker present",
+      "actual": "340/340 legacy flags absent; all route markers populated",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-06",
+      "data": "TST101; first fresh Search key carried unchanged into GET Result",
+      "expected": "Readable itinerary/prices; selected key and endpoint marker retained",
+      "actual": "HTTP 200; key retained=True; endpoint=flightShop",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-07",
+      "data": "TST102; first fresh Search key carried unchanged into GET Result",
+      "expected": "Readable itinerary/prices; selected key and endpoint marker retained",
+      "actual": "HTTP 200; key retained=True; endpoint=flightShopLite",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-08",
+      "data": "TST104; first fresh Search key carried unchanged into GET Result",
+      "expected": "Readable itinerary/prices; selected key and endpoint marker retained",
+      "actual": "HTTP 200; key retained=True; endpoint=bargainFinderMax",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-09",
+      "data": "TST101; all lists null (user-approved empty); unchanged Search inputs",
+      "expected": "All options use default bargainFinderMax after config-only update",
+      "actual": "HTTP 200; 197/197 default options; previous marker=flightShop",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-10",
+      "data": "TST102; all lists null (user-approved empty); unchanged Search inputs",
+      "expected": "All options use default bargainFinderMax after config-only update",
+      "actual": "HTTP 200; 197/197 default options; previous marker=flightShopLite",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-11",
+      "data": "TST104; all lists null (user-approved empty); unchanged Search inputs",
+      "expected": "All options use default bargainFinderMax after config-only update",
+      "actual": "HTTP 200; 197/197 default options; previous marker=bargainFinderMax",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-12",
+      "data": "TST101 listed in both CID blocks; PUB/S/6NVG; unchanged itinerary",
+      "expected": "flightShop wins over flightShopLite",
+      "actual": "HTTP 200; 50/50 flightShop options",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-13",
+      "data": "Latest overlap Search key; GET /v1/result/ANY/{key}; TST101",
+      "expected": "Result succeeds with selected key, itinerary/prices and flightShop marker retained",
+      "actual": "HTTP 200; selected key retained=True; flightShop marker retained",
+      "status": "PASS"
+    }
+  ],
+  "evidence": [],
+  "collection": "SS-6409.postman_collection.json"
+}

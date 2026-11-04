@@ -1,0 +1,548 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "https://api.search.dev.travel-dev.com/v1/commission/rules/search",
+    "body": {
+      "ids": [
+        8378
+      ]
+    }
+  },
+  "response": {
+    "http_status": 200,
+    "body": {
+      "rules": {
+        "81": [
+          {
+            "AirlineRefs": {
+              "Ids": "137",
+              "GroupIds": ""
+            },
+            "AllAirlines": false,
+            "Validating": [
+              "JL"
+            ],
+            "PaxCodes": 7,
+            "CombinationKey": "PROWY",
+            "Consolidator": "GTT",
+            "TourCode": "PROWY",
+            "FilterOptions": [
+              {
+                "FareTypes": [
+                  "PUB"
+                ]
+              },
+              {
+                "validatings": [
+                  "JL"
+                ]
+              }
+            ],
+            "FareRules": [
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    8
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "JL"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "A",
+                      "C",
+                      "F",
+                      "J"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11,
+                        41,
+                        127
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        5
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "137",
+                  "GroupIds": ""
+                },
+                "Id": 25082,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    5
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "JL"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "B",
+                      "D",
+                      "E",
+                      "H",
+                      "I",
+                      "K",
+                      "L",
+                      "M",
+                      "R",
+                      "S",
+                      "V",
+                      "W",
+                      "X",
+                      "Y"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11,
+                        41,
+                        127
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        5
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "137",
+                  "GroupIds": ""
+                },
+                "Id": 25083,
+                "AllAirlines": false
+              },
+              {
+                "Scenario": {
+                  "type": 1,
+                  "percent": [
+                    2
+                  ],
+                  "surcharges": [
+                    true
+                  ]
+                },
+                "TicketCode": "",
+                "FilterOptions": [
+                  {
+                    "fareOwners": [
+                      "JL"
+                    ]
+                  },
+                  {
+                    "FareTypes": [
+                      "PUB"
+                    ]
+                  },
+                  {
+                    "Classes": [
+                      "N",
+                      "O",
+                      "Q"
+                    ]
+                  },
+                  {
+                    "origin": {
+                      "countryIds": [
+                        6,
+                        11,
+                        41,
+                        127
+                      ]
+                    },
+                    "destination": {
+                      "countryIds": [
+                        5
+                      ]
+                    },
+                    "Direction": 1
+                  }
+                ],
+                "AirlineRefs": {
+                  "Ids": "137",
+                  "GroupIds": ""
+                },
+                "Id": 25084,
+                "AllAirlines": false
+              }
+            ],
+            "FlightApplicationGroup": {
+              "Rules": [
+                {
+                  "codeshare": {
+                    "Airlines": [
+                      {
+                        "Marketing": [
+                          "JL"
+                        ],
+                        "Operating": [
+                          "JL"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  },
+                  "routing": {
+                    "between": [
+                      {
+                        "Origin": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 148
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 150
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  }
+                },
+                {
+                  "codeshare": {
+                    "Airlines": [
+                      {
+                        "Marketing": [
+                          "JL"
+                        ],
+                        "Operating": [
+                          "JL"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  },
+                  "routing": {
+                    "between": [
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 23
+                        },
+                        "Destination": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 5
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  }
+                },
+                {
+                  "codeshare": {
+                    "Airlines": [
+                      {
+                        "Marketing": [
+                          "JL"
+                        ],
+                        "Operating": [
+                          "JL"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        }
+                      },
+                      {
+                        "Marketing": [
+                          "JL"
+                        ],
+                        "Operating": [
+                          "NU"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "508",
+                          "GroupIds": ""
+                        }
+                      },
+                      {
+                        "Marketing": [
+                          "JL"
+                        ],
+                        "Operating": [
+                          "GK"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "507",
+                          "GroupIds": ""
+                        }
+                      },
+                      {
+                        "Marketing": [
+                          "NU"
+                        ],
+                        "Operating": [
+                          "NU"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "508",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "508",
+                          "GroupIds": ""
+                        }
+                      },
+                      {
+                        "Marketing": [
+                          "GK"
+                        ],
+                        "Operating": [
+                          "GK"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "507",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "507",
+                          "GroupIds": ""
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  },
+                  "routing": {
+                    "between": [
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 23
+                        },
+                        "Destination": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 23
+                        }
+                      }
+                    ],
+                    "Appliance": 2
+                  }
+                },
+                {
+                  "codeshare": {
+                    "Airlines": [
+                      {
+                        "Marketing": [
+                          "JL"
+                        ],
+                        "Operating": [
+                          "JL"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  },
+                  "routing": {
+                    "between": [
+                      {
+                        "Origin": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 309
+                        },
+                        "Destination": {
+                          "Type": "ZONE",
+                          "Value": "",
+                          "Id": 309
+                        }
+                      }
+                    ],
+                    "Appliance": 2
+                  }
+                },
+                {
+                  "codeshare": {
+                    "Airlines": [
+                      {
+                        "Marketing": [
+                          "JL"
+                        ],
+                        "Operating": [
+                          "JL"
+                        ],
+                        "MarketingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        },
+                        "OperatingRefs": {
+                          "Ids": "137",
+                          "GroupIds": ""
+                        }
+                      }
+                    ],
+                    "Appliance": 1
+                  },
+                  "routing": {
+                    "between": [
+                      {
+                        "Origin": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 6
+                        },
+                        "Destination": {
+                          "Type": "COUNTRY",
+                          "Value": "",
+                          "Id": 11
+                        }
+                      }
+                    ],
+                    "Appliance": 2
+                  }
+                }
+              ],
+              "Relation": true
+            },
+            "Connection": {
+              "Allowed": false,
+              "AllLocations": false,
+              "Locations": {}
+            },
+            "Id": 8378,
+            "DistributionId": 95,
+            "DistributionPriority": 0,
+            "ContractType": "Pro-rate",
+            "ContractClass": "Standard",
+            "ClaimMethod": "upfront",
+            "DeductedAmount": 100,
+            "TravelDatesRelation": true,
+            "IsDeducted": true,
+            "FareTypes": [
+              "PUB"
+            ]
+          }
+        ]
+      },
+      "distributions": {
+        "95": [
+          {
+            "PCC": [
+              "SFOG32100"
+            ],
+            "GDS": "I",
+            "targetGDS": "I",
+            "targetPCC": "SFOG32100"
+          }
+        ]
+      },
+      "distributionJobs": {
+        "81": [
+          {
+            "GDS": "I",
+            "PCC": [
+              "SFOG32100"
+            ],
+            "FareType": [
+              "PUB"
+            ],
+            "IsTarget": false
+          }
+        ]
+      },
+      "distributionSources": {
+        "95": {
+          "I": [
+            "SFOG32100"
+          ]
+        }
+      },
+      "enabledGds": {
+        "81": [
+          "I"
+        ]
+      },
+      "repoLastUpdate": "2026-11-02 20:14"
+    },
+    "transport_error": null,
+    "reason_code": "UNEVALUATED",
+    "status": "WARN",
+    "retryable": false
+  }
+}

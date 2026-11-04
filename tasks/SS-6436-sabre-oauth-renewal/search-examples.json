@@ -1,0 +1,57 @@
+[
+  {
+    "origin": "SFO",
+    "destination": "FRA",
+    "date": "2026-11-20",
+    "gds": "V",
+    "pcc": "8Ki0",
+    "cid": "tst101",
+    "fare": "PUB",
+    "adt": 1,
+    "cabin": "Y"
+  },
+  {
+    "origin": "LHR",
+    "destination": "JFK",
+    "date": "2026-11-20",
+    "gds": "V",
+    "pcc": "8Ki0",
+    "cid": "tst101",
+    "fare": "PUB",
+    "adt": 1,
+    "cabin": "Y"
+  },
+  {
+    "origin": "JFK",
+    "destination": "LHR",
+    "date": "2026-11-20",
+    "gds": "V",
+    "pcc": "8Ki0",
+    "cid": "tst101",
+    "fare": "PUB",
+    "adt": 1,
+    "cabin": "Y"
+  },
+  {
+    "origin": "FRA",
+    "destination": "JFK",
+    "date": "2026-11-20",
+    "gds": "V",
+    "pcc": "8Ki0",
+    "cid": "tst101",
+    "fare": "PUB",
+    "adt": 1,
+    "cabin": "Y"
+  },
+  {
+    "origin": "CDG",
+    "destination": "JFK",
+    "date": "2026-11-20",
+    "gds": "V",
+    "pcc": "8Ki0",
+    "cid": "tst101",
+    "fare": "PUB",
+    "adt": 1,
+    "cabin": "Y"
+  }
+]

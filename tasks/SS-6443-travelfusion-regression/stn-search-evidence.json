@@ -1,0 +1,22 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://api.search.stage.travel-dev.com/v1/search?cid=TST101&gds=F&adt=1&cabin=Y&fl.0.o=STN&fl.0.d=DUB&fl.0.dt=2026-11-20"
+  },
+  "http_status": 200,
+  "transport_error": null,
+  "results_count": 0,
+  "body": {
+    "results": [],
+    "starUTCTime": "2026-11-02 12:34:27.738",
+    "endUTCTime": "2026-11-02 12:34:27.738",
+    "excutionTime": "271.331\u00b5s",
+    "ngsMap": {},
+    "messages": [
+      {
+        "type": "TRACEID",
+        "value": "f73ec211-7a9a-441c-a5ab-cc460632f9f6"
+      }
+    ]
+  }
+}

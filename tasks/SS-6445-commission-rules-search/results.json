@@ -1,0 +1,78 @@
+[
+  {
+    "id": "TC-01",
+    "ids": [
+      8378
+    ],
+    "http_status": 200,
+    "returned_ids": [
+      8378
+    ],
+    "full_content_matches": true,
+    "reason_code": "OK",
+    "status": "PASS",
+    "retryable": false
+  },
+  {
+    "id": "TC-02",
+    "ids": [
+      7839
+    ],
+    "http_status": 200,
+    "returned_ids": [
+      7839
+    ],
+    "full_content_matches": true,
+    "reason_code": "OK",
+    "status": "PASS",
+    "retryable": false
+  },
+  {
+    "id": "TC-03",
+    "ids": [
+      8378,
+      8379
+    ],
+    "http_status": 200,
+    "returned_ids": [
+      8378,
+      8379
+    ],
+    "full_content_matches": true,
+    "reason_code": "OK",
+    "status": "PASS",
+    "retryable": false
+  },
+  {
+    "id": "TC-04",
+    "ids": [
+      7839,
+      7840
+    ],
+    "http_status": 200,
+    "returned_ids": [
+      7839,
+      7840
+    ],
+    "full_content_matches": true,
+    "reason_code": "OK",
+    "status": "PASS",
+    "retryable": false
+  },
+  {
+    "id": "TC-05",
+    "ids": [
+      8378,
+      7839
+    ],
+    "http_status": 200,
+    "returned_ids": [
+      8378,
+      7839
+    ],
+    "full_content_matches": true,
+    "reason_code": "OK",
+    "status": "PASS",
+    "retryable": false
+  }
+]

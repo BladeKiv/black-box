@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "SS-6404 Atlas - logic for \"baggageFullTextA\" and \"baggageFullTextD\" + carry on",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "AirAPI Book/Info only. Supply original request locally in CSV request_body or environment atlas_request_body. Provider docs confirm weight -1 means no weight limit; Alaska numeric weight limits must remain absent. CSV expectations are this run snapshot. TLS bypass authorized; configure local Postman certificate verification accordingly."
+  },
+  "variable": [
+    {
+      "key": "book_info_url",
+      "value": "https://airapi51.kivops.info:8090/atlas/v1/book/info"
+    }
+  ],
+  "item": [
+    {
+      "name": "Existing Atlas booking - Book/Info only",
+      "request": {
+        "method": "POST",
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{booklogin}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{bookpass}}",
+              "type": "string"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "x-atlas-client-id",
+            "value": "{{atlas_client_id}}"
+          },
+          {
+            "key": "x-atlas-client-secret",
+            "value": "{{atlas_client_secret}}"
+          }
+        ],
+        "url": "{{book_info_url}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{{request_body}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const u=pm.iterationData.get('book_info_url')||pm.collectionVariables.get('book_info_url'); if(u!=='https://airapi51.kivops.info:8090/atlas/v1/book/info')throw Error('Unexpected endpoint');pm.variables.set('book_info_url',u);",
+              "const raw=pm.iterationData.get('request_body')||pm.environment.get('atlas_request_body');if(!raw){pm.execution.skipRequest();throw Error('Supply unchanged original existing-booking request locally');}const q=JSON.parse(raw);if(!q.additionalInfo?.pnrCode||!q.gds?.backoffice_id)throw Error('Existing-booking inputs required');pm.variables.set('request_body',raw);"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const d=pm.response.json();pm.test('HTTP/body success',()=>{pm.response.to.have.status(200);pm.expect(d.status).to.equal(200);});",
+              "const path=pm.iterationData.get('segments_path');if(!path)throw Error('segments_path required');const actual=path.split('.').reduce((v,k)=>v?.[k],d);const expected=JSON.parse(pm.iterationData.get('expected_segments'));pm.test('Expected segment count',()=>pm.expect(actual).to.have.length(expected.length));",
+              "for(let i=0;i<expected.length;i++)for(const [k,v]of Object.entries(expected[i])){pm.test('Segment '+i+' '+k,()=>pm.expect(actual[i][k]).to.deep.equal(v));}"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

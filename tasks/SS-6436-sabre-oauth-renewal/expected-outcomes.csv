@@ -1,0 +1,2 @@
+scenario_id,expected_result,provider_filter,search_url,pcc,cid,fare,origin,destination,departure_date,adt,cabin,extra,debug
+TC-01,usable Sabre NDC offers and Result,V,https://api.search.stage.travel-dev.com/v1/search?extra=false&cabin=T&adt=1&debug=true&fare=PUB&cid=TST101&gds=V&pcc=8KI0&fl.0.o=LAX&fl.0.d=MAD&fl.0.dt=2026-11-14,8KI0,TST101,PUB,LAX,MAD,2026-11-14,1,T,false,true

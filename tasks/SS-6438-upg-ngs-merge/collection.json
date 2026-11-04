@@ -1,0 +1,99 @@
+{
+  "info": {
+    "name": "SS-6438 \u2014 Build UPG itineraries as main itineraries with NGS children (regular + upgrade options)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Consolidated approved scope: 13 merge-enabled Search rows and two merge-disabled SS-6437 baseline rows. Run CSV rows grouped by mode, manually verifying matching CID mergeWithRegular=true for merge_enabled or false for legacy_disabled before each group. BCKDCR secondBag/keepBothBagOptions=false; AKKDCR both true. No configuration changes are performed by this collection. The positive regular-cheapest and complete pre-filter checks are excluded from sign-off; unsuccessful exploratory Searches are not included. Existing PREPROD environment supplies search_authorization at runtime. Includes one extra_false row: BCKDCR mergeWithRegular=true with extra=false must expose no NGS child options or offer identifiers. Metadata is not counted as itinerary options."
+  },
+  "item": [
+    {
+      "name": "{{scenario_id}} \u2014 {{mode}}",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const required=['scenario_id','search_url','expected_result','keepBothBagOptions','bags_path','exchange_path','refund_path','price_path','children_path','upgrade_path'];",
+              "for (const key of required) { const v=pm.iterationData.get(key); if (v===undefined || v==='') throw new Error('CSV row missing '+key); pm.variables.set(key,v); }",
+              "if (!String(pm.variables.get('search_url')).startsWith('http://airapi51.kivops.info/v1/search?')) throw new Error('Search URL outside the approved host/endpoint');",
+              "if (!['merge_enabled','legacy_disabled','extra_false'].includes(pm.iterationData.get('mode'))) throw new Error('Missing or invalid CSV mode');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if (pm.iterationData.get('mode')==='merge_enabled') {",
+              "const row = pm.iterationData;",
+              "function value(name) { return row.get(name) ?? pm.variables.get(name); }",
+              "function at(obj, path) { return String(path).split('.').reduce((a, k) => a == null ? undefined : a[k], obj); }",
+              "const body = pm.response.json();",
+              "pm.test('Search exposes results[]', () => pm.expect(body.results).to.be.an('array'));",
+              "const childPath = value('children_path');",
+              "const markerPath = value('upgrade_path');",
+              "const upg = o => at(o, markerPath) !== undefined;",
+              "const groups = body.results.filter(r => upg(r) || (at(r, childPath) || []).some(upg));",
+              "if (!groups.length) {",
+              "  console.warn('WARN/NO_DATA: no qualifying UPG groups; merge checks cannot be evaluated.');",
+              "  pm.test.skip('Qualifying merge inventory is available', () => {});",
+              "} else {",
+              "  const keepBoth = String(value('keepBothBagOptions')) === 'true';",
+              "  const vectors = o => [at(o,value('bags_path')), at(o,value('exchange_path')), at(o,value('refund_path'))];",
+              "  const price = o => at(o,value('price_path'));",
+              "  const signature = o => JSON.stringify((o.trips || []).map(t => (t.segments || []).map(s => [s.departureAirportCode,s.arrivalAirportCode,s.departureTime,s.arrivalTime,s.marketingAirline,s.flightNumber])));",
+              "  pm.test('Retained groups follow the scoped merge rules', () => {",
+              "    for (const main of groups) {",
+              "      const children = at(main,childPath) || [];",
+              "      pm.expect(children).to.be.an('array');",
+              "      const options = [main,...children];",
+              "      for (let i=0;i<options.length;i++) {",
+              "        const o=options[i], f=vectors(o);",
+              "        pm.expect(f[0]).to.be.a('number');",
+              "        pm.expect(f[1]).to.be.a('boolean');",
+              "        pm.expect(f[2]).to.be.a('boolean');",
+              "        pm.expect(price(o)).to.be.a('number');",
+              "        pm.expect(o.currency).to.equal(main.currency);",
+              "        if (children.length) pm.expect(o.gdsOfferId.endsWith(':NGS#'+(i+1))).to.equal(true);",
+              "        if (i) {",
+              "          const previous=options[i-1], pf=vectors(previous);",
+              "          pm.expect(price(o)).to.be.at.least(price(previous));",
+              "          pm.expect(f.every((x,j)=>x>=pf[j]) && f.some((x,j)=>x>pf[j])).to.equal(true);",
+              "          pm.expect(signature(o)).to.equal(signature(main));",
+              "          if (!keepBoth) pm.expect(upg(o)).to.equal(false);",
+              "        }",
+              "      }",
+              "    }",
+              "  });",
+              "}",
+              "",
+              "} else if (pm.iterationData.get('mode')==='extra_false') {",
+              "const body=pm.response.json();",
+              "pm.test('extra=false suppresses NGS options',()=>{pm.expect(body.results).to.be.an('array');for(const r of body.results){pm.expect((r.ngsItineraries||[]).length).to.equal(0);pm.expect(String(r.gdsOfferId||'').includes(':NGS#')).to.equal(false);}});",
+              "} else {",
+              "const body=pm.response.json();",
+              "pm.test('Search results[]',()=>pm.expect(body.results).to.be.an('array'));",
+              "const parents=body.results.filter(r=>String(r.gdsOfferId||'').includes(':UPG#'));",
+              "if (!parents.length) { console.warn('WARN: legacy UPG inventory unavailable'); pm.test.skip('Legacy UPG inventory available',()=>{}); }",
+              "else if (pm.iterationData.get('cid')==='BCKDCR') pm.test('SS-6437 BCKDCR main identifiers',()=>{for(const r of body.results)pm.expect(String(r.gdsOfferId||'').includes(':UPG#')&&String(r.gdsOfferId||'').includes(':NGS#')).to.equal(false);});",
+              "else pm.test('SS-6437 AKKDCR child identifiers',()=>{for(const r of parents){pm.expect(r.ngsItineraries).to.be.an('array').and.not.empty;for(const c of r.ngsItineraries){pm.expect(String(c.gdsOfferId||'').includes(':UPG#')).to.equal(true);pm.expect(String(c.gdsOfferId||'').includes(':NGS#')).to.equal(true);}}});",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}",
+            "type": "text"
+          }
+        ],
+        "url": "{{search_url}}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+SS-6453 — explicit user corrections for rerun (2026-11-04)
+
+Use STAGE and only AIRAPI_BASE_URL. Generate Search inputs independently with cid=TST101 unless supplied otherwise. Omit gds, pcc and fare because Cpanel configures them. No playbook or user-provided fixture is required to start.
+
+Keep this a small black-box output check. Search -> Result is ONE flow per requirement, not separate endpoint cases. Carry each selected Search key unchanged. Reuse the same Search responses across checks. Prefer keys whose Search offers contain the features needed for that check. A Result 'no results found' is unavailable inventory, not a failure; try another suitable key/search. NGS Air Pricing is optional and must not block completion.
+
+Four requirement-level checks maximum:
+1. No partial-coverage FREE seat feature (application F) from the ticket's seat-code set appears in observed Search or available Result output. Evaluate the whole returned itinerary's segments. Observed absence satisfies this output invariant; do not require an upstream pre-filter candidate or internal filtering proof.
+2. Where free seat features exist, their breakdown covers all itinerary segments in that endpoint response. Validate Search and available same-key Result independently against this requirement.
+3. Charged/unavailable seat features (C/N), when present, remain outside the F-only filtering rule. Check each endpoint independently; partial coverage is allowed for C/N. No upstream captures or Search-to-Result equality baseline is required.
+4. Non-seat features, including partial-coverage examples when available, remain outside seat filtering. Check each endpoint independently against the task requirements. Do not fail because Result adds, omits or changes features relative to Search; cross-endpoint equality is not an acceptance criterion.
+
+Explicit user correction: Search and Result may return different feature sets and values because they are different endpoints. The same opaque key establishes the flow, not feature equality. Validate every observed feature against the task rules within its own response, including features newly present in Result. Differences from Search alone are never a failure, including for TC4. Do not infer that filtering changed unrelated features solely from cross-endpoint differences.
+
+The seat-code set identifies features to inspect; do not demand inventory for every ATPCO code or create cases per code. Do not expand the full-segment requirement to C/N seats. Do not require synthetic fixtures, upstream baselines or exhaustive provider/code combinations.
+
+Bound inventory discovery: prepare at least five relevant Search examples. Reuse searches across requirements; if a needed category has not appeared after five relevant searches for that requirement, stop chasing it, exclude that unavailable category/check, record the discovery count and exclusion, and continue. Do not call an unobserved positive category passed or turn its absence into a need_action request. Do not confuse absence of forbidden output with missing positive category coverage.
+
+Write cases.json before any request, with up to four requirement-level checks and the bounded discovery steps. Explicit user exception for this rerun: after bounded discovery, unavailable positive categories may be removed from the executable plan BEFORE the first results.jsonl entry; retain their titles, search counts and reasons in excluded_cases metadata. Once result writing starts, keep the final plan immutable and write exactly one result per retained case. Never rewrite historical runs. Genuine access/requirement blockers still use need_action. This narrow user-authorized exclusion is not a general change to the project output contract.
+
+Keep evidence brief: search count, sampled itinerary/feature counts, validated Search/Result flow counts, violations and exclusions. This is a quick output regression, not proof of internal filter execution. Do not rerun from this chat; user will rerun from Dashboard.
+
+

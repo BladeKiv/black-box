@@ -1,0 +1,54 @@
+{
+  "title": "SS-6436 Sabre NDC - Sabre OAuth token is never renewed after a 401 (dead retry branch, cached token never invalidated)",
+  "date": "2026-11-02",
+  "scope": "STAGE | Search \u2192 Result | LAX\u2013MAD 2026-11-14 | V/8KI0 | cid=TST101 | cabin=T",
+  "summary": "Exact user-supplied Search returned HTTP 200 with 37 matching V/8KI0 offers. Result returned HTTP 200, preserving the selected opaque key and V/8KI0 identifiers, with populated itinerary segments and totalPrice=595.",
+  "intended": "User-approved regression: Search returns usable V/8KI0 offers; Result resolves an unchanged matching Search key into itinerary and price data.",
+  "limits": "Latest exact-input regression: one Search and one Result; no retries. extra=false, cabin=T, adt=1, debug=true, fare=PUB, cid=TST101, gds=V, pcc=8KI0. Earlier different-input attempts are retained separately and excluded from this verdict. Several inputs changed together, so the cause of earlier empty responses is not isolated. OAuth recovery is outside regression scope. No booking, ticketing or configuration changes. No lessons applied; ledger unchanged.",
+  "collection": "SS-6436.postman_collection.json",
+  "rows": [
+    {
+      "id": "TC-01",
+      "data": "LAX\u2013MAD 2026-11-14; 1 ADT; T; V/8KI0; TST101; PUB; extra=false; debug=true",
+      "expected": "Usable V/8KI0 offers and opaque key for Result",
+      "actual": "HTTP 200; 37 offers, all V/8KI0",
+      "status": "PASS"
+    },
+    {
+      "id": "TC-02",
+      "data": "Selected V/8KI0 Search key unchanged; cid=TST101",
+      "expected": "Matching key/provider identifiers; populated itinerary and numeric price",
+      "actual": "HTTP 200; same key; V/8KI0; 1 trip with segments; totalPrice=595",
+      "status": "PASS"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "TC-01",
+      "request": {
+        "method": "GET",
+        "url": "https://api.search.stage.travel-dev.com/v1/search?extra=false&cabin=T&adt=1&debug=true&fare=PUB&cid=TST101&gds=V&pcc=8KI0&fl.0.o=LAX&fl.0.d=MAD&fl.0.dt=2026-11-14"
+      },
+      "response": {
+        "http_status": 200,
+        "results_count": 37,
+        "matching_count": 37
+      }
+    },
+    {
+      "id": "TC-02",
+      "request": {
+        "method": "GET",
+        "url": "https://api.search.stage.travel-dev.com/v1/result/ANY/0_VFNUMTAxKlkxMDAwL0xBWE1BRDIwMjYtMTEtMTRfMTAxNypBQX4jQkE0NzkyI0JBNDI3Mn5sYzplbl91c35jdXI6VVNE?cid=TST101&gds=V&pcc=8KI0&fare=PUB&debug=true"
+      },
+      "response": {
+        "http_status": 200,
+        "same_key": true,
+        "gds": "V",
+        "pcc": "8KI0",
+        "trips": 1,
+        "totalPrice": 595
+      }
+    }
+  ]
+}

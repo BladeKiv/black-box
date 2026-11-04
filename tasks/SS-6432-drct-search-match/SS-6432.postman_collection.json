@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "SS-6432 DRCT S&M - non-D Result",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Fresh fixed-build non-D Result cases. CSV indices identify captured inventory only; verify selected flights against fresh DRCT before rerun. Runtime Search authorization only; booking not included."
+  },
+  "item": [
+    {
+      "name": "Search",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "{{search_url}}"
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "if(!pm.environment.get('search_authorization')) throw new Error('Set local search_authorization');"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const b=pm.response.json(); pm.test('Search results array',()=>pm.expect(b.results).to.be.an('array')); const i=Number(pm.iterationData.get('selected_index')); if(!b.results[i]) throw new Error('Required matching inventory unavailable'); pm.collectionVariables.set('selected_key',b.results[i].key);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Result",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{search_authorization}}"
+          }
+        ],
+        "url": "https://api.search.dev.travel-dev.com/v1/result/ANY/{{selected_key}}"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Result recovers to DRCT',()=>pm.expect(pm.response.json().gds).to.equal('D'));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
